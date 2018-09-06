@@ -13,4 +13,4 @@ Melissa et Bertrand:
 
 Julien:
 
-* git merge nomDeLaBranche : rattache ma branche au master de la branche principale (master) ==> nécessite de résoudre les conflits !
+* git merge nomDeLaBranche : rattache ma branche au master de la branche principale (master) ==> nécessite de résoudre les conflits ! 
