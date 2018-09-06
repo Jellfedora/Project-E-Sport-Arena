@@ -5,5 +5,9 @@
 * Mise en place d'un dossier de save stocké en dehors de la VM et push sur repo perso 
 * Mise en place du Cahier des Charges 
 * Lecture sur Github 
+* Maj de mon user.name et user.email git grâce aux commandes:
+    * git config --global user.email julienlecointe@live.fr
+    * git config --global user.name "Julien"
+    * Verifiable avec git config user.name et git config user.email
 
 ----------------------
