@@ -30,3 +30,13 @@
 
 #### Rattacher une branche à master
 * git merge nomDeLaBranche : rattache ma branche au master de la branche principale à faire en étant sur master ==> nécessite de résoudre les conflits !    
+
+### Julien:
+
+#### Rattacher une branche à master
+
+* Sur la branche master
+
+* git merge nomDeLaBranche : rattache ma branche au master de la branche principale à faire en étant sur master ==> nécessite de résoudre les conflits !  
+
+* git push
