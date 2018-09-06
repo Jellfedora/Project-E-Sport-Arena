@@ -9,5 +9,6 @@
     * git config --global user.email julienlecointe@live.fr
     * git config --global user.name "Julien"
     * Verifiable avec git config user.name et git config user.email
+    * test
 
 ----------------------
