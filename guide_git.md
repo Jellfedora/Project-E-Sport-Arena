@@ -15,12 +15,12 @@
 * cd Project-E-Sport-Arena
 * git branch nombDeLaBranche (branchMelissa et branchBertrand): va créer la branche en local
 * lors du premier push il y aura une erreur:
-    * cc la ligne git push --set-upstream origin nomDeLaBranche
+    * cc la ligne git push --set-upstream origin nomDeVotreBranche
 
 
 #### Ensuite:
 * git checkout nomDeLaBranche : pour basculer dessus ou revenir sur master
-* git status
+* git status (toujours vérifier de bien être sur votre branche et non sur master!)
 * git add .
 * git commit -m "votre commentaire"
 * git push
