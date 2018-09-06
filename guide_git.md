@@ -11,9 +11,13 @@
 ### Melissa et Bertrand:
 
 #### Initialisation de votre branche en local:
+(à faire la premiére fois juste)
 * cloner votre branche dans le dossier de votre choix (different du dossier contenant vos pull de master)
 * cd Project-E-Sport-Arena
-* git branch nombDeLaBranche (branchMelissa et branchBertrand): va créer la branche en local
+* git branch nombDeLaBranche (melissa ou bertrand)   : va créer la branche en local
+* git checkout nomDeLaBranche (melissa ou bertrand)   : vous "transfére sur votre branche"
+* git add [filename]  OU  git add . (alias technique de bourrin!)
+* git commit -m "votre commentaire"
 * lors du premier push il y aura une erreur:
     * cc la ligne git push --set-upstream origin nomDeVotreBranche
 
