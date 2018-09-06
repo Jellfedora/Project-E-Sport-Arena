@@ -35,8 +35,12 @@
 
 #### Rattacher une branche à master
 
-* Sur la branche master
+* git checkout master : pour basculer sur master
 
-* git merge nomDeLaBranche : rattache ma branche au master de la branche principale à faire en étant sur master ==> nécessite de résoudre les conflits !  
+* git merge julien/bertrand/melissa :cc le contenu de julien/bertrand/melissa dans master
+
+* git status
+
+* git add [filename] ou git add .
 
 * git push
