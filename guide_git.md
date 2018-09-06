@@ -21,7 +21,7 @@
 #### Ensuite:
 * git checkout nomDeLaBranche : pour basculer dessus ou revenir sur master
 * git status (toujours vérifier de bien être sur votre branche et non sur master!)
-* git add .
+* git add [filename]  OU  git add . (alias technique de bourrin!)
 * git commit -m "votre commentaire"
 * git push
 
