@@ -12,3 +12,6 @@
     * test
 
 ----------------------
+# Sprint 0.1
+
+* Prise en main de git + formation de Bertrand et Melissa dessus
