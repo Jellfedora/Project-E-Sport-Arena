@@ -1,6 +1,10 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 # Sprint 0.0 
 - 06 Septembre 2018
+=======
+# Sprint 0.0 ++++ 06 septembre 2018 ++++
+>>>>>>> 89acc2be5c64a17ec8e345dcea70ef024faf59ca
 =======
 # Sprint 0.0 ++++ 06 septembre 2018 ++++
 >>>>>>> 89acc2be5c64a17ec8e345dcea70ef024faf59ca
@@ -21,6 +25,7 @@
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 # Sprint 0.1
 - 07 Septembre 2018
 
@@ -31,6 +36,8 @@
     * Création user stories 
     test
 =======
+=======
+>>>>>>> 89acc2be5c64a17ec8e345dcea70ef024faf59ca
 # Sprint 0.1 ++++ 07 septembre 2018 ++++
 
 * Validation du CDC par Christophe.
@@ -41,5 +48,9 @@
 
 * Création des user stories.
 
+<<<<<<< HEAD
+* Création du Minimum Viable Product 
+>>>>>>> 89acc2be5c64a17ec8e345dcea70ef024faf59ca
+=======
 * Création du Minimum Viable Product 
 >>>>>>> 89acc2be5c64a17ec8e345dcea70ef024faf59ca
