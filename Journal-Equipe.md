@@ -25,3 +25,17 @@
 
     * Création user stories 
     test
+
+
+# Sprint 0.1 07 septembre 2018 
+
+* Validation du CDC par Christophe.
+
+* Validation du visuel.
+
+* Création des wireframes.
+
+* Création des user stories.
+
+* Création du Minimum Viable Product 
+
