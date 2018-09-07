@@ -39,3 +39,7 @@
 
 * Création du Minimum Viable Product 
 
+* Réorganisation du trello
+
+* Déterminer les sprints
+
