@@ -43,3 +43,5 @@
 
 * Déterminer les sprints
 
+* Ajout du wordpress custom
+
