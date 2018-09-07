@@ -24,3 +24,11 @@
 -Validation du cahier des charges. ( Christophe ).
 
 -Création des user stories  ( Julien et Bertrand ).
+
+-Essaie de la mise en place d'une bdd commune :
+
+    => Création d'une installation complète avec gandi (ssh, mySQL, apache2 etc..)
+
+    => Problème de connexion au serveur 
+
+    => Mise en place de la bdd en attente.. 
