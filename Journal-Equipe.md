@@ -45,3 +45,7 @@
 
 * Installation nouveau serveur pour partage de BDD ( en cours )
 
+# Sprint 0.2 08 septembre 2018
+
+* Serveur gandi créé et nom de domaine attribué via NO IP
+
