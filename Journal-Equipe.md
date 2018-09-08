@@ -43,5 +43,5 @@
 
 * Déterminer les sprints
 
-* Ajout du wordpress custom
+* Installation nouveau serveur pour partage de BDD ( en cours )
 

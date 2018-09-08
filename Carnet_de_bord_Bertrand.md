@@ -36,3 +36,5 @@
 
     * Création des wireframes  ( Mélissa ).
 
+    * On a tenté de faire une BDD commune, nous avons donc créer un nouveau server sur gandi ( www.gandhi.net ) sur lequel nous avons installé Apache2, MySQL, phpMyAdmin et PHP7.
+     Nous avons recontré beaucoup de probléme pour partager la BDD, nous repoussons donc à demain ce partage.  
