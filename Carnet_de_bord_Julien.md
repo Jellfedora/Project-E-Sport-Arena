@@ -16,3 +16,4 @@
 
 * Prise en main de git + formation de Bertrand et Melissa dessus
 * Ajout du wordpress custom
+* Création de l'hébergement sur un serveur Gandi mais probléme mysql / Phpmyadmin
