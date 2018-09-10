@@ -49,3 +49,18 @@
 
 * Serveur gandi créé et nom de domaine attribué via NO IP
 
+# Sprint 1.1 10 septembre 2018
+
+* Installation WordPress custom 
+
+* Partage de BDD MySQL via serveur Gandi 
+    - Probléme rencontré => Difficile de mettre la BDD en commun sur 3 localhost --> WP_HOME WP_SITE_URL
+
+* Configuration du projet ( arborescence,  brunch config, jQuery, BootStrap, ect )
+
+* Config de thème ( style.css / index.php / screenshot.png / header.php / footer.php )
+    - Arborescence en 7-1 + shame.scss
+
+* Probléme rencontré avec Git
+
+
