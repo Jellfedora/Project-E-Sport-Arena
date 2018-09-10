@@ -1,9 +1,10 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
+    "hash": "d05eb5834212dbd40b25fcfb56d2f22a",
     "content-hash": "a5c1a9eda1cf0399e5694fd901cc033f",
     "packages": [
         {
@@ -124,7 +125,7 @@
                 "zend",
                 "zikula"
             ],
-            "time": "2017-12-29T09:13:20+00:00"
+            "time": "2017-12-29 09:13:20"
         },
         {
             "name": "johnpbloch/wordpress",
@@ -163,7 +164,7 @@
                 "cms",
                 "wordpress"
             ],
-            "time": "2018-08-02T21:48:39+00:00"
+            "time": "2018-08-02 21:48:39"
         },
         {
             "name": "johnpbloch/wordpress-core",
@@ -203,7 +204,7 @@
                 "cms",
                 "wordpress"
             ],
-            "time": "2018-08-02T21:48:32+00:00"
+            "time": "2018-08-02 21:48:32"
         },
         {
             "name": "johnpbloch/wordpress-core-installer",
@@ -252,7 +253,7 @@
             "keywords": [
                 "wordpress"
             ],
-            "time": "2018-01-29T14:49:29+00:00"
+            "time": "2018-01-29 14:49:29"
         },
         {
             "name": "wpackagist-plugin/advanced-custom-fields",
