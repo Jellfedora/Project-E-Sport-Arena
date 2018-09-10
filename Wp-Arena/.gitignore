@@ -1,4 +1,10 @@
 vendor/
 wp/
-content/
+/content/*
+!/content/themes
+/content/themes/*
+!/content/themes/oarena
+!/content/plugins
+/content/plugins/*
+!/content/plugins/oarena-settings
 wp-config.php

@@ -49,3 +49,6 @@
 
 * Serveur gandi créé et nom de domaine attribué via NO IP
 
+# Sprint 1 10 septembre 2018
+
+* Mise en place de la BDD partagée + install wordpress custom sur vm
