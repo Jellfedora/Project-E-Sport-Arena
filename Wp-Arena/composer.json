@@ -1,27 +1,32 @@
 {
-    "name": "mint/three",
-    "authors": [
-        {
-            "name": "Marchams",
-            "email": "marchams@gmail.com"
-        }
-    ],
-    "repositories":[
-        {
-            "type":"composer",
-            "url":"https://wpackagist.org"
-        }
-    ],
+    "name": "Bertrand/oagency",
+    "authors": [{
+        "name": "Bertrand",
+        "email": "bertrand.parroche@gmail.com"
+    }],
+    "repositories": [{
+        "type": "composer",
+        "url": "https://wpackagist.org"
+    }],
     "require": {
         "johnpbloch/wordpress": "^4.9",
         "wpackagist-theme/twentyseventeen": "*",
-        "wpackagist-plugin/hello-dolly": "*"
+        "wpackagist-plugin/hello-dolly": "*",
+        "wpackagist-plugin/advanced-custom-fields": "*",
+        "wpackagist-plugin/advanced-custom-fields-font-awesome": "*"
+    },
+    "require-dev": {
+        "wpackagist-plugin/what-the-file": "*"
     },
     "extra": {
         "wordpress-install-dir": "wp",
         "installer-paths": {
-            "content/plugins/{$name}/": ["type:wordpress-plugin"],
-            "content/themes/{$name}/": ["type:wordpress-theme"]
+            "content/plugins/{$name}/": [
+                "type:wordpress-plugin"
+            ],
+            "content/themes/{$name}/": [
+                "type:wordpress-theme"
+            ]
         }
     }
 }
