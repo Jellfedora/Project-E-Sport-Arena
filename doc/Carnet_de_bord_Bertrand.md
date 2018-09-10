@@ -38,3 +38,13 @@
 
     * On a tenté de faire une BDD commune, nous avons donc créer un nouveau server sur gandi ( www.gandhi.net ) sur lequel nous avons installé Apache2, MySQL, phpMyAdmin et PHP7.
      Nous avons recontré beaucoup de probléme pour partager la BDD, nous repoussons donc à demain ce partage.  
+
+# Sprint 1.1 
+
+++++ 10 septembre 2018 ++++
+
+    * Mise en place de la BDD partagée
+
+    * Mise en place des 3 WordPress custom avec BDD commune
+
+    * Création arborescence et configuration du projet
