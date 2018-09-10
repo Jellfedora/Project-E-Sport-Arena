@@ -1,6 +1,8 @@
 @import 'variables/vars';
 @import 'base/base';
-@import 'component/action-button';
+@import 'component/action-button',
+'component/category-button',
+'component/learn-more-button';
 @import 'layout/carousel',
 'layout/news',
 'layout/footer',
