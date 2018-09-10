@@ -8,3 +8,10 @@
 .learn-more-button:hover {
     text-decoration: none;
 }
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+    .learn-more-button {
+        width: 10em;
+    }
+}
