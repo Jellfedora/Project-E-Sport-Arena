@@ -48,3 +48,6 @@
     * Mise en place des 3 WordPress custom avec BDD commune
 
     * Création arborescence et configuration du projet
+
+    * Squelette HTML + Mise en place display de base ( index.html )
+        => Travail à 3 sur un Visual Studio grâce à l'extension Live Share

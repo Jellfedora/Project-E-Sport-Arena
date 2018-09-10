@@ -1,0 +1,21 @@
+.carousel {
+    height: 30vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+}
+
+.intro {
+    &__small {
+        margin: auto;
+        margin-bottom: 1.5em;
+        padding-top: 7em;
+        color: #fff;
+    }
+
+    &__small__title {
+        padding-left: 0.3em;
+        font-size: 1em;
+    }
+}

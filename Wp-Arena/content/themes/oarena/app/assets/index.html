@@ -12,8 +12,220 @@
 
 <body>
 
-  <div class="container">
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <!-- <a class="navbar-brand" href="#">oarena</a> -->
+    <h1 class="nav__title">oarena</h1>
+    <img class="nav__image" src="" alt="">
+    <button class="navbar-toggler nav__burger" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+      aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse nav__content" id="navbarNavDropdown">
+      <ul class="navbar-nav nav__liens">
+        <li class="nav-item">
+          <a class="nav-link" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Billeterie</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Jeux</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Teams</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">&Eacute;venement</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Galerie</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Contact</a>
+        </li>
+        </a>
+        <div class="dropdown-menu nav__drop" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+        </li>
+      </ul>
+    </div>
+  </nav>
 
+
+  <div class="carousel">
+    <div class="" data-ride="carousel" data-interval="1000">
+      <div class="carousel-inner  ">
+        <div class="carousel carousel-item active intro" style="background-image: url(https://source.unsplash.com/2000x2000/?christmas);">
+          <div class="intro__small  " style="text-align: center;">
+            <div class="intro__small__title ">Tournoi de noel</div>
+            <div class="intro__small__button">
+              <button type="button" class="btn font-weight-bold btn-primary ">Infos</button>
+            </div>
+          </div>
+        </div>
+        <div class="carousel carousel-item intro " style="background-image: url(https://source.unsplash.com/2000x2000/?gamer );">
+          <div class=" intro__small" style="text-align: center;">
+            <div class="intro__small__title">Tournoi de la Toussaint</div>
+            <div class="intro__small__button">
+              <button type="button" class="btn font-weight-bold btn-primary ">Infos</button>
+            </div>
+          </div>
+        </div>
+        <div class="carousel carousel-item " style="background-image: url(https://source.unsplash.com/2000x2000/?arcade );">
+          <div class="
+            intro__small" style="text-align: center;">
+            <div class=" intro__small__title">Tournoi du 1er janvier</div>
+            <div class="intro__small__button">
+              <button type="button" class="btn font-weight-bold btn-primary ">Infos</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
+  <div class="description">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias recusandae obcaecati adipisci vitae. Incidunt
+    repellendus molestias dolor distinctio minima accusamus ratione ipsum mollitia unde.
+  </div>
+
+
+
+  <div class="cards d-flex justify-content-around flex-wrap">
+    <div class="card mb-2" style="width: 15rem;">
+      <div class="card__intro d-flex ">
+        <img class="card-img-top" src="https://source.unsplash.com/100x100/?arcade">
+        <ul class="mt-2 ml-2">
+          <i class="fa fa-gamepad" aria-hidden="true"><span class="intro__font ml-1"> Jeux</span></i>
+          <i class="fa fa-user " aria-hidden="true"><span class="intro__font ml-1"> Places</span></i>
+          <i class="fa fa-eur " aria-hidden="true"><span class="intro__font ml-1"> Prix</span></i>
+        </ul>
+      </div>
+      <div class="card-body">
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+          content.</p>
+      </div>
+    </div>
+
+    <div class="card mb-2" style="width: 15rem;">
+      <div class="card__intro d-flex ">
+        <img class="card-img-top" src="https://source.unsplash.com/100x100/?arcade">
+        <ul class="mt-2 ml-2">
+          <i class="fa fa-gamepad" aria-hidden="true"><span class="intro__font ml-1"> Jeux</span></i>
+          <i class="fa fa-user " aria-hidden="true"><span class="intro__font ml-1"> Places</span></i>
+          <i class="fa fa-eur " aria-hidden="true"><span class="intro__font ml-1"> Prix</span></i>
+        </ul>
+      </div>
+      <div class="card-body">
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+          content.</p>
+      </div>
+    </div>
+
+    <div class="card mb-2 " style=" width: 15rem;">
+      <div class="card__intro d-flex ">
+        <img class="card-img-top" src="https://source.unsplash.com/100x100/?arcade">
+        <ul class="mt-2 ml-2">
+          <i class="fa fa-gamepad" aria-hidden="true"><span class="intro__font ml-1"> Jeux</span></i>
+          <i class="fa fa-user " aria-hidden="true"><span class="intro__font ml-1"> Places</span></i>
+          <i class="fa fa-eur " aria-hidden="true"><span class="intro__font ml-1"> Prix</span></i>
+        </ul>
+      </div>
+      <div class="card-body">
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+          content.</p>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="news mt-4">
+    <h2 class="news__title">Actualités</h2>
+    <div class="news__content">
+      <div class="news__item" style="background-image: url(https://source.unsplash.com/2000x2000/?arcade );">
+        <a href="#">
+          <h3 class="news__item-title">Hello world</h3>
+        </a>
+        <p class="new__item-text">Wotch a kofee avec ton bibalaekaess et ta wurscht ? Yeuh non che suis au réchime,
+          je ne mange plus que des
+          Grumbeere light
+          et che fais de la chym avec Bertranch, Melicha et Chulien. Tiens, un rottznoz sur le comptoir</p>
+        <div class="news_item-category">
+          <div class="action-button mb-1"><a href="#">MOBA</a></div>
+          <div class="action-button"><a href="#">League of legend</a> </div>
+        </div>
+      </div>
+      <div class="news__content">
+        <div class="news__item" style="background-image: url(https://i.pinimg.com/originals/0f/1e/47/0f1e47f3f9daff00feafc4fc7b242355.jpg);">
+          <a href="#">
+            <h3 class="news__item-title">Hello Journey</h3>
+          </a>
+          <p class="new__item-text">Wotch a kofee avec ton bibalaekaess et ta wurscht ? Yeuh non che suis au réchime,
+            je ne mange plus que des
+            Grumbeere light
+            et che fais de la chym avec Bertranch, Melicha et Chulien. Tiens, un rottznoz sur le comptoir</p>
+          <div class="news_item-category">
+            <div class="action-button mb-1"><a href="#">MOBA</a></div>
+            <div class="action-button"><a href="#">League of legend</a> </div>
+          </div>
+        </div>
+        <div class="news__content">
+          <div class="news__item" style="background-image: url(http://www.designbordeaux.com/upload/snimki/hd-wallpaper-world-of-warcraft-3-1.jpg);">
+            <a href="#">
+              <h3 class="news__item-title">Hello Truc</h3>
+            </a>
+            <p class="new__item-text">Wotch a kofee avec ton bibalaekaess et ta wurscht ? Yeuh non che suis au réchime,
+              je ne mange plus que des
+              Grumbeere light
+              et che fais de la chym avec Bertranch, Melicha et Chulien. Tiens, un rottznoz sur le comptoir</p>
+            <div class="news_item-category">
+              <div class="action-button mb-1"><a href="#">MMORPG</a></div>
+              <div class="action-button"><a href="#">WOW</a> </div>
+            </div>
+          </div>
+          <div class="news__content">
+            <div class="news__item" style="background-image: url(https://esportsinsider.com/wp-content/uploads/2016/12/OpTic-ELEAGUE.jpg);">
+              <a href="#">
+                <h3 class="news__item-title">Hello Machin</h3>
+              </a>
+              <p class="new__item-text">Wotch a kofee avec ton bibalaekaess et ta wurscht ? Yeuh non che suis au
+                réchime,
+                je ne mange plus que des
+                Grumbeere light
+                et che fais de la chym avec Bertranch, Melicha et Chulien. Tiens, un rottznoz sur le comptoir</p>
+              <div class="news_item-category">
+                <div class="action-button mb-1"><a href="#">MOBA</a></div>
+                <div class="action-button"><a href="#">League of legend</a> </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <footer class="footer d-flex flex-column mt-5">
+          <div class="footer__contact d-flex justify-content-around mb-5">
+            <a href="#" class="action-button ">Contact</a>
+            <a href="#" class="action-button">Lorem</a>
+          </div>
+          <div class="footer__links d-flex justify-content-center ">
+            <ul>
+              <li><a href="#"></a>One article</li>
+              <li><a href="#"></a>Two article</li>
+              <li><a href="#"></a>Three article</li>
+              <li><a href="#"></a>Four article</li>
+              <li><a href="#"></a>Five article</li>
+              <li><a href="#"></a>Six article</li>
+            </ul>
+          </div>
+          <div class="footer__rs d-flex justify-content-around mt-5">
+            <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+            <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+            <a href="#"><i class="fa fa-github" aria-hidden="true"></i></a>
+            <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+          </div>
+
+        </footer>
 
 </body>

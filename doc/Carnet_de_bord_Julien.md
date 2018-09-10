@@ -21,3 +21,8 @@
 # Sprint 0.2
 
 * Serveur gandi créé et nom de domaine attribué via NO IP
+
+# Sprint 1.1
+
+* Base de donnée tout client mise en place
+* HTML section actualités et footer + début css

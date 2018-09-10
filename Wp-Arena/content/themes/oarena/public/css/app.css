@@ -3,7 +3,8 @@ html {
   box-sizing: border-box; }
 
 body {
-  font-family: 'Baloo bhaina'; }
+  font-family: 'Baloo bhaina';
+  background-color: #242853; }
 
 *,
 *::before,
@@ -12,6 +13,7 @@ body {
 
 a {
   text-decoration: none;
+  color: #333977;
   text-transform: uppercase;
   font-weight: bold; }
 
@@ -22,6 +24,57 @@ ul {
 
 li {
   list-style: none; }
+
+.action-button {
+  color: #7ABCFD;
+  border: 2px solid #7ABCFD;
+  border-radius: 2px;
+  padding: 0.5em 3em 0.5em 0.8em;
+  position: relative;
+  transition: border 0.8s, padding 0.3s, color 0.8s; }
+  .action-button:hover {
+    color: #8C7BFC;
+    border-color: #8C7BFC;
+    padding-right: 4em; }
+  .action-button:after {
+    content: '\f178';
+    font-family: 'FontAwesome';
+    position: absolute;
+    right: 0.7em;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.4em; }
+
+.carousel {
+  height: 30vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%; }
+
+.intro__small {
+  margin: auto;
+  margin-bottom: 1.5em;
+  padding-top: 7em;
+  color: #fff; }
+
+.intro__small__title {
+  padding-left: 0.3em;
+  font-size: 1em; }
+
+.news__item {
+  background-size: cover; }
+
+.footer__contact button {
+  width: 5em; }
+
+.description {
+  width: 70%;
+  margin: auto;
+  margin: 1.5em auto 1.5em; }
+
+.navbar-menu {
+  background-color: #242853; }
 
 
 /*# sourceMappingURL=app.css.map*/

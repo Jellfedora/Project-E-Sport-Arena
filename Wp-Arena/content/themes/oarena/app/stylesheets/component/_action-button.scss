@@ -1,0 +1,26 @@
+.action-button {
+    color: $color-brand;
+    border: 2px solid $color-brand;
+    border-radius: 2px;
+    padding: 0.5em 3em 0.5em 0.8em;
+    position: relative;
+    transition: border $duration-slow,
+        padding $duration-fast,
+        color $duration-slow;
+
+    &:hover {
+        color: $color-brand-alt;
+        border-color: $color-brand-alt;
+        padding-right: 4em;
+    }
+
+    &:after {
+        content: '\f178';
+        font-family: 'FontAwesome';
+        position: absolute;
+        right: 0.7em;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 1.4em;
+    }
+}

@@ -32,3 +32,21 @@
     => Problème de connexion au serveur 
 
     => Mise en place de la bdd en attente.. 
+
+
+# Sprint 0.2
+
+-Serveur gandi créé et nom de domaine attribué via NO IP (Julien)
+
+
+
+# Sprint 1.1
+
+-Mise en place de la bdd commune ainsi que les WordPress 
+
+-Création de l'arborescence et configuration de projet 
+
+-Intégration HTML - CSS : 
+
+    => Nav-menu 
+    => Catégorie tournois
