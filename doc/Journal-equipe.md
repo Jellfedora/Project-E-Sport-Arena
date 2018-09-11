@@ -49,7 +49,7 @@
 
 * Serveur gandi créé et nom de domaine attribué via NO IP
 
-# Sprint 1 10 septembre 2018
+# Sprint 1.1 10 septembre 2018
 
 * Mise en place de la BDD partagée + install wordpress custom 
 
@@ -60,3 +60,11 @@
 
 * Squelette HTML de la home qui permet d'avoir un début de layout général.
     => Version mobile ( Mobile First )
+
+# Sprint 1.2 11 septembre 2018
+
+* Réunion avec Lucie
+
+* Refonte du cahier des charges
+
+* Refonte du Trello

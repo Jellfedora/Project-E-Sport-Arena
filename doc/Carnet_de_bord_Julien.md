@@ -26,3 +26,12 @@
 
 * Base de donnée tout client mise en place
 * HTML section actualités et footer + début css
+
+# Sprint 1.2
+
+* Réunion avec Lucie
+
+* Refonte du cahier des charges
+
+* Refonte du Trello
+
