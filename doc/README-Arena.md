@@ -1,8 +1,8 @@
 # Project-E-Sport-Arena
 Repository of our project E Sport Arena
 
-# Lien du Cahier des charges (sera push dans ce repo)
-https://docs.google.com/document/d/1XvtrwHEA7Of4wCyECkgTIPngWloDUGyv3n4sZOFbS48
+# Lien du Cahier des charges
+https://docs.google.com/document/d/1ihu_doHz33Y3dH3RbJagwRD2Q8Q5_FIJH90V8L6ZDrY/edit
 
 # Lien du Trello
 * Sprint Arena: https://trello.com/b/1RcgP6dz/sprint-arena
