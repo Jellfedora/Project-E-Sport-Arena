@@ -50,3 +50,13 @@
 
     => Nav-menu 
     => Catégorie tournois
+
+    
+
+# Sprint 1.2
+
+-Réunion avec Lucie
+
+-Refonte du cahier des charges
+
+-Refonte du Trello
