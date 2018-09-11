@@ -1,11 +1,12 @@
 @import 'variables/vars';
 @import 'base/base';
+@import 'layout/carousel',
+'layout/description',
+'layout/news',
+'layout/footer';
 @import 'component/action-button',
+'component/nav-menu',
+'component/carousel',
 'component/category-button',
 'component/learn-more-button';
-@import 'layout/carousel',
-'layout/news',
-'layout/footer',
-'layout/description',
-'layout/nav-menu';
 @import 'shame.scss';

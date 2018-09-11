@@ -1,5 +1,5 @@
 .carousel {
-    height: 30vh;
+    height: 45vh;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -12,10 +12,5 @@
         margin-bottom: 1.5em;
         padding-top: 7em;
         color: #fff;
-    }
-
-    &__small__title {
-        padding-left: 0.3em;
-        font-size: 1em;
     }
 }

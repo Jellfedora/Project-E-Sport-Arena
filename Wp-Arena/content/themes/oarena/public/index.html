@@ -12,57 +12,49 @@
 
 <body>
 
-  <nav class="navbar navbar-expand-lg navbar-light">
+  <nav class="nav navbar navbar-expand-lg navbar-light">
     <!-- <a class="navbar-brand" href="#">oarena</a> -->
+    <div class="nav__logo d-none-md d-none d-lg-block"><img src="http://esportarena.fr/wp-content/uploads/2016/10/defaut-1-300x132.png"></div>
     <h1 class="nav__title">oarena</h1>
     <img class="nav__image" src="" alt="">
-    <button class="navbar-toggler nav__burger" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+    <button class="nav navbar-toggler nav__burger" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
       aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse nav__content" id="navbarNavDropdown">
-      <ul class="navbar-nav nav__liens">
-        <li class="nav-item">
-          <a class="nav-link" href="#">Home</a>
+    <div class="nav__content collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="nav__links navbar-nav">
+        <li class="nav__item ">
+          <a class="nav__link nav-link" href="#">Home</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Billeterie</a>
+        <li class="nav__item nav-item">
+          <a class="nav__link nav-link" href="#">Billeterie</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Jeux</a>
+        <li class="nav__item nav-item">
+          <a class="nav__link nav-link" href="#">Jeux</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Teams</a>
+        <li class="nav__item nav-item">
+          <a class="nav__link nav-link" href="#">Teams</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">&Eacute;venement</a>
+        <li class="nav__item nav-item">
+          <a class="nav__link nav-link" href="#">&Eacute;venement</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Galerie</a>
+        <li class="nav__item nav-item">
+          <a class="nav__link nav-link" href="#">Galerie</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Contact</a>
-        </li>
-        </a>
-        <div class="dropdown-menu nav__drop" aria-labelledby="navbarDropdownMenuLink">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
-          <a class="dropdown-item" href="#">Something else here</a>
-        </div>
+        <li class="nav__item nav-item">
+          <a class="nav__link nav-link" href="#">Contact</a>
         </li>
       </ul>
     </div>
   </nav>
-
-
   <div class="carousel">
     <div class="" data-ride="carousel" data-interval="1000">
       <div class="carousel-inner  ">
-        <div class="carousel carousel-item active intro" style="background-image: url(https://source.unsplash.com/2000x2000/?christmas);">
+        <div class="carousel carousel-item active intro" style="background-image: url(https://source.unsplash.com/2000x2000/?nintendo);">
           <div class="intro__small  " style="text-align: center;">
             <div class="intro__small__title ">Tournoi de noel</div>
             <div class="intro__small__button">
-              <button type="button" class="btn font-weight-bold btn-primary ">Infos</button>
+              <button type="button" class="btn font-weight-bold btn-danger ">Infos</button>
             </div>
           </div>
         </div>
@@ -70,16 +62,16 @@
           <div class=" intro__small" style="text-align: center;">
             <div class="intro__small__title">Tournoi de la Toussaint</div>
             <div class="intro__small__button">
-              <button type="button" class="btn font-weight-bold btn-primary ">Infos</button>
+              <button type="button" class="btn font-weight-bold btn-danger ">Infos</button>
             </div>
           </div>
         </div>
-        <div class="carousel carousel-item " style="background-image: url(https://source.unsplash.com/2000x2000/?arcade );">
+        <div class="carousel carousel-item " style="background-image: url(https://source.unsplash.com/2000x2000/?computer );">
           <div class="
             intro__small" style="text-align: center;">
             <div class=" intro__small__title">Tournoi du 1er janvier</div>
             <div class="intro__small__button">
-              <button type="button" class="btn font-weight-bold btn-primary ">Infos</button>
+              <button type="button" class="btn font-weight-bold btn-danger ">Infos</button>
             </div>
           </div>
         </div>
@@ -90,13 +82,11 @@
     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias recusandae obcaecati adipisci vitae. Incidunt
     repellendus molestias dolor distinctio minima accusamus ratione ipsum mollitia unde.
   </div>
-
-
-
+  <h2 class="news__title text-light mb-3 text-center">&#9660; PROCHAINS TOURNOIS &#9660; </h2>
   <div class="cards d-flex justify-content-around flex-wrap">
     <div class="card mb-2" style="width: 15rem;">
       <div class="card__intro d-flex ">
-        <img class="card-img-top" src="https://source.unsplash.com/100x100/?arcade">
+        <img class="card-img-top" src="https://source.unsplash.com/100x100/?fortnite">
         <ul class="mt-2 ml-2">
           <i class="fa fa-gamepad" aria-hidden="true"><span class="intro__font ml-1"> Jeux</span></i>
           <i class="fa fa-user " aria-hidden="true"><span class="intro__font ml-1"> Places</span></i>
@@ -104,14 +94,14 @@
         </ul>
       </div>
       <div class="card-body">
+        <h3 class="news__tournament">Tournoi de Noël</h3>
         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
           content.</p>
       </div>
     </div>
-
     <div class="card mb-2" style="width: 15rem;">
       <div class="card__intro d-flex ">
-        <img class="card-img-top" src="https://source.unsplash.com/100x100/?arcade">
+        <img class="card-img-top" src="https://source.unsplash.com/100x100/?videogame">
         <ul class="mt-2 ml-2">
           <i class="fa fa-gamepad" aria-hidden="true"><span class="intro__font ml-1"> Jeux</span></i>
           <i class="fa fa-user " aria-hidden="true"><span class="intro__font ml-1"> Places</span></i>
@@ -119,14 +109,15 @@
         </ul>
       </div>
       <div class="card-body">
+        <h3 class="news__tournament">Tournoi du 1er janvier</h3>
         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-          content.</p>
+          content.
+        </p>
       </div>
     </div>
-
-    <div class="card mb-2 " style=" width: 15rem;">
+    <div class="card mb-2" style="width: 15rem;">
       <div class="card__intro d-flex ">
-        <img class="card-img-top" src="https://source.unsplash.com/100x100/?arcade">
+        <img class="card-img-top" src="https://source.unsplash.com/100x100/?playstation">
         <ul class="mt-2 ml-2">
           <i class="fa fa-gamepad" aria-hidden="true"><span class="intro__font ml-1"> Jeux</span></i>
           <i class="fa fa-user " aria-hidden="true"><span class="intro__font ml-1"> Places</span></i>
@@ -134,14 +125,13 @@
         </ul>
       </div>
       <div class="card-body">
+        <h3 class="news__tournament">Tournoi de la toussaint</h3>
         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-          content.</p>
+          content.
+        </p>
       </div>
     </div>
   </div>
-
-
-
   <div class="news p-3 mt-5">
     <h2 class="news__title text-light">&#9660; ACTUALIT&Eacute;S &#9660; </h2>
     <div class="news__content">
@@ -156,13 +146,11 @@
           <a href="#">
             <h3 class="news__item-title text-light">Saison 9 en Approche!</h3>
           </a>
-
           <p class="news__item-text">Wotch a kofee avec ton bibalaekaess et ta wurscht ? Yeuh non che suis
             au réchime,
             je ne mange plus que des
             Grumbeere light
             et che fais de la chym avec Bertranch, Melicha et Chulien. Tiens, un rottznoz sur le comptoir. </p>
-
           <a class="learn-more-button d-flex justify-content-center text-light bg-dark" href="">En savoir plus</a>
         </div>
       </div>
@@ -177,13 +165,11 @@
           <a href="#">
             <h3 class="news__item-title text-light">Du nouveau côté lootbox!</h3>
           </a>
-
           <p class="news__item-text">Wotch a kofee avec ton bibalaekaess et ta wurscht ? Yeuh non che suis
             au réchime,
             je ne mange plus que des
             Grumbeere light
             et che fais de la chym avec Bertranch, Melicha et Chulien. Tiens, un rottznoz sur le comptoir</p>
-
           <a class="learn-more-button d-flex justify-content-center text-light bg-dark" href="">En savoir plus</a>
         </div>
       </div>
@@ -198,13 +184,11 @@
           <a href="#">
             <h3 class="news__item-title text-light">Melissa toujours pas stuff pour raid...</h3>
           </a>
-
           <p class="news__item-text">Wotch a kofee avec ton bibalaekaess et ta wurscht ? Yeuh non che suis
             au réchime,
             je ne mange plus que des
             Grumbeere light
             et che fais de la chym avec Bertranch, Melicha et Chulien. Tiens, un rottznoz sur le comptoir</p>
-
           <a class="learn-more-button d-flex justify-content-center text-light bg-dark" href="">En savoir plus</a>
         </div>
       </div>
@@ -231,9 +215,6 @@
       </div>
     </div>
   </div>
-
-
-
   <footer class="footer d-flex flex-column mt-5">
     <div class="footer__contact d-flex justify-content-around mb-5">
       <a href="#" class="action-button ">Contact</a>
@@ -255,7 +236,6 @@
       <a href="#"><i class="fa fa-github" aria-hidden="true"></i></a>
       <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
     </div>
-
   </footer>
 
 </body>
