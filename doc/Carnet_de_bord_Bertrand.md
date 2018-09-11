@@ -51,3 +51,12 @@
 
     * Squelette HTML + Mise en place display de base ( index.html )
         => Travail à 3 sur un Visual Studio grâce à l'extension Live Share
+
+# Sprint 1.2
+
+++++ 11 septembre 2011 ++++
+
+   * Réunion le matin avec Lucie, nous avons déjà résolus pas mal de problémes ( voir au dessus ) mais il nous manquait de la rigueur sur le CDC
+                                                           => Refonte entiére du CDC et du Trello
+
+   * Grâce à cela nous gagnons beaucoup en visibilité sur notre projet
