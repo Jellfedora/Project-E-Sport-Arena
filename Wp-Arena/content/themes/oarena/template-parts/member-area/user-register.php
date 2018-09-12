@@ -71,6 +71,8 @@ class Register_user
 
     public function __create_user()
     {
+        $user_email='';
+        $user_name='';
         $user_email='test2@test.fr';
         $user_name ='test2';
         $user_id = username_exists( $user_name );

@@ -10,6 +10,7 @@ Version: 1.0.0
     if (!defined('WPINC')) {die();}
 
     require plugin_dir_path(__FILE__). 'inc/tournament_cpt.php';
+    require plugin_dir_path(__FILE__). 'inc/register.php';
 
     $tournament_cpt = new Tournament_cpt();
 
