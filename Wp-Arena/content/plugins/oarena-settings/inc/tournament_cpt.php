@@ -104,7 +104,8 @@ class Tournament_cpt
         $args = [
             'labels'                        => $labels,
             'hierarchical'                  => false,
-            'public'                        => true
+            'public'                        => true,
+            'show_admin_column'             => true
         ];
 
         register_taxonomy('jeu', 'tournament',  $args);
@@ -135,7 +136,8 @@ class Tournament_cpt
             'labels'                    => $labels,
             'hierarchical'              => true,
             'show_in_rest'              => true,
-            'public'                    => true
+            'public'                    => true,
+            'show_admin_column'         => true
         ];
 
         register_taxonomy('team', 'tournament', $args);
