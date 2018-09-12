@@ -1,4 +1,5 @@
 <?php get_header(); ?>
+
     <?php get_template_part('template-parts/front-page/register') ; ?>
 
     <?php get_template_part('template-parts/front-page/carousel') ; ?>
