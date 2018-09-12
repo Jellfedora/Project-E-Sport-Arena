@@ -11,9 +11,11 @@
       </button>
 
     <?php get_template_part('template-parts/header/header', 'nav'); ?>
-    
+  </div>
+  <div>
     <?php get_template_part('template-parts/member-area/user-login'); ?>
   </div>
-
-
+  <div>
+    <?php get_template_part('template-parts/member-area/user-register'); ?>
+</div>
 </header>
