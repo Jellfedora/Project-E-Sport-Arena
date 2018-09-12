@@ -2,6 +2,8 @@
 /*
 Template Name: Contact form
 */
+
+
 $nameError = '';
 $emailError = '';
 $commentError = '';
