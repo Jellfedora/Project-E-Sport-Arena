@@ -34,4 +34,5 @@
       </ul>
     </div>
   </nav>
+  <?php get_template_part('template-parts/member-area/user-login'); ?>
 </header>
