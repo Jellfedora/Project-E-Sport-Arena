@@ -74,6 +74,9 @@ define('WP_CONTENT_DIR', dirname(ABSPATH) . '/content');
 // J'indique à WordPress l'url du dossier "wp-content"
 define('WP_CONTENT_URL', 'http://_URLDEWORDPRESS_/content' );
 
+define('WP_SITEURL', 'http://_URLDEWORDPRESS_/wp' );
+define('WP_HOME', 'http://_URLDEWORDPRESS_/' );
+
 /**
  * Pour les développeurs : le mode déboguage de WordPress.
  *
