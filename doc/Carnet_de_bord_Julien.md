@@ -39,3 +39,4 @@
 
 * Mise en place de la connexion d'un utilisateur
 * Intégration + début code pour l'inscription d'un utilisateur
+* Prise de tête sur git (encore)
