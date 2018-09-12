@@ -7,5 +7,4 @@ wp/
 !/content/plugins
 /content/plugins/*
 !/content/plugins/oarena-settings
-/content/uploads
 wp-config.php
