@@ -19,3 +19,17 @@ function oarena_setup()
         }
             
 add_action('after_setup_theme', 'oarena_setup');
+
+
+function contact_form() {
+
+	if (isset($_POST['send-to-form']) && isset($_POST['name_of_nonce_field']))  {
+
+		if (wp_verify_nonce($_POST['name_of_nonce_field'], 'name_of_my_action')) {
+
+
+		}
+
+	}
+}
+add_action('template_redirect', 'contact_form');
