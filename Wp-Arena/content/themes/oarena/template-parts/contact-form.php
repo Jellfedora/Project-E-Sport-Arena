@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Contact Form
+Template Name: Contact form
 */
 $nameError = '';
 $emailError = '';
