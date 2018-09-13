@@ -40,3 +40,13 @@
 * Mise en place de la connexion d'un utilisateur
 * Intégration + début code pour l'inscription d'un utilisateur
 * Prise de tête sur git (encore)
+
+# Sprint 1.4
+
+* Réorganisation du Trello et remaniement équipe
+* Test de création d'un nouvel utilisateur via un plugin
+* Save BDD
+* * https://codex.wordpress.org/Function_Reference/username_exists
+* * https://codex.wordpress.org/Function_Reference/wp_generate_password
+* * https://codex.wordpress.org/Function_Reference/email_exists
+* * https://codex.wordpress.org/Function_Reference/wp_create_user
