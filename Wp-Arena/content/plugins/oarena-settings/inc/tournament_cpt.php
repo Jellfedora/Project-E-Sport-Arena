@@ -124,10 +124,10 @@ class Tournament_cpt
             'view_item'                  => 'Voir toutes les teams',
             'separate_items_with_commas' => 'Séparer les teams avec une virgule',
             'add_or_remove_items'        => 'Ajouter ou supprimer une team',
-            'choose_from_most_used'      => 'Choisir parmis les teams les plus utilisés',
+            'choose_from_most_used'      => 'Choisir parmis les teams les plus utilisées',
             'popular_items'              => 'Teams populaires',
             'search_items'               => 'Rechercher une team',
-            'not_found'                  => 'Aucune team trouvé',
+            'not_found'                  => 'Aucune team trouvée',
             'items_list'                 => 'Lister les teams',
             'items_list_navigation'      => 'Lister les teams',
         ];

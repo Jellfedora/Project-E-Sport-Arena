@@ -60,3 +60,13 @@
                                                            => Refonte entiére du CDC et du Trello
 
    * Grâce à cela nous gagnons beaucoup en visibilité sur notre projet
+
+# Sprint 1.3
+
+++++ 12 septembre 2011 ++++
+
+    * Création du theme setup 
+
+    * Découpage tout en template ( home / listes / actualité / tournoi )
+
+    * Dynamisme minimal de toutes les pages

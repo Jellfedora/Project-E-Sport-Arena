@@ -68,3 +68,18 @@
 * Refonte du cahier des charges
 
 * Refonte du Trello
+
+
+# Sprint 1.3 12 septembre 2018
+
+* Création CPT tournoi 
+
+* Taxonomie jeu et team
+
+* Début création plugin contact form
+
+* Découpage en template, affichage liste actualités, liste tournois, page tournoi page actualités => dynamique OK 
+
+* Connection au site
+
+* Début inscription
