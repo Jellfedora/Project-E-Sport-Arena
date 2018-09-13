@@ -1,5 +1,6 @@
 <?php
 
+//A deplacer dans le plugin!!
 
 // Login form
 if ( ! is_user_logged_in() ) {
