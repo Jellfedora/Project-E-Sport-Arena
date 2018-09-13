@@ -11,9 +11,9 @@
       </button>
 
     <?php get_template_part('template-parts/header/header', 'nav'); ?>
+    <?php get_template_part('template-parts/member-area/user-login'); ?>
   </div>
   <div>
-    <?php get_template_part('template-parts/member-area/user-login'); ?>
   </div>
 
 <a href="register"><button class="action-button">Inscription</button></a>
