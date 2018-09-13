@@ -83,3 +83,4 @@
 * Connection au site
 
 * Début inscription
+https://codex.wordpress.org/Function_Reference/wp_create_user
