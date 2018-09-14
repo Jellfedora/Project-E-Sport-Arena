@@ -50,3 +50,4 @@
 * * https://codex.wordpress.org/Function_Reference/wp_generate_password
 * * https://codex.wordpress.org/Function_Reference/email_exists
 * * https://codex.wordpress.org/Function_Reference/wp_create_user
+* Ajout des redirections sur le plugin oarena-users

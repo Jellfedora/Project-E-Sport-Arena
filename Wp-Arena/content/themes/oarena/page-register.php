@@ -20,12 +20,21 @@
     </div>
 
     <div class="form-group">
+        <label for="password">Mot de passe *</label>
+        <input type="password" class="form-control" id="password" name="password" aria-describedby="passwordHelp" placeholder="Choisissez votre mot de passe" required>
+        <small id="passwordHelp" class="form-text text-muted">8 caractères minimum, et avec au moins une lettre et un chiffre</small>
+    </div>
+    <div class="form-group">
+        <label for="password2">Confirmation *</label>
+        <input type="password" class="form-control" id="password2" name="password2" placeholder="Confirmation du mot de passe" required>
+    </div>
+
+    <div class="form-group">
         <small class="form-text text-muted">* champs obligatoires</small>
     </div>
      <input type="submit" name="envoi">
 </form>
 
-<?php //$register = new oArena_register(); ?>
 
 
 <?php get_footer(); ?>

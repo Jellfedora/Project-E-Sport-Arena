@@ -9,27 +9,60 @@ Class oArena_register
 
     public function addUser()
     {
-        //$_POST['email']='';
-        //$_POST['username']='';
-        //$user_email= $_POST['email'];
-        //$user_name= $_POST['username'];
-        //$user_email='';
-        //$user_name='';
+        $errorList =array();
 
     // If the form is submitted
     if(isset($_POST['envoi'])) {
         $user_name= $_POST['username'];
         $user_email= $_POST['email'];
-        // Returns the user ID if the user exists or false if the user doesn't exist.
-        $user_id = username_exists( $user_name );
-    
-         // This function will check whether or not a given email address ($email) has 
+        $user_password= $_POST['password'];
+        $user_passwordConfirm= $_POST['password2'];
+
+        // Removes spaces (or other characters) at the beginning and end of the string
+        $user_name = trim($user_name);
+        $user_email = trim($user_email);
+        $user_password =trim($user_password);
+        $user_passwordConfirm =trim($user_passwordConfirm);
+
+        // Verify email is conform
+        if (empty($user_email)) {
+                $errorList[] = 'L\'email doit être renseigné';
+            }
+            else if (filter_var($user_email, FILTER_VALIDATE_EMAIL) === false) {
+                $errorList[] = 'L\'email est incorrect';
+            }
+
+        // Verify password is conform
+        if (empty($user_password)) {
+                $errorList[] = 'Le mot de passe doit être renseigné';
+            }
+            else if (strlen($user_password) < 8) {
+                $errorList[] = 'Le mot de passe doit contenir au moins 8 caractères';
+            }
+            else if ($user_password !== $user_passwordConfirm) {
+                $errorList[] = 'Les deux mots de passe doivent être identiques';
+            }
+        
+        // Verify username exist
+        if ($user_id = username_exists( $user_name )){
+            $errorList[] = 'Ce nom est déjà pris';
+            }
+            else if ($user_name ==! ctype_lower($user_name)) {
+            $errorList[] = 'Ce nom n\'est pas en minuscule';
+            }
+        
+        
+            
+        var_dump($errorList);exit;
+
+        // This function will check whether or not a given email address ($email) has 
         // already been registered to a username, and returns that users ID (or false if none exists).
         if ( !$user_id && email_exists($user_email) == false ) {
+
         // Generates a random password drawn from the defined set of characters.
         $random_password = wp_generate_password( 12, false );
         $user_id = wp_create_user( $user_name, $random_password, $user_email );
-        echo ('Nouveau membre créé: '. $user_name . '<br/>');
+        //echo ('Nouveau membre créé: '. $user_name . '<br/>');
         // Redirect to home
         wp_redirect(home_url());
         exit;
@@ -41,6 +74,33 @@ Class oArena_register
         }}
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
     //var_dump($user_email);exit;

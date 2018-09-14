@@ -17,4 +17,16 @@
   </div>
 
 <a href="register"><button class="action-button">Inscription</button></a>
+
+
+<?php 
+// Affiche le nom du user connecté
+if (  is_user_logged_in() ) {
+$current_user = wp_get_current_user();
+echo 'Bienvenue ' . $current_user->user_login . '<br />';
+}
+?>
+
+
+
 </header>
