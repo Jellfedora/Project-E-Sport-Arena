@@ -34,7 +34,6 @@ Class oArena_register
         wp_redirect(home_url());
         exit;
         } else {
-        //exit;
         echo($user_name .' ou '.$user_email.' existe déjà'. '<br/>');
         // Ajouter la Redirection
         wp_redirect( 'register' );
