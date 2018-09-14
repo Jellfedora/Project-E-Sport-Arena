@@ -43,7 +43,7 @@ class Tournament_cpt
 
         $args = [
             'label'                         => 'Tournoi',
-            'description'                   => 'tournoi de l\'arena',
+            'description'                   => 'Tournois de l\'arena',
             'labels'                        => $labels,
             'supports'                      => [
                 'title',
@@ -63,7 +63,7 @@ class Tournament_cpt
                 'slug'                         => 'tournoi',
                 'with_front'                   => true
             ],
-        ];
+        ];       
 
         register_post_type('tournament',  $args);
     }
@@ -110,40 +110,7 @@ class Tournament_cpt
 
         register_taxonomy('jeu', 'tournament',  $args);
 
-    // I create my taxonomy games
-
-        $labels = [
-            'name'                       => 'Teams',
-            'singular_name'              => 'Team',
-            'menu_name'                  => 'Teams',
-            'all_items'                  => 'Toutes les teams',
-            'new_item_name'              => 'Nouvelle team',
-            'add_new_item'               => 'Ajouter une team',
-            'update_item'                => 'Mettre à jour une team',
-            'edit_item'                  => 'Editer une team',
-            'view_item'                  => 'Voir toutes les teams',
-            'separate_items_with_commas' => 'Séparer les teams avec une virgule',
-            'add_or_remove_items'        => 'Ajouter ou supprimer une team',
-            'choose_from_most_used'      => 'Choisir parmis les teams les plus utilisées',
-            'popular_items'              => 'Teams populaires',
-            'search_items'               => 'Rechercher une team',
-            'not_found'                  => 'Aucune team trouvée',
-            'items_list'                 => 'Lister les teams',
-            'items_list_navigation'      => 'Lister les teams',
-        ];
-
-        $args = [
-            'labels'                    => $labels,
-            'hierarchical'              => true,
-            'show_in_rest'              => true,
-            'public'                    => true,
-            'show_admin_column'         => true
-        ];
-
-        register_taxonomy('team', 'tournament', $args);
-
     }
-
   
     // As we are going to manipulate new types of content, therefore new roads
     // => when the plugin will be activated we will execute create cpt and taxonomies. => flush to reload the roads
