@@ -16,7 +16,7 @@
 
     if ($our_articles->have_posts()): while ($our_articles->have_posts()): $our_articles->the_post(); 
 
-        get_template_part('template-parts/tournament/tournament' , 'display');
+        get_template_part('template-parts/tournament/tournament' , 'single');
 
     endwhile;
 

@@ -1,20 +1,20 @@
 <h2 class="news__title text-light mt-3 mb-3 text-center">&#9660; Equipes &#9660; </h2>
-    <div class="cards d-flex justify-content-around flex-wrap">
+    <div class="cards text-center flex-wrap">
 
             <?php 
 
             $args= [
                 'post_type' => 'team',
                 'posts_per_page' => -1,
-                'order' => 'DESC',
-                'order_by' => 'date'
+                'order' => 'ASC',
+                'orderby' => 'name'
             ];
 
             $our_articles = new WP_Query($args);
 
             if ($our_articles->have_posts()): while ($our_articles->have_posts()): $our_articles->the_post(); 
 
-            get_template_part('template-parts/teams/team-display');
+            get_template_part('template-parts/team/team' , 'single');
 
             endwhile;
 
