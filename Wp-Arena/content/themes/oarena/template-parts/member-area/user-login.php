@@ -5,7 +5,7 @@
 // Login form
 if ( ! is_user_logged_in() ) {
 	wp_login_form( array(
-        'redirect'       => site_url( 'http://localhost/Cours/Wordpress/Projet/Projet-master/Project-E-Sport-Arena/Wp-Arena/actualites/' ), // Returns to the current page
+        'redirect'       => home_url(), // Return to home after login
         'label_username' => 'Login',
         'label_password' => 'Mot de passe',
         'label_remember' => 'Se souvenir de moi',
@@ -20,6 +20,6 @@ if ( ! is_user_logged_in() ) {
 	) );
 } else {
 	echo '<a href="' . admin_url( 'user-edit.php?user_id='. get_current_user_id() ) .'">Accès au profil</a>';
-	echo '<a class="ml-4" href="' . wp_logout_url( site_url( 'http://localhost/Cours/Wordpress/Projet/Projet-master/Project-E-Sport-Arena/Wp-Arena/actualites/' ) ) .'">Se déconnecter</a>';
+	echo '<a class="ml-4" href="' . wp_logout_url(home_url()) .'">Se déconnecter</a>';
 }
 ?>

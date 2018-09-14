@@ -20,6 +20,8 @@ Class oArena_register
     if(isset($_POST['envoi'])) {
         $user_name= $_POST['username'];
         $user_email= $_POST['email'];
+        $user_password= $_POST['password'];
+        $user_password2= $_POST['password2'];
         // Returns the user ID if the user exists or false if the user doesn't exist.
         $user_id = username_exists( $user_name );
     
@@ -29,7 +31,7 @@ Class oArena_register
         // Generates a random password drawn from the defined set of characters.
         $random_password = wp_generate_password( 12, false );
         $user_id = wp_create_user( $user_name, $random_password, $user_email );
-        echo ('Nouveau membre créé: '. $user_name . '<br/>');
+        //echo ('Nouveau membre créé: '. $user_name . '<br/>');
         // Redirect to home
         wp_redirect(home_url());
         exit;
@@ -41,6 +43,33 @@ Class oArena_register
         }}
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
     //var_dump($user_email);exit;
