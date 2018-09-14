@@ -57,7 +57,7 @@ class Team_cpt
                     'menu_icon'                    => 'dashicons-groups',
                     'has_archive'                  => true,
                     'rewrite'                      => [
-                        'slug'                         => 'team',
+                        'slug'                         => 'teams',
                         'with_front'                   => true
                     ],
                 ];
