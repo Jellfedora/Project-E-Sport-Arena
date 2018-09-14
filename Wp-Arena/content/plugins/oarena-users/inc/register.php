@@ -51,7 +51,7 @@ Class oArena_register
             }
             else if ($user_name ==! ctype_lower($user_name)) {
             $errorList[] = 'Ce nom n\'est pas en minuscule ou contient des chiffres ou caractéres spéciaux';
-            }
+            } 
  
 
         if (!empty($errorList)) {
