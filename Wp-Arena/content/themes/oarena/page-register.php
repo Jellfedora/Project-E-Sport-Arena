@@ -18,12 +18,13 @@
         <small id="emailHelp" class="form-text text-muted">votre adresse email restera secrète</small>
     </div>
     
+    
     <div class="form-group">
         <label for="password">Mot de passe *</label>
         <input type="password" class="form-control" id="password" name="password" aria-describedby="passwordHelp" placeholder="Choisissez votre mot de passe" required>
         <small id="passwordHelp" class="form-text text-muted">8 caractères minimum</small>
     </div>
-    
+
     <div class="form-group">
         <label for="password2">Confirmation *</label>
         <input type="password" class="form-control" id="password2" name="password2" placeholder="Confirmation du mot de passe" required>
