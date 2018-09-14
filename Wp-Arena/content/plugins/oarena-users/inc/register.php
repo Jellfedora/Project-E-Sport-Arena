@@ -9,6 +9,7 @@ Class oArena_register
 
     public function addUser()
     {
+    
         $errorList =array();
 
     // If the form is submitted
@@ -23,10 +24,10 @@ Class oArena_register
         $user_email = trim($user_email);
         $user_password =trim($user_password);
         $user_passwordConfirm =trim($user_passwordConfirm);
-
+    
         // Verify email is conform
         if (empty($user_email)) {
-                $errorList[] = 'L\'email doit être renseigné';
+            $errorList[] = 'L\'email doit être renseigné';
             }
             else if (filter_var($user_email, FILTER_VALIDATE_EMAIL) === false) {
                 $errorList[] = 'L\'email est incorrect';
@@ -34,7 +35,8 @@ Class oArena_register
 
         // Verify password is conform
         if (empty($user_password)) {
-                $errorList[] = 'Le mot de passe doit être renseigné';
+                $errorList[] = 'Le mot de passe doit être renseigné'; 
+                
             }
             else if (strlen($user_password) < 8) {
                 $errorList[] = 'Le mot de passe doit contenir au moins 8 caractères';
@@ -42,33 +44,34 @@ Class oArena_register
             else if ($user_password !== $user_passwordConfirm) {
                 $errorList[] = 'Les deux mots de passe doivent être identiques';
             }
-        
+
         // Verify username exist
         if ($user_id = username_exists( $user_name )){
             $errorList[] = 'Ce nom est déjà pris';
             }
             else if ($user_name ==! ctype_lower($user_name)) {
-            $errorList[] = 'Ce nom n\'est pas en minuscule';
+            $errorList[] = 'Ce nom n\'est pas en minuscule ou contient des chiffres ou caractéres spéciaux';
             }
-        
-        
-            
-        var_dump($errorList);exit;
+ 
 
-        // This function will check whether or not a given email address ($email) has 
-        // already been registered to a username, and returns that users ID (or false if none exists).
+        if (!empty($errorList)) {
+            var_dump ($errorList);exit;
+        }
+
+
+        // Verify email exist
         if ( !$user_id && email_exists($user_email) == false ) {
-
-        // Generates a random password drawn from the defined set of characters.
-        $random_password = wp_generate_password( 12, false );
-        $user_id = wp_create_user( $user_name, $random_password, $user_email );
-        //echo ('Nouveau membre créé: '. $user_name . '<br/>');
+        // Succes created user!
+        $user_id = wp_create_user( $user_name, $user_password, $user_email );
         // Redirect to home
         wp_redirect(home_url());
         exit;
+
         } else {
-        echo($user_name .' ou '.$user_email.' existe déjà'. '<br/>');
-        // Ajouter la Redirection
+        $errorList[] = $user_name .' ou '.$user_email.' existe déjà';
+        
+        
+        // Redirection to register page
         wp_redirect( 'register' );
         exit;  
         }}
