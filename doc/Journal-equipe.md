@@ -84,3 +84,31 @@
 
 * Début inscription
 https://codex.wordpress.org/Function_Reference/wp_create_user
+
+# Sprint 1.4 14 septembre 2018
+
+* Réunion présentation de projet de la classe le matin.
+
+* Problémes avec Mélissa tout l'aprés midi ( Elle quitte le projet )
+
+* Refonte de tous les sprints
+
+* Dans la soirée Julien met en place le systéme d'inscription
+
+# Sprint 1.5 15 septembre 2018
+
+* Envoie de messages du formulaire de contact
+
+* Reception messages formulaire de contact
+
+* Création d'équipe => Version trés simpliste => https://mosaika.fr/utiliser-wp_insert_post-pour-creer-du-contenu-dynamiquement-dans-wordpress/
+
+* Enregistrement équipe en BDD => https://developer.wordpress.org/reference/functions/wp_insert_post/
+
+* Archive de team
+
+* Commencer a regarder les roles => https://codex.wordpress.org/fr:R%C3%B4les_et_Capacit%C3%A9s
+
+* Ajout de conditions au formulaire d'inscription
+
+* Site hebergé sur le serveur 

@@ -28,3 +28,6 @@ Version: 1.0.0
     register_deactivation_hook(__FILE__, [$team_cpt, 'deactivation']);
     register_activation_hook(__FILE__, [$contact_cpt, 'activation']);
     register_deactivation_hook(__FILE__, [$contact_cpt, 'deactivation']);
+
+    // register_activation_hook(__FILE__, [$roles, 'activation']);
+    // regiter_deactivation_hook(__FILE__, [$roles, 'deactivation']);

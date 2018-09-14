@@ -54,7 +54,7 @@
 
 # Sprint 1.2
 
-++++ 11 septembre 2011 ++++
+++++ 11 septembre 2018 ++++
 
    * Réunion le matin avec Lucie, nous avons déjà résolus pas mal de problémes ( voir au dessus ) mais il nous manquait de la rigueur sur le CDC
                                                            => Refonte entiére du CDC et du Trello
@@ -63,10 +63,41 @@
 
 # Sprint 1.3
 
-++++ 12 septembre 2011 ++++
+++++ 12 septembre 2018 ++++
 
     * Création du theme setup 
 
     * Découpage tout en template ( home / listes / actualité / tournoi )
 
     * Dynamisme minimal de toutes les pages
+
+# Sprint 1.4
+
+++++ 13 septembre 2018 ++++
+
+* Durant la réunion du matin, de gros problémes avec Mélissa qui quittera le projet
+
+* Réunion le matin avec la promo, je fais la présentation du projet, apparement nous ne sommes pas trop mal
+
+* On réorganise le trello, d'un projet pour 4 personnes nous ne sommes plus que 2 actuellement. Les nuits vont être courtes. On est même encore plus motivés face
+  à tout ce travail.
+
+* Le soir je ne suis pas disponible mais Julien réussi à mettre en place l'inscription.
+
+# Sprint 1.5
+
+++++ 14 septembre 2018 ++++
+
+* Aprés la réunion du matin, Julien repart sur ses conditions du formulaire et quand à moi je fixe 2 3 petits bugs.
+
+* Aprés une petite recherche de doc, je décide de faire un CPT team et non une taxonomie comme on avait envisagé au début
+
+* Je créé donc un nouveau cpt, et me lance dans la gestion du formulaire, ma premiere question a été "comment vais-je autorisé un utilisateur a creer du contenu ? " 
+
+* Avec un formulaire que je vais intercepter et je découvre la fonction wp_insert_post => https://developer.wordpress.org/reference/functions/wp_insert_post/
+
+* Je fais de même avec le formulaire de contact sauf que je limite l'édition des messages dans le cpt
+
+* Je fix la page d'archives tournois, créé la liste team ect 
+
+* Je fais quelques recherches sur les roles mais je dois partir
