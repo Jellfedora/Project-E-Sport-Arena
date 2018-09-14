@@ -51,3 +51,8 @@
 * * https://codex.wordpress.org/Function_Reference/email_exists
 * * https://codex.wordpress.org/Function_Reference/wp_create_user
 * Ajout des redirections sur le plugin oarena-users
+
+# Sprint 1.5
+
+* Plugin inscription utilisateur terminé mais encore à fignoler
+* Installation de notre wordpress sur le serveur Gandhi!
