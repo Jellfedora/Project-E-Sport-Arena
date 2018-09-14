@@ -5,7 +5,7 @@
 
             $args= [
                 'post_type' => 'team',
-                'posts_per_page' => 6,
+                'posts_per_page' => -1,
                 'order' => 'DESC',
                 'order_by' => 'date'
             ];
