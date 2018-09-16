@@ -41,7 +41,7 @@
 * Intégration + début code pour l'inscription d'un utilisateur
 * Prise de tête sur git (encore)
 
-# Sprint 1.4
+# Sprint 1.4 Vendredi 14 septembre
 
 * Réorganisation du Trello et remaniement équipe
 * Test de création d'un nouvel utilisateur via un plugin
@@ -52,7 +52,13 @@
 * * https://codex.wordpress.org/Function_Reference/wp_create_user
 * Ajout des redirections sur le plugin oarena-users
 
-# Sprint 1.5
+# Sprint 1.5 Samedi 15 septembre
 
 * Plugin inscription utilisateur terminé mais encore à fignoler
 * Installation de notre wordpress sur le serveur Gandhi!
+
+# Sprint 1.7 Dimanche 16 septembre
+
+* Découpage de la partie connexion / inscription du header
+* Ajout de la page 404
+* Header refait avec une navbar responsive
