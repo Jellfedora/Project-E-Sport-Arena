@@ -127,6 +127,9 @@ li {
     transform: translateY(-50%);
     font-size: 1.4em; }
 
+.nav__link a {
+  color: #dd2121; }
+
 .intro__small__title {
   padding-left: 0.3em;
   font-size: 2em; }
