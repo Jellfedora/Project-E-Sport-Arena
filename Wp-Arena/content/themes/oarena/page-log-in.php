@@ -1,5 +1,6 @@
 <?php get_header();
 
+// Form of log in
 wp_login_form(array(
     'redirect' => home_url(), // Return to home after login
     'label_username' => 'Login',
@@ -14,3 +15,5 @@ wp_login_form(array(
     'remember' => true,
     'value_remember' => false,
 ));
+
+get_footer();
