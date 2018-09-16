@@ -1,11 +1,10 @@
-<?php get_header(); 
-
+<?php get_header();
 
 ?>
 
-<form action=" register.php " class="col-12 col-md-6 offset-md-3 mb-5" method="post">
+<form action="register.php" class="col-12 col-md-6 offset-md-3 mb-5" method="post">
     <h1>Inscription</h1>
-    
+
     <div class="form-group">
         <label for="username">Nom d'utilisateur *</label>
         <input type="text" class="form-control" id="username" name="username"  aria-describedby="usernameHelp" placeholder="Nom d'utilisateur" required>
@@ -17,8 +16,8 @@
         <input type="email" class="form-control" id="email" name="email"  aria-describedby="emailHelp" placeholder="Adresse email" required>
         <small id="emailHelp" class="form-text text-muted">votre adresse email restera secrète</small>
     </div>
-    
-    
+
+
     <div class="form-group">
         <label for="password">Mot de passe *</label>
         <input type="password" class="form-control" id="password" name="password" aria-describedby="passwordHelp" placeholder="Choisissez votre mot de passe" required>
@@ -38,4 +37,4 @@
 
 
 
-<?php get_footer(); ?>
+<?php get_footer();?>
