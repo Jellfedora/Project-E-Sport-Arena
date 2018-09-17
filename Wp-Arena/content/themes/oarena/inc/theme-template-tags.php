@@ -1,16 +1,16 @@
 <?php
 
-function get_jeux($post_id)
+function get_game($post_id)
 {
-    return get_post_meta($post_id, 'jeux', true);
+    return get_post_meta($post_id, 'jeu', true);
 }
 
-function get_places($post_id)
+function get_seats($post_id)
 {
     return get_post_meta($post_id, 'places', true);
 }
 
-function get_prix($post_id)
+function get_price($post_id)
 {
     return get_post_meta($post_id, 'prix', true);
 }

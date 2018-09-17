@@ -2,9 +2,9 @@
         <div class="card__intro d-flex justify-content-around ">
         <img class="card-img-top p-1" src="https://source.unsplash.com/100x100/?fortnite">
         <ul class="mt-2 ml-2">
-            <i class="fa fa-gamepad" aria-hidden="true"><span class="intro__font ml-1"> <?= get_jeux(get_the_ID()); ?></span></i>
-            <i class="fa fa-user " aria-hidden="true"><span class="intro__font ml-1"> <?= get_places(get_the_ID()); ?></span></i>
-            <i class="fa fa-eur " aria-hidden="true"><span class="intro__font ml-1"> <?= get_prix(get_the_ID()); ?></span></i>
+            <i class="fa fa-gamepad" aria-hidden="true"><span class="intro__font ml-1"> <?= get_game(get_the_ID()); ?></span></i>
+            <i class="fa fa-user " aria-hidden="true"><span class="intro__font ml-1"> <?= get_seats(get_the_ID()); ?></span></i>
+            <i class="fa fa-eur " aria-hidden="true"><span class="intro__font ml-1"> <?= get_price(get_the_ID()); ?></span></i>
             <i class="fa fa-calendar " aria-hidden="true"><span class="intro__font ml-1"> <?= get_date(get_the_ID()); ?></span></i>
         </ul>
         </div>
