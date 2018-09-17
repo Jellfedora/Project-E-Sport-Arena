@@ -3,7 +3,7 @@
 /*
 Plugin Name: oArena Users
 Description: Ajout de l'espace membre de oArena 
-Authors: Mélissa Tarby Julien Lecointe Bertrand PARROCHE
+Author: Julien Lecointe Bertrand PARROCHE
 Version: 1.0.0
 */
 

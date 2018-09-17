@@ -3,7 +3,7 @@
 /*
 Plugin Name: oArena Settings
 Description: Réglages pour le théme oArena: Custom Post type, taxonomies, Custom Fields
-Authors: Mélissa Tarby Julien Lecointe Bertrand PARROCHE
+Authors: Julien Lecointe Bertrand PARROCHE
 Version: 1.0.0
 */
 

@@ -1,5 +1,6 @@
 <?php
 
+// Adding template tags for tournaments cards
 function get_game($post_id)
 {
     return get_post_meta($post_id, 'jeu', true);
