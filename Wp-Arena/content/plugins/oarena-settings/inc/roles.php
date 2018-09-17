@@ -13,6 +13,7 @@ class oArenaRole
         // Création nouveau role pour l'admin team
         add_role('TeamAdmin', 'Administrateur de la team', [
             'read' => true,
+            'edit_posts' => true,
             'edit_published_posts' => true,
         ]);
     }
