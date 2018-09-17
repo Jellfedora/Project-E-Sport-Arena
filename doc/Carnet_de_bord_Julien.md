@@ -72,3 +72,4 @@
 
 * Aprés discussion avec Christophe, je pars sur l'idée de remplacer les utilisateurs par des custom Post type, tout est ok sauf l'affichage d'un membre, essai avec single.php ; single-member ...etc Rien à faire
 * Pti push et save de la BDD puis go dodo!
+* 1h32: Enfin j'ai réussi à afficher la page d'un membre, aprés nettoyage des cookies, restart du plugin enfin cela fonctionne correctement!
