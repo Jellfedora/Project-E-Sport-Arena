@@ -62,3 +62,8 @@
 * Découpage de la partie connexion / inscription du header
 * Ajout de la page 404
 * Header refait avec une navbar responsive
+
+# Sprint 2.1 Lundi 17 septembre
+
+* Ajout des templates tags: jeu, prix, date et places pour les tournois
+* Grosse frayeur avec notre super admin qui a perdu ses droits suites à des tests, heureusement bdd sauvegardée!
