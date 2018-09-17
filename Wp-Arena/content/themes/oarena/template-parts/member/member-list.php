@@ -1,16 +1,26 @@
+<h2 class="news__title text-light mt-3 mb-3 text-center">&#9660; Membres &#9660; </h2>
+    <div class="cards text-center flex-wrap">
 
+            <?php
 
-<h2>Liste des membres:</h2>
+$args = [
+    'post_type' => 'members',
+    'posts_per_page' => -1,
+    'order' => 'ASC',
+    'orderby' => 'name',
+];
 
+$members = new WP_Query($args);
 
+if ($members->have_posts()): while ($members->have_posts()): $members->the_post();
 
-<?php
-$subscribers = get_users('blog_id=1&orderby=nicename&role=subscriber');
-// The list of the subscribers
-//var_dump($subscribers);
-foreach ($subscribers as $user) {
-    echo '<li><a href="#">' . ($user->user_login) . '</li></a>';
+        get_template_part('template-parts/member/member', 'single');
 
-}
+    endwhile;
 
-?>
+    // Je remet les variables globals telle qu'elles étaient avant ma boucle custom
+    wp_reset_postdata();
+
+endif;?>
+
+</div>

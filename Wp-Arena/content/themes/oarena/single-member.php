@@ -4,7 +4,7 @@
 
 if (have_posts()): while (have_posts()): the_post();
 
-        get_template_part('template-parts/team/team', 'display');
+        get_template_part('template-parts/member/member', 'display');
 
     endwhile;
     wp_reset_postdata();endif;

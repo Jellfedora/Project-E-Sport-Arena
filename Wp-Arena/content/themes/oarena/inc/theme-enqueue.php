@@ -1,6 +1,6 @@
 <?php
 
-function oarena_script_stylelink ()
+function oarena_script_stylelink()
 {
     wp_enqueue_style(
         'oagency_app_css',

@@ -1,20 +1,6 @@
-<?php get_header(); ?>
-
-    <?php// wp_list_authors('exclude_admin = 0'); ?>
-
-
-<?php 
-$curauth = (isset($_GET['author_name'])) ? get_user_by('slug', $author_name) : get_userdata(intval($author));
-?>
-
-<h2>Vous êtes sur le profil de <?php echo $curauth->nickname; ?></h2>
-
-<h3>Description</h3>
-<p><?= $curauth->description; ?></p>
-
-<h3>Equipe: <?= truc ?> </h3>
-
-<h3>Mon email</h3>
-<p><?= $curauth->user_email; ?></p>
-
-<?php get_footer(); ?>
+<h3>Nom du Membre:</h3>
+<a href="<?=get_the_permalink(get_the_ID());?>"><h4><?php the_title();?></h4></a>
+<h3>Fait partie de l'équipe:</h3>
+<a href="">Equipe 2</a>
+<hr>
+<hr>
