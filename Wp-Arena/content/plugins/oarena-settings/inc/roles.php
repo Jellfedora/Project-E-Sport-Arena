@@ -10,24 +10,22 @@ Class oArenaRole
     public function addRole()
     {
         // Création nouveau role pour l'admin team
-        add_role('Team Admin', 'Administrateur de la team', [
+        add_role('TeamAdmin', 'Administrateur de la team', [
             'read' => true,
-            
+            'edit_published_posts' => true,            
         ]);
     }
 
     public function addCap()
     {
         $role = get_role('Team Admin');
-        $role->add_cap('edit_published_posts');
+    
 
-        // $role = get_role('administrator');
-        // $role->add_cap('oarena_show_secret');
     }
 
     public function removeRole()
     {
-        remove_role('Team Admin');
+        remove_role('TeamAdmin');
     }
 
     public function activation()
@@ -42,4 +40,3 @@ Class oArenaRole
     }
 }
 
-add_action('init', 'register_role_cap');

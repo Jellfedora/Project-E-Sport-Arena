@@ -8,7 +8,7 @@ Template Name: Create-user
 
     <?php
 
-        // Si formulaire envoyé on récupere les données dans des variables
+        // If the form is sent we collect datas in vars
         if (isset($_POST['submit'])) {
 
             echo 'Votre équipe a été créée';
@@ -18,7 +18,7 @@ Template Name: Create-user
             // fonction wp qui 'néttoie' le contenu du post
             $myteamdescription = wp_kses_post($_POST['myteamdescription']);
         
-        // Création du contenu team dans la BDD
+        // Create content in BDD
 
         $team_post = [
             'post_title' => $teamName,
