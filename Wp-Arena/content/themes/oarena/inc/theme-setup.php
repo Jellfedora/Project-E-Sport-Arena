@@ -17,6 +17,7 @@ function oarena_setup()
             'quote'
             ]);    
         }
+        
             
 add_action('after_setup_theme', 'oarena_setup');
 
