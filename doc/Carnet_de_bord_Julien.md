@@ -67,3 +67,8 @@
 
 * Ajout des templates tags: jeu, prix, date et places pour les tournois
 * Grosse frayeur avec notre super admin qui a perdu ses droits suites à des tests, heureusement bdd sauvegardée!
+
+# Sprint 2.2 nuit du lundi 17 au mardi 18 septembre
+
+* Aprés discussion avec Christophe, je pars sur l'idée de remplacer les utilisateurs par des custom Post type, tout est ok sauf l'affichage d'un membre, essai avec single.php ; single-member ...etc Rien à faire
+* Pti push et save de la BDD puis go dodo!
