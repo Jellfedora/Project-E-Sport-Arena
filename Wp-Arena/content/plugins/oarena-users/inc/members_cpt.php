@@ -46,12 +46,10 @@ class oArena_members_cpt
             'labels' => $labels,
             'supports' => [
                 'title',
-                'author',
                 'editor',
                 'thumbnail',
                 'custom-fields',
                 'revisions',
-                'excerpt',
             ],
             'hierarchical' => false,
             'public' => true,
