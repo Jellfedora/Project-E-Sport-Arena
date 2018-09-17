@@ -38,6 +38,7 @@ Version: 1.0.0
     require plugin_dir_path(__FILE__). 'inc/roles.php';
 
     $roles = new oArenaRole();
+    
     register_activation_hook(__FILE__, [$roles, 'activation']);
     register_deactivation_hook(__FILE__, [$roles, 'deactivation']);
 

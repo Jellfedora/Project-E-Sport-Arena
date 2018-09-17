@@ -29,6 +29,15 @@ Template Name: Create-user
         
         wp_insert_post($team_post);
 
+        // Je récupére l'ID du membre
+        $user_id = get_current_user_id();
+
+        // Je lui change son role en team admin
+        wp_update_user([
+            'ID' => $user_id,
+            'role' => 'TeamAdmin'
+        ]);
+
         // J'affiche le formulaire s'il n'a pas été envoyé        
         } else { ?> 
 
