@@ -30,23 +30,20 @@ Template Name: Create-user
         wp_insert_post($team_post);
 
         // Je récupére l'ID du membre
-        $user_id = get_current_user_id();
+         $user_id = get_current_user_id();
 
-        // Je lui change son role en team admin
-        wp_update_user([
-            'ID' => $user_id,
-            'role' => 'TeamAdmin'
-        ]);
-
+         // Je lui change son role en team admin
+         wp_update_user([
+             'ID' => $user_id,
+             'role' => 'TeamAdmin'
+         ]);
         // J'affiche le formulaire s'il n'a pas été envoyé        
         } else { ?> 
 
         <!-- Affichage du formulaire -->
-
-        <h1 style="color: red;">NE PAS CREER D EQUIPE EN TANT QU ARENA !!!</h1>
         
         <!-- Form action the permalink recharge la page a la soumission du formulaire, method post pour récuperer les données du form -->
-        <form action="<?= the_permalink(); ?>" method="post">
+        <form name="formsubmit" action="<?= the_permalink(); ?>" method="post">
         <!-- Test input simple-->
         <input type="text" name="team-name" placeholder="Nom de votre team">
         <hr>
