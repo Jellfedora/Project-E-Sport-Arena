@@ -112,3 +112,15 @@ https://codex.wordpress.org/Function_Reference/wp_create_user
 * Ajout de conditions au formulaire d'inscription
 
 * Site hebergé sur le serveur 
+
+# Sprint 2.1 17 septembre 2018
+
+* Page membre et archives membres et 404
+
+* Création CPT membre 
+ 
+* Création métabox équipe dans cpt membre
+
+* Change de voie, nous avons décidés de partir sur un CPT de membre avec les droits minimaux, pour ne même pas avoir accés au back office, et SURTOUT pouvoir réliés entres eux les membres et les team.
+
+* Création d'un rôle teamadmin qui peux editer ses propres posts à la soumission du formulaire.

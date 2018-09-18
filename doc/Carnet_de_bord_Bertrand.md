@@ -106,6 +106,11 @@
 
 ++++ 17 septembre 2018 ++++
 
-* Création du rôle AdminTeam à la création d'une team
+* Création du rôle AdminTeam à la création d'une team => https://codex.wordpress.org/fr:R%C3%B4les_et_Capacit%C3%A9s
+    A la soumission du form je change son rôle et créé un CPT et je fais un wp_update_user avec comme argument le rôle créer dans roles.php
 
-* Création archives membres et membres 
+* Changement de cap => CPT membres
+
+* On a perdu du temps à cause de changement de rôle de l'admin.
+
+* J'ai perdu énormément de temps sur le plugin oCreateTeam, à cause d'une non  activation ....  

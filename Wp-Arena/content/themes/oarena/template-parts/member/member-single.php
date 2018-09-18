@@ -1,5 +1,3 @@
-
-
 <div class="news__item">
         <div class="news__item-image" style="background-image: url(<?=get_the_post_thumbnail_url();?>);">
         </div>
@@ -12,3 +10,15 @@
             <h4>Fait partie de l'équipe:</h4>
         </div>
 </div>
+
+<form action="TODO">
+  <div class="form-group">
+    <label for="email">Email address:</label>
+    <input type="email" class="form-control" id="email">
+  </div>
+  <div class="form-group">
+    <label for="pwd">Nom:</label>
+    <input type="text" class="form-control" id="pwd">
+  </div>
+  <button type="submit-member" class="btn btn-default">Edit</button>
+</form>
