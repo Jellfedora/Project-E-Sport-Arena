@@ -2,7 +2,7 @@
 
 // Custom Post Type: Members
 
-class oArena_members_cpt
+class oArenaMembersCpt
 {
     public function __construct()
     {
@@ -53,7 +53,7 @@ class oArena_members_cpt
             ],
             'hierarchical' => false,
             'public' => true,
-            'menu_position' => 20,
+            'menu_position' => 5,
             'menu_icon' => 'dashicons-id',
             'has_archive' => true,
             'rewrite' => [

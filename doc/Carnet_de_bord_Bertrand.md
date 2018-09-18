@@ -101,3 +101,11 @@
 * Je fix la page d'archives tournois, créé la liste team ect 
 
 * Je fais quelques recherches sur les roles mais je dois partir
+
+# Sprint 2.1
+
+++++ 17 septembre 2018 ++++
+
+* Création du rôle AdminTeam à la création d'une team
+
+* Création archives membres et membres 

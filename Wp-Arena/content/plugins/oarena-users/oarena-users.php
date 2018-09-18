@@ -15,7 +15,7 @@ require plugin_dir_path(__FILE__) . 'inc/metabox.php';
 
 // Instantiation of oArena_register
 $oArena_register = new oArena_register();
-$oArena_members = new oArena_members_cpt();
+$oArena_members = new oArenaMembersCpt();
 
 register_activation_hook(__FILE__, [$oArena_register, 'activation']);
 register_deactivation_hook(__FILE__, [$oArena_register, 'deactivation']);

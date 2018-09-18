@@ -15,7 +15,7 @@ get_header(); ?>
                  * Si envoyé, analyser les données du formulaire et les stocker dans des variables
                  */
  
-                if (isset($_POST['submit'])) {
+                if (isset($_POST['submit']) && !empty($_POST['myemail'])) {
                         $name = htmlspecialchars($_POST['myname']);
                         $email = sanitize_email($_POST['myemail']);
                         $message = wp_kses_post($_POST['mymessage']);

@@ -59,22 +59,23 @@ class oArena_register
                 // Succes created user!
                 $user_id = wp_create_user($user_name, $user_password, $user_email);
 
-                // $id = wp_create_member
-                //// ICCCCCCCCCIIIIIIIIII
-                //    $team_post = [
-                //'post_title' => $teamName,
-                //'post_content' => $myteamdescription,
-                //'post_type' => 'team',
-                //'post_status' => 'publish',
-                //];
+            $name = trim(htmlspecialchars($_POST['username']));
+                       
+            // Create content in BDD
+            
+            
+            $profile_post = [
+                'post_title' => $name,
+                'post_type' => 'members',
+                'post_status' => 'publish'
+            ];
+            
+            wp_insert_post($profile_post);
 
-                wp_insert_post($team_post);
 
-                add_user_meta('member_id', $id);
-
-                // Redirect to home
-                wp_redirect(home_url());
-                exit;
+            // Redirect to home
+            wp_redirect(home_url());
+            exit;
 
             } else {
                 $errorList[] = $user_name . ' ou ' . $user_email . ' existe déjà';
