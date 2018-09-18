@@ -124,3 +124,11 @@ https://codex.wordpress.org/Function_Reference/wp_create_user
 * Change de voie, nous avons décidés de partir sur un CPT de membre avec les droits minimaux, pour ne même pas avoir accés au back office, et SURTOUT pouvoir réliés entres eux les membres et les team.
 
 * Création d'un rôle teamadmin qui peux editer ses propres posts à la soumission du formulaire.
+
+# Sprint 2.2 18 septembre 2018
+
+* L'admin team a maintenant sa propre page d'équipe 
+
+* Beaucoup de recherches
+
+* Début création formulaire edit sur front

@@ -114,3 +114,13 @@
 * On a perdu du temps à cause de changement de rôle de l'admin.
 
 * J'ai perdu énormément de temps sur le plugin oCreateTeam, à cause d'une non  activation ....  
+
+# Sprint 2.2
+
+++++ 18 septembre 2018 ++++
+
+* Création d'un nouveau rôle à la création du compte qui ne donne pas accés au back office
+
+* Début de mise en place du formulaire d'édition => probléme rencontré sur l'update en BDD
+
+
