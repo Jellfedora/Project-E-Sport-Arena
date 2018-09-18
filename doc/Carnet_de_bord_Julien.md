@@ -77,3 +77,5 @@
 # Sprint 2.2 mardi 18 septembre
 
 * Ajout de la metaboxe Equipe aux membres
+* Page pour gérer son équipe créé, affiche les informations de l'équipe seulement pour les admins Teams et n'affiche que leur team à eux.
+* Recherche pour relier les membres à une team 

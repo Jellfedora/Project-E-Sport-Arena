@@ -12,7 +12,6 @@ function info_client($post)
 
     ?>
 
-
   <input id="" type="text" name="nom" value="<?php echo $nom; ?>" />
 
   <?php

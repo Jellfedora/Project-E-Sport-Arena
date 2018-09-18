@@ -7,7 +7,7 @@
                 'post_type' => 'team',
                 'posts_per_page' => -1,
                 'order' => 'ASC',
-                'orderby' => 'name'
+                'orderby' => 'name',
             ];
 
             $our_articles = new WP_Query($args);
