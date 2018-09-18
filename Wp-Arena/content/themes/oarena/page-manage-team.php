@@ -4,6 +4,7 @@
 
 <?php get_header();?>
 
+<div class="col-12 col-md-6 offset-md-3 mb-5">
 <h2> &#9660; Equipe truc &#9660; </h2>
 
 <h3>Membres:</h3>
@@ -11,7 +12,7 @@
 <li>membre1</li>
 <li>membre2</li>
 </ul>
-
+</div>
 <!-- Sera visible seulement par le team admin -->
 <form action="#" class="col-12 col-md-6 offset-md-3 mb-5" method="post">
     <h1>Ajouter un membre à l'équipe</h1>
