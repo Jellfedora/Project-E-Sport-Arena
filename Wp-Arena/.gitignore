@@ -8,5 +8,6 @@ wp/
 /content/plugins/*
 !/content/plugins/oarena-settings
 !/content/plugins/oarena-users
+!/content/plugins/oarena-create-team
 !/content/uploads
 wp-config.php
