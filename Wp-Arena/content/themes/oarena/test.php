@@ -5,15 +5,36 @@
  */
 
 // Permet de récuperer les infos globales du user et son rôle ( boucle WP ? )
-global $current_user, $wp_roles;
+// global $current_user, $wp_roles;
+
+
+$current_user = wp_get_current_user();
+
+// var_dump($current_user);
+// die();
 
 // Tableau d'erreurs
 $error = [];    
 // $SERVER REQUEST METHOD permet d'arriver aux entetes ( Post get etc ) / action pour la soumission 
 if ( 'POST' == $_SERVER['REQUEST_METHOD'] && !empty( $_POST['action'] ) && $_POST['action'] == 'update-user' ) {
     // Si le champs n'est pas vide j'update la meta_info
-    if ( !empty( $_POST['user-name'] ) )
-        update_user_meta( $current_user->ID, 'nickname', esc_attr( $_POST['user-name'] ) );
+    if ( !empty( $_POST['user-name'] ) ) {
+
+        $current_user = wp_get_current_user();
+        $current_user->nickname = esc_attr($_POST['user-name']);
+        // $current_user->user_login = esc_attr($_POST['user-name']);
+        $current_user->user_nicename = esc_attr($_POST['user-name']);
+        $current_user->display_name = esc_attr($_POST['user-name']);
+        $current_user->first_name = esc_attr($_POST['user-name']);
+        $current_user->last_name = esc_attr($_POST['user-name']);
+
+        // var_dump($current_user);
+        // var_dump(wp_update_user($current_user));
+        // die();
+
+        // wp_update_user($current_user);
+    }
+        // update_user_meta( $current_user->ID, 'nickname', esc_attr( $_POST['user-name'] ) );
     // Si mon tableau d'erreurs est vide 
     if ( count($error) == 0 ) {
         // execute le code sur le hook
@@ -38,7 +59,7 @@ if ( 'POST' == $_SERVER['REQUEST_METHOD'] && !empty( $_POST['action'] ) && $_POS
                 <?php if ( count($error) > 0 ) echo '<p class="error">' . implode("<br />", $error) . '</p>'; ?>
                 <form method="post" id="adduser" action="<?php the_permalink(); ?>">
                     <p class="form-username">
-                        <label for="user-name"><?php _e('User Name', 'profile'); ?></label>
+                        <label for="user-name"><?php _e('Changer votre Nom', 'profile'); ?></label>
                         <input class="text-input" name="user-name" type="text" id="user-name" value="<?php the_author_meta( 'nickname', $current_user->ID ); ?>" />
                     </p>
                     <?php 
@@ -46,7 +67,7 @@ if ( 'POST' == $_SERVER['REQUEST_METHOD'] && !empty( $_POST['action'] ) && $_POS
                         do_action('edit_user_profile',$current_user); 
                     ?>
                     <p class="form-submit">                    
-                        <input name="update-user" type="submit" id="updateuser" class="submit button" value="<?php _e('Update', 'profile'); ?>" />
+                        <input name="updateuser" type="submit" id="updateuser" class="submit button" value="<?php _e('Update', 'profile'); ?>" />
                         <!-- Nonce field est une fonction qui permet de vérifier si la requete viens bien de ce site--> 
                         <?php wp_nonce_field( 'update-user' ) ?>
                         <input name="action" type="hidden" id="action" value="update-user" />

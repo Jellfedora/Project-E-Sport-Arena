@@ -123,4 +123,9 @@
 
 * Début de mise en place du formulaire d'édition => probléme rencontré sur l'update en BDD
 
+* Création d'un formulaire poru changer son nom en passant par le front et non le back office 
+    Enormément de recherches => de temps ( 4/5h ) pour essayer de changer le user_login ...
+    Chose possible avant mais plus maintenant WordPress l'ayant supprimé.
+    Probléme résolu en changeant user_nicename / nickname / display_name 
+
 

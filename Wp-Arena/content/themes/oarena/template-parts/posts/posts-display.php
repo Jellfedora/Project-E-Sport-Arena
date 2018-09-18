@@ -10,5 +10,7 @@
             </div>
             </a>
             <p class="news__item-text"><?php the_content() ; ?></p>
+            <br>
+            <?= the_author(); ?>
         </div>
 </div>

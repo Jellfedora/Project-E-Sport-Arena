@@ -131,4 +131,4 @@ https://codex.wordpress.org/Function_Reference/wp_create_user
 
 * Beaucoup de recherches
 
-* Début création formulaire edit sur front
+* Début création formulaire edit sur front => Réussi car on ne peux pas changer le user_login ( restriction WP ) il faut donc lui changer ses méta informations
