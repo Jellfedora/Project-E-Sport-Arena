@@ -11,6 +11,8 @@ Version: 1.0.0
 if (!defined('WPINC')) {die();}
 
 // on fait un require de inc
+require plugin_dir_path(__FILE__) . 'inc/metabox.php';
+
 require plugin_dir_path(__FILE__) . 'inc/tournament_cpt.php';
 
 $tournament_cpt = new Tournament_cpt();
@@ -38,3 +40,11 @@ $roles = new oArenaRole();
 
 register_activation_hook(__FILE__, [$roles, 'activation']);
 register_deactivation_hook(__FILE__, [$roles, 'deactivation']);
+
+// CPT MEMBERS
+require plugin_dir_path(__FILE__) . 'inc/members_cpt.php';
+
+$oArena_members = new oArenaMembersCpt();
+
+register_activation_hook(__FILE__, [$oArena_members, 'activation']);
+register_deactivation_hook(__FILE__, [$oArena_members, 'deactivation']);
