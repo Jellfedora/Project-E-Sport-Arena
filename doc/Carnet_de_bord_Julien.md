@@ -70,7 +70,7 @@
 
 # Sprint 2.2 nuit du lundi 17 au mardi 18 septembre
 
-* Aprés discussion avec Christophe, je pars sur l'idée de remplacer les utilisateurs par des custom Post type, tout est ok sauf l'affichage d'un membre, essai avec single.php ; single-member ...etc Rien à faire
+* Aprés discussion avec Christophe, nous partons sur l'idée de remplacer les utilisateurs par des custom Post type, tout est ok sauf l'affichage d'un membre, essai avec single.php ; single-member ...etc Rien à faire
 * Pti push et save de la BDD puis go dodo!
 * 1h32: Enfin j'ai réussi à afficher la page d'un membre, aprés nettoyage des cookies, restart du plugin enfin cela fonctionne correctement!
 
@@ -78,4 +78,5 @@
 
 * Ajout de la metaboxe Equipe aux membres
 * Page pour gérer son équipe créé, affiche les informations de l'équipe seulement pour les admins Teams et n'affiche que leur team à eux.
-* Recherche pour relier les membres à une team 
+* Page manage-team dynamisée avec l'ajout de metaboxe pour le chef d'équipe et les 5 membres
+* Ajout au plugin oarena-create-team de update-team.php qui sera chargé de changer les membres au submit dun formulaire ->  update_post_meta (iddupost, 'member1', 'nomdunouveaumembre');
