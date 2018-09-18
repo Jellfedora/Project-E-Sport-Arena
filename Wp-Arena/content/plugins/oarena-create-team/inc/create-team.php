@@ -31,6 +31,7 @@ Class oArenaCreateTeam
         'post_status' => 'publish',
     ];
 
+    // stocké en bdd dans wp-posts
     wp_insert_post($team_post);
     // Je récupére l'ID du membre
     $user_id = get_current_user_id();
