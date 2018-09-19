@@ -49,7 +49,7 @@ WHERE `post_author` = $user_id
 foreach($team_id as $id_team){
 $id_team->ID;
 }
-//var_dump($team_id);
+var_dump($id_team);
 ?>
 
 <h3>Chef d'équipe:</h3>
