@@ -43,6 +43,7 @@ register_deactivation_hook(__FILE__, [$roles, 'deactivation']);
 
 // CPT MEMBERS
 require plugin_dir_path(__FILE__) . 'inc/members_cpt.php';
-
+;
 $oArena_members = new oArenaMembersCpt();
+
 

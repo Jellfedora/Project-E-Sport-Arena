@@ -19,7 +19,10 @@ $id = $post->ID;
     <h4>team inscrites: </h4>
     <li><?= get_post_meta($id, '_team_register', true) ; ?></li>
     <h3 class="news__tournament"><?php the_title() ; ?></h3>
-    <p class="card-text"> <?php the_content() ; ?></p>
-    <a href="<?= get_the_permalink(get_the_ID()) ; ?>" class="text-center"><button type="button" class="btn btn-info" >S'inscrire</button></a>
+    <p class="card-text"> <?php the_content() ; ?></p>   
+    <form action="add-team" method="post">
+    <input type="submit" value="S'inscrire" name="register-team-tournament"">
+    </form>
     </div>
 </div>
+
