@@ -64,48 +64,24 @@ $id_team->ID;
 </div>
 
 
-	<form action="update-team" class="col-12 col-md-6 offset-md-3 mb-5" method="post">
-	    <h1>Changer le membre 1</h1>
+	<form action="update-member-team" class="col-12 col-md-6 offset-md-3 mb-5" method="post">
+	    <h3>Changer de membres</h3>
 	    <div class="form-group">
-	        <input type="text" class="form-control" id="username" name="_member1"  aria-describedby="usernameHelp" placeholder="Nom d'utilisateur" required>
+	        <input type="text" class="form-control" id="username" name="_member1"  aria-describedby="usernameHelp" placeholder="<?= $member1 ?>" >
+			<small id="usernameHelp" class="form-text text-muted"></small>
+			<input type="text" class="form-control" id="username" name="_member2"  aria-describedby="usernameHelp" placeholder="<?= $member2 ?>" >
+			<small id="usernameHelp" class="form-text text-muted"></small>
+			<input type="text" class="form-control" id="username" name="_member3"  aria-describedby="usernameHelp" placeholder="<?= $member3 ?>" >
+			<small id="usernameHelp" class="form-text text-muted"></small>
+			<input type="text" class="form-control" id="username" name="_member4"  aria-describedby="usernameHelp" placeholder="<?= $member4 ?>" >
+			<small id="usernameHelp" class="form-text text-muted"></small>
+			<input type="text" class="form-control" id="username" name="_member5"  aria-describedby="usernameHelp" placeholder="<?= $member5 ?>" >
 	        <small id="usernameHelp" class="form-text text-muted"></small>
 	    </div>
-	     <input type="submit" name="update-member">
+	     <input type="submit" name="member-submit">
 	</form>
-<form action="update-team" class="col-12 col-md-6 offset-md-3 mb-5" method="post">
-	    <h1>Changer le membre 2</h1>
-	    <div class="form-group">
-	        <input type="text" class="form-control" id="username" name="_member1"  aria-describedby="usernameHelp" placeholder="Nom d'utilisateur" required>
-	        <small id="usernameHelp" class="form-text text-muted"></small>
-	    </div>
-	     <input type="submit" name="update-member">
-	</form>
-<form action="update-team" class="col-12 col-md-6 offset-md-3 mb-5" method="post">
-	    <h1>Changer le membre 3</h1>
-	    <div class="form-group">
-	        <input type="text" class="form-control" id="username" name="_member1"  aria-describedby="usernameHelp" placeholder="Nom d'utilisateur" required>
-	        <small id="usernameHelp" class="form-text text-muted"></small>
-	    </div>
-	     <input type="submit" name="update-member">
-	</form>
-<form action="update-team" class="col-12 col-md-6 offset-md-3 mb-5" method="post">
-	    <h1>Changer le membre 4</h1>
-	    <div class="form-group">
-	        <input type="text" class="form-control" id="username" name="_member1"  aria-describedby="usernameHelp" placeholder="Nom d'utilisateur" required>
-	        <small id="usernameHelp" class="form-text text-muted"></small>
-	    </div>
-	     <input type="submit" name="update-member">
-	</form>
-<form action="update-team" class="col-12 col-md-6 offset-md-3 mb-5" method="post">
-	    <h1>Changer le membre 5</h1>
-	    <div class="form-group">
-	        <input type="text" class="form-control" id="username" name="_member1"  aria-describedby="usernameHelp" placeholder="Nom d'utilisateur" required>
-	        <small id="usernameHelp" class="form-text text-muted"></small>
-	    </div>
-	     <input type="submit" name="update-member">
-	</form>	
-		<?php
 
+<?php
 endif;
 ?>
 
