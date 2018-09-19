@@ -1,11 +1,14 @@
-   <?php get_header();?>
+   <?php get_header(); ?>
+   
+       <?php
 
-<?php
-if (have_posts()):
-    while (have_posts()): the_post();
-        get_template_part('template-parts/member/member', 'single');
+            if (have_posts()): while (have_posts()): the_post();
 
-    endwhile;
-endif;
+                get_template_part('template-parts/member/member', 'display');
 
-get_footer();?>
+            endwhile; wp_reset_postdata(); endif;
+
+        ?>
+    </main>
+
+    <?php get_footer() ; ?>
