@@ -4,9 +4,9 @@
 
 <?php get_header();?>
 
-<!-- affiche le post title ou post author=68 (lid de julien admin team)-->
-<?php
 
+<?php
+//A mettre dans le plugin
 $current_user = wp_get_current_user();
 $user_id = $current_user->ID;
 $adminTeam = $current_user->roles;
@@ -19,6 +19,8 @@ $arguments = [
 ];
 
 ?>
+
+
 <div class="col-12 col-md-6 offset-md-3 mb-5">
 <h2> &#9660; <?php the_title();?> &#9660; </h2>
 <?php $user_team = new WP_Query($arguments);
@@ -53,6 +55,17 @@ $id_team->ID;
 
 <h3>Chef d'équipe:</h3>
 <li><?= $team_chief = get_post_meta($id_team->ID,'_team_chief',true);?></li>
+
+	<form action="update-member-team" class="col-12 col-md-6 offset-md-3 mb-5" method="post">
+	    <h3>Ajouter ou changer de chef d'équipe</h3>
+	    <div class="form-group">
+			<small id="usernameHelp" class="">Chef d'équipe</small>
+	        <input type="text" class="form-control" id="username" name="_team_chief"  aria-describedby="usernameHelp" placeholder="<?= $team_chief ?>" >
+	    </div>
+	    <input type="submit" name="team_chief-submit">
+	</form>
+
+
 <h3>Membres:</h3>
 <ul>
 <li><?= $member1 = get_post_meta($id_team->ID,'_member1',true);?></li>
@@ -65,20 +78,20 @@ $id_team->ID;
 
 
 	<form action="update-member-team" class="col-12 col-md-6 offset-md-3 mb-5" method="post">
-	    <h3>Changer de membres</h3>
+	    <h3>Ajouter ou changer de membres</h3>
 	    <div class="form-group">
+			<small id="usernameHelp" class="">Membre 1 </small>
 	        <input type="text" class="form-control" id="username" name="_member1"  aria-describedby="usernameHelp" placeholder="<?= $member1 ?>" >
-			<small id="usernameHelp" class="form-text text-muted"></small>
+			<small id="usernameHelp" class="">Membre 2</small>
 			<input type="text" class="form-control" id="username" name="_member2"  aria-describedby="usernameHelp" placeholder="<?= $member2 ?>" >
-			<small id="usernameHelp" class="form-text text-muted"></small>
+			<small id="usernameHelp" class="">Membre 3</small>
 			<input type="text" class="form-control" id="username" name="_member3"  aria-describedby="usernameHelp" placeholder="<?= $member3 ?>" >
-			<small id="usernameHelp" class="form-text text-muted"></small>
+			<small id="usernameHelp" class="">Membre 4</small>
 			<input type="text" class="form-control" id="username" name="_member4"  aria-describedby="usernameHelp" placeholder="<?= $member4 ?>" >
-			<small id="usernameHelp" class="form-text text-muted"></small>
+	        <small id="usernameHelp" class="">Membre 5</small>
 			<input type="text" class="form-control" id="username" name="_member5"  aria-describedby="usernameHelp" placeholder="<?= $member5 ?>" >
-	        <small id="usernameHelp" class="form-text text-muted"></small>
 	    </div>
-	     <input type="submit" name="member-submit">
+	    <input type="submit" name="member-submit">
 	</form>
 
 <?php

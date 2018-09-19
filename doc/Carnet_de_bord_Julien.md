@@ -80,3 +80,4 @@
 * Page pour gérer son équipe créé, affiche les informations de l'équipe seulement pour les admins Teams et n'affiche que leur team à eux.
 * Page manage-team dynamisée avec l'ajout de metaboxe pour le chef d'équipe et les 5 membres
 * Ajout au plugin oarena-create-team de update-team.php qui sera chargé de changer les membres au submit dun formulaire ->  update_post_meta (iddupost, 'member1', 'nomdunouveaumembre');
+* Nettoyage des utilisateurs

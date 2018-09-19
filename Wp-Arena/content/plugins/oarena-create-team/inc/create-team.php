@@ -40,5 +40,7 @@ Class oArenaCreateTeam
         'ID' => $user_id,
         'role' => 'TeamAdmin',
     ]);
+    wp_redirect('gerer-son-equipe');exit;
     }}
+    
 }

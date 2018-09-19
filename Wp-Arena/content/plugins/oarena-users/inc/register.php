@@ -46,9 +46,7 @@ class oArena_register
             // Verify username exist
             if ($user_id = username_exists($user_name)) {
                 $errorList[] = 'Ce nom est déjà pris';
-            } else if ($user_name == !ctype_lower($user_name)) {
-                $errorList[] = 'Ce nom n\'est pas en minuscule ou contient des chiffres ou caractéres spéciaux';
-            }
+            } 
 
             if (!empty($errorList)) {
                 var_dump($errorList);exit;
