@@ -3,7 +3,7 @@
 // Displays the name of the connected user
 if (is_user_logged_in()) {
     $current_user = wp_get_current_user();
-    echo 'Bienvenue ' . $current_user->last_name . '<br />';
+    echo 'Bienvenue ' . $current_user->display_name . '<br />';
     echo '<a href="' . admin_url('user-edit.php?user_id=' . get_current_user_id()) . '">Accès au profil</a>';
     echo '<a class="ml-4" href="' . wp_logout_url(home_url()) . '">Se déconnecter</a>';
 
