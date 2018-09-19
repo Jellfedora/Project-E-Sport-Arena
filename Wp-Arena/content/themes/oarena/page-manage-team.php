@@ -65,7 +65,7 @@ $id_team->ID;
 
 
 	<form action="update-member-team" class="col-12 col-md-6 offset-md-3 mb-5" method="post">
-	    <h1>Changer de membres</h1>
+	    <h3>Changer de membres</h3>
 	    <div class="form-group">
 	        <input type="text" class="form-control" id="username" name="_member1"  aria-describedby="usernameHelp" placeholder="<?= $member1 ?>" >
 			<small id="usernameHelp" class="form-text text-muted"></small>
