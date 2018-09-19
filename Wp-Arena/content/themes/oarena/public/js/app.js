@@ -1,1 +1,173 @@
-!function(){"use strict";var e="undefined"==typeof global?self:global;if("function"!=typeof e.require){var r={},n={},i={},t={}.hasOwnProperty,o=/^\.\.?(\/|$)/,u=function(e,r){for(var n,i=[],t=(o.test(r)?e+"/"+r:r).split("/"),u=0,l=t.length;u<l;u++)n=t[u],".."===n?i.pop():"."!==n&&""!==n&&i.push(n);return i.join("/")},l=function(e){return e.split("/").slice(0,-1).join("/")},a=function(r){return function(n){var i=u(l(r),n);return e.require(i,r)}},s=function(e,r){var i=_&&_.createHot(e),t={id:e,exports:{},hot:i};return n[e]=t,r(t.exports,a(e),t),t.exports},c=function(e){return i[e]?c(i[e]):e},f=function(e,r){return c(u(l(e),r))},p=function(e,i){null==i&&(i="/");var o=c(e);if(t.call(n,o))return n[o].exports;if(t.call(r,o))return s(o,r[o]);throw new Error("Cannot find module '"+e+"' from '"+i+"'")};p.alias=function(e,r){i[r]=e};var d=/\.[^.\/]+$/,w=/\/index(\.[^\/]+)?$/,v=function(e){if(d.test(e)){var r=e.replace(d,"");t.call(i,r)&&i[r].replace(d,"")!==r+"/index"||(i[r]=e)}if(w.test(e)){var n=e.replace(w,"");t.call(i,n)||(i[n]=e)}};p.register=p.define=function(e,i){if(e&&"object"==typeof e)for(var o in e)t.call(e,o)&&p.register(o,e[o]);else r[e]=i,delete n[e],v(e)},p.list=function(){var e=[];for(var n in r)t.call(r,n)&&e.push(n);return e};var _=e._hmr&&new e._hmr(f,p,r,n);p._cache=n,p.hmr=_&&_.wrap,p.brunch=!0,e.require=p}}(),function(){var e;"undefined"==typeof window?this:window;require.register("initialize.js",function(e,r,n){document.addEventListener("DOMContentLoaded",function(){console.log("Initialized app")})}),require.alias("process/browser.js","process"),e=require("process"),require.register("___globals___",function(e,r,n){window.$=r("jquery"),window.jQuery=r("jquery"),window.rellax=r("rellax"),window.scrollex=r("jquery.scrollex"),window.bootstrap=r("bootstrap")})}(),require("___globals___"),require("initialize");
+(function() {
+  'use strict';
+
+  var globals = typeof global === 'undefined' ? self : global;
+  if (typeof globals.require === 'function') return;
+
+  var modules = {};
+  var cache = {};
+  var aliases = {};
+  var has = {}.hasOwnProperty;
+
+  var expRe = /^\.\.?(\/|$)/;
+  var expand = function(root, name) {
+    var results = [], part;
+    var parts = (expRe.test(name) ? root + '/' + name : name).split('/');
+    for (var i = 0, length = parts.length; i < length; i++) {
+      part = parts[i];
+      if (part === '..') {
+        results.pop();
+      } else if (part !== '.' && part !== '') {
+        results.push(part);
+      }
+    }
+    return results.join('/');
+  };
+
+  var dirname = function(path) {
+    return path.split('/').slice(0, -1).join('/');
+  };
+
+  var localRequire = function(path) {
+    return function expanded(name) {
+      var absolute = expand(dirname(path), name);
+      return globals.require(absolute, path);
+    };
+  };
+
+  var initModule = function(name, definition) {
+    var hot = hmr && hmr.createHot(name);
+    var module = {id: name, exports: {}, hot: hot};
+    cache[name] = module;
+    definition(module.exports, localRequire(name), module);
+    return module.exports;
+  };
+
+  var expandAlias = function(name) {
+    return aliases[name] ? expandAlias(aliases[name]) : name;
+  };
+
+  var _resolve = function(name, dep) {
+    return expandAlias(expand(dirname(name), dep));
+  };
+
+  var require = function(name, loaderPath) {
+    if (loaderPath == null) loaderPath = '/';
+    var path = expandAlias(name);
+
+    if (has.call(cache, path)) return cache[path].exports;
+    if (has.call(modules, path)) return initModule(path, modules[path]);
+
+    throw new Error("Cannot find module '" + name + "' from '" + loaderPath + "'");
+  };
+
+  require.alias = function(from, to) {
+    aliases[to] = from;
+  };
+
+  var extRe = /\.[^.\/]+$/;
+  var indexRe = /\/index(\.[^\/]+)?$/;
+  var addExtensions = function(bundle) {
+    if (extRe.test(bundle)) {
+      var alias = bundle.replace(extRe, '');
+      if (!has.call(aliases, alias) || aliases[alias].replace(extRe, '') === alias + '/index') {
+        aliases[alias] = bundle;
+      }
+    }
+
+    if (indexRe.test(bundle)) {
+      var iAlias = bundle.replace(indexRe, '');
+      if (!has.call(aliases, iAlias)) {
+        aliases[iAlias] = bundle;
+      }
+    }
+  };
+
+  require.register = require.define = function(bundle, fn) {
+    if (bundle && typeof bundle === 'object') {
+      for (var key in bundle) {
+        if (has.call(bundle, key)) {
+          require.register(key, bundle[key]);
+        }
+      }
+    } else {
+      modules[bundle] = fn;
+      delete cache[bundle];
+      addExtensions(bundle);
+    }
+  };
+
+  require.list = function() {
+    var list = [];
+    for (var item in modules) {
+      if (has.call(modules, item)) {
+        list.push(item);
+      }
+    }
+    return list;
+  };
+
+  var hmr = globals._hmr && new globals._hmr(_resolve, require, modules, cache);
+  require._cache = cache;
+  require.hmr = hmr && hmr.wrap;
+  require.brunch = true;
+  globals.require = require;
+})();
+
+(function() {
+var global = typeof window === 'undefined' ? this : window;
+var process;
+var __makeRelativeRequire = function(require, mappings, pref) {
+  var none = {};
+  var tryReq = function(name, pref) {
+    var val;
+    try {
+      val = require(pref + '/node_modules/' + name);
+      return val;
+    } catch (e) {
+      if (e.toString().indexOf('Cannot find module') === -1) {
+        throw e;
+      }
+
+      if (pref.indexOf('node_modules') !== -1) {
+        var s = pref.split('/');
+        var i = s.lastIndexOf('node_modules');
+        var newPref = s.slice(0, i).join('/');
+        return tryReq(name, newPref);
+      }
+    }
+    return none;
+  };
+  return function(name) {
+    if (name in mappings) name = mappings[name];
+    if (!name) return;
+    if (name[0] !== '.' && pref) {
+      var val = tryReq(name, pref);
+      if (val !== none) return val;
+    }
+    return require(name);
+  }
+};
+require.register("initialize.js", function(exports, require, module) {
+document.addEventListener('DOMContentLoaded', function () {
+  // do your setup here
+  console.log('Initialized app');
+
+});
+});
+
+require.alias("process/browser.js", "process");process = require('process');require.register("___globals___", function(exports, require, module) {
+  
+
+// Auto-loaded modules from config.npm.globals.
+window["$"] = require("jquery");
+window.jQuery = require("jquery");
+window.rellax = require("rellax");
+window.scrollex = require("jquery.scrollex");
+window.bootstrap = require("bootstrap");
+
+
+});})();require('___globals___');
+
+require('initialize');
+//# sourceMappingURL=app.js.map
