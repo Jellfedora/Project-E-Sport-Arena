@@ -138,3 +138,4 @@ https://codex.wordpress.org/Function_Reference/wp_create_user
 * Un membre peut maintenant éditer son nom sur la page éditer son profil
 * Suppr de la condition est miniscule/caractéres spéciaux à l'inscription d'un membre
 * Ajout/Correction de redirection
+* Intégré un joli dégradé pour la background du body!

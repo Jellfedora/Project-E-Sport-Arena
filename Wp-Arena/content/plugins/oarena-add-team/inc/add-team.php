@@ -18,36 +18,41 @@ class oArenaAddTeam {
             'post_type' => 'team',
             'order' => -1
         );
-
         $user = get_posts($args);
+        foreach($user as $id_team){
+            $id_team->post_title;
+        }
+        //var_dump($id_team->post_title);
+        //var_dump($user);exit;
         // untill there i have the var dump ok with post author 
         // var_dump($user);
         // exit;
         if (isset($_POST['register-team-tournament'])) 
         {
-            echo 'there';
-            function init_metabox_tournament() 
-            {
-                add_meta_box('team_register_tournament', '', 'team_register_tournament', 'tournament', 'normal' );
-            }   
+            // echo 'here';
+            // function init_metabox_tournament() 
+            // {
+            //     add_meta_box('team_register_tournament', 'Participant1', 'team_register_tournament', 'tournament', 'normal' );
+            // }   
             
-            function team_tournament($post)
-            {
-                // var_dump($post);
-                // die;
-                $team_tournament = get_post_meta($post->ID, '_team_register_tournament', true);
+            // function team_tournament($post)
+            // {
+            //     // var_dump($post);
+            //     // die;
+            //     $team_tournament = get_post_meta($post->ID, '_team_register_tournament', true);?>
+                 <!--<input id="" type="text" name="_team_register_tournament" value="--><?php// echo $team_tournament; ?>" />
+                 <?php
+            // }
 
-            }
+            // add_action('save_post', 'save_metabox');
 
-            add_action('save_post', 'save_metabox');
-
-            function save_metabox_tournament($post_id)
-            {
-                if (isset($_POST['register-team-tournament'])) 
-                {
-                    update_post_meta($post_id, '_team_register_tournament', $user->post_title);
-                }
-            }
+            // function save_metabox_tournament($post_id)
+            // {
+            //     if (isset($_POST['register-team-tournament'])) 
+            //     {
+            //         update_post_meta($post_id, '_team_register_tournament', $user->post_title);
+            //     }
+            // }
         } else {
             echo 'wrong';
         }
