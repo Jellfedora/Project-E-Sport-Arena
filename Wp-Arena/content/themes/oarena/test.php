@@ -38,7 +38,7 @@ if ( 'POST' == $_SERVER['REQUEST_METHOD'] && !empty( $_POST['action'] ) && $_POS
     if ( count($error) == 0 ) {
         // execute le code sur le hook
         do_action('edit_user_profile_update', $current_user->ID);
-        wp_redirect( home_url() );
+        wp_redirect('profil');
         exit;
     }
 }
@@ -59,7 +59,7 @@ if ( 'POST' == $_SERVER['REQUEST_METHOD'] && !empty( $_POST['action'] ) && $_POS
                 <form method="post" id="adduser" action="<?php the_permalink(); ?>" class="d-flex text-center flex-column">
                     <p class="form-username d-flex flex-column justify-content-center">
                         <label class="justify-content-center m-auto pb-1" for="user-name"><?php _e('Changer votre Nom', 'profile'); ?></label>
-                        <input class="text-input text-center w-25 m-auto mt-2" name="user-name" type="text" id="user-name" value="<?php the_author_meta( 'nickname', $current_user->ID ); ?>" />
+                        <input class="text-input text-center w-25 m-auto mt-2" name="user-name" type="text" id="user-name" placeholder="<?php the_author_meta( 'nickname', $current_user->ID ); ?>" />
                     </p>
                     <?php 
                         //action hook for plugin and extra fields

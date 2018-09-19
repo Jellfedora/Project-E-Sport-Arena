@@ -6,7 +6,12 @@ html {
 
 body {
     font-family: 'Baloo bhaina';
-    background-color: green;
+    background: -webkit-linear-gradient(right, rgb(177, 22, 22), rgb(5, 5, 145));
+    background: -moz-linear-gradient(right, rgb(177, 22, 22), rgb(5, 5, 145));
+    background: -ms-linear-gradient(right, rgb(177, 22, 22), rgb(5, 5, 145));
+    background: -o-linear-gradient(right, rgb(177, 22, 22), rgb(5, 5, 145));
+    background: linear-gradient(to left, rgb(177, 22, 22), rgb(5, 5, 145));
+
 }
 
 *,
