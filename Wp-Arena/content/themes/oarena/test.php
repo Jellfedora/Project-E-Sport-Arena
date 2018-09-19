@@ -56,10 +56,10 @@ if ( 'POST' == $_SERVER['REQUEST_METHOD'] && !empty( $_POST['action'] ) && $_POS
                     </p><!-- .warning -->
             <?php else : ?>
                 <?php if ( count($error) > 0 ) echo '<p class="error">' . implode("<br />", $error) . '</p>'; ?>
-                <form method="post" id="adduser" action="<?php the_permalink(); ?>">
-                    <p class="form-username">
-                        <label for="user-name"><?php _e('Changer votre Nom', 'profile'); ?></label>
-                        <input class="text-input" name="user-name" type="text" id="user-name" value="<?php the_author_meta( 'nickname', $current_user->ID ); ?>" />
+                <form method="post" id="adduser" action="<?php the_permalink(); ?>" class="d-flex text-center flex-column">
+                    <p class="form-username d-flex flex-column justify-content-center">
+                        <label class="justify-content-center m-auto pb-1" for="user-name"><?php _e('Changer votre Nom', 'profile'); ?></label>
+                        <input class="text-input text-center w-25 m-auto mt-2" name="user-name" type="text" id="user-name" value="<?php the_author_meta( 'nickname', $current_user->ID ); ?>" />
                     </p>
                     <?php 
                         //action hook for plugin and extra fields

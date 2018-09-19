@@ -60,26 +60,23 @@ class oArena_register
                 $user_id = wp_create_user($user_name, $user_password, $user_email);
 
             $name = trim(htmlspecialchars($_POST['username']));
-                       
-            // Create content in BDD
-            
-            $user_id = get_current_user_id();
-            // Je lui change son role en membre
-            
-            $profile_post = [
-                'post_title' => $name,
-                'post_type' => 'members',
-                'post_status' => 'publish'
-            ];
-
-            wp_insert_post($profile_post);
+              
             
             // Je récupére l'ID du membre
-            $user_id = get_current_user_id();
-            wp_update_user([
+                
+                $profile_post = [
+                    'post_title' => $name,
+                    'post_type' => 'members',
+                    'post_status' => 'publish'
+                ];
+                // Create content in BDD
+
+            wp_insert_post($profile_post);
+
+                wp_update_user([
                 'ID' => $user_id,
                 'role' => 'Membre',
-            ]);
+                ]);
 
             // Redirect to home
             wp_redirect(home_url());
