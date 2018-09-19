@@ -10,7 +10,7 @@
 $current_user = wp_get_current_user();
 $user_id = $current_user->ID;
 $adminTeam = $current_user->roles;
-//var_dump($user_id);
+//var_dump($adminTeam;
 
 if ($adminTeam): 
 $arguments = [
@@ -43,24 +43,23 @@ global $wpdb; // On se connecte à la base de données du site
 $team_id = $wpdb->get_results("
 SELECT ID
 FROM wp_posts
-WHERE `post_author` = $user_id
+WHERE `post_author` = $user_id AND `post_status`='publish'
 ;
 ");
 foreach($team_id as $id_team){
 $id_team->ID;
 }
-var_dump($id_team);
 ?>
 
 <h3>Chef d'équipe:</h3>
-<li><?= $val = get_post_meta($id_team->ID,'_team_chief',true);?></li>
+<li><?= $team_chief = get_post_meta($id_team->ID,'_team_chief',true);?></li>
 <h3>Membres:</h3>
 <ul>
-<li><?= $val = get_post_meta($id_team->ID,'_member1',true);?></li>
-<li><?= $val = get_post_meta($id_team->ID,'_member2',true);?></li>	
-<li><?= $val = get_post_meta($id_team->ID,'_member3',true);?></li>
-<li><?= $val = get_post_meta($id_team->ID,'_member4',true);?></li>
-<li><?= $val = get_post_meta($id_team->ID,'_member5',true);?></li>	
+<li><?= $member1 = get_post_meta($id_team->ID,'_member1',true);?></li>
+<li><?= $member2 = get_post_meta($id_team->ID,'_member2',true);?></li>	
+<li><?= $member3 = get_post_meta($id_team->ID,'_member3',true);?></li>
+<li><?= $member4 = get_post_meta($id_team->ID,'_member4',true);?></li>
+<li><?= $member5 = get_post_meta($id_team->ID,'_member5',true);?></li>	
 </ul>
 </div>
 
