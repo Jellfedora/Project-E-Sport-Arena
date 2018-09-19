@@ -5,6 +5,7 @@ function init_metabox()
 {
     add_meta_box('team_chief', 'Chef', 'team_chief', 'team', 'normal');
     add_meta_box('team_members', 'Membres', 'team_members', 'team', 'normal');
+    add_meta_box('team_register', 'Participants', 'team_register', 'tournament', 'normal' );
 }
 
 function team_chief($post)
@@ -37,6 +38,15 @@ function team_members($post)
   <?php
 }
 
+function team_register($post) 
+{
+    $register_teams = get_post_meta($post->ID, '_team_register', true);
+
+    ?>
+     <input id="" type="text" name="register-team" value="<?php echo $register_teams; ?>" />
+     <?php
+}
+
 add_action('save_post', 'save_metabox');
 function save_metabox($post_id)
 {
@@ -63,5 +73,8 @@ function save_metabox($post_id)
 
     if (isset($_POST['member5'])) {
         update_post_meta($post_id, '_member5', sanitize_text_field($_POST['member5']));
+    }
+    if (isset($_POST['register-team'])) {
+        update_post_meta($post_id, '_team_register', sanitize_text_field($_POST['register-team']));
     }
 }
