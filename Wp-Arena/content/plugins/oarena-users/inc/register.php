@@ -63,15 +63,23 @@ class oArena_register
                        
             // Create content in BDD
             
+            $user_id = get_current_user_id();
+            // Je lui change son role en membre
             
             $profile_post = [
                 'post_title' => $name,
                 'post_type' => 'members',
                 'post_status' => 'publish'
             ];
-            
-            wp_insert_post($profile_post);
 
+            wp_insert_post($profile_post);
+            
+            // Je récupére l'ID du membre
+            $user_id = get_current_user_id();
+            wp_update_user([
+                'ID' => $user_id,
+                'role' => 'Membre',
+            ]);
 
             // Redirect to home
             wp_redirect(home_url());

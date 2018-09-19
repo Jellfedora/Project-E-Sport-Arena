@@ -8,7 +8,7 @@ class oArenaRole
         $this->addCap();
     }
 
-    public function addRole()
+    public function addRoleTeamAdmin()
     {
         // Création nouveau role pour l'admin team
         add_role('TeamAdmin', 'Administrateur de la team', [

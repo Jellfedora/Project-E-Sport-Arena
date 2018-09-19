@@ -28,9 +28,8 @@ if ( 'POST' == $_SERVER['REQUEST_METHOD'] && !empty( $_POST['action'] ) && $_POS
         $current_user->first_name = esc_attr($_POST['user-name']);
         $current_user->last_name = esc_attr($_POST['user-name']);
 
-        // var_dump($current_user);
-        // var_dump(wp_update_user($current_user));
-        // die();
+       wp_update_user($current_user);
+       
 
         // wp_update_user($current_user);
     }
@@ -67,7 +66,7 @@ if ( 'POST' == $_SERVER['REQUEST_METHOD'] && !empty( $_POST['action'] ) && $_POS
                         do_action('edit_user_profile',$current_user); 
                     ?>
                     <p class="form-submit">                    
-                        <input name="updateuser" type="submit" id="updateuser" class="submit button" value="<?php _e('Update', 'profile'); ?>" />
+                        <input name="update-user" type="submit" id="updateuser" class="submit button" value="<?php _e('Update', 'profile'); ?>" />
                         <!-- Nonce field est une fonction qui permet de vérifier si la requete viens bien de ce site--> 
                         <?php wp_nonce_field( 'update-user' ) ?>
                         <input name="action" type="hidden" id="action" value="update-user" />
