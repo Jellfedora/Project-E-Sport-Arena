@@ -6,7 +6,7 @@ $id = $post->ID;
 // die;
 ?>
 
-<div class="card mb-2 p-3" style="width: 15rem;">
+<div class="card mb-2 p-3 m-auto w-25">
     <div class="card__intro d-flex justify-content-around ">
     <img class="card-img-top p-1" src="https://source.unsplash.com/100x100/?fortnite">
     <ul class="mt-2 ml-2">
