@@ -1,12 +1,16 @@
-<?php $post = get_post();
-// var_dump($post);
+<?php
+// Template Name: User Profile
 ?>
+<div class="news__item">
+         <div class="news__item-image" style="background-image: url(<?=get_the_post_thumbnail_url();?>);">
+         </div>
+         <span class="news__items-type">League of legends</span>
+         <div class="news__item-content  ">
+             <a href="<?=get_the_permalink(get_the_ID());?>">
+             <h3 class="news__item-title text-light"><?php the_title();?></h3>
+             </a>
+             <p class="news__item-text"><?php the_content();?></p>
+             <h4>Fait partie de l'équipe:</h4>
+         </div>
+ </div>
 
-  <a href="<?= get_the_permalink($post); ?>"><div class="card mb-2 p-3" style="width: 15rem;">
-    <div class="card-body d-flex flex-column">
-    <h3 class="news__tournament"><?php the_title();?></h3>
-    <p class="card-text"> <?php the_content();?></p>
-    </div>
-</div>
-
-</a>

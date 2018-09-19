@@ -63,6 +63,7 @@ $id_team->ID;
 </ul>
 </div>
 
+
 	<form action="update-team" class="col-12 col-md-6 offset-md-3 mb-5" method="post">
 	    <h1>Changer le membre 1</h1>
 	    <div class="form-group">

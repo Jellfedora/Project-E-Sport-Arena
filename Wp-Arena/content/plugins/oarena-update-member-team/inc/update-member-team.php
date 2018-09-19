@@ -19,7 +19,7 @@ class oArenaUpdateTeamMember
 
             // Removes spaces (or other characters) at the beginning and end of the string
             $user_name = trim($user_name);
-
+            update_post_meta($id_team->ID, '_team_chief', sanitize_text_field($_POST['team_chief']));
             
 
             // Verify username exist
@@ -29,23 +29,23 @@ class oArenaUpdateTeamMember
             //    $errorList[] = 'Ce nom n\'est pas en minuscule ou contient des chiffres ou caractéres spéciaux';
             //}
 
-            if (!empty($errorList)) {
-                var_dump($errorList);exit;
-            }
+            //if (!empty($errorList)) {
+              //  var_dump($errorList);exit;
+            //}
 
 
 
 
             // Redirect to home
-            wp_redirect(home_url());
-            exit;
+            //wp_redirect(home_url());
+            //exit;
 
-            } else {
+            //} else {
                 //$errorList[] = $user_name . ' ou ' . $user_email . ' existe déjà';
 
                 // Redirection to register page
-                wp_redirect('gerer-son-equipe');
-                exit;
+                //wp_redirect('gerer-son-equipe');
+                //exit;
             }}
     
 }
