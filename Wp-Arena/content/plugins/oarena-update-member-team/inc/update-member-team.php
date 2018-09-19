@@ -30,24 +30,24 @@ class oArenaUpdateTeamMember
 
         // If the form is submitted
         
-        if (isset($_POST['member1-submit'])) {
+        if ((isset($_POST['member-submit'])) && (!empty($_POST['_member1']))) {
             update_post_meta($id_team->ID, '_member1', sanitize_text_field($_POST['_member1']));
             //Redirect to home
             //wp_redirect(home_url());
         }
-         if (isset($_POST['member2-submit'])) {
+         if ((isset($_POST['member-submit'])) && (!empty($_POST['_member2']))) {
         update_post_meta($id_team->ID, '_member2', sanitize_text_field($_POST['_member2']));
         }
 
-        if (isset($_POST['member3-submit'])) {
+        if ((isset($_POST['member-submit'])) && (!empty($_POST['_member3']))) {
             update_post_meta($id_team->ID, '_member3', sanitize_text_field($_POST['_member3']));
         }
 
-        if (isset($_POST['member4-submit'])) {
+        if ((isset($_POST['member-submit'])) && (!empty($_POST['_member4']))) {
             update_post_meta($id_team->ID, '_member4', sanitize_text_field($_POST['_member4']));
         }
 
-        if (isset($_POST['member5-submit'])) {
+        if ((isset($_POST['member-submit'])) && (!empty($_POST['_member5']))) {
             update_post_meta($id_team->ID, '_member5', sanitize_text_field($_POST['_member5']));
         }
 
