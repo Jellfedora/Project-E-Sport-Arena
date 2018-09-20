@@ -13,7 +13,6 @@ exports.files = {
     }
   }
 };
-
 exports.plugins = {
   // Paramétrage de sass
   sass: {
@@ -31,12 +30,10 @@ exports.plugins = {
     'fonts': ['node_modules/font-awesome/fonts'],
   }
 };
-
 exports.watcher = {
   usePolling: true,
   awaitWriteFinish: true
 }
-
 exports.npm = {
     styles: {
       'normalize.css': ['normalize.css'],
@@ -51,7 +48,6 @@ exports.npm = {
       'bootstrap': 'bootstrap'
     }
   },
-
   exports.modules = {
     autoRequire: {
       'js/app.js': ['initialize']
