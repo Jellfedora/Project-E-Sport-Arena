@@ -40,7 +40,7 @@ $red:rgb(153, 18, 13);
     position: relative;
     border: 2px solid #fff;
 
-    @include transition(all 0.5s ease);
+    @include transition(all 0.7s ease);
 }
 
 
@@ -72,7 +72,7 @@ $red:rgb(153, 18, 13);
         color: #fff;
 
         .insider {
-            @include transition(all 0.3s ease);
+            @include transition(all 0.5s ease);
             left: 135px;
         }
     }
