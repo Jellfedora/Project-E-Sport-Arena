@@ -1,4 +1,4 @@
-<!-- <div class="carousel">
+<div class="carousel">
     <div class="" data-ride="carousel" data-interval="3000">
       <div class="carousel-inner  ">
         <div class="carousel carousel-item active intro" style="background-image: url(http://geeko.lesoir.be/wp-content/uploads/sites/58/2018/08/esport.jpg);">
@@ -28,4 +28,4 @@
         </div>
       </div>
     </div>
-</div> -->
+</div>

@@ -1,5 +1,5 @@
 <?php ; ?>
-
+</main>
 <footer class="footer d-flex flex-column mt-5">
     <div class="footer__contact d-flex justify-content-around mb-5">
       <a href="http://localhost/Project/Project-E-Sport-Arena/Wp-Arena/contact/" class="action-button ">Contact</a>

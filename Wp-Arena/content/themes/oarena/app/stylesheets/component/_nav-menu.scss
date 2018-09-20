@@ -1,3 +1,47 @@
-.nav__link a {
-    color: rgb(221, 33, 33);
+.menu-lg {
+    display: none;
+}
+
+.menu__login {
+    display: flex;
+    justify-content: space-around;
+}
+
+@media (min-width: 768px) {
+    .menu-lg {
+        display: initial;
+        height: 100vh;
+        background-color: #242752;
+        width: 18em;
+        position: fixed;
+
+        &__nav {
+            position: relative;
+        }
+
+        &__user {
+            position: absolute;
+            bottom: 4em;
+        }
+    }
+
+    .menu__login {
+        flex-wrap: wrap;
+        justify-content: initial;
+        height: 5em;
+    }
+
+    .menu__login a {}
+
+    .menu-xs {
+        display: none;
+    }
+
+    .main {
+        margin-left: 18em;
+    }
+
+    .footer {
+        margin-left: 18em;
+    }
 }
