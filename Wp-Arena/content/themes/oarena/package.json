@@ -17,7 +17,7 @@
     "masonry": "0.0.2",
     "normalize.css": "^8.0.0",
     "popper.js": "^1.14.4",
-    "rellax": "^1.6.2"
+    "rellax": "^1.7.0"
   },
   "devDependencies": {
     "browser-sync-brunch": "0.0.9",

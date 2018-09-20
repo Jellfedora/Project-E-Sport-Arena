@@ -32,6 +32,7 @@ Have any suggestions or feedback? Reach out [@dixonandmoe](https://twitter.com/d
   var rellax = new Rellax('.rellax', {
     speed: -2,
     center: false,
+    wrapper: null,
     round: true,
     vertical: true,
     horizontal: false
@@ -83,6 +84,17 @@ Horizontal parallax is disabled by default. You can enable it by passing `horizo
 This feature is intended for panoramic style websites, where users scroll horizontally instead of vertically.
 Note that this can work together at the same time with the default vertical parallax. If you do not want this, pass `vertical: false` in the settings block.
 
+### Custom Wrapper
+By default, the position of parallax elements is determined via the scroll position of the body. Passing in the `wrapper` property will tell Rellax to watch that element instead. 
+```html
+<script>
+  // Set wrapper to .custom-element instead of the body
+  var rellax = new Rellax('.rellax', {
+    wrapper: '.custom-element'
+  });
+</script>
+```
+
 ### Refresh
 ```html
 <script>
@@ -132,18 +144,18 @@ var rellax = new Rellax(this.rellaxRef)
 If you're using Rellax in production, we'd love to list you here! Let us know: moe@dixonandmoe.com
 - [Microsoft Fluent](https://fluent.microsoft.com/)
 - [Gucci Gift](http://gift.gucci.com/)
+- [Bowmore Scotch](https://www.bowmore.com/)
+- [Laws of UX](https://lawsofux.com/)
 - [Finch](https://finch.io/)
 - [Product Designer in San Francisco](https://moeamaya.com/)
+- [Cool Backgrounds](https://coolbackgrounds.io/)
 - [EthWorks](http://ethworks.io/)
+- [Service List](https://servicelist.io/)
 - [Airgora](https://www.airgora.com/competition)
 - [Lorem Ipsum Generator](https://loremipsumgenerator.com/)
-- [Alex Bailon Portfolio](http://www.iambailon.com/)
 - [Terry Design](http://terrydesign.co.uk/)
-- [The Rixey](http://www.livetherixey.com/)
-- [Laws of UX](https://lawsofux.com/)
 - [Deeson](https://www.deeson.co.uk/)
-
-Learn Rellax and other web animation skills with a course on [CSS Animation Rocks](http://courses.cssanimation.rocks/p/level-up)
+- [Alex Bailon Portfolio](http://www.iambailon.com/)
 
 ## Development
 In the spirit of lightweight javascript, the build processes (thus far) is lightweight also.

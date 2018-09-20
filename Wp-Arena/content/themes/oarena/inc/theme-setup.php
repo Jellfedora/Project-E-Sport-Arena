@@ -7,6 +7,7 @@ function oarena_setup()
 
     register_nav_menus([
         'header' => 'menu de navigation du header',
+        'menu-admin' => 'Menu pour l\'admin'
     ]);
 
         // Je demande à WordPress que mes post-thumbnails ai la taille de 500*500
