@@ -46,4 +46,11 @@ require plugin_dir_path(__FILE__) . 'inc/members_cpt.php';
 ;
 $oArena_members = new oArenaMembersCpt();
 
+require plugin_dir_path(__FILE__) . 'inc/custom_hook.php';
+
+// $submitHook = new oArenaSubmitHook();
+
+// register_activation_hook(__FILE__, [$submitHook, 'activation']);
+// register_deactivation_hook(__FILE__, [$submitHook, 'deactivation']);
+
 
