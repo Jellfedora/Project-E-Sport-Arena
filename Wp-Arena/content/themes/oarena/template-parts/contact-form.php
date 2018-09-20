@@ -6,8 +6,8 @@
  
 get_header(); ?>
  
-<div id="primary" class="site-content">
-        <div id="content" role="main">
+<div id="primary" class="site-content ">
+        <div id="content" role="main" class="d-flex justify-content-center">
  
                 <?php
  
@@ -41,13 +41,13 @@ get_header(); ?>
                 } else { ?>
  
                         <form action="<?php echo the_permalink(); ?>" method="post">
-                                <label for="name">Nom complet</label>
+                                <label for="name"></label>
                                 <input type="text" name="myname" id="name" placeholder="Votre nom" />
                                 <hr>
-                                <label for="email">Adresse e-mail</label>
+                                <label for="email"></label>
                                 <input type="email" name="myemail" id="email" placeholder="Votre e-mail" />
                                 <hr>
-                                <label for="message">Message</label>
+                                <label for="message"></label>
                                 <textarea cols="50" rows="10" name="mymessage" id="message" placeholder="Votre message..."></textarea>
                                 <br>
                                 <input type="submit" name="submit" value="Envoyer votre message" />
