@@ -63,7 +63,11 @@ $red:rgb(153, 18, 13);
     }
 
     &:hover {
-        background-color: $red;
+        background: -webkit-linear-gradient(left, rgb(177, 22, 22), rgb(5, 5, 145));
+        background: -moz-linear-gradient(left, rgb(177, 22, 22), rgb(5, 5, 145));
+        background: -ms-linear-gradient(left, rgb(177, 22, 22), rgb(5, 5, 145));
+        background: -o-linear-gradient(left, rgb(177, 22, 22), rgb(5, 5, 145));
+        background: linear-gradient(to right, rgb(177, 22, 22), rgb(5, 5, 145));
         border-color: #fff;
         color: #fff;
 
