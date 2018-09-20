@@ -128,4 +128,11 @@
     Chose possible avant mais plus maintenant WordPress l'ayant supprimé.
     Probléme résolu en changeant user_nicename / nickname / display_name 
 
+# Sprint 2.3
+
+++++ 19 septembre 2018 ++++
+
+* Beaucoup de problémes pour gérer l'ajout de métabox via le front office. => recherches toute la journée ...
+ post sur slack overflow.
+
 

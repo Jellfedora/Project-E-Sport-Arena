@@ -2,7 +2,8 @@
 
 Class oArenaCreateTeam
 {
-    public function __construct(){
+    public function __construct()
+    {
         
         add_action ('init', [$this, 'addTeam']);
     }
