@@ -1,4 +1,4 @@
-<div class="container_fluide bg-dark">
+<div class="container_fluide bg-dark d-flex justify-content-around">
 <?php
 // Displays the name of the connected user
 if (is_user_logged_in()) {
@@ -21,6 +21,7 @@ if (is_user_logged_in()) {
     ?>
     <div class="container-fluide d-flex">
     <?php
+    // Lien à changer avec blog bloginfo('url');
     echo ('<a href="log-in"><button class="myButt one"><div class="insider"></div>Connexion</button></a>');
     echo ('<a href="register"><button class="myButt one"><div class="insider"></div>Inscription</button></a>');
     ?>
