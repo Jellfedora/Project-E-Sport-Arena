@@ -28,6 +28,10 @@ a {
     font-weight: bold;
 }
 
+a:hover {
+    text-decoration: none;
+}
+
 ul {
     list-style: none;
     padding: 0;

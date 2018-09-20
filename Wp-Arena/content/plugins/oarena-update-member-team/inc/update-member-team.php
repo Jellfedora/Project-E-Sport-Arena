@@ -30,7 +30,7 @@ class oArenaUpdateTeamMember
         
         // Ajouter la condition si le membre existe!
 
-        // If the form is submitted and the input is !empty update value change the member
+        // If the form is submitted and the input is !empty update value and change the member
         if (isset($_POST['member-submit'])) {
 
             if (!empty($_POST['_member1'])) {
@@ -55,7 +55,7 @@ class oArenaUpdateTeamMember
         wp_redirect('gerer-son-equipe');exit;
         }
 
-        // If the form is submitted and the input is !empty update value change the team chief
+        // If the form is submitted and the input is !empty update value and change the team chief
         if (isset($_POST['team_chief-submit'])) {
 
             if (!empty($_POST['_team_chief'])) {
