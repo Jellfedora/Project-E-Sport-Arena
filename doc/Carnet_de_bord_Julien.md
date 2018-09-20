@@ -81,3 +81,11 @@
 * Page manage-team dynamisée avec l'ajout de metaboxe pour le chef d'équipe et les 5 membres
 * Ajout au plugin oarena-create-team de update-team.php qui sera chargé de changer les membres au submit dun formulaire ->  update_post_meta (iddupost, 'member1', 'nomdunouveaumembre');
 * Nettoyage des utilisateurs
+
+# Sprint 2.3 mercredi 19 septembre 2018
+
+* Un membre peut maintenant éditer son nom sur la page éditer son profil
+* Suppr de la condition est miniscule/caractéres spéciaux à l'inscription d'un membre
+* Ajout/Correction de redirection
+* Intégré un joli dégradé pour la background du body!
+* Diverses corrections/améliorations de code

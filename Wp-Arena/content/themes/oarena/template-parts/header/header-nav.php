@@ -11,3 +11,6 @@ $menu = strip_tags($menu, '<a><li>');
 $menu = str_replace('a href', 'a class="nav__link nav-link" href', $menu);
 
 echo $menu;
+
+
+
