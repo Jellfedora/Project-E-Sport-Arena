@@ -17,7 +17,7 @@
             </div>
           </div>
         </div>
-        <div class="carousel carousel-item " style="background-image: url(https://www.evgagaming.com/image.axd?picture=/2016/September/esportsarenabren.jpg);">
+        <div class="carousel carousel-item " style="background-image: url(https://www.challenges.fr/assets/img/2015/10/27/cover-r4x3w1000-578d78a2ec926-e-sport.jpg);">
           <div class="
             intro__small" style="text-align: center;">
             <div class=" intro__small__title">Tournoi du 1er janvier</div>
