@@ -8,6 +8,7 @@
 }
 
 @media (min-width: 768px) {
+
     .menu-lg {
         display: initial;
         height: 100vh;
@@ -25,13 +26,15 @@
         }
     }
 
+    .menu-hide {
+        display: none;
+    }
+
     .menu__login {
         flex-wrap: wrap;
         justify-content: initial;
         height: 5em;
     }
-
-    .menu__login a {}
 
     .menu-xs {
         display: none;
