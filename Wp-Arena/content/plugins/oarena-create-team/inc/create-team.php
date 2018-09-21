@@ -16,18 +16,29 @@ Class oArenaCreateTeam
             'posts_per_page' => -1,
         ];
 
-        $post = get_posts($args);
-        // var_dump($test);
-        // die;
-
-        foreach ($post as $title) {
-            //var_dump($title->post_title);
+        $posts = get_posts($args);
+        // // var_dump($test);
+        // // var_dump($posts->post_title);
+        // foreach($posts as $titles){
             
-        }
-
+        // }
+        // var_dump( $titles->post_title);
+        // die;
+        // die;
         
-        // $our_articles = new WP_Query($args);
         
+        
+        // $test = array_values($array_title);
+        // }
+        // die;
+        // var_dump($array_title);
+        
+            // var_dump($array_title);
+            // die;
+            
+            
+            // $our_articles = new WP_Query($args);
+            
         // if ($our_articles->have_posts()): while ($our_articles->have_posts()): $our_articles->the_post(); 
         // var_dump($args);
         
@@ -63,21 +74,9 @@ Class oArenaCreateTeam
             $errorList = [];    
             
             if (isset($_POST['submit-team'])) 
-            {  
-                $args= [
-                        'post_type' => 'team',
-                        'posts_per_page' => -1,
-                    ];
-
-                    $post = get_posts($args);
-                    // var_dump($test);
-                    // die;
-
-                    foreach ($post as $title) {
-                        $title = $title->post_title;
-                    }
-                    var_dump($title);    
-                    
+            {
+                foreach ($posts as $title) {
+                 
                 // htmlspecialchars convertit les caractères spéciaux en entités HTML
                 $teamName = htmlspecialchars($_POST['team-name']);
                 // fonction wp qui 'néttoie' le contenu du post
@@ -89,17 +88,26 @@ Class oArenaCreateTeam
                 if (empty($teamName)) {
                     $errorList[] = 'Ne peux pas etre vide';
                     // var_dump( $errorList);
-                    // die;
-                } 
-                 if ($title == $teamName ) {
-                                $errorList[] = ' doublon';
-                                var_dump($errorList);                   
-                                     }
+                }
+                 
+                    if ($teamName == $title->post_title) {
+                    $errorList = 'Cette team existe déjà';
+                    var_dump($errorList);
+                    wp_redirect('equipe');
+                    exit;
+                }
+                }
+            }
+            // die;
                 
                 if (empty($myteamdescription)) {
-                    $errorList[] = 'Ne peux pas etre vide non plus';
+                    $errorList = 'Ne peux pas etre vide non plus';
                 } 
-                    
+                // if ($title === $teamName ) {
+                    //     $errorList[] = ' doublon';
+                    // }
+                   else {
+                        
                     $team_post = [
                         'post_title' => $teamName,
                         'post_content' => $myteamdescription,
@@ -116,9 +124,13 @@ Class oArenaCreateTeam
                         'ID' => $user_id,
                         'role' => 'TeamAdmin',
                         ]);
-                      // wp_redirect('gerer-son-equipe');exit;
-                   } 
-    }       
+                        // wp_redirect('gerer-son-equipe');exit;
+                    }
+                }
+                    
+                
+    }    
                 
                 
-}
+                
+
