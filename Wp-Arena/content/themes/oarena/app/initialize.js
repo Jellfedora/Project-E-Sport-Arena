@@ -7,10 +7,11 @@ var app = {
     // Je créé mes variables pour cibler mes éléments + facilement
     $menu = $('.menu-lg');
     $footer = $('.footer')
+    $main = $('.main')
 
 
-    $('.hidden-menu-button').on('click', app.hideMenu);
-    // $body.on('click', '.ui-button', app.toogleMenu);
+    $('.hide-menu-button').on('click', app.hideMenu);
+    $('.show-menu-button').on('click', app.showMenu);
 
 
   },
@@ -18,11 +19,23 @@ var app = {
 
     console.log('hideMenu');
 
-    // Je supprime l'évènement par défaut du bouton
-    evt.preventDefault();
+    $menu.addClass('menu-hide');
+    $footer.addClass('footer-hide');
+    $main.addClass('main-hide');
 
-    $menu.toggleClass('menu-hide');
-  }
+  },
+
+  showMenu: function (evt) {
+    $footer.removeClass('footer-hide');
+    $main.removeClass('main-hide');
+    setTimeout(app.showMenuheader, 1000);
+  },
+
+  showMenuheader: function (evt) {
+    console.log('showMenu');
+    $menu.removeClass('menu-hide');
+  },
+
 
 
 

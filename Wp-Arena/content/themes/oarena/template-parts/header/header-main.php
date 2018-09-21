@@ -16,7 +16,10 @@
   </div>
 
   <!--Menu for large screen-->
-  <div class="menu-lg menu-hide">
+  <div class="menu-lg ">
+    <div class="menu-lg__hidden text-center">
+      <button class="hide-menu-button"><i class="fa fa-arrow-circle-left" aria-hidden="true"></i></button>
+    </div>
     <div class="menu-lg__logo text-center">
       <a class="" href="<?=home_url();?>"><img src="http://image.noelshack.com/fichiers/2018/38/4/1537467630-efad17ce-f4d2-4dee-96f8-d8e47fb5973d.png"></a>
     </div>
@@ -28,11 +31,9 @@
         <div class="menu-lg__user">
           <?php get_template_part('template-parts/header/member', 'area');?>
         </div>
-        <div class="menu-lg__hidden text-center">
-          <button class="hidden-menu-button"><i class="fa fa-arrow-circle-left" aria-hidden="true"></i></button>
-        </div>
+        
     </div>
   </div>
 </header>
-  <button class="hidden-menu-button"><i class="fa fa-arrow-circle-left" aria-hidden="true"></i></button>
-<main class="main">
+<button class="show-menu-button"><i class="fa fa-bars" aria-hidden="true"></i></button>
+<main class="main ">

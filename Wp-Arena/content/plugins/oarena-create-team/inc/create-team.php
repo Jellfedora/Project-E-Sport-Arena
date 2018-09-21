@@ -10,6 +10,22 @@ Class oArenaCreateTeam
     
     public function addTeam()
     {
+        
+        $args= [
+            'post_type' => 'team',
+            'posts_per_page' => -1,
+        ];
+
+        $post = get_posts($args);
+        // var_dump($test);
+        // die;
+
+        foreach ($post as $title) {
+            //var_dump($title->post_title);
+            
+        }
+
+        
         // $our_articles = new WP_Query($args);
         
         // if ($our_articles->have_posts()): while ($our_articles->have_posts()): $our_articles->the_post(); 
