@@ -30,8 +30,9 @@
 
 
 
-/* Button found on https://www.designrush.com/resources/designskilz/cool-css-buttons/ */
 
+/* Button found on https://www.designrush.com/resources/designskilz/cool-css-buttons/ */
+/*Bouton avec animation de la bordure a bouger de là!!!*/
 /*    start code for the actual button:         */
 
 
@@ -100,6 +101,7 @@
 }
 
 /* 
+
     Changing the shape on hover. I change the color of the stroke,
 make it thinner, then set it to again wrap around the entire parent element.
 */
@@ -109,4 +111,33 @@ make it thinner, then set it to again wrap around the entire parent element.
     stroke-width: 3px;
     stroke-dashoffset: 0;
     stroke: #242752;
+}
+
+/*
+Bouton pour retourner en haut du site, a degager de là!!!
+*/
+#scrollToTop a {
+    background-image: url("https://zupimages.net/up/18/38/ldek.png");
+    background-repeat: no-repeat;
+    top: 0.2em;
+    height: 100px;
+    position: fixed;
+    right: 0.1em;
+    text-indent: -50000px;
+    width: 85px;
+
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+    #scrollToTop a {
+        background-image: url("https://zupimages.net/up/18/38/ldek.png");
+        background-repeat: no-repeat;
+        bottom: 10px;
+        height: 100px;
+        position: fixed;
+        right: 1em;
+        text-indent: -50000px;
+        width: 85px;
+    }
 }

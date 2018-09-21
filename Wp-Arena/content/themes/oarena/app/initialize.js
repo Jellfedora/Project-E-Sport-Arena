@@ -52,6 +52,10 @@ var app = {
     $button_update_team.addClass('hide');
   },
 
+  buttonElevator: function (evt) {
+
+  },
+
   smoothScroll: function (evt) {
 
     console.log('hey');
@@ -107,3 +111,24 @@ var app = {
   }
 }
 $(app.init);
+
+
+
+$(document).ready(function () {
+  $(window).scroll(function () {
+    if ($(window).scrollTop() == 0) {
+      $('#scrollToTop').fadeOut("fast");
+    } else {
+      if ($('#scrollToTop').length == 0) {
+        $('body').append('<div id="scrollToTop">' + '<a href="#">Retour en haut</a>' + '</div>');
+      }
+      $('#scrollToTop').fadeIn("fast");
+    }
+  });
+  $('body').on('click', '#scrollToTop a', function (event) {
+    event.preventDefault();
+    $('html,body').animate({
+      scrollTop: 0
+    }, 'slow');
+  });
+});
