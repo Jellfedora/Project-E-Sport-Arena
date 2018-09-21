@@ -16,6 +16,7 @@
         width: 18em;
         position: fixed;
 
+
         &__nav {
             position: relative;
         }
@@ -42,9 +43,21 @@
 
     .main {
         margin-left: 18em;
+        transition-property: margin-left;
+        transition-duration: 0.5s;
     }
 
     .footer {
         margin-left: 18em;
+        transition-property: margin-left;
+        transition-duration: 0.5s;
+    }
+
+    .main-hide {
+        margin-left: 3em;
+    }
+
+    .footer-hide {
+        margin-left: 3em;
     }
 }
