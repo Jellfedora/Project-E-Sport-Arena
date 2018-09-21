@@ -5,6 +5,7 @@ Template Name: Create-user
 ?>
 
 <?php get_header();?>
+<<<<<<< HEAD
         <!-- Affichage du formulaire -->
 <div class="d-flex justify-content-center">
         <!-- Form action the permalink recharge la page a la soumission du formulaire, method post pour récuperer les données du form -->
@@ -22,6 +23,9 @@ Template Name: Create-user
 <script type="text/javascript">
     var ajaxurl = "<?php echo admin_url('admin-ajax.php'); ?>";
 </script>
+=======
+
+>>>>>>> master
 
 
 <?php
