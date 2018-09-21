@@ -10,11 +10,12 @@
         <form name="formsubmit" action="create-team.php" method="post">
         <!-- Test input simple-->
         <input type="text" name="team-name" placeholder="Nom de votre team">
+        <div id="alert-name">Cette équipe existe déjà</div> 
         <hr>
         <textarea name="myteamdescription" cols="30" rows="10"></textarea>
         <hr>
         <!-- Boutton de soumission-->
-        <input type="submit" name="submit-team" value="Creer team">
+        <input type="submit" name="submit-team" value="Creer team" id="create-team-form">
         </form>
 </div>
 
