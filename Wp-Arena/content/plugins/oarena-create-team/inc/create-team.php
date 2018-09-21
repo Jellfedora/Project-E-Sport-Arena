@@ -21,7 +21,7 @@ Class oArenaCreateTeam
         // die;
 
         foreach ($post as $title) {
-            var_dump($title->post_title);
+            //var_dump($title->post_title);
             
         }
 
