@@ -23,7 +23,7 @@ $arguments = [
 ?>
 
 
-<div class="team">
+<div class="team text-center">
 	<div class="team__logo text-center">
 		<img  src="http://image.noelshack.com/fichiers/2018/38/5/1537545883-13042b56-bcee-4b3b-be37-520dbfc5750e.png" alt="">
 	</div>
@@ -39,8 +39,7 @@ if ($user_team->have_posts()): while ($user_team->have_posts()): $user_team->the
 	<div class="team__bio">
 		<p><?php the_content();?></p>
 	</div>
-		
-<?php endwhile;
+		<?php endwhile;
 
     // Je remet les variables globals telle qu'elles étaient avant ma boucle custom
     wp_reset_postdata();
@@ -76,40 +75,43 @@ $id_team->ID;
 			<li><?= $member5 = get_post_meta($id_team->ID,'_member5',true);?></li>	
 		</ul>
 	</div>
-	<button class="myButt one">
-	<div class="insider">
-	</div>Connexion
-	</button>
+    <div class="team__button-update button-update-team svg-wrapper">
+      <svg height="40" width="150" xmlns="http://www.w3.org/2000/svg">
+        <rect id="shape" height="40" width="150" />
+        <div id="text">
+          <span class="spot"></span>Modifier équipe
+        </div>
+      </svg>
+    </div>
 </div>
 
-
-
+<div class="team__form-update team-form-update">
 <form action="update-member-team" class="col-12 col-md-6 offset-md-3 mb-5" method="post">
-	    <h3>Ajouter ou changer de chef d'équipe</h3>
+	    <h3 class="text-center">Changer le chef d'équipe</h3>
 	    <div class="form-group">
-			<small id="usernameHelp" class="">Chef d'équipe</small>
-	        <input type="text" class="form-control" id="username" name="_team_chief"  aria-describedby="usernameHelp" placeholder="<?= $team_chief ?>" >
+			<small id="member" class="">Chef d'équipe</small>
+	        <input type="text" class="form-control"  name="_team_chief"  aria-describedby="member" placeholder="<?= $team_chief ?>" >
 	    </div>
 	    <input type="submit" name="team_chief-submit">
 	</form>
 
 	<form action="update-member-team" class="col-12 col-md-6 offset-md-3 mb-5" method="post">
-	    <h3>Ajouter ou changer de membres</h3>
+	    <h3 class="text-center">Changer les membres</h3>
 	    <div class="form-group">
-			<small id="usernameHelp" class="">Membre 1 </small>
-	        <input type="text" class="form-control" id="username" name="_member1"  aria-describedby="usernameHelp" placeholder="<?= $member1 ?>" >
-			<small id="usernameHelp" class="">Membre 2</small>
-			<input type="text" class="form-control" id="username" name="_member2"  aria-describedby="usernameHelp" placeholder="<?= $member2 ?>" >
-			<small id="usernameHelp" class="">Membre 3</small>
-			<input type="text" class="form-control" id="username" name="_member3"  aria-describedby="usernameHelp" placeholder="<?= $member3 ?>" >
-			<small id="usernameHelp" class="">Membre 4</small>
-			<input type="text" class="form-control" id="username" name="_member4"  aria-describedby="usernameHelp" placeholder="<?= $member4 ?>" >
-	        <small id="usernameHelp" class="">Membre 5</small>
-			<input type="text" class="form-control" id="username" name="_member5"  aria-describedby="usernameHelp" placeholder="<?= $member5 ?>" >
+			<small id="member1" class="">Membre 1 </small>
+	        <input type="text" class="form-control" name="_member1"  aria-describedby="member" placeholder="<?= $member1 ?>" >
+			<small id="member2" class="">Membre 2</small>
+			<input type="text" class="form-control" name="_member2"  aria-describedby="member" placeholder="<?= $member2 ?>" >
+			<small id="member3" class="">Membre 3</small>
+			<input type="text" class="form-control" name="_member3"  aria-describedby="member" placeholder="<?= $member3 ?>" >
+			<small id="member4" class="">Membre 4</small>
+			<input type="text" class="form-control" name="_member4"  aria-describedby="member" placeholder="<?= $member4 ?>" >
+	        <small id="member5" class="">Membre 5</small>
+			<input type="text" class="form-control" name="_member5"  aria-describedby="member" placeholder="<?= $member5 ?>" >
 	    </div>
 	    <input type="submit" name="member-submit">
 	</form>
-
+</div>
 <?php
 endif;
 ?>

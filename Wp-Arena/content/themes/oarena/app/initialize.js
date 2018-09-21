@@ -10,6 +10,10 @@ var app = {
     $footer = $('.footer');
     $main = $('.main');
 
+    // Show the team edition form
+    $team_form_update = $('.team-form-update');
+    $button_update_team = $('.button-update-team');
+    $('.button-update-team').on('click', app.showTeamform);
 
     // Création variable pour soumission du formulaire
     // $('#create-team-form').on('click', app.formError);
@@ -21,9 +25,6 @@ var app = {
 
   },
   hideMenu: function (evt) {
-
-    console.log('hideMenu');
-
     $menu.addClass('menu-hide');
     $footer.addClass('footer-hide');
     $main.addClass('main-hide');
@@ -37,8 +38,12 @@ var app = {
   },
 
   showMenuheader: function (evt) {
-    console.log('coucoucoucoucou');
     $menu.removeClass('menu-hide');
+  },
+
+  showTeamform: function (evt) {
+    $team_form_update.addClass('show');
+    $button_update_team.addClass('hide');
   },
 
   formError: function (evt) {

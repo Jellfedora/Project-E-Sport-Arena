@@ -174,6 +174,10 @@ var app = {
     $footer = $('.footer');
     $main = $('.main');
 
+    // Show the team edition form
+    $team_form_update = $('.team-form-update');
+    $button_update_team = $('.button-update-team');
+    $('.button-update-team').on('click', app.showTeamform);
 
     // Création variable pour soumission du formulaire
     // $('#create-team-form').on('click', app.formError);
@@ -185,9 +189,6 @@ var app = {
 
   },
   hideMenu: function (evt) {
-
-    console.log('hideMenu');
-
     $menu.addClass('menu-hide');
     $footer.addClass('footer-hide');
     $main.addClass('main-hide');
@@ -201,40 +202,14 @@ var app = {
   },
 
   showMenuheader: function (evt) {
-    console.log('coucoucoucoucou');
     $menu.removeClass('menu-hide');
   },
 
-<<<<<<< HEAD
-  // formError: function (evt) {
-  //   // FORM = Je stoppe le comportement par défaut de la page
-  //   evt.preventDefault();
-  //   // console.log('OK')
-  //   var dataToSend = $(this).serialize();
+  showTeamform: function (evt) {
+    $team_form_update.addClass('show');
+    $button_update_team.addClass('hide');
+  },
 
-  //   //Je cache la div contenant l'alerte
-  //   $('#alert-name').hide();
-  //   // Je fais un appel Ajax
-  //   $.ajax({
-  //     url: custom_ajax_vars.ajaxurl,
-  //     method: 'POST',
-  //     dataType: 'json',
-  //     data: dataToSend
-  //   }).done(function (response) {
-  //     console.log(coucou);
-  //     if (response.code == 1) {
-  //       window.setTimeout(function () {
-  //         location.href = response.redirect;
-  //       }, 2000);
-  //     } else {
-  //       var $alertsDiv = $('#alert-name');
-  //       $alertDiv.show();
-  //     }
-  //   }).fail(function () {
-  //     alert('ajax failed');
-  //   })
-  // }
-=======
   formError: function (evt) {
     // FORM = Je stoppe le comportement par défaut de la page
     evt.preventDefault();
@@ -263,7 +238,6 @@ var app = {
     //     console.log('ajax failed');
     //   })
     // }
->>>>>>> fd51834737354cfde27b9de37d1093ea4e6f1c68
 
 
   }
