@@ -19,7 +19,7 @@ if (is_user_logged_in())
                 ]);
                 
                 $menu = strip_tags($menu, '<a><li>');
-                $menu = str_replace('a href', 'a class="nav__link nav-link" href', $menu);
+                $menu = str_replace('a href', 'a class="nav__link nav-link text-light" href', $menu);
                 
                 echo $menu;
             }
@@ -33,7 +33,7 @@ if (is_user_logged_in())
                 ]);
                 
                 $menu = strip_tags($menu, '<a><li>');
-                $menu = str_replace('a href', 'a class="nav__link nav-link" href', $menu);
+                $menu = str_replace('a href', 'a class="nav__link nav-link text-light" href', $menu);
                 
                 echo $menu;
             };
@@ -47,7 +47,7 @@ if (is_user_logged_in())
                 ]);
                 
                 $menu = strip_tags($menu, '<a><li>');
-                $menu = str_replace('a href', 'a class="nav__link nav-link" href', $menu);
+                $menu = str_replace('a href', 'a class="nav__link nav-link text-light" href', $menu);
                 
                 echo $menu;
 }

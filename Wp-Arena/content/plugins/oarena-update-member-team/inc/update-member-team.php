@@ -52,7 +52,7 @@ class oArenaUpdateTeamMember
             if (!empty($_POST['_member5'])) {
                 update_post_meta($id_team->ID, '_member5', sanitize_text_field($_POST['_member5']));
             }
-        wp_redirect('gerer-son-equipe');exit;
+        wp_redirect('equipe');exit;
         }
 
         // If the form is submitted and the input is !empty update value and change the team chief
@@ -61,7 +61,7 @@ class oArenaUpdateTeamMember
             if (!empty($_POST['_team_chief'])) {
                 update_post_meta($id_team->ID, '_team_chief', sanitize_text_field($_POST['_team_chief']));
             }
-        wp_redirect('gerer-son-equipe');exit;
+        wp_redirect('equipe');exit;
         }
     }
 }
