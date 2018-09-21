@@ -10,22 +10,6 @@ Class oArenaCreateTeam
     
     public function addTeam()
     {
-        
-        $args= [
-            'post_type' => 'team',
-            'posts_per_page' => -1,
-        ];
-
-        $post = get_posts($args);
-        // var_dump($test);
-        // die;
-
-        foreach ($post as $title) {
-            var_dump($title->post_title);
-            
-        }
-
-        
         // $our_articles = new WP_Query($args);
         
         // if ($our_articles->have_posts()): while ($our_articles->have_posts()): $our_articles->the_post(); 
@@ -63,7 +47,21 @@ Class oArenaCreateTeam
             $errorList = [];    
             
             if (isset($_POST['submit-team'])) 
-            {
+            {  
+                $args= [
+                        'post_type' => 'team',
+                        'posts_per_page' => -1,
+                    ];
+
+                    $post = get_posts($args);
+                    // var_dump($test);
+                    // die;
+
+                    foreach ($post as $title) {
+                        $title = $title->post_title;
+                    }
+                    var_dump($title);    
+                    
                 // htmlspecialchars convertit les caractères spéciaux en entités HTML
                 $teamName = htmlspecialchars($_POST['team-name']);
                 // fonction wp qui 'néttoie' le contenu du post
@@ -76,14 +74,15 @@ Class oArenaCreateTeam
                     $errorList[] = 'Ne peux pas etre vide';
                     // var_dump( $errorList);
                     // die;
-                }
+                } 
+                 if ($title == $teamName ) {
+                                $errorList[] = ' doublon';
+                                var_dump($errorList);                   
+                                     }
                 
                 if (empty($myteamdescription)) {
                     $errorList[] = 'Ne peux pas etre vide non plus';
                 } 
-                // if ($title === $teamName ) {
-                    //     $errorList[] = ' doublon';
-                    // }
                     
                     $team_post = [
                         'post_title' => $teamName,
