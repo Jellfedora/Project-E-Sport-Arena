@@ -1,15 +1,15 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css?family=Baloo+Bhaina");
+@import url("https://fonts.googleapis.com/css?family=VT323");
 html {
   box-sizing: border-box; }
 
 body {
-  font-family: 'Baloo bhaina';
-  background: -webkit-linear-gradient(right, #b11616, #050591);
-  background: -moz-linear-gradient(right, #b11616, #050591);
-  background: -ms-linear-gradient(right, #b11616, #050591);
-  background: -o-linear-gradient(right, #b11616, #050591);
-  background: linear-gradient(to left, #b11616, #050591);
+  font-family: 'VT323', monospace;
+  background: -webkit-linear-gradient(right, #34208f, #518cd4);
+  background: -moz-linear-gradient(right, #34208f, #518cd4);
+  background: -ms-linear-gradient(right, #34208f, #518cd4);
+  background: -o-linear-gradient(right, #34208f, #518cd4);
+  background: linear-gradient(to left, #34208f, #518cd4);
   color: black; }
 
 *,

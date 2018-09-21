@@ -1,16 +1,16 @@
-@import url('https://fonts.googleapis.com/css?family=Baloo+Bhaina');
+@import url('https://fonts.googleapis.com/css?family=VT323');
 
 html {
     box-sizing: border-box;
 }
 
 body {
-    font-family: 'Baloo bhaina';
-    background: -webkit-linear-gradient(right, rgb(177, 22, 22), rgb(5, 5, 145));
-    background: -moz-linear-gradient(right, rgb(177, 22, 22), rgb(5, 5, 145));
-    background: -ms-linear-gradient(right, rgb(177, 22, 22), rgb(5, 5, 145));
-    background: -o-linear-gradient(right, rgb(177, 22, 22), rgb(5, 5, 145));
-    background: linear-gradient(to left, rgb(177, 22, 22), rgb(5, 5, 145));
+    font-family: 'VT323', monospace;
+    background: -webkit-linear-gradient(right, rgb(52, 32, 143), rgb(81, 140, 212));
+    background: -moz-linear-gradient(right, rgb(52, 32, 143), rgb(81, 140, 212));
+    background: -ms-linear-gradient(right, rgb(52, 32, 143), rgb(81, 140, 212));
+    background: -o-linear-gradient(right, rgb(52, 32, 143), rgb(81, 140, 212));
+    background: linear-gradient(to left, rgb(52, 32, 143), rgb(81, 140, 212));
     color: black;
 
 }
