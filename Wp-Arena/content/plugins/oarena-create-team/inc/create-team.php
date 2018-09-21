@@ -14,21 +14,29 @@ Class oArenaCreateTeam
         $args= [
             'post_type' => 'team',
             'posts_per_page' => -1,
-            'post_status' => 'publish',
-            'title'=> get_the_title()
         ];
+
+        $post = get_posts($args);
+        // var_dump($test);
+        // die;
+
+        foreach ($post as $title) {
+            var_dump($title->post_title);
+            
+        }
+
         
-        $our_articles = new WP_Query($args);
+        // $our_articles = new WP_Query($args);
         
-        if ($our_articles->have_posts()): while ($our_articles->have_posts()): $our_articles->the_post(); 
-        var_dump(get_post());
+        // if ($our_articles->have_posts()): while ($our_articles->have_posts()): $our_articles->the_post(); 
+        // var_dump($args);
         
         
-        endwhile;
+        // endwhile;
                 // Je remet les variables globals telle qu'elles étaient avant ma boucle custom
                 // wp_reset_postdata();    
                 
-                endif; 
+                // endif; 
         
         
         
@@ -61,9 +69,12 @@ Class oArenaCreateTeam
                 // fonction wp qui 'néttoie' le contenu du post
                 $myteamdescription = wp_kses_post($_POST['myteamdescription']);
                 // Create content in BDD
+
+                // var_dump($teamName);
+                // exit;
                 if (empty($teamName)) {
                     $errorList[] = 'Ne peux pas etre vide';
-                    var_dump( $errorList);
+                    // var_dump( $errorList);
                     // die;
                 }
                 
@@ -90,12 +101,9 @@ Class oArenaCreateTeam
                         'ID' => $user_id,
                         'role' => 'TeamAdmin',
                         ]);
-                        // wp_redirect('gerer-son-equipe');exit;
-                    }
-                    
-                
-    }    
-                
+                      // wp_redirect('gerer-son-equipe');exit;
+                   } 
+    }       
                 
                 
 }

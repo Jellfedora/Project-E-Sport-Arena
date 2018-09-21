@@ -49,10 +49,10 @@ class oArenaAddTeam
             {
                 add_post_meta($post_id, '_team_register_tournament', $user->post_title);
             }
+        else {
+            // echo 'wrong';
         }
-             } else {
-                echo 'wrong';
-                }
+      }
     } 
-    
+    }
 }
