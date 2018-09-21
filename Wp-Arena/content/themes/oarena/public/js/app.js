@@ -170,6 +170,7 @@ var app = {
 
 
     // Je créé mes variables pour cibler mes éléments + facilement
+    $header = $('.header');
     $menu = $('.menu-lg');
     $footer = $('.footer');
     $main = $('.main');
@@ -178,6 +179,11 @@ var app = {
     $team_form_update = $('.team-form-update');
     $button_update_team = $('.button-update-team');
     $('.button-update-team').on('click', app.showTeamform);
+
+    // Smooth Scroll
+    // Je cible tout les a dont le href vaux #
+    // MAIS pas ceux ton le href ne vaux QUE #
+    $('a[href*="#"]:not([href="#"])').on('click', app.smoothScroll);
 
     // Création variable pour soumission du formulaire
     // $('#create-team-form').on('click', app.formError);
@@ -208,6 +214,28 @@ var app = {
   showTeamform: function (evt) {
     $team_form_update.addClass('show');
     $button_update_team.addClass('hide');
+  },
+
+  smoothScroll: function (evt) {
+
+    console.log('hey');
+    // Je supprime l'évènement par défaut de l'ancre
+    evt.preventDefault();
+
+    // Je transforme la cible en objet jquery
+    var $target = $(this.hash);
+
+    // SI l'element existe bien...
+    if ($target.length) {
+
+      var targetPosition = $target.offset().top - $header.height() + 1;
+
+      $('html, body').animate({
+        scrollTop: targetPosition
+      }, 1500);
+    }
+
+
   },
 
   formError: function (evt) {
