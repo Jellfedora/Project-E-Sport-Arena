@@ -42,7 +42,8 @@ Class oArenaCreateTeam
             }
         }
                 
-        if (empty($myteamdescription)) {
+        if (empty($myteamdescription)) 
+        {
 
             $errorList = 'Ne peux pas etre vide non plus';
 
