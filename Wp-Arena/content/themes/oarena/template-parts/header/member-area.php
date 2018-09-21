@@ -7,34 +7,40 @@ if (is_user_logged_in()) {
         <?php
     echo 'Bienvenue ' . $current_user->display_name . '<br />';?>
     </div>
-    <div class="d-sm-flex flex-wrap justify-content-around align-items-lg-center">
+    <div class="menu__login d-flex justify-content-around">
     <?php
     
-    echo ('<a href="' . wp_logout_url(home_url()) . '">Deconnexion</a>');
+    echo ('<a href="' . wp_logout_url(home_url()) . '"><i class="fa fa-sign-out" aria-hidden="true"></i></a>');
 
-    
-    $user_menu = wp_nav_menu([
-    'theme_location' => 'user',
-    'echo' => false,
-    ]);
+    //Menu Wordpress remplacé par le suivant pour intégration icones
+    // $user_menu = wp_nav_menu([
+    // 'theme_location' => 'user',
+    // 'echo' => false,
+    // ]);
+    // $user_menu = strip_tags($user_menu, '<a>');
+    // $user_menu = str_replace('a href', 'a class="insider" href', $user_menu);
+    // echo $user_menu; 
 
-    $user_menu = strip_tags($user_menu, '<a>');
-    $user_menu = str_replace('a href', 'a class="insider" href', $user_menu);
+    $url_profil = site_url ('profil');
+    $url_add_team = site_url ('creer-une-equipe');
+    $url_team = site_url ('equipe');
+
+    echo ('<a href="' . $url_profil . '"><i class="fa fa-user" aria-hidden="true"></i></a>');
+    echo ('<a href="' . $url_add_team . '"><i class="fa fa-user-plus" aria-hidden="true"></i></a>');
+    echo ('<a href="' . $url_team . '"><i class="fa fa-users" aria-hidden="true"></i></a>');
     
-    
-    echo $user_menu; ?>
+    ?>
     
     </div>
     <?php
 } else {
     ?>
-    <div class="menu__login">
+    <div class="menu__login d-flex justify-content-around">
     <?php
     $url_log_in = site_url ('log-in');
     $url_register = site_url ('register');
-    
-    echo ('<a class="menu__login-a" href="' . $url_log_in . '"><button class="myButt one"><div class="insider"></div>Connexion</button></a>');
-    echo ('<a class="menu__login-a" href="' . $url_register . '"><button class="myButt one"><div class="insider"></div>Inscription</button></a>');
+    echo ('<a href="' . $url_log_in . '"><i class="fa fa-sign-in" aria-hidden="true"></i></a>');
+    echo ('<a href="' . $url_register . '"><i class="fa fa-registered" aria-hidden="true"></i></a>');
     ?>
     </div>
     <?php

@@ -137,12 +137,30 @@ li {
     transform: translateY(-50%);
     font-size: 1.4em; }
 
+.menu-xs a {
+  font-size: 1.2em;
+  color: black; }
+
+.menu-xs__user {
+  font-size: 1.5em; }
+
+.menu-xs__user a {
+  margin-top: 2em;
+  color: black; }
+
 .menu-lg {
   display: none; }
 
 .menu__login {
   display: flex;
-  justify-content: space-around; }
+  justify-content: space-around;
+  color: white; }
+  .menu__login a {
+    color: white; }
+
+.menu__login a {
+  color: white;
+  margin-top: 1em; }
 
 @media (min-width: 768px) {
   .menu-lg {
@@ -151,11 +169,11 @@ li {
     background-color: #242752;
     width: 18em;
     position: fixed; }
-    .menu-lg__nav {
-      position: relative; }
+    .menu-lg__video {
+      margin-top: 8em; }
     .menu-lg__user {
-      position: absolute;
-      bottom: 4em; }
+      margin-top: 8em;
+      text-align: center; }
   .menu-hide {
     display: none; }
   .menu__login {

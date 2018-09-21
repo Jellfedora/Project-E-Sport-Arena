@@ -1,3 +1,19 @@
+.menu-xs {
+    & a {
+        font-size: 1.2em;
+        color: black;
+    }
+
+    &__user {
+        font-size: 1.5em;
+    }
+
+    &__user a {
+        margin-top: 2em;
+        color: black;
+    }
+}
+
 .menu-lg {
     display: none;
 }
@@ -5,6 +21,16 @@
 .menu__login {
     display: flex;
     justify-content: space-around;
+    color: white;
+
+    & a {
+        color: white;
+    }
+}
+
+.menu__login a {
+    color: white;
+    margin-top: 1em;
 }
 
 @media (min-width: 768px) {
@@ -16,15 +42,16 @@
         width: 18em;
         position: fixed;
 
-
-        &__nav {
-            position: relative;
+        &__video {
+            margin-top: 8em;
         }
 
         &__user {
-            position: absolute;
-            bottom: 4em;
+            margin-top: 8em;
+            text-align: center;
         }
+
+
     }
 
     .menu-hide {

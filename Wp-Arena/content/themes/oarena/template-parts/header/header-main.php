@@ -12,7 +12,9 @@
         </ul>
       </div>
     </nav>
+    <div class=menu-xs__user>
     <?php get_template_part('template-parts/header/member', 'area');?>
+    </div>
   </div>
 
   <!--Menu for large screen-->
@@ -28,10 +30,12 @@
         <ul class="text-center">
           <?php get_template_part('template-parts/header/header', 'nav');?>
         </ul>
+        <div class="menu-lg__video text-center">
+          <iframe class="" width="260" height="180" src="https://www.youtube.com/embed/6G6R9RycMqo" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
         <div class="menu-lg__user">
           <?php get_template_part('template-parts/header/member', 'area');?>
         </div>
-        
     </div>
   </div>
 </header>
