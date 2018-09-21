@@ -25,14 +25,18 @@ var app = {
     $main.addClass('main-hide');
 
   },
+
   showMenu: function (evt) {
-    console.log('showMenu');
-    // Je supprime l'évènement par défaut du bouton
-    evt.preventDefault();
-    $menu.removeClass('menu-hide');
     $footer.removeClass('footer-hide');
     $main.removeClass('main-hide');
+    setTimeout(app.showMenuheader, 1000);
   },
+
+  showMenuheader: function (evt) {
+    console.log('showMenu');
+    $menu.removeClass('menu-hide');
+  },
+
 
 
 
