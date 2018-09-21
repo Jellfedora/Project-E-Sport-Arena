@@ -38,3 +38,21 @@ function contact_form() {
 	}
 }
 add_action('template_redirect', 'contact_form');
+
+//     function add_js_scripts() {
+//         // pass Ajax Url to script.js
+//         wp_localize_script('script', 'ajaxurl', admin_url( 'admin-ajax.php' ) );
+//     }
+//     add_action('wp_enqueue_scripts', 'add_js_scripts');
+
+//     add_action( 'wp_ajax_mon_action', 'mon_action' );
+//     add_action( 'wp_ajax_nopriv_mon_action', 'mon_action' );
+
+// function mon_action() {
+
+// 	$param = $_POST['submit-team'];
+
+// 	echo $param;
+
+// 	die();
+// }
