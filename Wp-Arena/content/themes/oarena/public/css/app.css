@@ -261,5 +261,11 @@ li {
       -ms-transition: all 0.5s ease;
       left: 135px; }
 
+.team {
+  margin-top: 1em;
+  padding: 2em; }
+  .team__logo {
+    margin: 1em 0 1em 0; }
+
 
 /*# sourceMappingURL=app.css.map*/

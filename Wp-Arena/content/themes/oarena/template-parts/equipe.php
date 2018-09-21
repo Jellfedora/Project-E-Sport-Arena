@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Create-user
+Template Name: page-team
  */
 ?>
 
@@ -23,15 +23,23 @@ $arguments = [
 ?>
 
 
-<div class="col-12 col-md-6 offset-md-3 mb-5">
-<h2> &#9660; <?php the_title();?> &#9660; </h2>
+<div class="team">
+	<div class="team__logo text-center">
+		<img  src="http://image.noelshack.com/fichiers/2018/38/5/1537545883-13042b56-bcee-4b3b-be37-520dbfc5750e.png" alt="">
+	</div>
+	
+
 <?php $user_team = new WP_Query($arguments);
 //print_r($user_team); 
 if ($user_team->have_posts()): while ($user_team->have_posts()): $user_team->the_post();?>
   
-	<h1><?php the_title();?></h1>
-	<p><?php the_content();?></p>
-			
+	<div class="team__title">
+		<h2 class="text-center"> &#9660; Team <?php the_title();?> &#9660;  </h2>
+	</div>
+	<div class="team__bio">
+		<p><?php the_content();?></p>
+	</div>
+		
 <?php endwhile;
 
     // Je remet les variables globals telle qu'elles étaient avant ma boucle custom
@@ -54,11 +62,29 @@ foreach($team_id as $id_team){
 $id_team->ID;
 }
 ?>
+	<div class="team__chief">
+		<h3>Chef d'équipe:</h3>
+		<li><?= $team_chief = get_post_meta($id_team->ID,'_team_chief',true);?></li>
+	</div>
+	<div class="team__member">
+		<h3>Membres:</h3>
+		<ul>
+			<li><?= $member1 = get_post_meta($id_team->ID,'_member1',true);?></li>
+			<li><?= $member2 = get_post_meta($id_team->ID,'_member2',true);?></li>	
+			<li><?= $member3 = get_post_meta($id_team->ID,'_member3',true);?></li>
+			<li><?= $member4 = get_post_meta($id_team->ID,'_member4',true);?></li>
+			<li><?= $member5 = get_post_meta($id_team->ID,'_member5',true);?></li>	
+		</ul>
+	</div>
+	<button class="myButt one">
+	<div class="insider">
+	</div>Connexion
+	</button>
+</div>
 
-<h3>Chef d'équipe:</h3>
-<li><?= $team_chief = get_post_meta($id_team->ID,'_team_chief',true);?></li>
 
-	<form action="update-member-team" class="col-12 col-md-6 offset-md-3 mb-5" method="post">
+
+<form action="update-member-team" class="col-12 col-md-6 offset-md-3 mb-5" method="post">
 	    <h3>Ajouter ou changer de chef d'équipe</h3>
 	    <div class="form-group">
 			<small id="usernameHelp" class="">Chef d'équipe</small>
@@ -66,18 +92,6 @@ $id_team->ID;
 	    </div>
 	    <input type="submit" name="team_chief-submit">
 	</form>
-
-
-<h3>Membres:</h3>
-<ul>
-<li><?= $member1 = get_post_meta($id_team->ID,'_member1',true);?></li>
-<li><?= $member2 = get_post_meta($id_team->ID,'_member2',true);?></li>	
-<li><?= $member3 = get_post_meta($id_team->ID,'_member3',true);?></li>
-<li><?= $member4 = get_post_meta($id_team->ID,'_member4',true);?></li>
-<li><?= $member5 = get_post_meta($id_team->ID,'_member5',true);?></li>	
-</ul>
-</div>
-
 
 	<form action="update-member-team" class="col-12 col-md-6 offset-md-3 mb-5" method="post">
 	    <h3>Ajouter ou changer de membres</h3>
