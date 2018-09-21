@@ -12,7 +12,6 @@ var app = {
 
     $('.hide-menu-button').on('click', app.hideMenu);
     $('.show-menu-button').on('click', app.showMenu);
-    // $body.on('click', '.ui-button', app.toogleMenu);
 
 
   },
