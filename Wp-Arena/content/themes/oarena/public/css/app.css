@@ -39,13 +39,28 @@ li {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  width: 100%; }
+  width: 100%;
+  position: relative; }
 
 .intro__small {
-  margin: auto;
-  margin-bottom: 1.5em;
-  padding-top: 7em;
-  color: #fff; }
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  color: #fff;
+  background-color: #242752;
+  padding-bottom: 1em;
+  background-image: url("https://szftlgs.com/wp-content/uploads/data/2018/1/7/Futuristic-HD-Wallpapers-hd-wallpapers-download-free-high-definition-amazing-artwork-background-wallpapers-pictures-x-PIC-WSW1067949.jpg"); }
+
+@media (min-width: 768px) {
+  .intro {
+    padding-top: 8em; }
+    .intro__small__button button {
+      color: white;
+      background-color: #242752;
+      border: none;
+      height: 2.5em;
+      width: 5em;
+      opacity: 1; } }
 
 .description {
   width: 70%;
