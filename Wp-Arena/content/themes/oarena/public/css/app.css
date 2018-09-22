@@ -19,12 +19,12 @@ body {
 
 a {
   text-decoration: none;
-  color: #004d99;
   text-transform: uppercase;
   font-weight: bold; }
 
 a:hover {
-  text-decoration: none; }
+  text-decoration: none;
+  color: #bc8df1; }
 
 ul {
   list-style: none;
@@ -137,6 +137,15 @@ li {
     transform: translateY(-50%);
     font-size: 1.4em; }
 
+.menu-lg-button {
+  background-color: transparent;
+  border: none;
+  color: white;
+  margin-top: 1em; }
+
+.menu-lg-button:hover {
+  color: #bc8df1; }
+
 .menu-xs a {
   font-size: 1.2em;
   color: black; }
@@ -191,9 +200,9 @@ li {
     transition-property: margin-left;
     transition-duration: 0.5s; }
   .main-hide {
-    margin-left: 3em; }
+    margin-left: 4.5em; }
   .footer-hide {
-    margin-left: 3em; } }
+    margin-left: 4.5em; } }
 
 .intro__small__title {
   padding-left: 0.3em;
@@ -230,6 +239,31 @@ li {
 @media (min-width: 992px) {
   .learn-more-button {
     width: 10em; } }
+
+@media (min-width: 768px) {
+  .menu-lg-v-small {
+    width: 4.5em;
+    height: 100vh;
+    background-color: #242752;
+    position: fixed;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: space-between;
+    padding-bottom: 2em; }
+    .menu-lg-v-small__user-links a {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-content: space-around;
+      color: white;
+      margin-bottom: 2em; }
+    .menu-lg-v-small__user-name {
+      text-transform: uppercase;
+      writing-mode: vertical-rl;
+      text-orientation: upright;
+      margin-bottom: 6em;
+      font-size: 1.2em; } }
 
 .myButt {
   outline: none;

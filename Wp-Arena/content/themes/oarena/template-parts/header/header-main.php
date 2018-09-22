@@ -17,11 +17,12 @@
     </div>
   </div>
 
-  <!--Menu for large screen-->
+  <!--Menu for large screen version large-->
   <div class="menu-lg ">
     <div class="menu-lg__hidden text-center">
-      <button class="hide-menu-button"><i class="fa fa-arrow-circle-left" aria-hidden="true"></i></button>
+      <button class="menu-lg-button hide-menu-button "><i class="fa fa-long-arrow-left" aria-hidden="true"></i></button>
     </div>
+    
     <div class="menu-lg__logo text-center">
       <a class="" href="<?=home_url();?>"><img src="https://zupimages.net/up/18/38/3fnl.png"></a>
     </div>
@@ -38,6 +39,21 @@
         </div>
     </div>
   </div>
+</div>
+  <!--Menu for large screen version small-->
+  <div class="menu-lg-v-small hide ">
+    <div class="menu-lg-v-small__content text-center">
+      <button class="menu-lg-button show-menu-button "><i class="fa fa-long-arrow-right" aria-hidden="true"></i></button>
+    </div>
+    <div class="menu-lg-v-small__logo text-center">
+      <a class="" href="<?=home_url();?>"><img src="http://image.noelshack.com/fichiers/2018/38/6/1537605295-webp-net-resizeimage-2.png"></a>
+    </div>
+    <div>
+      <div class="menu_lg-v-small__nav">
+        <div class="menu-lg-v-small__user">
+          <?php get_template_part('template-parts/header/member', 'area-small');?>
+        </div>
+    </div>
 </header>
-<button class="show-menu-button"><i class="fa fa-bars" aria-hidden="true"></i></button>
+
 <main class="main ">

@@ -23,13 +23,13 @@ body {
 
 a {
     text-decoration: none;
-    color: lighten($menu-text-color, 10%);
     text-transform: uppercase;
     font-weight: bold;
 }
 
 a:hover {
     text-decoration: none;
+    color: $a-hover;
 }
 
 ul {

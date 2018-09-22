@@ -8,8 +8,10 @@ var app = {
     // Je créé mes variables pour cibler mes éléments + facilement
     $header = $('.header');
     $menu = $('.menu-lg');
+    $menu_v_small = $('.menu-lg-v-small');
     $footer = $('.footer');
     $main = $('.main');
+
 
     // Show the team edition form
     $team_form_update = $('.team-form-update');
@@ -29,18 +31,22 @@ var app = {
     // Je cache la div qui contient le message d erreur cette team est deja prise
     $('#alert-name').hide();
 
+
+
   },
   hideMenu: function (evt) {
     $menu.addClass('menu-hide');
+    $menu_v_small.removeClass('hide');
     $footer.addClass('footer-hide');
     $main.addClass('main-hide');
 
   },
 
   showMenu: function (evt) {
+    $menu_v_small.addClass('hide');
     $footer.removeClass('footer-hide');
     $main.removeClass('main-hide');
-    setTimeout(app.showMenuheader, 1000);
+    setTimeout(app.showMenuheader, 300);
   },
 
   showMenuheader: function (evt) {

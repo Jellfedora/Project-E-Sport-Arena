@@ -14,6 +14,7 @@
     }
 }
 
+
 .menu-lg {
     display: none;
 }
@@ -38,7 +39,7 @@
     .menu-lg {
         display: initial;
         height: 100vh;
-        background-color: #242752;
+        background-color: $menu-color;
         width: 18em;
         position: fixed;
 
@@ -81,10 +82,10 @@
     }
 
     .main-hide {
-        margin-left: 3em;
+        margin-left: 4.5em;
     }
 
     .footer-hide {
-        margin-left: 3em;
+        margin-left: 4.5em;
     }
 }
