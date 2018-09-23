@@ -139,3 +139,18 @@ https://codex.wordpress.org/Function_Reference/wp_create_user
 * Suppr de la condition est miniscule/caractéres spéciaux à l'inscription d'un membre
 * Ajout/Correction de redirection
 * Intégré un joli dégradé pour la background du body!
+
+# Sprint 2.4 jeudi 20 septembre 2018
+
+* Présentation du projet le matin devant la classe
+* Aprés midi passé sur diverses correction de bugs
+
+# Sprint 2.5 et 2.6 vendredi 21 et samedi 22 septembre 2018
+
+* Gros début d'intégration sur le site: menu, scroll back to top, scroll vers section suivante, logo, typo...
+
+# Sprint 2.7 23 septembre 2018
+
+* Intégration carousel en cours, intégration "nos services"
+* Ajout d'une sécurité: ?author=1 dans la barre de recherche ne renvoie plus le nom de l'admin
+* Formulaire de connexion refait avec la fonction wp_login_form, plus besoin de plugin pour la connexion
