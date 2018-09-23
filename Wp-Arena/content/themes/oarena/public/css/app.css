@@ -123,6 +123,8 @@ li {
     width: 48%; } }
 
 @media (min-width: 992px) {
+  .next-tournaments {
+    height: 100vh; }
   .news {
     display: inherit; }
     .news__item {

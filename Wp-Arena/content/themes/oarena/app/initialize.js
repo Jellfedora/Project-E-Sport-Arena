@@ -30,9 +30,16 @@ var app = {
     // Je cache la div qui contient le message d erreur cette team est deja prise
     $('#alert-name').hide();
 
+    // Scroll to next elements . A minifier!!
     $('.scroll-to-tournament').click(function () {
       $('html,body').animate({
           scrollTop: $('.news__title').offset().top
+        },
+        'slow');
+    });
+    $('.scroll-to-actualities').click(function () {
+      $('html,body').animate({
+          scrollTop: $('.news').offset().top
         },
         'slow');
     });
