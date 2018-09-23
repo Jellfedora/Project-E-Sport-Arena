@@ -1,7 +1,7 @@
 <?php if (!get_theme_mod('oarena_theme_carousel_active')) : 
 ?>
 
-<div id="carousel" class="carousel slide" data-ride="carousel">
+<div id="carousel" class="carousel slide" data-ride="carousel" data-interval="<?= get_theme_mod('oarena_theme_carousel_interval'); ?>">
   <ol class="carousel-indicators">
     <li data-target="#carousel" data-slide-to="0" class="active"></li>
     <li data-target="#carousel" data-slide-to="1"></li>

@@ -1,6 +1,7 @@
 <?php
 
 require('customizer/section-carousel.php');
+require('customizer/section-posts.php');
 
 function oarena_customize_register($wp_customize) 
 {
@@ -19,6 +20,16 @@ function oarena_customize_register($wp_customize)
     ]);
 
     oarena_customize_carousel($wp_customize);
-}
+
+    // Section Posts
+     $wp_customize->add_section('oarena_theme_posts', [
+         'title' => 'Posts',
+         'panel' => 'oarena_theme_panel',
+         'prioriy' => 8
+     ]);
+
+     oarena_customize_posts($wp_customize);
+
+ }
 
 add_action('customize_register', 'oarena_customize_register');
