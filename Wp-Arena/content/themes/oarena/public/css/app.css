@@ -49,6 +49,9 @@ li {
   width: 30em;
   height: 2em; }
 
+.carousel-caption {
+  background-color: #242752; }
+
 .description {
   height: 50vh; }
   .description__presentation {
