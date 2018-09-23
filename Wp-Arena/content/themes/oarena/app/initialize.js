@@ -21,7 +21,7 @@ var app = {
     // Smooth Scroll
     // Je cible tout les a dont le href vaux #
     // MAIS pas ceux ton le href ne vaux QUE #
-    $('a[href*="#"]:not([href="#"])').on('click', app.smoothScroll);
+    $('#scrollToTop').on('click', app.smoothScroll);
 
     // Création variable pour soumission du formulaire
     // $('#create-team-form').on('click', app.formError);
@@ -66,7 +66,7 @@ var app = {
 
     console.log('hey');
     // Je supprime l'évènement par défaut de l'ancre
-    evt.preventDefault();
+    //evt.preventDefault();
 
     // Je transforme la cible en objet jquery
     var $target = $(this.hash);
