@@ -16,6 +16,12 @@
     }
 
     &__form-update {
+        //Empeche le chargement de ajax!!
+        //display: none;
+    }
+
+    &__error {
+        color: red;
         display: none;
     }
 }

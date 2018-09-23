@@ -11,6 +11,7 @@ var app = {
     $menu_v_small = $('.menu-lg-v-small');
     $footer = $('.footer');
     $main = $('.main');
+    $form_update_member_error = $('.error');
 
     // Show the team edition form
     $team_form_update = $('.team-form-update');
@@ -21,6 +22,9 @@ var app = {
     // Je cible tout les a dont le href vaux #
     // MAIS pas ceux ton le href ne vaux QUE #
     $('#scrollToTop').on('click', app.smoothScroll);
+
+    //A la soumission du formulaire update membre
+    $('.button-update-member').on('click', app.showErrorUpdateMember);
 
     // Création variable pour soumission du formulaire
     // $('#create-team-form').on('click', app.formError);
@@ -93,7 +97,33 @@ var app = {
 
 
   },
+  /////////////////////////////////////////////////////////////////////////
+  showErrorUpdateMember: function (evt) {
+    evt.preventDefault();
+    console.log('formulaire update membre soumis');
 
+    // Je récupère les données à envoyer, déjà formatées
+    // "dataToSend" est au format "Query String"
+    var dataToSend = $(this).serialize();
+    $.ajax({
+      url: $(this).attr('update-member-team.php'), // à adapter selon la ressource
+      method: 'POST', // GET par défaut
+      data: dataToSend,
+
+      headers: {}, // si je souhaite modifier les entêtes
+      success: function (data) { // en cas de requête réussie
+        // Je procède à l'insertion
+        $form_update_member_error.addClass('show');
+        console.log('bravo');
+      },
+      error: function (data) { // en cas d'échec
+        // Sinon je traite l'erreur
+        console.log('Erreur…');
+      }
+    });
+  },
+
+  //////////////////////////////////////////////////////////////////////////
   formError: function (evt) {
     // FORM = Je stoppe le comportement par défaut de la page
     evt.preventDefault();
@@ -128,8 +158,9 @@ var app = {
 }
 $(app.init);
 
+// A ranger!!!
 
-
+// Mise en place du scroll to top.
 $(document).ready(function () {
   $(window).scroll(function () {
     if ($(window).scrollTop() == 0) {

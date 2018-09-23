@@ -104,3 +104,4 @@
 * Intégration carousel en cours, intégration "nos services"
 * Ajout d'une sécurité: ?author=1 dans la barre de recherche ne renvoie plus le nom de l'admin
 * Formulaire de connexion refait avec la fonction wp_login_form, plus besoin de plugin pour la connexion
+* Vérification quand on ajoute un membre à notre équipe que ce membre existe rééllement en BDD
