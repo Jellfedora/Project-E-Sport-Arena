@@ -42,12 +42,8 @@ li {
   text-align: center;
   text-transform: uppercase;
   margin-bottom: 2em;
-  display: flex;
-  justify-content: space-between;
-  align-content: center;
   background-color: #242752;
-  width: 30em;
-  height: 2em; }
+  height: auto; }
 
 .carousel-caption {
   background-color: #242752; }
