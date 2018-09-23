@@ -6,7 +6,7 @@
 
     $args= [
         'post_type' => 'post',
-        'cat' => '',
+        'cat' => get_the_category(),
         'posts_per_page' => -1,
         'order' => 'DESC',
         'order_by' => 'date'
