@@ -2,7 +2,7 @@
     
         $array_categories = get_categories();
 
-    var_dump($array_categories);
+    // var_dump($array_categories);
     // die();
 
     // $choice_categories[0] = 'blog';
@@ -15,14 +15,13 @@
         // var_dump($category);
         // die;
         $choice_categories = $category->name;
-
     }
-    var_dump($choice_categories);
-    die;
+    // var_dump($choice_categories);
+    // die;
     
     $args= [
         'post_type' => 'post',
-        'cat' => the_category(),
+        'cat' => $choice_categories,
         'posts_per_page' => -1,
         'order' => 'DESC',
         'order_by' => 'date'
