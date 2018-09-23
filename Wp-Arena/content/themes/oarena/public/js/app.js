@@ -176,7 +176,6 @@ var app = {
     $footer = $('.footer');
     $main = $('.main');
 
-
     // Show the team edition form
     $team_form_update = $('.team-form-update');
     $button_update_team = $('.button-update-team');
@@ -195,8 +194,12 @@ var app = {
     // Je cache la div qui contient le message d erreur cette team est deja prise
     $('#alert-name').hide();
 
-
-
+    $('.scroll-to-tournament').click(function () {
+      $('html,body').animate({
+          scrollTop: $('.news__title').offset().top
+        },
+        'slow');
+    });
   },
   hideMenu: function (evt) {
     $menu.addClass('menu-hide');

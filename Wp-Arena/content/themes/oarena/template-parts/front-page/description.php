@@ -24,6 +24,6 @@
       </div>
     </div>
     <div class="description__arrow">
-      <a href="#"><img src="http://image.noelshack.com/fichiers/2018/38/7/1537696980-white-arrow-bottom.png" alt=""></a>
+      <a class="scroll-to-tournament" href="#"><img src="http://image.noelshack.com/fichiers/2018/38/7/1537696980-white-arrow-bottom.png" alt=""></a>
     </div>
   </div>
