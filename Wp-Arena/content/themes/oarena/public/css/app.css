@@ -404,7 +404,7 @@ li {
 #shape {
   stroke-width: 6px;
   fill: transparent;
-  stroke: white;
+  stroke: black;
   stroke-dasharray: 85 400;
   stroke-dashoffset: -220;
   transition: 1s all ease; }
@@ -448,6 +448,8 @@ Bouton pour retourner en haut du site, a degager de là!!!
   width: 85px; }
 
 @media (min-width: 768px) {
+  .team {
+    margin-top: 0; }
   #scrollToTop a {
     background-image: url("https://zupimages.net/up/18/38/ldek.png");
     background-repeat: no-repeat;
