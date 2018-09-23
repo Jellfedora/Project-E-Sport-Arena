@@ -13,3 +13,5 @@ require 'inc/theme-template-tags.php';
 require 'inc/theme-admin-bar.php';
 
 require 'inc/theme-template.php';
+
+require 'inc/customizer.php';
