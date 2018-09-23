@@ -1,6 +1,57 @@
 .description {
-    width: 70%;
-    margin: auto;
-    margin: 1.5em auto 1.5em;
-    margin-top: 0;
+
+    height: 50vh;
+
+    &__presentation {
+        padding-top: 1em;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        &__title {
+            text-align: center;
+            color: white;
+            width: 100%;
+        }
+
+        &__introduction {
+            display: inline-block;
+            background-color: $menu-color;
+            color: white;
+            text-align: center;
+        }
+    }
+
+    &__services {
+        text-align: center;
+        padding: 1em;
+
+        &__title {
+            color: white;
+            margin-bottom: 1em;
+        }
+
+    }
+
+    &__services__content {
+        display: flex;
+        justify-content: space-around;
+
+
+        &__items {
+            background-color: $menu-color;
+            color: white;
+            width: 30em;
+            padding: 1em;
+
+            &__title {
+                margin: 0.5em;
+            }
+        }
+    }
+
+    &__arrow {
+        display: flex;
+        justify-content: center;
+    }
 }

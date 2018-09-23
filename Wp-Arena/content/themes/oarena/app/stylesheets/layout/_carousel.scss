@@ -1,38 +1,29 @@
-.carousel {
-    height: 45vh;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
+.carousel-item-image {
+    height: 50vh;
     width: 100%;
-    position: relative;
 }
 
-.intro {
-    &__small {
-        position: absolute;
-        width: 100%;
-        bottom: 0;
-        color: #fff;
-        background-color: $menu-color;
-        padding-bottom: 1em;
+.carousel {
 
-        background-image: url('https://szftlgs.com/wp-content/uploads/data/2018/1/7/Futuristic-HD-Wallpapers-hd-wallpapers-download-free-high-definition-amazing-artwork-background-wallpapers-pictures-x-PIC-WSW1067949.jpg');
-        //Appliquer transparence sur image!
+    &__text {
+        text-align: center;
+        text-transform: uppercase;
+        margin-bottom: 2em;
+        background-color: $menu-color;
+        height: auto;
     }
 }
+
+.carousel-caption {
+    background-color: $menu-color;
+}
+
+
 
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px) {
-    .intro {
-        padding-top: 8em;
-
-        &__small__button button {
-            color: white;
-            background-color: $menu-color;
-            border: none;
-            height: 2.5em;
-            width: 5em;
-            opacity: 1;
-        }
+    .carousel {
+        &__button {}
     }
+
 }

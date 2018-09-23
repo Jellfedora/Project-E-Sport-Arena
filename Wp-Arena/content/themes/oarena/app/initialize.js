@@ -12,7 +12,6 @@ var app = {
     $footer = $('.footer');
     $main = $('.main');
 
-
     // Show the team edition form
     $team_form_update = $('.team-form-update');
     $button_update_team = $('.button-update-team');
@@ -21,7 +20,7 @@ var app = {
     // Smooth Scroll
     // Je cible tout les a dont le href vaux #
     // MAIS pas ceux ton le href ne vaux QUE #
-    $('a[href*="#"]:not([href="#"])').on('click', app.smoothScroll);
+    $('#scrollToTop').on('click', app.smoothScroll);
 
     // Création variable pour soumission du formulaire
     // $('#create-team-form').on('click', app.formError);
@@ -31,8 +30,19 @@ var app = {
     // Je cache la div qui contient le message d erreur cette team est deja prise
     $('#alert-name').hide();
 
-
-
+    // Scroll to next elements . A minifier!!
+    $('.scroll-to-tournament').click(function () {
+      $('html,body').animate({
+          scrollTop: $('.news__title').offset().top
+        },
+        'slow');
+    });
+    $('.scroll-to-actualities').click(function () {
+      $('html,body').animate({
+          scrollTop: $('.news').offset().top
+        },
+        'slow');
+    });
   },
   hideMenu: function (evt) {
     $menu.addClass('menu-hide');
@@ -66,7 +76,7 @@ var app = {
 
     console.log('hey');
     // Je supprime l'évènement par défaut de l'ancre
-    evt.preventDefault();
+    //evt.preventDefault();
 
     // Je transforme la cible en objet jquery
     var $target = $(this.hash);

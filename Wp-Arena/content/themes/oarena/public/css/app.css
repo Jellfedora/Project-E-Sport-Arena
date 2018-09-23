@@ -34,39 +34,55 @@ ul {
 li {
   list-style: none; }
 
-.carousel {
-  height: 45vh;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  width: 100%;
-  position: relative; }
+.carousel-item-image {
+  height: 50vh;
+  width: 100%; }
 
-.intro__small {
-  position: absolute;
-  width: 100%;
-  bottom: 0;
-  color: #fff;
+.carousel__text {
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 2em;
   background-color: #242752;
-  padding-bottom: 1em;
-  background-image: url("https://szftlgs.com/wp-content/uploads/data/2018/1/7/Futuristic-HD-Wallpapers-hd-wallpapers-download-free-high-definition-amazing-artwork-background-wallpapers-pictures-x-PIC-WSW1067949.jpg"); }
+  height: auto; }
 
-@media (min-width: 768px) {
-  .intro {
-    padding-top: 8em; }
-    .intro__small__button button {
-      color: white;
-      background-color: #242752;
-      border: none;
-      height: 2.5em;
-      width: 5em;
-      opacity: 1; } }
+.carousel-caption {
+  background-color: #242752; }
 
 .description {
-  width: 70%;
-  margin: auto;
-  margin: 1.5em auto 1.5em;
-  margin-top: 0; }
+  height: 50vh; }
+  .description__presentation {
+    padding-top: 1em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; }
+    .description__presentation__title {
+      text-align: center;
+      color: white;
+      width: 100%; }
+    .description__presentation__introduction {
+      display: inline-block;
+      background-color: #242752;
+      color: white;
+      text-align: center; }
+  .description__services {
+    text-align: center;
+    padding: 1em; }
+    .description__services__title {
+      color: white;
+      margin-bottom: 1em; }
+  .description__services__content {
+    display: flex;
+    justify-content: space-around; }
+    .description__services__content__items {
+      background-color: #242752;
+      color: white;
+      width: 30em;
+      padding: 1em; }
+      .description__services__content__items__title {
+        margin: 0.5em; }
+  .description__arrow {
+    display: flex;
+    justify-content: center; }
 
 .news__item {
   margin-top: 1em;
@@ -106,6 +122,8 @@ li {
     width: 48%; } }
 
 @media (min-width: 992px) {
+  .next-tournaments {
+    height: 100vh; }
   .news {
     display: inherit; }
     .news__item {
@@ -387,7 +405,7 @@ li {
 #shape {
   stroke-width: 6px;
   fill: transparent;
-  stroke: white;
+  stroke: black;
   stroke-dasharray: 85 400;
   stroke-dashoffset: -220;
   transition: 1s all ease; }
@@ -431,6 +449,8 @@ Bouton pour retourner en haut du site, a degager de là!!!
   width: 85px; }
 
 @media (min-width: 768px) {
+  .team {
+    margin-top: 0; }
   #scrollToTop a {
     background-image: url("https://zupimages.net/up/18/38/ldek.png");
     background-repeat: no-repeat;

@@ -10,7 +10,10 @@ if (is_user_logged_in()) {
     <div class="menu-lg-v-small__user-links ">
     <?php
     
-    echo ('<a href="' . wp_logout_url(home_url()) . '"><i class="fa fa-sign-out" aria-hidden="true"></i></a>');
+    echo ('
+    <a class="data-toggle="tooltip" title="Déconnexion"
+    href="' . wp_logout_url(home_url()) . '"><i class="fa fa-sign-out" aria-hidden="true"></i></a>
+    ');
 
 
 
@@ -18,9 +21,20 @@ if (is_user_logged_in()) {
     $url_add_team = site_url ('creer-une-equipe');
     $url_team = site_url ('equipe');
 
-    echo ('<a href="' . $url_profil . '"><i class="fa fa-user" aria-hidden="true"></i></a>');
-    echo ('<a href="' . $url_add_team . '"><i class="fa fa-user-plus" aria-hidden="true"></i></a>');
-    echo ('<a href="' . $url_team . '"><i class="fa fa-users" aria-hidden="true"></i></a>');
+    echo ('
+    <a class="data-toggle="tooltip" title="Profil"
+    href="' . $url_profil . '"><i class="fa fa-user" aria-hidden="true"></i></a>
+    ');
+
+    echo ('
+    <a class="data-toggle="tooltip" title="Creer une équipe"
+    href="' . $url_add_team . '"><i class="fa fa-user-plus" aria-hidden="true"></i></a>
+    ');
+
+    echo ('
+    <a class="data-toggle="tooltip" title="Voir son équipe"
+    href="' . $url_team . '"><i class="fa fa-users" aria-hidden="true"></i></a>
+    ');
     
     ?>
     
@@ -32,8 +46,15 @@ if (is_user_logged_in()) {
     <?php
     $url_log_in = site_url ('log-in');
     $url_register = site_url ('register');
-    echo ('<a href="' . $url_log_in . '"><i class="fa fa-sign-in" aria-hidden="true"></i></a>');
-    echo ('<a href="' . $url_register . '"><i class="fa fa-registered" aria-hidden="true"></i></a>');
+    echo ('
+    <a class="data-toggle="tooltip" title="Connexion"
+    href="' . $url_log_in . '"><i class="fa fa-sign-in" aria-hidden="true"></i></a>
+    ');
+
+    echo ('
+    <a class="data-toggle="tooltip" title="Inscription"
+    href="' . $url_register . '"><i class="fa fa-registered" aria-hidden="true"></i></a>
+    ');
     ?>
     </div>
     <?php

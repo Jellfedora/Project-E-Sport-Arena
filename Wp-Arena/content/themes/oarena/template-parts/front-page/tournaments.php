@@ -1,3 +1,4 @@
+<div class="next-tournaments">
 <h2 class="news__title text-light mt-3 mb-3 text-center">&#9660; PROCHAINS TOURNOIS &#9660; </h2>
     <div class="cards d-flex justify-content-around flex-wrap">
 
@@ -23,5 +24,8 @@
             wp_reset_postdata();    
 
             endif; ?>
-
+</div>
+    <div class="description__arrow">
+      <a class="scroll-to-actualities" href="#"><img src="http://image.noelshack.com/fichiers/2018/38/7/1537696980-white-arrow-bottom.png" alt=""></a>
+    </div>
 </div>
