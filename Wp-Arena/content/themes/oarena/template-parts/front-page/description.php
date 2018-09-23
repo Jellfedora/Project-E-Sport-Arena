@@ -1,6 +1,6 @@
   <div class="description">
     <div class="description__presentation">
-      <h3 class="description__presentation__title">Bienvenue sur le site de oArena</h3>
+      <h3 class="description__presentation__title">Bienvenue sur le site E-Sport oArena</h3>
       <p class="description__presentation__introduction">"Avant j'étais un aventurier comme toi. Et puis je me suis pris une fléche dans le genou"</p>
     </div>
     <div class="description__services">
