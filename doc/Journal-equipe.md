@@ -175,3 +175,4 @@ https://codex.wordpress.org/Function_Reference/wp_create_user
 * Style page tournois
 * Ajout infos dans la page de contact ( ville adresse telephone )
 * Edition des infos grace au customizer
+* Ajout de la modification de l'email par l'utilisateur avec vérification comme quoi elle n'est pas déjà prise
