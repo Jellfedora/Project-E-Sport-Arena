@@ -133,12 +133,17 @@ https://codex.wordpress.org/Function_Reference/wp_create_user
 
 * Début création formulaire edit sur front => Réussi car on ne peux pas changer le user_login ( restriction WP ) il faut donc lui changer ses méta informations
 
+* Création d'un nouveau rôle à la création du compte
+
+* Edition du nom OK sauf le userlogin 
+
 # Sprint 2.3 19 septembre 2018
 
 * Un membre peut maintenant éditer son nom sur la page éditer son profil
 * Suppr de la condition est miniscule/caractéres spéciaux à l'inscription d'un membre
 * Ajout/Correction de redirection
 * Intégré un joli dégradé pour la background du body!
+* Recherches énormes sans succés sur la création d'une méta donnée au submit du bouton d'inscription a un tournoi
 
 # Sprint 2.4 jeudi 20 septembre 2018
 
@@ -148,6 +153,7 @@ https://codex.wordpress.org/Function_Reference/wp_create_user
 # Sprint 2.5 et 2.6 vendredi 21 et samedi 22 septembre 2018
 
 * Gros début d'intégration sur le site: menu, scroll back to top, scroll vers section suivante, logo, typo...
+* Création customizer basique 
 
 # Sprint 2.7 23 septembre 2018
 

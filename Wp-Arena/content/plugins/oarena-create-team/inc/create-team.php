@@ -41,8 +41,8 @@ Class oArenaCreateTeam
                 {
                     $errorList = 'Cette team existe déjà';
                     var_dump($errorList);
-                    wp_redirect('equipe');
                     exit;
+                    wp_redirect('equipe');
                 }
             }
         }

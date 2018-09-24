@@ -143,14 +143,26 @@
 * Création d'une condition si la team existe déjà au moment de la création . Beaucoup de temps perdu mais au final je trouve la solution.
 
 
-# Sprint 2.3
+# Sprint 2.4
 
 
 ++++ 21 septembre 2018 ++++
 
 * J'arrive enfin a verifier si la team exite déjà, j'avais la réponse depuis le début mais il fallait juste que je déplace le foreach ...
 * Essaie d'ajout d'ajax pour générer les erreurs sur les forms => echecs => pas loin voir christophe
-* Création catégories => pas réussi pas loin voir christophe
+* Création page catégories => pas réussi pas loin voir christophe
 ==> Journée perdue 
 
+# Sprint 2.5
 
+++++ 23 septembre 2018 ++++
+
+* Test de tri par catégorie
+* Début du customizer
+
+# Sprint 3.1
+
+++++ 24 septembre 2018 ++++
+
+Mise a jour du Trello, derniere semaine de projet, pour le moment tout se passe plutot bien.
+Modifications sur création de team, maintenant un utilisateur ne peux créer qu'une seule équipe ce qui facilitera l'ajour aux tournois.
