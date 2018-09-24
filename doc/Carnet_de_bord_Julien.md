@@ -105,3 +105,9 @@
 * Ajout d'une sécurité: ?author=1 dans la barre de recherche ne renvoie plus le nom de l'admin
 * Formulaire de connexion refait avec la fonction wp_login_form, plus besoin de plugin pour la connexion
 * Vérification quand on ajoute un membre à notre équipe que ce membre existe rééllement en BDD
+
+# Sprint 3.1 lundi 24 septembre 2018
+
+* Mise à jour du trello pour le sprint 3
+* Mise en plugin de l'édition de membre (avant dans le template test) + update membre ( = post title) en meme temps que l'update du nom de l'user.
+* Maintenant membre = user

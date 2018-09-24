@@ -46,6 +46,7 @@ class oArenaMembersCpt
             'labels' => $labels,
             'supports' => [
                 'title',
+                'author',
                 'editor',
                 'thumbnail',
                 'custom-fields',

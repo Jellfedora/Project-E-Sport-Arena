@@ -1,0 +1,127 @@
+<?php
+
+class oArena_updateUser
+{
+    public function __construct()
+    {
+
+        add_action('init', [$this, 'updateUser']);
+    }
+
+    public function updateUser()
+    {
+        // If the form is submitted
+        if (isset($_POST['update-member-submit'])) {
+
+            // je stocke mes données dans des variables
+            $user_name = ($_POST['user-name']);
+            $user_email = ($_POST['user-email']);
+
+            // If the input user-name is !empty 
+            if (!empty($user_name)) {
+
+                //Ajout d'un tableau contenant les erreurs
+                $errorList = array();
+
+                //Récupére l'utilisateur courant et met à jour le nom du user
+                $current_user = wp_get_current_user();
+                $current_user->nickname = esc_attr($user_name);
+                // $current_user->user_login = esc_attr($user_name);
+                $current_user->user_nicename = esc_attr($user_name);
+                $current_user->display_name = esc_attr($user_name);
+                $current_user->first_name = esc_attr($user_name);
+                $current_user->last_name = esc_attr($user_name);
+                
+                
+                wp_update_user($current_user);
+
+                ///////////////////////////////
+
+                //Mettre à jour le nom du membre
+
+                // Récupére les noms des membres sous forme d'un tableau:
+
+                global $wpdb; // On se connecte à la base de données du site
+                // Requete qui récupére tout les post title ayant pour type members
+                $members_name = $wpdb->get_results("
+                SELECT `post_title` 
+                FROM `wp_posts` 
+                WHERE `post_type` ='members' 
+                ;
+                ");
+                
+                // Récupére les noms des membres en string et les stocke dans un tableau
+                $member_list_name= Array();
+                foreach ( $members_name  as $member_name ) {
+                    $member_name->post_title;
+                    array_push($member_list_name,$member_name->post_title);
+                }
+                
+                //var_dump($member_list_name);exit;
+                
+                
+                //TODO récupérer le nom du membre connecté
+                
+                $user_login = $current_user->user_login;
+                //var_dump($user_login);exit;
+
+                
+                global $wpdb; // On se connecte à la base de données du site
+
+                //Requete sql qui récupére l'ID du post ayant le nom du membre
+                $member_id = $wpdb->get_results("
+                SELECT ID
+                FROM wp_posts
+                WHERE `post_name` = '$user_login' AND `post_status`='publish'
+                ;
+                ");
+
+                foreach($member_id as $id_member){
+                $id_member->ID;
+                }
+                
+                // var_dump($member_list_name);exit;
+
+                // Si le nom nest pas pris
+                // Update le post-title ayant pour identifiant id_member
+                if (!in_array($user_name,($member_list_name))) {
+                    // Update title_post
+                      $my_post = array(
+                        'ID'           => $id_member->ID,
+                        'post_title'   => $user_name,
+                    );
+
+                    // Update the post into the database
+                    wp_update_post( $my_post );
+                    //var_dump($my_post);exit;
+                } else $errorList[] = 'Ce nom est déjà pris';
+
+            } else $errorList[] = 'le champ est vide!';
+
+            // If the input user-email is !empty 
+            // if (!empty($user_email)) {
+            //     $current_user = wp_get_current_user();
+            //     $mail = the_author_meta( 'email', $current_user->ID );
+            //     // Update email_post
+
+            //     var_dump($mail);exit;
+            // }
+
+            // Si il y a des erreurs affiche les
+            if (!empty($errorList)) {
+                var_dump($errorList);exit;
+            }
+
+            // Redirige vers la page profil
+                wp_redirect('profil');
+                exit;
+        } 
+    }
+}
+
+    
+        
+ 
+
+        
+  
