@@ -15,8 +15,9 @@ class oArena_updateUser
 
             // je stocke mes données dans des variables
             $user_name = ($_POST['user-name']);
+            $user_email = ($_POST['user-email']);
 
-            // If the input is !empty 
+            // If the input user-name is !empty 
             if (!empty($user_name)) {
 
                 //Ajout d'un tableau contenant les erreurs
@@ -95,22 +96,25 @@ class oArena_updateUser
                     //var_dump($my_post);exit;
                 } else $errorList[] = 'Ce nom est déjà pris';
 
-                // Si il y a des erreurs affiche les
-                if (!empty($errorList)) {
-                    var_dump($errorList);exit;
-                }
-
-                // Si ok redirige vers la page profil
-                wp_redirect('profil');
-                exit;
-
             } else $errorList[] = 'le champ est vide!';
 
+            // If the input user-email is !empty 
+            // if (!empty($user_email)) {
+            //     $current_user = wp_get_current_user();
+            //     $mail = the_author_meta( 'email', $current_user->ID );
+            //     // Update email_post
+
+            //     var_dump($mail);exit;
+            // }
 
             // Si il y a des erreurs affiche les
             if (!empty($errorList)) {
                 var_dump($errorList);exit;
             }
+
+            // Redirige vers la page profil
+                wp_redirect('profil');
+                exit;
         } 
     }
 }
