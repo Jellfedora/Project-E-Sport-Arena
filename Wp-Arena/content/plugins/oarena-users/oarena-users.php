@@ -10,9 +10,13 @@ Version: 1.0.0
 if (!defined('WPINC')) {die();}
 
 require plugin_dir_path(__FILE__) . 'inc/register.php';
+require plugin_dir_path(__FILE__) . 'inc/update-user.php';
 
 // Instantiation of oArena_register
 $oArena_register = new oArena_register();
+
+// Instantiation of oArena_updateUser
+$oArena_updateUser = new oArena_updateUser();
 
 
 register_activation_hook(__FILE__, [$oArena_register, 'activation']);
