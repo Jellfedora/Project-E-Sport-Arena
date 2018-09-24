@@ -13,3 +13,5 @@ wp/
 !/content/plugins/oarena-add-team
 !/content/uploads
 wp-config.php
+/content/themes/oarena/node_modules
+/content/themes/oarena/public
