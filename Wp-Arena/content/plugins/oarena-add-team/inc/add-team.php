@@ -46,7 +46,7 @@ class oArenaAddTeam
                     var_dump('Vous pouvez inscrire cette equipe');
                     die;
                 } else {
-                    var_dump('Cette team n existe pas');
+                    var_dump('Cette team n existe pas ou ce n est pas vous qui l avez créée');
                     die;
                 }
             }

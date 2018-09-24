@@ -153,7 +153,7 @@ https://codex.wordpress.org/Function_Reference/wp_create_user
 # Sprint 2.5 et 2.6 vendredi 21 et samedi 22 septembre 2018
 
 * Gros début d'intégration sur le site: menu, scroll back to top, scroll vers section suivante, logo, typo...
-* Création customizer basique 
+
 
 # Sprint 2.7 23 septembre 2018
 
@@ -161,3 +161,13 @@ https://codex.wordpress.org/Function_Reference/wp_create_user
 * Ajout d'une sécurité: ?author=1 dans la barre de recherche ne renvoie plus le nom de l'admin
 * Formulaire de connexion refait avec la fonction wp_login_form, plus besoin de plugin pour la connexion
 * Vérification quand on ajoute un membre à notre équipe que ce membre existe rééllement en BDD
+* Création d'un template pour articles selon categories => probleme de link
+* Création customizer basique  
+
+# Sprint 3.1 24 septembre 2018
+
+* Refait l'organisation du dernier sprint sur le Trello
+* Mise en plugin edition de membre 
+* Changement de nom de CPT Membre en même temps que le user
+* Un utilisateur ne peux crééer qu'une team
+* Ajout vérifications sur inscription a un tournoi => Team existante et créée par l'user ?
