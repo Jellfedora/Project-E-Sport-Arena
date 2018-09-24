@@ -166,6 +166,6 @@
 
 * Mise a jour du Trello, derniere semaine de projet, pour le moment tout se passe plutot bien.
 * Modifications sur création de team, maintenant un utilisateur ne peux créer qu'une seule équipe ce qui facilitera l'ajour aux tournois.
-* Enfin arrivé a rentrer dans ma condition pour vérifier si une team a été créée par l'user 
+* Enfin arrivé a rentrer dans ma condition pour vérifier si une team a été créée par l'user lors de l'inscription a un tournoi
 * Un peu de style sur la page tournois
 
