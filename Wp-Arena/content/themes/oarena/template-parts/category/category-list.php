@@ -2,8 +2,8 @@
     
         $array_categories = get_categories();
 
-    // var_dump($array_categories);
-    // die();
+     //var_dump($array_categories);
+     //die();
 
     // $choice_categories[0] = 'blog';
     // $choice_categories[1] = 'news';
@@ -14,10 +14,10 @@
     {
         // var_dump($category);
         // die;
-        $choice_categories = $category->name;
+         $choice_categories = $category->name;
     }
-    // var_dump($choice_categories);
-    // die;
+    //var_dump($category->name);
+     //die;
     
     $args= [
         'post_type' => 'post',

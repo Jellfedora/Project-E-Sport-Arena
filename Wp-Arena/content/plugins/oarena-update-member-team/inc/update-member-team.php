@@ -5,15 +5,16 @@ class oArenaUpdateTeamMember
     public function __construct()
     {
 
-        add_action('init', [$this, 'updateTeamMember1']);
+        add_action('init', [$this, 'updateTeamMember']);
     }
 
-    public function updateTeamMember1()
+    public function updateTeamMember()
     {
         
 
         //A commenter!
         $current_user = wp_get_current_user();
+        global $current_user;
         $user_id = $current_user->ID;
         $adminTeam = $current_user->roles;
         //requete sql a faire pour récupérer lid du post=356
@@ -123,11 +124,9 @@ class oArenaUpdateTeamMember
                 $member_name->post_title;
                 // Stocke les noms des membres dans un tableau
                 array_push($member_list_name,$member_name->post_title);
-            //echo($member_list_name);
             }
 
-            //$team_chief = ($_POST['_team_chief']);
-            //var_dump($team_chief);
+            
             if ((!empty($team_chief)) & (in_array($team_chief,($member_list_name)))) {
                 update_post_meta($id_team->ID, '_team_chief', sanitize_text_field($team_chief));
             } else if (!empty($team_chief)) {
