@@ -13,9 +13,12 @@ var app = {
     $main = $('.main');
     $form_update_member_error = $('.error');
 
+    // $('#create-team-form').on('click', app.formError);
+
     // Show the team edition form
     $team_form_update = $('.team-form-update');
     $button_update_team = $('.button-update-team');
+
     $('.button-update-team').on('click', app.showTeamform);
 
     // Smooth Scroll
@@ -32,7 +35,7 @@ var app = {
     $('.show-menu-button').on('click', app.showMenu);
 
     // Je cache la div qui contient le message d erreur cette team est deja prise
-    $('#alert-name').hide();
+    // $('#alert-name').hide();
 
     // Scroll to next elements . A minifier!!
     $('.scroll-to-tournament').click(function () {
@@ -124,38 +127,37 @@ var app = {
   },
 
   //////////////////////////////////////////////////////////////////////////
-  formError: function (evt) {
-    // FORM = Je stoppe le comportement par défaut de la page
-    evt.preventDefault();
-    console.log('OK')
-    var dataToSend = $(this).serialize();
+  // formError: function (evt) {
+  //   // FORM = Je stoppe le comportement par défaut de la page
+  //   evt.preventDefault();
+  //   console.log('OK')
+  //   var dataToSend = $(this).serialize();
 
-    //Je cache la div contenant l'alerte
+  //   // Je cache la div contenant l 'alerte
 
-    // Je fais un appel Ajax
-    //   $.ajax({
-    //     url: 'localhost/Project/Project-E-Sport-Arena/Wp-Arena/wp-admin/admin-ajax.php',
-    //     method: 'POST',
-    //     dataType: 'json',
-    //     data: dataToSend
-    //   }).done(function (response) {
-    //     console.log(coucou);
-    //     if (response.code == 1) {
-    //       window.setTimeout(function () {
-    //         location.href = response.redirect;
-    //       }, 2000);
-    //     } else {
-    //       var $alertsDiv = $('#alert-name');
-    //       $alertsDiv.show();
-    //     }
-    //   }).fail(function () {
-    //     console.log('ajax failed');
-    //   })
-    // }
-
-
-  }
+  //   // Je fais un appel Ajax
+  //   $.ajax({
+  //     url: $(this).attr('create-team.php'),
+  //     method: 'POST',
+  //     // dataType: 'json',
+  //     data: dataToSend
+  //   }).done(function (response) {
+  //     console.log(response);
+  //     if (response.code == 0) {
+  //       $('#alert-name').hide();
+  //       window.setTimeout(function () {
+  //         location.href = response.redirect;
+  //       }, 2000);
+  //     } else {
+  //       var $alertsDiv = $('#alert-name');
+  //       $alertsDiv.show();
+  //     }
+  //   }).fail(function () {
+  //     console.log('ajax failed');
+  //   })
+  // }
 }
+
 $(app.init);
 
 // A ranger!!!

@@ -1,6 +1,6 @@
-    <?php get_header() ;  
-    
-        $array_categories = get_categories();
+<?php  
+
+    $array_categories = get_categories();
 
      //var_dump($array_categories);
      //die();
@@ -28,20 +28,20 @@
     ];
     
 
-    $our_articles = new WP_Query($args);
+    // $our_articles = new WP_Query($args);
 
-    if ($our_articles->have_posts()): while ($our_articles->have_posts()): $our_articles->the_post(); 
+    // if ($our_articles->have_posts()): while ($our_articles->have_posts()): $our_articles->the_post(); 
 
-    // $category = get_the_category();
-    // var_dump($category);
-    // die;
-        $args= [
-            'post_type' => 'post',
-            'cat' => $choice_categories,
-            'posts_per_page' => -1,
-            'order' => 'DESC',
-            'order_by' => 'date'
-        ];
+    // // $category = get_the_category();
+    // // var_dump($category);
+    // // die;
+    //     $args= [
+    //         'post_type' => 'post',
+    //         'cat' => $choice_categories,
+    //         'posts_per_page' => -1,
+    //         'order' => 'DESC',
+    //         'order_by' => 'date'
+    //     ];
         
         
         $our_articles = new WP_Query($args);
@@ -60,4 +60,3 @@
     wp_reset_postdata();    
     
 endif; ?>
-<?php get_footer() ; ?>
