@@ -24,7 +24,7 @@ var app = {
     $('#scrollToTop').on('click', app.smoothScroll);
 
     //A la soumission du formulaire update membre
-    $('.button-update-member').on('click', app.showErrorUpdateMember);
+    //$('.button-update-member').on('click', app.showErrorUpdateMember);
 
     // Création variable pour soumission du formulaire
     // $('#create-team-form').on('click', app.formError);

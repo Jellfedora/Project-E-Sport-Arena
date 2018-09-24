@@ -6,17 +6,21 @@
 ?>
 <?php get_header();?>
 
-        <div class="entry-content entry">
-                <form method="post" id="adduser" action="update-user.php" class="d-flex text-center flex-column">
-                    <p class="form-username d-flex flex-column justify-content-center">
-                        <label class="justify-content-center m-auto pb-1" for="user-name"><?php _e('Changer votre Nom', 'profile'); ?></label>
-                        <input class="text-input text-center w-25 m-auto mt-2" name="user-name" type="text" id="user-name" placeholder="<?php the_author_meta( 'nickname', $current_user->ID ); ?>" />
-                    </p>
-                    <p class="form-submit">                    
-                        <input name="update-user" type="submit" id="updateuser" class="submit button" value="Mettre à jour" />
-                        <input name="update-member-submit" type="hidden" id="action" value="update-user" />
-                    </p>
-                </form>
+    <div class="team__form-update team-form-update p-2">
+	<form action="update-user.php" class="col-12 col-md-6 offset-md-3 mb-5" method="post">
+		<h3 class="text-center">Modifier vos informations</h3>
+		<div class="error team__error">
+			<p>Voici les erreurs:</p>
+		</div>
+	    <div class="form-group">
+			<small class="">Votre nom</small>
+	        <input type="text" class="form-control"  name="user-name"  aria-describedby="user-name" placeholder="<?php the_author_meta( 'nickname', $current_user->ID ); ?>" >
         </div>
+        <div class="form-group">
+			<small class="">Votre email</small>
+	        <input type="text" class="form-control"  name="user-email"  aria-describedby="user-email" placeholder="<?php the_author_meta( 'email', $current_user->ID ); ?>" >
+	    </div>
+	    <input type="submit" name="update-member-submit">
+	</form>
  
 <?php get_footer() ; ?>
