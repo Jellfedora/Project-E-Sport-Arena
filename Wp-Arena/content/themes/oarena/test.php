@@ -38,8 +38,8 @@
 		<div class="error team__error">
 			<p>Voici les erreurs:</p>
 		</div>
+        <h4>Vos informations de profil</h4>
 	    <div class="form-group">
-            <h4>Vos informations de profil</h4>
 			<small class="">Votre pseudo</small>
 	        <input type="text" class="form-control"  name="user-name"  aria-describedby="user-name" placeholder="<?php the_author_meta( 'nickname', $current_user->ID ); ?>" >
         </div>
@@ -51,23 +51,31 @@
     </form>
 
     <form action="update-user-info.php" class="col-12 col-md-6 offset-md-3 mb-5" method="post">
-		<div class="error team__error">
-			<p>Voici les erreurs:</p>
-		</div>
+        <h4>Vos informations de livraison</h4>
 	    <div class="form-group">
-            <h4>Vos informations de profil</h4>
 			<small class="">Votre nom</small>
-	        <input class="form-control" type="text" name="member_name" placeholder="<?php echo $member_name; ?>"  />
+	        <input class="form-control" type="text" name="member-name" placeholder="<?php echo $member_name; ?>"  />
+        </div>
+        <div class="form-group">
+			<small class="">Votre prénom</small>
+	        <input class="form-control" type="text" name="member-firstname" placeholder="<?php echo $member_firstname; ?>"/>
+        </div>
+        <div class="form-group">
+			<small class="">Numéro et nom de la rue</small>
+	        <input class="form-control" type="text" name="member-street" placeholder="<?php echo $member_street; ?>"/>
+        </div>
+        <div class="form-group">
+			<small class="">Code postal</small>
+	        <input class="form-control" type="text" name="member-postal-code" placeholder="<?php echo $member_postal_code; ?>"/>
+        </div>
+        <div class="form-group">
+			<small class="">Ville</small>
+	        <input class="form-control" type="text" name="member-city" placeholder="<?php echo $member_city; ?>"/>
         </div>
 	    <input type="submit" name="update-user-info-submit">
     </form>
     
-    
-    <input id="" type="text" name="member_name" placeholder="<?php echo $member_name; ?>"  />
-    <input id="" type="text" name="member_firstname" placeholder="<?php echo $member_firstname; ?>"/>
-  <input id="" type="text" name="member_street" placeholder="<?php echo $member_street; ?>"/>
-  <input id="" type="text" name="member_postal_code" placeholder="<?php echo $member_postal_code; ?>"/>
-  <input id="" type="text" name="member_city" placeholder="<?php echo $member_city; ?>"/>  
+ 
         
 
     

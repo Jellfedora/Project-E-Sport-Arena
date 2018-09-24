@@ -96,16 +96,40 @@ class oArena_updateUser
                     //var_dump($my_post);exit;
                 } else $errorList[] = 'Ce nom est déjà pris';
 
-            } else $errorList[] = 'le champ est vide!';
+            } 
 
-            // If the input user-email is !empty 
-            // if (!empty($user_email)) {
-            //     $current_user = wp_get_current_user();
-            //     $mail = the_author_meta( 'email', $current_user->ID );
-            //     // Update email_post
 
-            //     var_dump($mail);exit;
-            // }
+            //Récupérer toutes les adresses mail des utilisateurs et admin du site
+
+            global $wpdb; // On se connecte à la base de données du site
+            
+            $list_email_users = $wpdb->get_results("
+                SELECT DISTINCT user_email
+                FROM wp_users
+                GROUP BY user_email
+                ;
+                ");
+
+            foreach($list_email_users as $mail){
+                $mail->user_email;
+                array_push($list_email_users,$mail->user_email);
+                }
+
+            //var_dump($list_email_users);exit;
+
+
+            //If the input user-email is !empty 
+            if ((!empty($user_email)) & (!in_array($user_email,($list_email_users)))) {
+                //echo('yooooooo');exit;
+                $current_user = wp_get_current_user();
+                //$mail = the_author_meta( 'email', $current_user->ID );
+                // Update email_post
+                $current_user->user_email = esc_attr($user_email);
+                wp_update_user($current_user);
+                //var_dump($current_user);exit;
+            } else if (!empty($user_email)) {
+                $errorList[] = 'Cette adresse email est déjà prise!';
+            } 
 
             // Si il y a des erreurs affiche les
             if (!empty($errorList)) {
