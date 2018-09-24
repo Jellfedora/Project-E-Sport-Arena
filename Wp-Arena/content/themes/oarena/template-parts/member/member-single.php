@@ -1,5 +1,4 @@
 <?php
-// Template Name: User Profile
 ?>
 <div class="news__item">
          <div class="news__item-image" style="background-image: url(<?=get_the_post_thumbnail_url();?>);">

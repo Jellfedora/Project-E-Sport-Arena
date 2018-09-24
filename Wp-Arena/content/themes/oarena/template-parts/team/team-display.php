@@ -15,5 +15,9 @@ foreach ($post as $post_id) {
      <div class="news__tournament__status__chief__name"><?= get_post_meta($post_id,'_team_chief',true); ?></div>
         <div class="news__tournament__status__members">Membres de l'équipe :</div>
         <div class="news__tournament__status__members__name"><li><?= $member1 = get_post_meta($post_id,'_member1',true);?></li></div>
+        <div class="news__tournament__status__members__name"><li><?= $member1 = get_post_meta($post_id,'_member2',true);?></li></div>
+        <div class="news__tournament__status__members__name"><li><?= $member1 = get_post_meta($post_id,'_member3',true);?></li></div>
+        <div class="news__tournament__status__members__name"><li><?= $member1 = get_post_meta($post_id,'_member4',true);?></li></div>
+        <div class="news__tournament__status__members__name"><li><?= $member1 = get_post_meta($post_id,'_member5',true);?></li></div>
     </div>
 </div>
