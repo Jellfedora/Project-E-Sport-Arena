@@ -136,3 +136,21 @@
  post sur slack overflow.
 
 
+# Sprint 2.3
+
+++++ 20 septembre 2018 ++++
+
+* Création d'une condition si la team existe déjà au moment de la création . Beaucoup de temps perdu mais au final je trouve la solution.
+
+
+# Sprint 2.3
+
+
+++++ 21 septembre 2018 ++++
+
+* J'arrive enfin a verifier si la team exite déjà, j'avais la réponse depuis le début mais il fallait juste que je déplace le foreach ...
+* Essaie d'ajout d'ajax pour générer les erreurs sur les forms => echecs => pas loin voir christophe
+* Création catégories => pas réussi pas loin voir christophe
+==> Journée perdue 
+
+

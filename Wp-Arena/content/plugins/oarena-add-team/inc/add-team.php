@@ -26,6 +26,15 @@ class oArenaAddTeam
         // untill there i have the var dump ok with post author 
         // var_dump($user);
         // exit;
+
+        $array_title = [];
+
+    foreach ($user as $post) {
+        $array_title = $post->post_title;
+        }
+// var_dump($array_title);
+// die;
+
         if (isset($_POST['register-team-tournament'])) 
         {
             function init_metabox_tournament() 

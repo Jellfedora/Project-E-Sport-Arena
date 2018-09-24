@@ -18,7 +18,8 @@ class oArenaRole
         ]);
 
         add_role('Membre', 'Membre du site', [
-            'read' => false,
+            // A MODIFIER EN FALSE POUR CACHER LA BARRE D ADMIN
+            'read' => true,
         ]);
     }
 
