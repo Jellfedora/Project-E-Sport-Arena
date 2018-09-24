@@ -44,7 +44,20 @@ class oArenaAddTeam
                     // var_dump($array_title);
                     // die;
                     var_dump('Vous pouvez inscrire cette equipe');
-                    die;
+                    function team_register_tournament($post) 
+                    {
+                        $register_teams = get_post_meta($post->ID, '_team_register', true);
+
+                        ?>
+                        <input id="" type="text" name="register-team" value="<?php echo $register_teams; ?>" />
+                        <?php
+                    }
+                    add_action('save_post', 'save_metabox_tournament');
+
+                    function save_metabox_tournament($post_id)
+                    {
+                        add_post_meta($post_id, '_team_register', $array_title);
+                    }
                 } else {
                     var_dump('Cette team n existe pas ou ce n est pas vous qui l avez créée');
                     die;

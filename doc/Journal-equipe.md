@@ -171,3 +171,7 @@ https://codex.wordpress.org/Function_Reference/wp_create_user
 * Changement de nom de CPT Membre en même temps que le user
 * Un utilisateur ne peux crééer qu'une team
 * Ajout vérifications sur inscription a un tournoi => Team existante et créée par l'user ?
+* Ajout des infos méta-box dans pages team ( chef et membres )
+* Style page tournois
+* Ajout infos dans la page de contact ( ville adresse telephone )
+* Edition des infos grace au customizer

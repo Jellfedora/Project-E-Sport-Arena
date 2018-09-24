@@ -168,4 +168,6 @@
 * Modifications sur création de team, maintenant un utilisateur ne peux créer qu'une seule équipe ce qui facilitera l'ajour aux tournois.
 * Enfin arrivé a rentrer dans ma condition pour vérifier si une team a été créée par l'user lors de l'inscription a un tournoi
 * Un peu de style sur la page tournois
+* Un peu de style sur page team + afficahge des métabox chief et members
+* Mise en place d'infos dans la page de contact modifiables grace au customizer 
 
