@@ -10,7 +10,7 @@ if (!get_theme_mod('oarena_theme_posts_active')) :
 
     $args= [
         'post_type' => 'post',
-        'posts_per_page' => get_theme_mod('oarena_theme_posts_numbers'),
+        'posts_per_page' => get_theme_mod('oarena_theme_posts_numbers', 6),
         'order' => 'DESC',
         'order_by' => 'date'
     ];
