@@ -47,7 +47,7 @@
 			<small class="">Votre email</small>
 	        <input type="text" class="form-control"  name="user-email"  aria-describedby="user-email" placeholder="<?php the_author_meta( 'email', $current_user->ID ); ?>" >
 	    </div>
-	    <input type="submit" name="update-member-submit">
+	    <input type="submit" value="Modifier" name="update-member-submit">
     </form>
 
     <form action="update-user-info.php" class="col-12 col-md-6 offset-md-3 mb-5" method="post">
@@ -72,7 +72,7 @@
 			<small class="">Ville</small>
 	        <input class="form-control" type="text" name="member-city" placeholder="<?php echo $member_city; ?>"/>
         </div>
-	    <input type="submit" name="update-user-info-submit">
+	    <input type="submit" value="Modifier" name="update-user-info-submit">
     </form>
     
  
