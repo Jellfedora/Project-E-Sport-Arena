@@ -6,7 +6,7 @@
             <a href="<?php the_permalink() ; ?>">
             <h3 class="news__item-title text-light"><?php the_title(); ?></h3>
             <div class="category-button d-flex justify-content-center ml-5">
-            <?php get_my_category_name(get_the_ID()) ; ?>
+            <?php the_category() ; ?>
             </div>
             </a>
             <div>

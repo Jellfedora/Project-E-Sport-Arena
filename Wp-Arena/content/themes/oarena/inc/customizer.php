@@ -2,6 +2,7 @@
 
 require('customizer/section-carousel.php');
 require('customizer/section-posts.php');
+require('customizer/section-contact.php');
 
 function oarena_customize_register($wp_customize) 
 {
@@ -29,6 +30,15 @@ function oarena_customize_register($wp_customize)
      ]);
 
      oarena_customize_posts($wp_customize);
+
+    // Section Contact
+     $wp_customize->add_section('oarena_theme_contact', [
+         'title' => 'Contact',
+         'panel' => 'oarena_theme_panel',
+         'prioriy' => 10
+     ]);
+
+     oarena_customize_contact($wp_customize);
 
  }
 
