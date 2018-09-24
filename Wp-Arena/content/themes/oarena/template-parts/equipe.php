@@ -85,14 +85,19 @@ $id_team->ID;
     </div>
 </div>
 
+<input id="s" type="text">
 <div class="team__form-update team-form-update">
-<form action="update-member-team" class="col-12 col-md-6 offset-md-3 mb-5" method="post">
-	    <h3 class="text-center">Changer le chef d'équipe</h3>
+	<form action="update-member-team" class="col-12 col-md-6 offset-md-3 mb-5" method="post">
+		<h3 class="text-center">Changer le chef d'équipe</h3>
+		<p>EST NORMALEMENT CACHE MAIS EMPECHE CHARGEMENT AJAX, A REGLER</p>
+		<div class="error team__error">
+			<p>Voici les erreurs:</p>
+		</div>
 	    <div class="form-group">
 			<small id="member" class="">Chef d'équipe</small>
 	        <input type="text" class="form-control"  name="_team_chief"  aria-describedby="member" placeholder="<?= $team_chief ?>" >
 	    </div>
-	    <input type="submit" name="team_chief-submit">
+	    <input class="button-update-member" type="submit" name="team_chief-submit">
 	</form>
 
 	<form action="update-member-team" class="col-12 col-md-6 offset-md-3 mb-5" method="post">

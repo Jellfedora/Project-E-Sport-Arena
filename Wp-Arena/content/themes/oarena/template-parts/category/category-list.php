@@ -2,8 +2,8 @@
     
         $array_categories = get_categories();
 
-    // var_dump($array_categories);
-    // die();
+     //var_dump($array_categories);
+     //die();
 
     // $choice_categories[0] = 'blog';
     // $choice_categories[1] = 'news';
@@ -12,12 +12,28 @@
 
     foreach($array_categories as $category)
     {
-        var_dump($category);
-        $choice_categories = $category->name;
-        
+        // var_dump($category);
+        // die;
+         $choice_categories = $category->name;
     }
-    // die;
-    // var_dump($choice_categories);
+    //var_dump($category->name);
+     //die;
+    
+    $args= [
+        'post_type' => 'post',
+        'cat' => $choice_categories,
+        'posts_per_page' => -1,
+        'order' => 'DESC',
+        'order_by' => 'date'
+    ];
+    
+
+    $our_articles = new WP_Query($args);
+
+    if ($our_articles->have_posts()): while ($our_articles->have_posts()): $our_articles->the_post(); 
+
+    // $category = get_the_category();
+    // var_dump($category);
     // die;
         $args= [
             'post_type' => 'post',
