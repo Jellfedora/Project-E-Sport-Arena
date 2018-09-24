@@ -31,10 +31,32 @@ class oArena_updateUser
                 $current_user->display_name = esc_attr($user_name);
                 $current_user->first_name = esc_attr($user_name);
                 $current_user->last_name = esc_attr($user_name);
-                
+                $current_user->user_login = esc_attr($user_name);
+                //var_dump($current_user);exit;
                 
                 wp_update_user($current_user);
 
+                //var_dump($current_user);exit;
+                //Met à jour le nom de l'utilisateur (celui avec lequel on se connecte)
+
+                global $wpdb;
+                $user_id = get_current_user_id();
+                $wpdb->update($wpdb->users, array('user_login' => $user_name), array('ID' => $user_id));
+
+
+
+
+                // global $current_user;
+                // get_currentuserinfo ();
+                // $current_username = $current_user->user_login;
+                // global $wpdb;
+
+                // $wpdb->query( "
+                // UPDATE wp_users
+                // SET user_login = $user_name
+                // WHERE user_login = $current_username
+                // " );
+                // var_dump($current_username);exit;
                 ///////////////////////////////
 
                 //Mettre à jour le nom du membre
@@ -120,7 +142,6 @@ class oArena_updateUser
 
             //If the input user-email is !empty 
             if ((!empty($user_email)) & (!in_array($user_email,($list_email_users)))) {
-                //echo('yooooooo');exit;
                 $current_user = wp_get_current_user();
                 //$mail = the_author_meta( 'email', $current_user->ID );
                 // Update email_post

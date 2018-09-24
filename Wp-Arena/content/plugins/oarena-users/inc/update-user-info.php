@@ -40,13 +40,13 @@ class oArena_updateUserInfo
             if (!empty($_POST['member-firstname'])) {
                 update_post_meta($post->ID, 'member_firstname', sanitize_text_field($_POST['member-firstname']));
             }
-            if (isset($_POST['member-street'])) {
+            if (!empty($_POST['member-street'])) {
                 update_post_meta($post->ID, 'member_street', sanitize_text_field($_POST['member-street']));
             }
-            if (isset($_POST['member-postal-code'])) {
+            if (!empty($_POST['member-postal-code'])) {
                 update_post_meta($post->ID, 'member_postal_code', sanitize_text_field($_POST['member-postal-code']));
             }
-            if (isset($_POST['member-city'])) {
+            if (!empty($_POST['member-city'])) {
                 update_post_meta($post->ID, 'member_city', sanitize_text_field($_POST['member-city']));
             }
             // Redirige vers la page profil

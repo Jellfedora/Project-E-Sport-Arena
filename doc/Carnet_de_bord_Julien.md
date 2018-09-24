@@ -112,3 +112,5 @@
 * Mise en plugin de l'édition de membre (avant dans le template test) + update membre ( = post title) en meme temps que l'update du nom de l'user.
 * Maintenant membre = user
 * Ajout de la modification de l'email par l'utilisateur avec vérification comme quoi elle n'est pas déjà prise
+* Ajout metaboxes pour ajouter information facturation du membre via la page profil de chaque membres
+* Ajout de l'update du user_login si modifier via profil
