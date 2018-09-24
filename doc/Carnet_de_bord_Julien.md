@@ -109,4 +109,5 @@
 # Sprint 3.1 lundi 24 septembre 2018
 
 * Mise à jour du trello pour le sprint 3
-* Mise en plugin de l'édition de membre (avant dans le template test)
+* Mise en plugin de l'édition de membre (avant dans le template test) + update membre ( = post title) en meme temps que l'update du nom de l'user.
+* Maintenant membre = user
