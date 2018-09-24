@@ -21,8 +21,9 @@ $id = $post->ID;
     <h3 class="news__tournament"><?php the_title() ; ?></h3>
     <p class="card-text"> <?php the_content() ; ?></p>   
     <form action="add-team" method="post">
-    <input type="test" value="Nom de votre team" name="register-team-tournament">
-    <button type="submit"> Inscrire ma team</button>
+    <p class="text-align">Nom de votre team : </p>
+    <input type="test" value="" name="register-team-tournament" >
+    <button type="submit" class="btn mt-2"> Inscrire ma team</button>
     </form>
     </div>
 </div>
