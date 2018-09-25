@@ -50,7 +50,7 @@ function team_members($post)
 
 function team_register($post) 
 {
-    $register_teams = get_post_meta($post->ID, '_team_register', true);
+    $register_teams = get_post_meta($post->ID, '_team_register');
 
     ?>
      <input id="" type="text" name="register-team" value="<?php echo $register_teams; ?>" />

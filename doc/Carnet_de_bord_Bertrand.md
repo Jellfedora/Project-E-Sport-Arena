@@ -171,3 +171,9 @@
 * Un peu de style sur page team + afficahge des métabox chief et members
 * Mise en place d'infos dans la page de contact modifiables grace au customizer 
 
+# Sprint 3.2
+
+++++ 24 septembre 2018 ++++
+
+* Création CPT boutique
+
