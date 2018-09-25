@@ -12,8 +12,9 @@ function oarena_customize_register($wp_customize)
         'title' => 'oarena',
         'description' => 'oarena - Gestion du thème',
         'priority' => 1
-    ]);
+    ]);    
 
+    // Section carousel
     $wp_customize->add_section('oarena_theme_carousel', [
     'title' => 'Carousel',
     'panel' => 'oarena_theme_panel',

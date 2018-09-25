@@ -50,7 +50,7 @@ register_activation_hook(__FILE__, [$oArena_members, 'activation']);
 register_deactivation_hook(__FILE__, [$oArena_members, 'deactivation']);
 
 // CPT SHOP
-require plugin_dir_path(__FILE__) . 'inc/shop_cpt.php';
+require plugin_dir_path(__FILE__) . 'inc/article_cpt.php';
 ;
 $oArena_shop = new oArenaShopCpt();
 

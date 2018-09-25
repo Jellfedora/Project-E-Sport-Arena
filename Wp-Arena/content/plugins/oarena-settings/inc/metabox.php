@@ -6,10 +6,16 @@ function init_metabox()
     // For CPT Team
     add_meta_box('team_chief', 'Chef', 'team_chief', 'team', 'normal');
     add_meta_box('team_members', 'Membres', 'team_members', 'team', 'normal');
+
+    // For CPT Tournament
     add_meta_box('team_register', 'Participants', 'team_register', 'tournament', 'normal' );
 
     // For CPT Member
     add_meta_box('member_info', 'Informations livraison', 'member_info', 'members', 'normal');
+
+    // For CPT Article 
+    add_meta_box('article_price', 'Prix du billet', 'article_price', 'article', 'normal');
+    add_meta_box('article_quantity', 'Places disponibles', 'article_quantity', 'article', 'normal');
 }
 
 function team_chief($post)
@@ -69,6 +75,25 @@ function member_info($post)
   <?php
 }
 
+function article_price($post)
+{
+    $article_price = get_post_meta($post->ID, 'article_price', true);
+    ?>
+    <input type="number" name="article-price" placeholder="Prix" value="<?= $article_price ; ?>"/>
+
+    <?php
+}
+
+function article_quantity($post)
+{
+    $article_quantity = get_post_meta($post->ID, 'article_quantity', true);
+
+    ?>
+    <input type="number" name="article-quantity" placeholder="Nombre de places disponibles" value="<?= $article_quantity ; ?>"/>
+
+    <?php 
+}
+
 add_action('save_post', 'save_metabox');
 function save_metabox($post_id)
 {
@@ -118,5 +143,16 @@ function save_metabox($post_id)
     }
     if (isset($_POST['member_city'])) {
         update_post_meta($post_id, 'member_city', sanitize_text_field($_POST['member_city']));
+    }
+
+    // Price article
+
+    if (isset($_POST['article-price'])) {
+        update_post_meta($post_id, 'article_price', absint($_POST['article-price']));
+    }
+
+    // Quantity Article
+    if (isset($_POST['article-quantity'])) {
+        update_post_meta($post_id, 'article_quantity', absint($_POST['article-quantity']));
     }
 }
