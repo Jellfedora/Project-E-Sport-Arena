@@ -11,7 +11,7 @@
         <!-- Test input simple-->
         <input type="hidden" name="submit-team" value="true">
         <input type="text" name="team-name" placeholder="Nom de votre team">
-        <div id="alert-name">Cette équipe existe déjà</div> 
+        <div id="alert-name">Cette équipe existe déjà ou vous avez déjà crééer une équipe</div> 
         <hr>
         <textarea name="myteamdescription" cols="30" rows="10"></textarea>
         <hr>

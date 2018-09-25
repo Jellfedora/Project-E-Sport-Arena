@@ -127,35 +127,42 @@ var app = {
   },
 
   //////////////////////////////////////////////////////////////////////////
-  // formError: function (evt) {
-  //   // FORM = Je stoppe le comportement par défaut de la page
-  //   evt.preventDefault();
-  //   console.log('OK')
-  //   var dataToSend = $(this).serialize();
+  formError: function (evt) {
+    // FORM = Je stoppe le comportement par défaut de la page
+    evt.preventDefault();
+    console.log('OK')
 
-  //   // Je cache la div contenant l 'alerte
+    var dataToSend = $(this).serialize();
 
-  //   // Je fais un appel Ajax
-  //   $.ajax({
-  //     url: $(this).attr('create-team.php'),
-  //     method: 'POST',
-  //     // dataType: 'json',
-  //     data: dataToSend
-  //   }).done(function (response) {
-  //     console.log(response);
-  //     if (response.code == 0) {
-  //       $('#alert-name').hide();
-  //       window.setTimeout(function () {
-  //         location.href = response.redirect;
-  //       }, 2000);
-  //     } else {
-  //       var $alertsDiv = $('#alert-name');
-  //       $alertsDiv.show();
-  //     }
-  //   }).fail(function () {
-  //     console.log('ajax failed');
-  //   })
-  // }
+    // console.log(this);
+    console.log(dataToSend);
+    // console.log($(this).attr('action'));
+
+    // // Je cache la div contenant l 'alerte
+
+    // Je fais un appel Ajax
+    $.ajax({
+      url: 'http://localhost/Project/Project-E-Sport-Arena/Wp-Arena/creer-une-equipe/',
+      method: 'POST',
+      dataType: 'json',
+      data: dataToSend
+    }).done(function (response) {
+      console.log(response);
+      if (response.code == 1) {
+        console.log('IF OK ');
+        $('#alert-name').hide();
+        // window.setTimeout(function () {
+        //   location.href = response.redirect;
+        // }, 10000);
+      } else {
+        console.log('ELSE OK ');
+        var $alertsDiv = $('#alert-name');
+        $alertsDiv.show();
+      }
+    }).fail(function () {
+      console.log('ajax failed');
+    })
+  }
 }
 
 $(app.init);
