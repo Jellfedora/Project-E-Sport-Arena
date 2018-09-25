@@ -1,6 +1,12 @@
+<?php 
+
+$shopping_cart = site_url('panier'); 
+
+?>
+
 <div class="news p-3 d-flex justify-content-around">
     <h2 class="news__title text-light">Billets disponibles</h2>
-    <i class="fa fa-shopping-basket" aria-hidden="true"></i>
+   <a href="<?= $shopping_cart; ?>" style="color: black;"><i class="fa fa-shopping-basket" style="font-size: 2em;" aria-hidden="true"></i></a>
 </div>
     <div class="news__content">
 
