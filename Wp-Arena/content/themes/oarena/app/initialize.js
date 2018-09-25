@@ -13,7 +13,7 @@ var app = {
     $main = $('.main');
     $form_update_member_error = $('.error');
 
-    // $('#create-team-form').on('click', app.formError);
+    // $('#create-team-form').on('submit', app.formError);
 
     // Show the team edition form
     $team_form_update = $('.team-form-update');
@@ -124,45 +124,45 @@ var app = {
         console.log('Erreur…');
       }
     });
-  },
+  }
 
   //////////////////////////////////////////////////////////////////////////
-  formError: function (evt) {
-    // FORM = Je stoppe le comportement par défaut de la page
-    evt.preventDefault();
-    console.log('OK')
+  // formError: function (evt) {
+  // FORM = Je stoppe le comportement par défaut de la page
+  // evt.preventDefault();
+  // console.log('OK')
 
-    var dataToSend = $(this).serialize();
+  // var dataToSend = $(this).serialize();
 
-    // console.log(this);
-    console.log(dataToSend);
-    // console.log($(this).attr('action'));
+  // console.log(this);
+  // console.log(dataToSend);
+  // console.log($(this).attr('action'));
 
-    // // Je cache la div contenant l 'alerte
+  // // Je cache la div contenant l 'alerte
 
-    // Je fais un appel Ajax
-    $.ajax({
-      url: 'http://localhost/Project/Project-E-Sport-Arena/Wp-Arena/creer-une-equipe/',
-      method: 'POST',
-      dataType: 'json',
-      data: dataToSend
-    }).done(function (response) {
-      console.log(response);
-      if (response.code == 1) {
-        console.log('IF OK ');
-        $('#alert-name').hide();
-        // window.setTimeout(function () {
-        //   location.href = response.redirect;
-        // }, 10000);
-      } else {
-        console.log('ELSE OK ');
-        var $alertsDiv = $('#alert-name');
-        $alertsDiv.show();
-      }
-    }).fail(function () {
-      console.log('ajax failed');
-    })
-  }
+  // Je fais un appel Ajax
+  // $.ajax({
+  //   url: 'http://localhost/Project/Project-E-Sport-Arena/Wp-Arena/creer-une-equipe/',
+  //   method: 'POST',
+  //   dataType: 'json',
+  //   data: dataToSend
+  // }).done(function (response) {
+  //   console.log(response);
+  //   if (response.code == 1) {
+  //     console.log('IF OK ');
+  //     $('#alert-name').hide();
+  // window.setTimeout(function () {
+  //   location.href = response.redirect;
+  // }, 10000);
+  //     } else {
+  //       console.log('ELSE OK ');
+  //       var $alertsDiv = $('#alert-name');
+  //       $alertsDiv.show();
+  //     }
+  //   }).fail(function () {
+  //     console.log('ajax failed');
+  //   })
+  // }
 }
 
 $(app.init);
