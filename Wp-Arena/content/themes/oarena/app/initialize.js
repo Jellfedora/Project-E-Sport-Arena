@@ -30,12 +30,12 @@ var app = {
     //$('.button-update-member').on('click', app.showErrorUpdateMember);
 
     // Création variable pour soumission du formulaire
-    $('#create-team-form').on('submit', app.formError);
+    // $('#create-team-form').on('click', app.formError);
     $('.hide-menu-button').on('click', app.hideMenu);
     $('.show-menu-button').on('click', app.showMenu);
 
     // Je cache la div qui contient le message d erreur cette team est deja prise
-    $('#alert-name').hide();
+    // $('#alert-name').hide();
 
     // Scroll to next elements . A minifier!!
     $('.scroll-to-tournament').click(function () {
