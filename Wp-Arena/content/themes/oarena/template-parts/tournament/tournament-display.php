@@ -22,6 +22,7 @@ $id = $post->ID;
     <form action="add-team" method="post">
     <p class="text-align mt-5">Nom de votre team : </p>
     <input type="test" value="" name="register-team-tournament" >
+    <input type="hidden" value="<?= get_the_ID(); ?>" name="register-tournament-id" >
     <button type="submit" class="btn mt-2"> Inscrire ma team</button>
     </form>
     </div>

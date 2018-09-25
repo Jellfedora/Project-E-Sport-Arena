@@ -75,10 +75,4 @@
 	    <input type="submit" value="Modifier" name="update-user-info-submit">
     </form>
     
- 
-        
-
-    
-
-    
 <?php get_footer() ; ?>
