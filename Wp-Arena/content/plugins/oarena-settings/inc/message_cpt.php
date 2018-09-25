@@ -53,7 +53,7 @@ class Contact_cpt
                     ],
                     'hierarchical'                 => false,
                     'public'                       => true,
-                    'menu_position'                => 30,
+                    'menu_position'                => 1,
                     'menu_icon'                    => 'dashicons-admin-comments',
                     'has_archive'                  => true,
                     'rewrite'                      => [

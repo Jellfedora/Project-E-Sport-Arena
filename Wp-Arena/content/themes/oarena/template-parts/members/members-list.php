@@ -14,7 +14,7 @@ $members = new WP_Query($args);
 
 if ($members->have_posts()): while ($members->have_posts()): $members->the_post();
 
-        get_template_part('template-parts/member/member', 'single');
+        get_template_part('template-parts/members/members', 'single');
 
     endwhile;
 
