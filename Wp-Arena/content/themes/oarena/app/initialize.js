@@ -134,9 +134,9 @@ var app = {
 
     var dataToSend = $(this).serialize();
 
-    console.log(this);
+    // console.log(this);
     console.log(dataToSend);
-    console.log($(this).attr('action'));
+    // console.log($(this).attr('action'));
 
     // // Je cache la div contenant l 'alerte
 
@@ -144,21 +144,22 @@ var app = {
     $.ajax({
       url: 'http://localhost/Project/Project-E-Sport-Arena/Wp-Arena/creer-une-equipe/',
       method: 'POST',
-      // dataType: 'json',
+      dataType: 'json',
       data: dataToSend
     }).done(function (response) {
       console.log(response);
-      // if (response.code == 1) {
-      //   $('#alert-name').hide();
-      //   window.setTimeout(function () {
-      //     location.href = response.redirect;
-      //   }, 2000);
-      // } else {
-      //   var $alertsDiv = $('#alert-name');
-      //   $alertsDiv.show();
-      // }
-    }).fail(function (jqXHR, textStatus, errorThrown) {
-      console.log(textStatus);
+      if (response.code == 1) {
+        console.log('IF OK ');
+        $('#alert-name').hide();
+        // window.setTimeout(function () {
+        //   location.href = response.redirect;
+        // }, 10000);
+      } else {
+        console.log('ELSE OK ');
+        var $alertsDiv = $('#alert-name');
+        $alertsDiv.show();
+      }
+    }).fail(function () {
       console.log('ajax failed');
     })
   }
