@@ -30,12 +30,12 @@ var app = {
     //$('.button-update-member').on('click', app.showErrorUpdateMember);
 
     // Création variable pour soumission du formulaire
-    // $('#create-team-form').on('click', app.formError);
+    $('#create-team-form').on('submit', app.formError);
     $('.hide-menu-button').on('click', app.hideMenu);
     $('.show-menu-button').on('click', app.showMenu);
 
     // Je cache la div qui contient le message d erreur cette team est deja prise
-    // $('#alert-name').hide();
+    $('#alert-name').hide();
 
     // Scroll to next elements . A minifier!!
     $('.scroll-to-tournament').click(function () {
@@ -124,45 +124,45 @@ var app = {
         console.log('Erreur…');
       }
     });
+  },
+
+  ////////////////////////////////////////////////////////////////////////
+  formError: function (evt) {
+    evt.preventDefault();
+    console.log('OK')
+
+    var dataToSend = $(this).serialize();
+
+    console.log(this);
+    console.log(dataToSend);
+    console.log($(this).attr('action'));
+
+    // Je cache la div contenant l 'alerte
+
+    // Je fais un appel Ajax
+    $.ajax({
+      url: 'http://localhost/Project/Project-E-Sport-Arena/Wp-Arena/creer-une-equipe/',
+      method: 'POST',
+      dataType: 'json',
+      data: dataToSend
+    }).done(function (response) {
+      console.log(response);
+      if (response.code == 1) {
+        $alertsDiv.show();
+      } else {
+        console.log('ELSE OK ');
+        var $alertsDiv = $('#alert-name');
+        $alertsDiv.show();
+      }
+    }).fail(function () {
+      console.log('IF OK ');
+      $('#alert-name').hide();
+      window.prompt('Team créée félicitations');
+      window.setTimeout(function () {
+        location.href = response.redirect;
+      }, 10000);
+    })
   }
-
-  //////////////////////////////////////////////////////////////////////////
-  // formError: function (evt) {
-  // FORM = Je stoppe le comportement par défaut de la page
-  // evt.preventDefault();
-  // console.log('OK')
-
-  // var dataToSend = $(this).serialize();
-
-  // console.log(this);
-  // console.log(dataToSend);
-  // console.log($(this).attr('action'));
-
-  // // Je cache la div contenant l 'alerte
-
-  // Je fais un appel Ajax
-  // $.ajax({
-  //   url: 'http://localhost/Project/Project-E-Sport-Arena/Wp-Arena/creer-une-equipe/',
-  //   method: 'POST',
-  //   dataType: 'json',
-  //   data: dataToSend
-  // }).done(function (response) {
-  //   console.log(response);
-  //   if (response.code == 1) {
-  //     console.log('IF OK ');
-  //     $('#alert-name').hide();
-  // window.setTimeout(function () {
-  //   location.href = response.redirect;
-  // }, 10000);
-  //     } else {
-  //       console.log('ELSE OK ');
-  //       var $alertsDiv = $('#alert-name');
-  //       $alertsDiv.show();
-  //     }
-  //   }).fail(function () {
-  //     console.log('ajax failed');
-  //   })
-  // }
 }
 
 $(app.init);
