@@ -26,6 +26,7 @@ if (is_user_logged_in()) {
     $url_profil = site_url ('profil');
     $url_add_team = site_url ('creer-une-equipe');
     $url_team = site_url ('equipe');
+    $shopping_cart = site_url('panier'); 
 
     echo ('
     <a class="data-toggle="tooltip" title="Profil"
@@ -40,6 +41,10 @@ if (is_user_logged_in()) {
     echo ('
     <a class="data-toggle="tooltip" title="Voir son équipe"
     href="' . $url_team . '"><i class="fa fa-users" aria-hidden="true"></i></a>');
+
+    echo ('
+    <a class="data-toggle="tooltip" title="Mon panier"
+    href="' . $shopping_cart . '"><i class="fa fa-shopping-basket" aria-hidden="true"></i></a>');
     
     ?>
     
