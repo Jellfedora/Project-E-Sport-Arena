@@ -12,9 +12,10 @@ var app = {
     $footer = $('.footer');
     $main = $('.main');
     $form_update_member_error = $('.error');
-    $itemName = $('#item-name');
-    $itemQuantity = $('#item-quantity');
-    $itemPrice = $('#item-price');
+    $itemName = $('.item-name');
+    console.log($itemName);
+    $itemQuantity = $('.item-quantity');
+    $itemPrice = $('.item-price');
     nameArray = [];
     quantityArray = [];
     priceArray = [];
@@ -42,7 +43,7 @@ var app = {
     $('.show-menu-button').on('click', app.showMenu);
 
     // j ecoute l evenement ajouter au panier
-    $('#cart-add-item').on('click', app.addItemToCart);
+    $('.cart-add-item').on('click', app.addItemToCart);
 
     // Je cache la div qui contient le message d erreur cette team est deja prise
     $('#alert-name').hide();
@@ -214,17 +215,17 @@ var app = {
 
   displayCart: function () {
     console.log('je suis dans display cart');
-    cartData = '<table><tr><th>Produit</th><th>Quantité</th><th>Prix</th><th>Total</th></tr>'
+    cartData = '<table><tr><th class="pr-2">Produit</th class="pl-5"><th>Quantité</th><th class="pr-5 pl-3">Prix</th><th class="pr-5">Total</th></tr>'
     // console.log(cartData);
     total = 0;
     for (i = 0; i < nameArray.length; i++) {
       total += quantityArray[i] * priceArray[i];
-      cartData += "<tr><td>" + nameArray[i] + "</td><td>" + quantityArray[i] + "</td><td>" + priceArray[i] + "</td><td>" + quantityArray[i] * priceArray[i] + "</td><td><button id='buttonDelete'>Supprimer</button></td></tr>"
+      cartData += "<tr><td class='mr-2'>" + nameArray[i] + "</td><td>" + quantityArray[i] + "</td><td class='pl-3'>" + priceArray[i] + "</td><td>" + quantityArray[i] * priceArray[i] + "</td><td><button class='buttonDelete'>Supprimer</button></td></tr>"
     }
     cartData += '<tr><td></td><td></td><td></td><td>' + total + '</td></tr></table>';
     document.getElementById('cart-mycart').innerHTML = cartData
     // Je rajoute un evenement au click sur supprimer
-    $('#buttonDelete').on('click', app.delElement);
+    $('.buttonDelete').on('click', app.delElement);
   },
 
   delElement: function (a) {
