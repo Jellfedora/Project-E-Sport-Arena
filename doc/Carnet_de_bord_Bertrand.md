@@ -180,3 +180,9 @@
 * Tentative pour le json, on récupere bien le form on a la réponse en json mais on ne sait pas quoi en faire ... 
 * Ajout d'une team au tournoi OK 
 
+# Sprint 3.2
+
+++++ 26 septembre 2018 ++++
+
+* Aujourd'hui je décide de ne pas me pencher sur le json et de faire autre chose, d'un coup une illumination, plutot que de recevoir du json en php 
+je vais plutot recevoir du json en JS => j'envoie un tableau d erreur JSON et selon la response il va rentrer dans telle ou telle condition.

@@ -184,4 +184,7 @@ https://codex.wordpress.org/Function_Reference/wp_create_user
 * Metabox OK 
 * Ajout a un tournoi ok => probléme c'était que je ciblait le post et non le cpt tournoi ...
 * Début d'affichage d erreurs en JSON => probleme de récupe de la réponse, on l'a mais on sait pas comment la retourné.
-* 
+
+# Sprint 3.3 26 septembre 2018
+
+* Réponse Ajax sur formulaire create team ok => PHP envoie a l AJAX plutot que l'inverse 
