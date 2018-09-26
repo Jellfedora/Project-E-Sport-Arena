@@ -8,12 +8,12 @@ Class oArenaCreateTeam
         add_action ('init', [$this, 'addTeam']);
     }
     
-    function displayJson($to_display)
-    {
-      header(home_url());
-      echo json_encode($to_display);
-      exit;
-    }
+    // function displayJson($to_display)
+    // {
+    //   header(home_url());
+    //   echo json_encode($to_display);
+    //   exit;
+    // }
     public function addTeam()
     {
         $args= [
@@ -28,12 +28,12 @@ Class oArenaCreateTeam
         // Si le formulaire n'est pas vide
         if (isset($_POST['submit-team'])) 
         {
-                $jsonData = [
-                            'code' => 1,
-                        ];
+                // $jsonData = [
+                //             'code' => 1,
+                        // ];
                         // J'affiche le tableau en JSON
-                        var_dump(json_encode($this->displayJson($jsonData)));
-                        die;
+                        // var_dump(json_encode($this->displayJson($jsonData)));
+                        // die;
                         // json_encode($jsonData);
                         // die();
             
@@ -57,7 +57,7 @@ Class oArenaCreateTeam
                 {
                     $errorList = 'Cette team existe déjà';
                     var_dump($errorList);
-                    exit;
+                    die();
                     wp_redirect('equipe');
                 }
             }
@@ -115,8 +115,9 @@ Class oArenaCreateTeam
             // Si le compte est supérieur a 0 Je redirige vers la home 
             } else
             {
-                echo 'Vous ne pouvez pas creer plusieurs équipes';
-                wp_redirect(home_url());
+                var_dump('Vous ne pouvez pas creer plusieurs équipes');
+                die();
+                // wp_redirect(home_url());
             }
             
             

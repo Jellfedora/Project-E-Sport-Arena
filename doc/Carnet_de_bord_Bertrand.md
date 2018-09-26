@@ -173,7 +173,10 @@
 
 # Sprint 3.2
 
-++++ 24 septembre 2018 ++++
+++++ 25 septembre 2018 ++++
 
 * Création CPT boutique
+* Création des métabox prix et dispo 
+* Tentative pour le json, on récupere bien le form on a la réponse en json mais on ne sait pas quoi en faire ... 
+* Ajout d'une team au tournoi OK 
 
