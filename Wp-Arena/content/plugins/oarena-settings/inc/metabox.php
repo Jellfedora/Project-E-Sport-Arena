@@ -59,12 +59,18 @@ function team_register($post)
 
 function member_info($post)
 {
+    $member_genre = get_post_meta($post->ID, 'member_genre', true);
     $member_name = get_post_meta($post->ID, 'member_name', true);
     $member_firstname = get_post_meta($post->ID, 'member_firstname', true);
     $member_street = get_post_meta($post->ID, 'member_street', true);
     $member_postal_code = get_post_meta($post->ID, 'member_postal_code', true);
     $member_city = get_post_meta($post->ID, 'member_city', true);
     ?>
+   
+  <input class="form-check-input" type="radio" name="member_genre" checked value="Mr" <?php checked( $member_genre, 'Mr' ); ?> >
+  <label class="form-check-label" for="member_man">Mr / </label>
+  <input class="form-check-input ml-2" type="radio" name="member_genre" value="Mme" <?php checked( $member_genre, 'Mme' ); ?> >
+  <label class="form-check-label ml-4" for="member_woman"> Mme</label>
 
   <input id="" type="text" name="member_name" placeholder="Nom" value="<?php echo $member_name; ?>" />
   <input id="" type="text" name="member_firstname" placeholder="Prenom" value="<?php echo $member_firstname; ?>" />
@@ -129,6 +135,11 @@ function save_metabox($post_id)
     }
 
     // Member information
+
+    
+    if (isset($_POST['member_genre'])) {
+        update_post_meta($post_id, 'member_genre', sanitize_html_class( $_POST['member_genre']));
+    }
     if (isset($_POST['member_name'])) {
         update_post_meta($post_id, 'member_name', sanitize_text_field($_POST['member_name']));
     }

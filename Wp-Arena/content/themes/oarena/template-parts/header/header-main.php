@@ -32,7 +32,7 @@
           <?php get_template_part('template-parts/header/header', 'nav');?>
         </ul>
         <div class="menu-lg__video text-center">
-          <iframe width="260" height="180" src="https://www.youtube.com/embed/xLHN9pz5Dms" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          <iframe width="260" height="180" src="https://www.youtube.com/embed/cjg7M1IvnXs" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
         </div>
         <div class="menu-lg__user">
           <?php get_template_part('template-parts/header/member', 'area');?>

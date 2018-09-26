@@ -32,6 +32,10 @@ class oArena_updateUserInfo
 
         // Si le formulaire est soumit
         if (isset($_POST['update-user-info-submit'])) {
+
+            if (isset($_POST['member-genre'])) {
+                update_post_meta($post->ID, 'member_genre', sanitize_html_class( $_POST['member-genre']));
+            }
             // Si l'input est rempli
             if (!empty($_POST['member-name'])) {
                 // On met à jour la métaboxe
