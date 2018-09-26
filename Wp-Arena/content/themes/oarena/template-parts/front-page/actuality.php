@@ -8,7 +8,7 @@
         </div>
         <span class="news__items-type">League of legends</span>
         <div class="news__item-content  ">
-            <a href="#">
+            <a href="<?php the_permalink() ; ?>">
             <h3 class="news__item-title text-light"><?php the_title(); ?></h3>
             </a>
             <p class="news__item-text"><?php echo strip_tags(get_the_excerpt()); ?></p>
