@@ -75,7 +75,16 @@ class oArena_register
                 'ID' => $user_id,
                 'role' => 'Membre',
                 ]);
+            
 
+            //Log the user
+            $log = array();
+            $log ['user_login'] = $user_name;
+            $log ['user_password'] = $user_password;
+            $log = wp_signon ($log, false);
+	            if (is_wp_error ($user))
+                echo $user-> get_error_message ();
+            
             // Redirect to home
             wp_redirect(home_url());
             exit;
