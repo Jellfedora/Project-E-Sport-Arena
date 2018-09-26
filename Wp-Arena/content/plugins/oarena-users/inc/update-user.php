@@ -22,9 +22,87 @@ class oArena_updateUser
 
                 //Ajout d'un tableau contenant les erreurs
                 $errorList = array();
+                $old_name = wp_get_current_user();
+
+                ####################################
+                //il faut stocker lancien nom pour changer celui du membre
+                $old_name->user_login;
+                
+                ####################################
 
                 //Récupére l'utilisateur courant et met à jour le nom du user
                 $current_user = wp_get_current_user();
+
+
+                ##############################
+
+                //var_dump($old_name->user_login);exit;
+                
+                //il faut mettre a jour le nom du membre avant son login
+                //Mettre à jour le nom du membre
+                
+                // Récupére les noms des membres sous forme d'un tableau:
+                    
+                    global $wpdb; // On se connecte à la base de données du site
+                    // Requete qui récupére tout les post title ayant pour type members
+                    $members_name = $wpdb->get_results("
+                    SELECT `post_title` 
+                    FROM `wp_posts` 
+                    WHERE `post_type` ='members' 
+                    ;
+                    ");
+                    
+                    // Récupére les noms des membres en string et les stocke dans un tableau
+                    $member_list_name= Array();
+                    foreach ( $members_name  as $member_name ) {
+                        $member_name->post_title;
+                        array_push($member_list_name,$member_name->post_title);
+                    }
+                    
+                    //var_dump($member_list_name);exit;
+                    
+                    
+                    //TODO récupérer le nom du membre connecté
+                    
+                    $user_login = $current_user->user_login;
+                    
+                    
+                    //var_dump($user_login);exit;
+                    
+                    global $wpdb; // On se connecte à la base de données du site
+                    
+                    //Requete sql qui récupére l'ID du post ayant le nom du membre
+                    $member_id = $wpdb->get_results("
+                    SELECT ID
+                    FROM wp_posts
+                    WHERE `post_name` = '$user_login' AND `post_status`='publish'
+                    ;
+                    ");
+                    
+                    
+                    $id_member= '';
+                    foreach($member_id as $id_member){
+                        $id_member= $id_member->ID;
+                    }
+                    
+                    //var_dump($id_member);exit;
+                    
+
+                    // Si le nom nest pas pris
+                    // Update le post-title ayant pour identifiant id_member
+                if (!in_array($user_name,($member_list_name))) {
+                    // Update title_post
+                    $my_post = array(
+                        'ID'           => $id_member,
+                        'post_title'   => $user_name,
+                    );
+                    
+                    //echo('hey');exit;
+                    // Update the post into the database
+                    wp_update_post( $my_post );
+                    //var_dump($my_post);exit;
+                } else $errorList[] = 'Ce nom est déjà pris';
+                ###############################
                 $current_user->nickname = esc_attr($user_name);
                 // $current_user->user_login = esc_attr($user_name);
                 $current_user->user_nicename = esc_attr($user_name);
@@ -32,25 +110,24 @@ class oArena_updateUser
                 $current_user->first_name = esc_attr($user_name);
                 $current_user->last_name = esc_attr($user_name);
                 $current_user->user_login = esc_attr($user_name);
-                //var_dump($current_user);exit;
+
+                //var_dump($old_name->user_login);exit;
                 
                 wp_update_user($current_user);
-
+                
                 //var_dump($current_user);exit;
                 //Met à jour le nom de l'utilisateur (celui avec lequel on se connecte)
-
                 global $wpdb;
                 $user_id = get_current_user_id();
                 $wpdb->update($wpdb->users, array('user_login' => $user_name), array('ID' => $user_id));
-
-
-
-
+                
+                
+                
                 // global $current_user;
                 // get_currentuserinfo ();
                 // $current_username = $current_user->user_login;
                 // global $wpdb;
-
+                
                 // $wpdb->query( "
                 // UPDATE wp_users
                 // SET user_login = $user_name
@@ -58,65 +135,8 @@ class oArena_updateUser
                 // " );
                 // var_dump($current_username);exit;
                 ///////////////////////////////
-
-                //Mettre à jour le nom du membre
-
-                // Récupére les noms des membres sous forme d'un tableau:
-
-                global $wpdb; // On se connecte à la base de données du site
-                // Requete qui récupére tout les post title ayant pour type members
-                $members_name = $wpdb->get_results("
-                SELECT `post_title` 
-                FROM `wp_posts` 
-                WHERE `post_type` ='members' 
-                ;
-                ");
-                
-                // Récupére les noms des membres en string et les stocke dans un tableau
-                $member_list_name= Array();
-                foreach ( $members_name  as $member_name ) {
-                    $member_name->post_title;
-                    array_push($member_list_name,$member_name->post_title);
-                }
-                
-                //var_dump($member_list_name);exit;
                 
                 
-                //TODO récupérer le nom du membre connecté
-                
-                $user_login = $current_user->user_login;
-                //var_dump($user_login);exit;
-
-                
-                global $wpdb; // On se connecte à la base de données du site
-
-                //Requete sql qui récupére l'ID du post ayant le nom du membre
-                $member_id = $wpdb->get_results("
-                SELECT ID
-                FROM wp_posts
-                WHERE `post_name` = '$user_login' AND `post_status`='publish'
-                ;
-                ");
-
-                foreach($member_id as $id_member){
-                $id_member->ID;
-                }
-                
-                // var_dump($member_list_name);exit;
-
-                // Si le nom nest pas pris
-                // Update le post-title ayant pour identifiant id_member
-                if (!in_array($user_name,($member_list_name))) {
-                    // Update title_post
-                      $my_post = array(
-                        'ID'           => $id_member->ID,
-                        'post_title'   => $user_name,
-                    );
-
-                    // Update the post into the database
-                    wp_update_post( $my_post );
-                    //var_dump($my_post);exit;
-                } else $errorList[] = 'Ce nom est déjà pris';
 
             } 
 
