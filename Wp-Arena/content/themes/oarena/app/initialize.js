@@ -12,7 +12,9 @@ var app = {
     $footer = $('.footer');
     $main = $('.main');
     $form_update_member_error = $('.error');
-
+    $itemName = $('#item-name');
+    $itemQuantity = $('#item-quantity');
+    $itemPrice = $('#item-price');
     // $('#create-team-form').on('submit', app.formError);
 
     // Show the team edition form
@@ -33,6 +35,9 @@ var app = {
     $('#create-team-form').on('submit', app.formError);
     $('.hide-menu-button').on('click', app.hideMenu);
     $('.show-menu-button').on('click', app.showMenu);
+
+    // j ecoute l evenement ajouter au panier
+    $('#cart-add-item').on('click', app.addItemToCart);
 
     // Je cache la div qui contient le message d erreur cette team est deja prise
     $('#alert-name').hide();
@@ -177,7 +182,24 @@ var app = {
         location.href = response.redirect;
       }, 10000);
     })
-  }
+  },
+
+  addItemToCart: function (evt) {
+    evt.preventDefault();
+    console.log('addItemOK');
+    var array_name = [];
+    var array_quantity = [];
+    var array_price = [];
+
+    // $itemName.val();
+    $name = $itemName.val();
+    $quantity = parseInt($itemQuantity.val());
+    $price = parseInt($itemPrice.val());
+    console.log($name);
+    console.log($quantity);
+    console.log($price);
+  },
+
 }
 
 $(app.init);
