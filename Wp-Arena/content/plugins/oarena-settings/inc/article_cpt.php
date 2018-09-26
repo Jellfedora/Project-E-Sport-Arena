@@ -48,7 +48,7 @@ class oArenaShopCpt
                 'title',
                 'editor',
                 'thumbnail',
-                'custom-fields',
+                //'custom-fields',
                 'revisions',
             ],
             'hierarchical' => false,
