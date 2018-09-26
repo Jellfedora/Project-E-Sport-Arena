@@ -11,7 +11,7 @@
         <!-- Test input simple-->
         <input type="hidden" name="submit-team" value="true">
         <input type="text" name="team-name" placeholder="Nom de votre team">
-        <div id="alert-name">L\'équipe ne peux pas être vide</div> 
+        <div id="alert-name">L'équipe ne peux pas être vide</div> 
         <div id="alert-name-exist">Cette équipe existe déjà</div>
         <div id="alert-team-more-than-one">Vous avez déjà créé une team</div>
         <hr>
