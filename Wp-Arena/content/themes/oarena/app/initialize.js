@@ -36,6 +36,9 @@ var app = {
 
     // Je cache la div qui contient le message d erreur cette team est deja prise
     $('#alert-name').hide();
+    $('#alert-name-exist').hide();
+    $('#alert-team-more-than-one').hide();
+    $('#alert-description-empty').hide();
 
     // Scroll to next elements . A minifier!!
     $('.scroll-to-tournament').click(function () {
@@ -148,16 +151,28 @@ var app = {
     }).done(function (response) {
       console.log(response);
       if (response.code == 1) {
-        $alertsDiv.show();
-      } else {
-        console.log('ELSE OK ');
         var $alertsDiv = $('#alert-name');
         $alertsDiv.show();
+        // window.setTimeout(function () {
+        //   location.href = response.redirect;
+        // }, 5000);
+      }
+      if (response.code == 2) {
+        var $alertDivEmpty = $('#alert-name-exist');
+        $alertDivEmpty.show();
+      }
+      if (response.code == 3) {
+        var $alertDescriptionEmpty = $('#alert-description-empty');
+        $alertDescriptionEmpty.show();
+      }
+      if (response.code == 4) {
+        var $alertTeamMoreThanOne = $('#alert-team-more-than-one');
+        $alertTeamMoreThanOne.show();
       }
     }).fail(function () {
       console.log('IF OK ');
       $('#alert-name').hide();
-      window.prompt('Team créée félicitations');
+      window.alert('Team créée félicitations');
       window.setTimeout(function () {
         location.href = response.redirect;
       }, 10000);
