@@ -8,12 +8,12 @@ Class oArenaCreateTeam
         add_action ('init', [$this, 'addTeam']);
     }
     
-    // function displayJson($to_display)
-    // {
-    //   header(home_url());
-    //   echo json_encode($to_display);
-    //   exit;
-    // }
+    function displayJson($to_display)
+    {
+      header(home_url());
+      echo json_encode($to_display);
+      exit;
+    }
     public function addTeam()
     {
         $args= [
@@ -27,16 +27,7 @@ Class oArenaCreateTeam
         
         // Si le formulaire n'est pas vide
         if (isset($_POST['submit-team'])) 
-        {
-                // $jsonData = [
-                //             'code' => 1,
-                        // ];
-                        // J'affiche le tableau en JSON
-                        // var_dump(json_encode($this->displayJson($jsonData)));
-                        // die;
-                        // json_encode($jsonData);
-                        // die();
-            
+        {          
             // echo json_encode($errorList);
             // die('');
             foreach ($posts as $title) 
@@ -49,28 +40,43 @@ Class oArenaCreateTeam
                 // Message d'erreur si le nom est vide
                 if (empty($teamName))
                 {
-                    $errorList[] = 'Ne peux pas etre vide';
-                    
+                    $errorList = [
+                    'code' => 1,
+                    'error' => 'Le nom de la team ne peux pas être vide'
+                      ];
+                json_encode($this->displayJson($errorList));
+                // die;                    
                 }  
                 // Message d'erreur si la team existe déjà
                 if ($teamName == $title->post_title)
                 {
-                    $errorList = 'Cette team existe déjà';
-                    var_dump($errorList);
-                    die();
+                        $errorList = [
+                                      'code' => 2,
+                                      'error' => 'Cette team existe déjà blibli'
+                                    ];
+               json_encode($this->displayJson($errorList));
+                // die;
+                    // var_dump($errorList);
+                    // die();
                     wp_redirect('equipe');
                 }
             }
         }
         
+        // ********************* ICI BUG APPAREMENT ****************
         // Message d'erreur si la description de l'équipe est vide
         if (empty($myteamdescription)) 
-        {
-            
-            $errorList = 'Ne peux pas etre vide non plus';
-            
+        {            
+            $errorList = [
+                            'code' => 3,
+                            'error' => 'La description d equipe ne peux pas être vide'
+                            ];
+                            // A DECOMMENTER POUR BUG json_encode($this->displayJson($errorList));      
+                // $this->displayJson($errorList);
+                // die;                  
             // S'il n'y a aucune erreur
         } else 
+        // **********************************************************
         {
             // Je récupere l'user et son ID
             $current_user = wp_get_current_user();
@@ -92,6 +98,11 @@ Class oArenaCreateTeam
             // Si le compte des post == 0 ( vide / false ) alors je rentre dans la condition
             if($the_query->post_count === 0)
             {
+                // var_dump($errorList);
+                // die;
+                // J'affiche le tableau en JSON
+                // var_dump(json_encode($this->displayJson($errorList)));
+                // die;
                 
                 // Je détermine le tableau d'argument qui récupere les données du formulaire 
                 $team_post = [
@@ -115,8 +126,14 @@ Class oArenaCreateTeam
             // Si le compte est supérieur a 0 Je redirige vers la home 
             } else
             {
-                var_dump('Vous ne pouvez pas creer plusieurs équipes');
-                die();
+                $errorList = [
+                            'code' => 4,
+                            'error' => 'Vous avez déjà créé une team'
+                            ];      
+                json_encode($this->displayJson($errorList));
+                
+                // var_dump('Vous ne pouvez pas creer plusieurs équipes');
+                // die();
                 // wp_redirect(home_url());
             }
             
