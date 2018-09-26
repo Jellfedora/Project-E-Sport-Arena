@@ -1,6 +1,6 @@
 <div class="card mb-2 p-3 width-75">
     <div class="card__intro d-flex justify-content-around ">
-        <img class="card-img-top p-1" src="https://source.unsplash.com/100x100/?fortnite">
+        <img class="card-img-top p-1" src="http://media.gettyimages.com/vectors/gold-ticket-golden-token-with-star-magical-background-vector-id851591454?s=170667a&w=1007">
     </div>
     <div class="card-body d-flex flex-column">
         <h3 class="news__tournament"><?php the_title() ; ?></h3>

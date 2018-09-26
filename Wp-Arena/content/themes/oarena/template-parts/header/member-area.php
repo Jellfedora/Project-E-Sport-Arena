@@ -3,7 +3,7 @@
 // Displays the name of the connected user
 if (is_user_logged_in()) {
     $current_user = wp_get_current_user(); ?>
-    <div class="text-center">
+    <div class="text-center text-light" style="font-size:1.3em;">
         <?php
     echo 'Bienvenue ' . $current_user->display_name . '<br />';?>
     </div>
