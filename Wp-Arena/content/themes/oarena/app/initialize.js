@@ -15,6 +15,11 @@ var app = {
     $itemName = $('#item-name');
     $itemQuantity = $('#item-quantity');
     $itemPrice = $('#item-price');
+    nameArray = [];
+    quantityArray = [];
+    priceArray = [];
+
+
     // $('#create-team-form').on('submit', app.formError);
 
     // Show the team edition form
@@ -198,7 +203,37 @@ var app = {
     console.log($name);
     console.log($quantity);
     console.log($price);
+    nameArray.push($name);
+    quantityArray.push($quantity);
+    priceArray.push($price);
+    console.log(nameArray)
+
+
+    app.displayCart()
   },
+
+  displayCart: function () {
+    console.log('je suis dans display cart');
+    cartData = '<table><tr><th>Produit</th><th>Quantité</th><th>Prix</th><th>Total</th></tr>'
+    // console.log(cartData);
+    total = 0;
+    for (i = 0; i < nameArray.length; i++) {
+      total += quantityArray[i] * priceArray[i];
+      cartData += "<tr><td>" + nameArray[i] + "</td><td>" + quantityArray[i] + "</td><td>" + priceArray[i] + "</td><td>" + quantityArray[i] * priceArray[i] + "</td><td><button id='buttonDelete'>Supprimer</button></td></tr>"
+    }
+    cartData += '<tr><td></td><td></td><td></td><td>' + total + '</td></tr></table>';
+    document.getElementById('cart-mycart').innerHTML = cartData
+    // Je rajoute un evenement au click sur supprimer
+    $('#buttonDelete').on('click', app.delElement);
+  },
+
+  delElement: function (a) {
+    nameArray.splice(a, 1);
+    quantityArray.splice(a, 1);
+    priceArray.splice(a, 1);
+    app.displayCart();
+  }
+
 
 }
 
