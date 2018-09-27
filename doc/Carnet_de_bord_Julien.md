@@ -114,3 +114,8 @@
 * Ajout de la modification de l'email par l'utilisateur avec vérification comme quoi elle n'est pas déjà prise
 * Ajout metaboxes pour ajouter information facturation du membre via la page profil de chaque membres
 * Ajout de l'update du user_login si modifier via profil
+
+# Sprint 3.3 mercredi 25 septembre 2018
+
+* Bug à l'update du user login réglé, le membre associé au user n'était pas update en meme temps
+* Mise en place de la boutique (templates, cpt etc...)
