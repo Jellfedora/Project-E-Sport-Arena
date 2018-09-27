@@ -68,7 +68,12 @@ get_header(); ?>
                                 <label for="message"></label>
                                 <textarea cols="50" rows="10" name="mymessage" id="message" placeholder="Votre message..."></textarea>
                                 <br>
-                                <input type="submit" name="submit" value="Envoyer votre message" />
+                        <div class="container">
+                                <button class='myButt one' type="submit" value="Creer team"'>
+                                        <div class='insider'></div>
+                                        Envoyer votre message
+                                </button>
+                        </div>
                         </form>
  
                 <?php } ?>

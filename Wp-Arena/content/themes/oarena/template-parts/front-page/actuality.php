@@ -12,7 +12,13 @@
             <h3 class="news__item-title text-light"><?php the_title(); ?></h3>
             </a>
             <p class="news__item-text"><?php echo strip_tags(get_the_excerpt()); ?></p>
-            <a class="learn-more-button d-flex justify-content-center text-light bg-dark" href="<?php the_permalink() ; ?>">En savoir plus</a>
+                <div class="container">
+                       <a href="<?php the_permalink() ; ?>"> <button class='myButt one' type="submit" value="Creer team">
+                            <div class='insider'></div>
+                            En savoir plus
+                        </button>
+                        </a>
+                </div>
         </div>
 </div>
 
