@@ -3,9 +3,9 @@
 // Displays the name of the connected user
 if (is_user_logged_in()) {
     $current_user = wp_get_current_user(); ?>
-    <div class="text-center menu-lg-v-small__user-name">
+    <div class="text-center menu-lg-v-small__user-name text-light">
         <?php
-    echo $current_user->display_name . '<br />';?>
+    echo 'HI ' .$current_user->display_name . '<br />';?>
     </div>
     <div class="menu-lg-v-small__user-links ">
     <?php

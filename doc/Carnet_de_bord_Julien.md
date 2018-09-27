@@ -119,3 +119,4 @@
 
 * Bug à l'update du user login réglé, le membre associé au user n'était pas update en meme temps
 * Mise en place de la boutique (templates, cpt etc...)
+* Ajout de la connexion automatique une fois enregistré

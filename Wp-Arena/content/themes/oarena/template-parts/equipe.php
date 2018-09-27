@@ -57,8 +57,10 @@ FROM wp_posts
 WHERE `post_author` = $user_id AND `post_status`='publish'
 ;
 ");
+
 foreach($team_id as $id_team){
 $id_team->ID;
+
 }
 ?>
 	<div class="team__chief">
@@ -85,7 +87,6 @@ $id_team->ID;
     </div>
 </div>
 
-<input id="s" type="text">
 <div class="team__form-update team-form-update">
 	<form action="update-member-team" class="col-12 col-md-6 offset-md-3 mb-5" method="post">
 		<h3 class="text-center">Changer le chef d'équipe</h3>
@@ -94,7 +95,7 @@ $id_team->ID;
 			<p>Voici les erreurs:</p>
 		</div>
 	    <div class="form-group">
-			<small id="member" class="">Chef d'équipe</small>
+			<p id="member" class="">Chef d'équipe</p>
 	        <input type="text" class="form-control"  name="_team_chief"  aria-describedby="member" placeholder="<?= $team_chief ?>" >
 	    </div>
 	    <input class="button-update-member" type="submit" name="team_chief-submit">
@@ -103,15 +104,15 @@ $id_team->ID;
 	<form action="update-member-team" class="col-12 col-md-6 offset-md-3 mb-5" method="post">
 	    <h3 class="text-center">Changer les membres</h3>
 	    <div class="form-group">
-			<small id="member1" class="">Membre 1 </small>
+			<p id="member1" class="">Membre 1 </p>
 	        <input type="text" class="form-control" name="_member1"  aria-describedby="member" placeholder="<?= $member1 ?>" >
-			<small id="member2" class="">Membre 2</small>
+			<p id="member2" class="">Membre 2</p>
 			<input type="text" class="form-control" name="_member2"  aria-describedby="member" placeholder="<?= $member2 ?>" >
-			<small id="member3" class="">Membre 3</small>
+			<p id="member3" class="">Membre 3</p>
 			<input type="text" class="form-control" name="_member3"  aria-describedby="member" placeholder="<?= $member3 ?>" >
-			<small id="member4" class="">Membre 4</small>
+			<p id="member4" class="">Membre 4</p>
 			<input type="text" class="form-control" name="_member4"  aria-describedby="member" placeholder="<?= $member4 ?>" >
-	        <small id="member5" class="">Membre 5</small>
+	        <p id="member5" class="">Membre 5</p>
 			<input type="text" class="form-control" name="_member5"  aria-describedby="member" placeholder="<?= $member5 ?>" >
 	    </div>
 	    <input type="submit" name="member-submit">
