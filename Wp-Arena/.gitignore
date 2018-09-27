@@ -11,6 +11,7 @@ wp/
 !/content/plugins/oarena-create-team
 !/content/plugins/oarena-update-member-team
 !/content/plugins/oarena-add-team
+!/content/plugins/oarena-shop
 /content/uploads
 wp-config.php
 /content/themes/oarena/node_modules
