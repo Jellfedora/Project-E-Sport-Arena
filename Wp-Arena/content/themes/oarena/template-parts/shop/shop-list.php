@@ -24,13 +24,18 @@ $our_articles = new WP_Query($args);
 
 if ($our_articles->have_posts()): while ($our_articles->have_posts()): $our_articles->the_post(); 
 
-        get_template_part('template-parts/shop/shop' , 'single');
+      
+    
+    get_template_part('template-parts/shop/shop' , 'single');
+    
+endwhile;
 
-        endwhile;
+// Je remet les variables globals telle qu'elles étaient avant ma boucle custom
+wp_reset_postdata();    
 
-        // Je remet les variables globals telle qu'elles étaient avant ma boucle custom
-        wp_reset_postdata();    
-        
-        endif; ?>
+endif; ?>
+
+
+
 
 </div>

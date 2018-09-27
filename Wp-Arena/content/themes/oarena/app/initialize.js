@@ -5,6 +5,7 @@ var app = {
     console.log('app.init');
 
 
+
     // Je créé mes variables pour cibler mes éléments + facilement
     $header = $('.header');
     $menu = $('.menu-lg');
@@ -64,6 +65,8 @@ var app = {
         },
         'slow');
     });
+    app.addToCart();
+
   },
   hideMenu: function (evt) {
     $menu.addClass('menu-hide');
@@ -213,14 +216,15 @@ var app = {
     app.displayCart()
   },
 
-  displayCart: function () {
+  displayCart: function (elem) {
+    console.log(elem);
     console.log('je suis dans display cart');
     cartData = '<table><tr><th class="pr-2">Produit</th class="pl-5"><th>Quantité</th><th class="pr-5 pl-3">Prix</th><th class="pr-5">Total</th></tr>'
     // console.log(cartData);
     total = 0;
     for (i = 0; i < nameArray.length; i++) {
       total += quantityArray[i] * priceArray[i];
-      cartData += "<tr><td class='mr-2'>" + nameArray[i] + "</td><td>" + quantityArray[i] + "</td><td class='pl-3'>" + priceArray[i] + "</td><td>" + quantityArray[i] * priceArray[i] + "</td><td><button class='buttonDelete'>Supprimer</button></td></tr>"
+      cartData += "<tr><td class='mr-2'>" + nameArray[i] + "</td><td>" + quantityArray[i] + "</td><td class='pl-3'>" + priceArray[i] + "</td><td>" + quantityArray[i] * priceArray[i] + "</td><td><button id='buttonDelete" + i + "'>Supprimer</button></td></tr>"
     }
     cartData += '<tr><td></td><td></td><td></td><td>' + total + '</td></tr></table>';
     document.getElementById('cart-mycart').innerHTML = cartData
@@ -233,6 +237,16 @@ var app = {
     quantityArray.splice(a, 1);
     priceArray.splice(a, 1);
     app.displayCart();
+  },
+
+  addToCart: function () {
+    console.log('coucou t es dans addtocart');
+    for (i = 0; i < nameArray.lenght; i++) {
+      addToCartData = "<button class='cart-add-item" + i + "'>Ajouter au panier</button>"
+      console.log(addToCartData);
+      document.getElementByClass("cart-add-item" + $i).innerHTML = addToCartData;
+
+    }
   }
 
 
