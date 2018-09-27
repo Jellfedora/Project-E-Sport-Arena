@@ -32,6 +32,7 @@ Template Name: Page panier
             $post->ID;
         }
 
+    // TODO récupérer les id dynamiquement!!!!
     //Renseigne l'id des produits
     $billet_magique_id = 5355;
     $billet_tournoi_id = 5365;
@@ -67,7 +68,7 @@ Template Name: Page panier
 
     
     ?>
-<form action="validate-cart.php"  method="post">
+<form action="validate-cart.php"  method="post" class="container">
     <!--Billet Magique-->
     <div style="display:flex;">
         <div style="border:1px solid black;padding:0.5em;">
