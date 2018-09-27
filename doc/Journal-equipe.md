@@ -190,4 +190,9 @@ https://codex.wordpress.org/Function_Reference/wp_create_user
 * Réponse Ajax sur formulaire create team ok => PHP envoie a l AJAX plutot que l'inverse 
 * Ajout début de mini formulaire pour boutique => tout ok mais probleme de differenciation d'articles
 * Fix bug update de l'user login
-* 
+
+# Sprint 3.4 27 septembre 2018
+* Réunion de présentation le matin avec Journey 
+* Un peu d'intégration
+* Ajout de la metaboxe panier pour les membres en bo et en front, avec laquelle on peut choisir ses articles, la quantitée et voir afficher le total
+* Ajout civilité a la page profil

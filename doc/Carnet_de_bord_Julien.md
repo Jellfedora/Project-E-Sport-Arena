@@ -120,3 +120,9 @@
 * Bug à l'update du user login réglé, le membre associé au user n'était pas update en meme temps
 * Mise en place de la boutique (templates, cpt etc...)
 * Ajout de la connexion automatique une fois enregistré
+
+# Sprint 3.4 jeudi 26 septembre 2018
+
+* Réunion de présentation le matin avec Journey 
+* Ajout de la metaboxe panier pour les membres en bo et en front, avec laquelle on peut choisir ses articles, la quantitée et voir afficher le total
+* Ajout civilité a la page profil
