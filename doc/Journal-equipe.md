@@ -188,3 +188,6 @@ https://codex.wordpress.org/Function_Reference/wp_create_user
 # Sprint 3.3 26 septembre 2018
 
 * Réponse Ajax sur formulaire create team ok => PHP envoie a l AJAX plutot que l'inverse 
+* Ajout début de mini formulaire pour boutique => tout ok mais probleme de differenciation d'articles
+* Fix bug update de l'user login
+* 

@@ -186,3 +186,4 @@
 
 * Aujourd'hui je décide de ne pas me pencher sur le json et de faire autre chose, d'un coup une illumination, plutot que de recevoir du json en php 
 je vais plutot recevoir du json en JS => j'envoie un tableau d erreur JSON et selon la response il va rentrer dans telle ou telle condition.
+* Création du début de la boutique en Javascript => j'arrive a ajouter / supprimr les articles du panier mais pas a differencier les articles au moment du click sur ajouter
