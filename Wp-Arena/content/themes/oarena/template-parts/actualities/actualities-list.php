@@ -1,3 +1,8 @@
+<?php
+if (get_theme_mod('oarena_theme_posts_active')) : 
+?>
+
+
 <div class="news p-3 mt-5">
     <h2 class="news__title text-light">&#9660; ACTUALIT&Eacute;S &#9660; </h2>
     <div class="news__content">
@@ -7,7 +12,7 @@
     $args= [
         'post_type' => 'post',
         'cat' => get_the_category(),
-        'posts_per_page' => -1,
+        'posts_per_page' => get_theme_mod('oarena_theme_posts_numbers'),
         'order' => 'DESC',
         'order_by' => 'date'
     ];
@@ -27,3 +32,4 @@
 
     </div>
 </div>
+<?php endif; ?>

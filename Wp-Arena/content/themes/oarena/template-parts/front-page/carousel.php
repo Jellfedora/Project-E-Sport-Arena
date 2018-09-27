@@ -9,7 +9,7 @@
   </ol>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img class="carousel-item-image" src="https://comarketing-news.fr/wp-content/uploads/eSport-un-secteur-en-plein-developpement.jpg" alt="First slide">
+      <img class="carousel-item-image" src="<?= get_theme_mod('oarena_theme_carousel_image') ; ?>" alt="First slide">
       <div class="carousel-caption d-none d-md-block">  
       <div class=" carousel__text container">
           <h3 class="">Tournoi des tournois</h1>
@@ -18,7 +18,7 @@
 </div>
 </div>
     <div class="carousel-item">
-      <img class="carousel-item-image" src="https://static.nintendomaine.com/2008/07/Super_Smash_Bros_Brawl_Fond.jpg" alt="Second slide">
+      <img class="carousel-item-image" src="<?= get_theme_mod('oarena_theme_carousel_image2') ; ?>" alt="Second slide">
       <div class="carousel-caption d-none d-md-block">
         <div class=" carousel__text container">
           <h3 class="">Tournoi Super Smash Bros Melee</h1>
@@ -27,7 +27,7 @@
       </div>
     </div>
     <div class="carousel-item">
-      <img class="carousel-item-image" src="http://ekladata.com/YjUo7-ppVKPhJ590xPvCBtZMjgw.png" alt="Third slide">
+      <img class="carousel-item-image" src="<?= get_theme_mod('oarena_theme_carousel_image3') ; ?>" alt="Third slide">
       <div class="carousel-caption d-none d-md-block">
         <div class=" carousel__text container">
           <h3 class="">Tournoi League Of Legend</h1>
