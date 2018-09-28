@@ -50,7 +50,7 @@ exports.npm = {
   },
   exports.modules = {
     autoRequire: {
-      'js/app.js': ['initialize', 'form'],
+      'js/app.js': ['initialize', 'form', 'shop-cart'],
       //'js/app.js': ['form'],
     }
   }

@@ -27,12 +27,12 @@
     * Création des user stories  ( Julien et Bertrand ).
 
     * Création Organisation du MVP ( Minimum Viable Project ) => On détermine que les minimums sont : Home, Boutique, Tournois, Actualité, Equipe.
-                                                     => Systéme de login
-                                                     => Actualités
-                                                     => Créer un tournoi
-                                                     => S'inscrire dans une équipe
-                                                     => Inscrire une équipe dans un tournoi
-                                                     => Boutique 
+                                                    => Systéme de login
+                                                    => Actualités
+                                                    => Créer un tournoi
+                                                    => S'inscrire dans une équipe
+                                                    => Inscrire une équipe dans un tournoi
+                                                    => Boutique 
 
     * Création des wireframes  ( Mélissa ).
 
@@ -187,3 +187,20 @@
 * Aujourd'hui je décide de ne pas me pencher sur le json et de faire autre chose, d'un coup une illumination, plutot que de recevoir du json en php 
 je vais plutot recevoir du json en JS => j'envoie un tableau d erreur JSON et selon la response il va rentrer dans telle ou telle condition.
 * Création du début de la boutique en Javascript => j'arrive a ajouter / supprimr les articles du panier mais pas a differencier les articles au moment du click sur ajouter
+
+# Sprint 3.3
+
+++++ 27 septembre 2018 +++
+
+* Un peu de style => animations sur les boutons
+* fix le changement d'images carrousel et nombre de posts affichés via le customizer
+* Début devellopement panier en JS j'y passe la journée => le soir christophe me dit que je part dans la mauvaise direction ( code JS mal écrit).
+
+
+# Sprint 3.4
+
+++++ 28 septembre 2018 +++
+
+* Je recommence la boutique en JS et part de cet exemple => https://codepen.io/justinklemm/pen/zAdoJ 
+* Tout marche plutot pas mal et je comprend bien le code, j'ai eu des soucis avec le panier qui s'affichait selon le nombre d'articles mais j'ai fixer
+le bug en changeant le panier de place dans la boucle et en gardant les data

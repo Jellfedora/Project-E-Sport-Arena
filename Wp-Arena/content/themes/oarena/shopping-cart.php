@@ -51,6 +51,8 @@ Template Name: Page panier
     $magique_quantity = get_post_meta($post->ID, 'magique_quantity', true);
     $magique_price = get_post_meta($billet_magique_id, 'article_price', true);
     $magique_total = ($magique_price * $magique_quantity);
+    //(is_numeric($magique_total));
+    //var_dump($magique_total);
 
     //Billet tournoi
     $tournoi_quantity = get_post_meta($post->ID, 'tournoi_quantity', true);

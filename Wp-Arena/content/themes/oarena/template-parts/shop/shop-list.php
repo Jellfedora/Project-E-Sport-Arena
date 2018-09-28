@@ -5,7 +5,7 @@ $shopping_cart = site_url('panier');
 ?>
 
 <div class="news p-3 d-flex justify-content-around">
-    <h2 class="news__title text-light">Billets disponibles</h2>
+    <h2 class="news__title text-light h1">Reservez dés maintenant votre place pour les prochains tournois</h2>
    <a href="<?= $shopping_cart; ?>" style="color: black;"><i class="fa fa-shopping-basket" style="font-size: 2em;" aria-hidden="true"></i></a>
 </div>
     <div class="news__content">
@@ -27,15 +27,36 @@ if ($our_articles->have_posts()): while ($our_articles->have_posts()): $our_arti
       
     
     get_template_part('template-parts/shop/shop' , 'single');
-    
+ 
 endwhile;
+?>
 
+<div class="totals h1">
+<div class="totals-item">
+<label>Total des articles</label>
+<div class="totals-value" id="cart-subtotal">0</div>
+</div>
+<div class="totals-item d-none">
+<label>Tax (0%)</label>
+<div class="totals-value" id="cart-tax">0</div>
+</div>
+<div class="totals-item">
+<label>Frais de port</label>
+<div class="totals-value" id="cart-shipping">0</div>
+</div>
+<div class="totals-item totals-item-total">
+<label>Total</label>
+<div class="totals-value" id="cart-total">0</div>
+</div>
+</div>
+
+<button class="checkout">Payer</button>
+
+<?php 
 // Je remet les variables globals telle qu'elles étaient avant ma boucle custom
-wp_reset_postdata();    
+// wp_reset_postdata();    
 
 endif; ?>
 
-
-
-
+    </div>
 </div>
