@@ -5,7 +5,7 @@ var fadeTime = 300;
 
 
 // Tout se déclenche au click sur la quantité 
-
+recalculateCart();
 
 /* Assign actions */
 $('.product-quantity input').change(function () {

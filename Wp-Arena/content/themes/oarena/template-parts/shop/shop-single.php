@@ -57,7 +57,7 @@
     <div class="product-quantity h2">
       <input type="number" value="0" min="0">
     </div>
-    <div class="product-line-price h2"></div>
+    <div class="product-line-price h2">0</div>
   </div>
 
 </div>
