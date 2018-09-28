@@ -2,7 +2,14 @@
 <?php
 // Displays the name of the connected user
 if (is_user_logged_in()) {
-    $current_user = wp_get_current_user(); ?>
+    $current_user = wp_get_current_user();
+    $user = wp_get_current_user()->roles;
+
+        // var_dump($user);
+        foreach ($user as $role) {
+            // var_dump($role);
+            // die;
+        } ?>
     <div class="text-center text-light" style="font-size:1.3em;">
         <?php
     echo 'Bienvenue ' . $current_user->display_name . '<br />';?>
@@ -38,10 +45,11 @@ if (is_user_logged_in()) {
     <a class="data-toggle="tooltip" title="Créer une équipe"
     href="' . $url_add_team . '"><i class="fa fa-user-plus" aria-hidden="true"></i></a>');
 
-    echo ('
-    <a class="data-toggle="tooltip" title="Voir son équipe"
-    href="' . $url_team . '"><i class="fa fa-users" aria-hidden="true"></i></a>');
-
+    if ($role === 'TeamAdmin') { 
+        echo ('
+        <a class="data-toggle="tooltip" title="Voir son équipe"
+        href="' . $url_team . '"><i class="fa fa-users" aria-hidden="true"></i></a>');
+    }
     echo ('
     <a class="data-toggle="tooltip" title="Mon panier"
     href="' . $shopping_cart . '"><i class="fa fa-shopping-basket" aria-hidden="true"></i></a>');
