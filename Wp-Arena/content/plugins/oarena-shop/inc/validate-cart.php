@@ -32,7 +32,15 @@ class oArenaValidateCart
         }
 
 
-        //var_dump($post->ID);exit;
+        // Si le formulaire est soumit avec l'input reset, reset les valeurs
+        if (isset($_POST['reset-cart'])) {
+            update_post_meta($post->ID, 'magique_quantity', 0);
+            update_post_meta($post->ID, 'tournoi_quantity', 0);
+            update_post_meta($post->ID, 'reduit_quantity', 0);
+            // Redirige vers la page panier
+                    wp_redirect('panier');
+                    exit;
+        }
 
         // Si le formulaire est soumit
         if (isset($_POST['validate-cart'])) {
