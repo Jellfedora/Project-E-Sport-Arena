@@ -193,6 +193,10 @@ https://codex.wordpress.org/Function_Reference/wp_create_user
 
 # Sprint 3.4 27 septembre 2018
 
+* Réunion de présentation le matin avec Journey 
+* Un peu d'intégration
+* Ajout de la metaboxe panier pour les membres en bo et en front, avec laquelle on peut choisir ses articles, la quantitée et voir afficher le total
+* Ajout civilité a la page profil
 * Fix customizer carousel 
 * fix customizer post
 * Un peu de style ( vite fait )
