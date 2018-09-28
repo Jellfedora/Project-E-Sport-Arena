@@ -70,49 +70,57 @@ Template Name: Page panier
 
     
     ?>
-<form action="validate-cart.php"  method="post" class="container">
-    <!--Billet Magique-->
-    <div style="display:flex;">
-        <div style="border:1px solid black;padding:0.5em;">
-            <h5 style><?= $magique_title ; ?></h5>
-            <p>Quantité</p>
-            <input id="article-quantity" type="number" name="magique-quantity" placeholder="Quantité" value="<?= $magique_quantity ; ?>"/>
-            <p>Prix</p>
-            <input type="text" name="magique-price" placeholder="Price unitaire" value="<?= $magique_price ; ?>"/>
-            <p style="color:green;">Total pour cet article</p>
-            <input type="text" name="magique-total" placeholder="Total pour cet article" value="<?= $magique_total ; ?>"/>
-        </div>
+<form action="validate-cart.php"  method="post" class="container-fluide">
+    <h3 class="text-center">Votre panier</h3>
+    <div class="d-flex justify-content-around">
+        <!--Billet Magique-->
+        <div style="display:flex;">
+            <div style="border:1px solid black;padding:0.5em;">
+                <h5 style><?= $magique_title ; ?></h5>
+                <p>Quantité</p>
+                <input id="article-quantity" type="number" name="magique-quantity" placeholder="Quantité" value="<?= $magique_quantity ; ?>"/>
+                <p>Prix</p>
+                <input type="text" name="magique-price" placeholder="Price unitaire" value="<?= $magique_price ; ?>"/>
+                <p style="color:green;">Total pour cet article</p>
+                <p> <?= $magique_total ; ?> &euro;</p>
+            </div>
 
-        <!-- Billet Tournoi -->
-        <div style="border:1px solid black;margin-left:1em;padding:0.5em;">
-            <h5 style><?= $tournoi_title ; ?></h5>
-            <p>Quantité</p>
-            <input type="number" name="tournoi-quantity" placeholder="Quantity" value="<?= $tournoi_quantity ; ?>"/>
-            <p>Prix</p>
-            <input type="text" name="tournoi-price" placeholder="Price unitaire" value="<?= $tournoi_price ; ?>"/>
-            <p style="color:green;">Total pour cet article</p>
-            <input type="text" name="tournoi-total" placeholder="Total pour cet article" value="<?= $tournoi_total ; ?>"/>
-        </div>
+            <!-- Billet Tournoi -->
+            <div style="border:1px solid black;margin-left:1em;padding:0.5em;">
+                <h5 style><?= $tournoi_title ; ?></h5>
+                <p>Quantité</p>
+                <input type="number" name="tournoi-quantity" placeholder="Quantity" value="<?= $tournoi_quantity ; ?>"/>
+                <p>Prix</p>
+                <input type="text" name="tournoi-price" placeholder="Price unitaire" value="<?= $tournoi_price ; ?>"/>
+                <p style="color:green;">Total pour cet article</p>
+                <p><?= $tournoi_total ; ?> &euro;</p>
+            </div>
 
-        <!--Billet Reduit-->
-        <div style="border:1px solid black;margin-left:1em;padding:0.5em;">
-            <h5 style><?= $reduit_title ; ?></h5>
-            <p>Quantité</p>
-            <input type="number" name="reduit-quantity" placeholder="Quantity" value="<?= $reduit_quantity ; ?>"/>
-            <p>Prix</p>
-            <input type="text" name="reduit-price" placeholder="Price unitaire" value="<?= $reduit_price ; ?>"/>
-            <p style="color:green;">Total pour cet article</p>
-            <input type="text" name="reduit-total" placeholder="Total pour cet article" value="<?= $reduit_total ; ?>"/>
-            <br/>
+            <!--Billet Reduit-->
+            <div style="border:1px solid black;margin-left:1em;padding:0.5em;">
+                <h5 style><?= $reduit_title ; ?></h5>
+                <p>Quantité</p>
+                <input type="number" name="reduit-quantity" placeholder="Quantity" value="<?= $reduit_quantity ; ?>"/>
+                <p>Prix</p>
+                <input type="text" name="reduit-price" placeholder="Price unitaire" value="<?= $reduit_price ; ?>"/>
+                <p style="color:green;">Total pour cet article</p>
+                <p><?= $reduit_total ; ?> &euro;</p>
+                <br/>
+            </div>
         </div>
     </div>
-    <div style="color:red;border:1px solid black;padding:0.5em;margin-top:0.5em;">
-        <!--Total-->
-        <h4 >Total Panier</h4>
-        <input type="text" name="cart-total" placeholder="Total panier" value="<?= $cart_total ; ?>"/>
-        <input type="submit" value="Valider la commande" name="validate-cart">
-    </div>
+        <div class="container"style="border:1px solid black;padding:0.5em;margin-top:0.5em;">
+            <!--Total-->
+            <h4 class="text-danger">Total Panier</h4>
+            <p><?= $cart_total ; ?> &euro;</p>
+            <input type="reset" value="Reinitialiser" />
+            <input type="submit" value="Confirmer Panier" name="validate-cart">
+        </div>
 </form>
+
+<div class="container mt-2">
+    <?php get_template_part('template-parts/shop/shop','paypal'); ?>
+</div>
 
 
 <?php get_footer() ; ?>

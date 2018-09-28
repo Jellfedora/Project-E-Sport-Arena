@@ -5,6 +5,7 @@ var app = {
         //console.log('form js init');
 
 
-    }
+    },
+
 }
 $(app.init);

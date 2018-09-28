@@ -27,7 +27,7 @@
       <a class="" href="<?=home_url();?>"><img src="https://zupimages.net/up/18/38/3fnl.png"></a>
     </div>
     <div>
-      <div class="menu_lg__nav">
+      <div class="menu-lg__nav">
         <ul class="text-center">
           <?php get_template_part('template-parts/header/header', 'nav');?>
         </ul>
