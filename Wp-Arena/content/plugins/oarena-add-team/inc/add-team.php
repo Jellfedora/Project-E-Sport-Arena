@@ -31,24 +31,23 @@ class oArenaAddTeam
         {
             $array_title = $post->post_title;
         }
-        // var_dump($array_title);
-        // die;
-        
-        // var_dump($myTeamName);
-        // die;
-
-
-        // var_dump($_POST['register-team-tournament']);
-        // var_dump($array_title);
-        // die();
 
             if (isset($_POST['register-team-tournament']))
             {
+                if(isset($_POST['remove-team']) AND ($_POST['register-team-tournament'] === $array_title )) {
+                    
+                    // Delete the value of the metaboxe
+                    delete_post_meta($_POST['register-tournament-id'], '_team_register', $array_title);
+                    
+                    // Redirect to home
+                    wp_redirect(home_url());
+                    exit;
+
+                }
+
                 if ($_POST['register-team-tournament'] === $array_title )
                 {
-
-                    // $register_teams = get_post_meta($post->ID, '_team_register', true);
-
+                    // add value of the metaboxe
                     add_post_meta($_POST['register-tournament-id'], '_team_register', $array_title);
 
                     /* var_dump($array_title);
@@ -69,6 +68,10 @@ class oArenaAddTeam
                             add_post_meta($post_id, '_team_register', $array_title);
                      }
                      */
+                    // Redirige vers la page profil
+                    wp_redirect(home_url());
+                    exit;
+
                 } else {
                     var_dump('Cette team n existe pas ou ce n est pas vous qui l avez créée');
                     die;

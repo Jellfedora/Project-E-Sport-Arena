@@ -27,6 +27,7 @@ $id = $post->ID;
     <input type="test" value="" name="register-team-tournament" >
     <input type="hidden" value="<?= get_the_ID(); ?>" name="register-tournament-id" >
     <button type="submit" class="btn mt-2"> Inscrire ma team</button>
+    <button name="remove-team" type="submit" class="btn mt-2" value="remove-team-submit"> Desinscrire ma team</button>
     </form>
     </div>
 </div>
