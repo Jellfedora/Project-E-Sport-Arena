@@ -1,8 +1,4 @@
-<div class="news p-3 mt-5">
-    <h2 class="news__title text-light">Messages Reçus </h2>
-    <div class="news__content d-flex flex-column">
-
-    <?php 
+ <?php 
 
     $args= [
         'post_type' => 'contact',
@@ -14,6 +10,18 @@
 
     $our_articles = new WP_Query($args);
 
+        if (is_user_logged_in()) 
+        {
+            $user = wp_get_current_user()->roles;
+
+                // var_dump($user);
+                foreach ($user as $role) {
+                    // var_dump($role);
+                    // die;
+                }
+
+                if ($role === 'administrator') {  
+
     if ($our_articles->have_posts()): while ($our_articles->have_posts()): $our_articles->the_post(); 
 
         get_template_part('template-parts/message/message' , 'single');
@@ -23,7 +31,10 @@
     // Je remet les variables globals telle qu'elles étaient avant ma boucle custom
     wp_reset_postdata();    
     
-    endif; ?>
-
-    </div>
+    endif;
+                } else {
+                echo ' Entrée interdite ;) ';
+            }
+        } ;?>
+        </div>
 </div>

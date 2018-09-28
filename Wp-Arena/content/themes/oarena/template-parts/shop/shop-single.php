@@ -57,11 +57,6 @@
     <div class="product-quantity h2">
       <input type="number" value="0" min="0">
     </div>
-    <div class="product-removal">
-      <button class="remove-product btn-danger mt-2 mb-2 h1">
-        Supprimer
-      </button>
-    </div>
     <div class="product-line-price h2"></div>
   </div>
 

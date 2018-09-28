@@ -32,7 +32,7 @@ endwhile;
 ?>
 
 <div class="totals h1">
-<div class="totals-item">
+<div class="totals-item d-none">
 <label>Total des articles</label>
 <div class="totals-value" id="cart-subtotal">0</div>
 </div>
@@ -40,7 +40,7 @@ endwhile;
 <label>Tax (0%)</label>
 <div class="totals-value" id="cart-tax">0</div>
 </div>
-<div class="totals-item">
+<div class="totals-item d-none">
 <label>Frais de port</label>
 <div class="totals-value" id="cart-shipping">0</div>
 </div>
@@ -50,7 +50,7 @@ endwhile;
 </div>
 </div>
 
-<button class="checkout">Payer</button>
+<button class="checkout">Ajouter les articles au panier</button>
 
 <?php 
 // Je remet les variables globals telle qu'elles étaient avant ma boucle custom
