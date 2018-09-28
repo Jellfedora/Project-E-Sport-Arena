@@ -1,5 +1,6 @@
+
 <div class="next-tournaments">
-<h2 class="news__title text-light mt-3 mb-3 text-center">&#9660; PROCHAINS TOURNOIS &#9660; </h2>
+<h2 class="news__title text-light  mb-3 text-center">&#9660; PROCHAINS TOURNOIS &#9660; </h2>
     <div class="cards d-flex justify-content-around flex-wrap">
 
             <?php 

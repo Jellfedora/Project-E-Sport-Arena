@@ -14,7 +14,7 @@ var app = {
     $main = $('.main');
     $form_update_member_error = $('.error');
     $itemName = $('.item-name');
-    console.log($itemName);
+    //console.log($itemName);
     $itemQuantity = $('.item-quantity');
     $itemPrice = $('.item-price');
     nameArray = [];
@@ -39,7 +39,7 @@ var app = {
     //$('.button-update-member').on('click', app.showErrorUpdateMember);
 
     // Création variable pour soumission du formulaire
-    $('#create-team-form').on('submit', app.formError);
+    //$('#create-team-form').on('submit', app.formError);
     $('.hide-menu-button').on('click', app.hideMenu);
     $('.show-menu-button').on('click', app.showMenu);
 
@@ -158,7 +158,7 @@ var app = {
 
     // Je fais un appel Ajax
     $.ajax({
-      url: 'http://localhost/Project/Project-E-Sport-Arena/Wp-Arena/creer-une-equipe/',
+      url: 'http://localhost/Cours/Wordpress/Projet/Projet-master/Project-E-Sport-Arena/Wp-Arena/creer-une-equipe/',
       method: 'POST',
       dataType: 'json',
       data: dataToSend

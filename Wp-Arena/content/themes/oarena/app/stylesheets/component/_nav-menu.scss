@@ -34,7 +34,7 @@
     margin-top: 1em;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
 
     .menu-lg {
         display: initial;
@@ -42,15 +42,18 @@
         background-color: $menu-color;
         width: 18em;
         position: fixed;
+        padding-bottom: 5em;
 
         &__video {
-            margin-top: 8em;
+            margin-top: 1em;
         }
 
         &__user {
             margin-top: 2em;
             text-align: center;
         }
+
+        &__nav {}
 
 
     }

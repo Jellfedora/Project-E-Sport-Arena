@@ -53,9 +53,13 @@ function team_register($post)
 {
     $register_teams = get_post_meta($post->ID, '_team_register');
 
-    ?>
-     <input id="" type="text" name="register-team" value="<?php echo $register_teams; ?>" />
-     <?php
+    //var_dump($register_teams);
+
+    foreach ($register_teams as $team) {
+        //var_dump($teams);exit;
+       ?> <input id="" type="text" name="register-team" value="<?= $team; ?>" /><?php
+    }
+  
 }
 
 function member_info($post)
@@ -142,7 +146,7 @@ function member_cart($post)
     <!--Billet Magique-->
     <div style="display:flex;">
         <div style="border:1px solid black;padding:0.5em;">
-            <h5><?= $magique_title ; ?></h5>
+            <h5 style><?= $magique_title ; ?></h5>
             <p>Quantité</p>
             <input id="article-quantity" type="number" name="magique-quantity" placeholder="Quantité" value="<?= $magique_quantity ; ?>"/>
             <p>Prix</p>
@@ -153,7 +157,7 @@ function member_cart($post)
 
         <!-- Billet Tournoi -->
         <div style="border:1px solid black;margin-left:1em;padding:0.5em;">
-            <h5><?= $tournoi_title ; ?></h5>
+            <h5 style><?= $tournoi_title ; ?></h5>
             <p>Quantité</p>
             <input type="number" name="tournoi-quantity" placeholder="Quantity" value="<?= $tournoi_quantity ; ?>"/>
             <p>Prix</p>
@@ -164,7 +168,7 @@ function member_cart($post)
 
         <!--Billet Reduit-->
         <div style="border:1px solid black;margin-left:1em;padding:0.5em;">
-            <h5><?= $reduit_title ; ?></h5>
+            <h5 style><?= $reduit_title ; ?></h5>
             <p>Quantité</p>
             <input type="number" name="reduit-quantity" placeholder="Quantity" value="<?= $reduit_quantity ; ?>"/>
             <p>Prix</p>

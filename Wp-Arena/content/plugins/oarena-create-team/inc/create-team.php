@@ -16,6 +16,7 @@ Class oArenaCreateTeam
     }
     public function addTeam()
     {
+        
         $args= [
             'post_type' => 'team',
             'posts_per_page' => -1,
@@ -28,6 +29,7 @@ Class oArenaCreateTeam
         // Si le formulaire n'est pas vide
         if (isset($_POST['submit-team'])) 
         {          
+            
             // echo json_encode($errorList);
             // die('');
             foreach ($posts as $title) 
