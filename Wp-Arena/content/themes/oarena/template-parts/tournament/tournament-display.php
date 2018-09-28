@@ -26,9 +26,28 @@ $id = $post->ID;
     <p class="text-align mt-5">Nom de votre team : </p>
     <input type="test" value="" name="register-team-tournament" >
     <input type="hidden" value="<?= get_the_ID(); ?>" name="register-tournament-id" >
+
+             <?php 
+
+                    if (is_user_logged_in()) 
+                    {
+                        $user = wp_get_current_user()->roles;
+
+                            // var_dump($user);
+                            foreach ($user as $role) {
+                                // var_dump($role);
+                                // die;
+                            }
+
+                            if ($role === 'administrator' || $role === 'TeamAdmin') { ; ?>
+
     <button type="submit" class="btn mt-2"> Inscrire ma team</button>
     <button name="remove-team" type="submit" class="btn mt-2" value="remove-team-submit"> Desinscrire ma team</button>
     </form>
+                            <?php } 
+                            }   ; 
+                            
+                            ?>
     </div>
 </div>
 

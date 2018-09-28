@@ -33,7 +33,7 @@
     
     endif;
                 } else {
-                echo ' Entrée interdite ;) ';
+                echo ' Entrée interdite :@' ;
             }
         } ;?>
         </div>

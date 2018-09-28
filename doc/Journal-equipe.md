@@ -204,3 +204,10 @@ https://codex.wordpress.org/Function_Reference/wp_create_user
 * Fixer bug sur CPT membre qui s'updatais pas 
 * Ajout de la connection automatique
 * templates boutique
+
+# Sprint 3.5 28 septembre 2018
+
+* Refonte entiere du JS pour la boutique => un dernier petit probleme persiste
+* Sécurisation de certains fonctionnalités selon role ( messages, inscription team et panier )
+* Fix l'ajout des team a un tournoi + conditions
+* début paypal pour panier

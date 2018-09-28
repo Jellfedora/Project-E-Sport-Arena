@@ -204,3 +204,5 @@ je vais plutot recevoir du json en JS => j'envoie un tableau d erreur JSON et se
 * Je recommence la boutique en JS et part de cet exemple => https://codepen.io/justinklemm/pen/zAdoJ 
 * Tout marche plutot pas mal et je comprend bien le code, j'ai eu des soucis avec le panier qui s'affichait selon le nombre d'articles mais j'ai fixer
 le bug en changeant le panier de place dans la boucle et en gardant les data
+* JS quazi OK maanque juste un probleme sur le NaN
+* Fix selon role admin les messages, bouton ajouter team a tournoi, et ajouter au panier selon roles 

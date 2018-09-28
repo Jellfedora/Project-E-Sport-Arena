@@ -50,11 +50,29 @@ endwhile;
 </div>
 </div>
 
+<?php 
+                   if (is_user_logged_in()) 
+                    {
+                        $user = wp_get_current_user()->roles;
+
+                            // var_dump($user);
+                            foreach ($user as $role) {
+                                // var_dump($role);
+                                // die;
+                            }
+
+                            if ($role === 'administrator' || $role === 'TeamAdmin') { ; ?>
+
+
 <button class="checkout">Ajouter les articles au panier</button>
 
 <?php 
 // Je remet les variables globals telle qu'elles étaient avant ma boucle custom
 // wp_reset_postdata();    
+                    
+
+                        }
+                    }
 
 endif; ?>
 
