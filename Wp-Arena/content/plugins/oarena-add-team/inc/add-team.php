@@ -32,6 +32,7 @@ class oArenaAddTeam
             $array_title = $post->post_title;
         }
 
+
             if (isset($_POST['register-team-tournament']))
             {
                 if(isset($_POST['remove-team']) AND ($_POST['register-team-tournament'] === $array_title )) {
@@ -47,6 +48,11 @@ class oArenaAddTeam
 
                 if ($_POST['register-team-tournament'] === $array_title )
                 {
+                    // Verifie que la team nest pas déjà inscrite au tournoi
+                    if (in_array($array_title,(get_post_meta($_POST['register-tournament-id'], '_team_register')))) {
+                        echo('Vous etes déjà inscrit à ce tournoi');exit;
+                    }
+
                     // add value of the metaboxe
                     add_post_meta($_POST['register-tournament-id'], '_team_register', $array_title);
 
@@ -73,7 +79,7 @@ class oArenaAddTeam
                     exit;
 
                 } else {
-                    var_dump('Cette team n existe pas ou ce n est pas vous qui l avez créée');
+                    var_dump('Cette team n\'est pas la vôtre ou elle n\'existe pas');
                     die;
                 }
             }

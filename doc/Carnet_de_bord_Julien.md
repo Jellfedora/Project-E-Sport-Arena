@@ -126,3 +126,9 @@
 * Réunion de présentation le matin avec Journey 
 * Ajout de la metaboxe panier pour les membres en bo et en front, avec laquelle on peut choisir ses articles, la quantitée et voir afficher le total
 * Ajout civilité a la page profil
+
+# Sprint 3.5 vendredi 27 septembre 2018
+
+* Réglage bug, on ne pouvait plus inscrire une team à un tournoi
+* Ajout de la suppression d'une team à un tournoi
+* Ajout de la condition, si une team est déjà inscrite à un tournoi elle ne peut plus s'y inscrire de nouveau
