@@ -89,7 +89,7 @@ Template Name: Page panier
         <h5 class="col" style><?= $tournoi_title ; ?></h5>
         <p class="col">7</p>
         <p class="col"><?= $tournoi_price ; ?> &euro;</p>
-        <input class="col text-center text-success" style="background:transparent;border:none;" type="number" name="tournoi-quantity" placeholder="Quantity" value="<?= $tournoi_quantity ; ?>"/>
+        <input class="col text-center text-success" style="background:transparent;border:none;" type="number" name="tournoi-quantity" placeholder="Quantité" value="<?= $tournoi_quantity ; ?>"/>
         <p class="col"><?= $tournoi_total ; ?> &euro;</p>
     </div>
     <!--Billet Reduit-->
@@ -97,7 +97,7 @@ Template Name: Page panier
         <h5 class="col" style><?= $reduit_title ; ?></h5>
         <p class="col">10</p>
         <p class="col"><?= $reduit_price ; ?> &euro;</p>
-        <input class="col text-center text-success" style="background:transparent;border:none;" type="number" name="reduit-quantity" placeholder="Quantity" value="<?= $reduit_quantity ; ?>"/>
+        <input class="col text-center text-success" style="background:transparent;border:none;" type="number" name="reduit-quantity" placeholder="Quantité" value="<?= $reduit_quantity ; ?>"/>
         <p class="col"><?= $reduit_total ; ?> &euro;</p>
     </div>
     <div class="container d-flex"style="border:1px solid black;padding:0.5em;margin-top:0.5em;">
