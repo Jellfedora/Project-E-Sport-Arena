@@ -4,8 +4,6 @@ var app = {
 
     console.log('app.init');
 
-
-
     // Je créé mes variables pour cibler mes éléments + facilement
     $header = $('.header');
     $menu = $('.menu-lg');
@@ -22,7 +20,7 @@ var app = {
     priceArray = [];
 
 
-    // $('#create-team-form').on('submit', app.formError);
+    $('#create-team-form').on('submit', app.formError);
 
     // Show the team edition form
     $team_form_update = $('.team-form-update');
@@ -158,7 +156,7 @@ var app = {
 
     // Je fais un appel Ajax
     $.ajax({
-      url: 'http://localhost/Cours/Wordpress/Projet/Projet-master/Project-E-Sport-Arena/Wp-Arena/creer-une-equipe/',
+      url: 'http://localhost/Project/Project-E-Sport-Arena/Wp-Arena/creer-une-equipe/',
       method: 'POST',
       dataType: 'json',
       data: dataToSend
