@@ -10,6 +10,4 @@ if (have_posts()): while (have_posts()): the_post();
     wp_reset_postdata();endif;
 
 ?>
-    </main>
-
     <?php get_footer();?>

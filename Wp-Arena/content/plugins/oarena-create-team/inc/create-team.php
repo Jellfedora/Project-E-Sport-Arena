@@ -63,23 +63,23 @@ Class oArenaCreateTeam
                     wp_redirect('equipe');
                 }
             }
+            if (empty($myteamdescription)) 
+            {            
+                $errorList = [
+                                'code' => 3,
+                                'error' => 'La description d equipe ne peux pas être vide'
+                                ];
+                                json_encode($this->displayJson($errorList));      
+                    // $this->displayJson($errorList);
+                    // die;                  
+                // S'il n'y a aucune erreur
+            } else {
         }
         
         // ********************* ICI BUG APPAREMENT ****************
         // Message d'erreur si la description de l'équipe est vide
-        if (empty($myteamdescription)) 
-        {            
-            $errorList = [
-                            'code' => 3,
-                            'error' => 'La description d equipe ne peux pas être vide'
-                            ];
-                            // A DECOMMENTER POUR BUG json_encode($this->displayJson($errorList));      
-                // $this->displayJson($errorList);
-                // die;                  
-            // S'il n'y a aucune erreur
-        } else 
         // **********************************************************
-        {
+        
             // Je récupere l'user et son ID
             $current_user = wp_get_current_user();
             

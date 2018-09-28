@@ -206,3 +206,4 @@ je vais plutot recevoir du json en JS => j'envoie un tableau d erreur JSON et se
 le bug en changeant le panier de place dans la boucle et en gardant les data
 * JS quazi OK maanque juste un probleme sur le NaN
 * Fix selon role admin les messages, bouton ajouter team a tournoi, et ajouter au panier selon roles 
+* fix bug create team avec description vide

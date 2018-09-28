@@ -5,7 +5,7 @@
  */
  
 get_header(); ?>
- 
+ <div class="pt-5">
  <div id="primary" class="site-content d-flex justify-content-around">
          <!-- <div id="content" role="main" class="d-flex justify-content-center"> -->
         <?php if (!get_theme_mod('oarena_theme_contact_active')) :
@@ -69,9 +69,9 @@ get_header(); ?>
                                 <textarea cols="50" rows="10" name="mymessage" id="message" placeholder="Votre message..."></textarea>
                                 <br>
                         <div class="container">
-                                <button class='myButt one' type="submit" value="Creer team"'>
+                                <button class='myButt one' type="submit" value="Creer team">
                                         <div class='insider'></div>
-                                        Envoyer votre message
+                                        Envoyer votre message <i class="fa fa-envelope-o ml-3" aria-hidden="true"></i>
                                 </button>
                         </div>
                         </form>
@@ -80,5 +80,6 @@ get_header(); ?>
                 </div> <!-- #form-->
         <!-- </div>#content -->
 </div><!-- #primary -->
+</div>
  
 <?php get_footer(); ?>

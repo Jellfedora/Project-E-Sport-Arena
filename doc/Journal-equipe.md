@@ -211,3 +211,4 @@ https://codex.wordpress.org/Function_Reference/wp_create_user
 * Sécurisation de certains fonctionnalités selon role ( messages, inscription team et panier )
 * Fix l'ajout des team a un tournoi + conditions
 * début paypal pour panier
+* Fix bug create team vide
