@@ -102,6 +102,7 @@ function cart($post)
     foreach ($cart as $product)
     {
         //var_dump($product);
+
         // Je stocke mes données dans des variables
         $product_title = $product['title'];
         $product_price = $product['product-price'];
