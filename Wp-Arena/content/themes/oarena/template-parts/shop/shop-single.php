@@ -31,7 +31,7 @@
     </div>
 </div> -->
 
-
+<form action="add-articles-to-cart.php"  method="post" class="container p-0" style="border:3px solid black;">
 <div class="shopping-cart">
     <div style="display: none;">
         <div class="column-labels">
@@ -48,19 +48,24 @@
       <img src="https://images-na.ssl-images-amazon.com/images/I/911MDRVptZL._SX425_.jpg">
     </div>
     <div class="product-details">
-      <div class="product-title"><?= the_title() ; ?></div>
-      <p class="product-description"><?= the_content() ; ?></p>
+        <!--Récupére ID du produit-->
+        <?php  $product = get_post();?>
+        <input type="hidden" name="product" value="<?= ($product->ID);  ?>">
+      <h3 name="product-name" class="product-title"><?= the_title() ; ?></h3>
+      <p name="product-description" class="product-description"><?= the_content() ; ?></p>
     </div>
     <div class="h2">Prix : </div>
-    <div class="product-price h2"><?= get_post_meta($post->ID, 'article_price', true); ?></div>
+    <div name="product-price" class="product-price h2"><?= get_post_meta($post->ID, 'article_price', true); ?></div>
     <div>Quantité : </div>
-    <div class="product-quantity h2">
-      <input type="number" value="0" min="0" >
+    <div  class="product-quantity h2">
+      <input name="product-quantity" type="number" value="0" min="0" >
     </div>
     <div class="product-line-price h2">0</div>
   </div>
 
 </div>
+<input class="btn" type="submit" value="Ajouter Article" name="add-product">
+</form>
    
 
 
