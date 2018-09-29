@@ -64,7 +64,9 @@ endwhile;
                             if ($role === 'administrator' || $role === 'TeamAdmin') { ; ?>
 
 
-<button class="checkout">Ajouter les articles au panier</button>
+<button class="checkout btn btn-success" name="add-to-cart-button" style="height: 5em;" >Ajouter les articles au panier</button>
+
+
 
 <?php 
 // Je remet les variables globals telle qu'elles étaient avant ma boucle custom

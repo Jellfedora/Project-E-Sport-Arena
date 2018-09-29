@@ -12,15 +12,6 @@ var app = {
     $main = $('.main');
     $form_update_member_error = $('.error');
     $itemName = $('.item-name');
-    //console.log($itemName);
-    $itemQuantity = $('.item-quantity');
-    $itemPrice = $('.item-price');
-    nameArray = [];
-    quantityArray = [];
-    priceArray = [];
-
-
-    $('#create-team-form').on('submit', app.formError);
 
     // Show the team edition form
     $team_form_update = $('.team-form-update');
@@ -43,12 +34,6 @@ var app = {
 
     // j ecoute l evenement ajouter au panier
     $('.cart-add-item').on('click', app.addItemToCart);
-
-    // Je cache la div qui contient le message d erreur cette team est deja prise
-    $('#alert-name').hide();
-    $('#alert-name-exist').hide();
-    $('#alert-team-more-than-one').hide();
-    $('#alert-description-empty').hide();
 
     // Scroll to next elements . A minifier!!
     $('.scroll-to-tournament').click(function () {
@@ -140,111 +125,6 @@ var app = {
       }
     });
   },
-
-  ////////////////////////////////////////////////////////////////////////
-  formError: function (evt) {
-    evt.preventDefault();
-    console.log('OK')
-
-    var dataToSend = $(this).serialize();
-
-    console.log(this);
-    console.log(dataToSend);
-    console.log($(this).attr('action'));
-
-    // Je cache la div contenant l 'alerte
-
-    // Je fais un appel Ajax
-    $.ajax({
-      url: 'http://localhost/Project/Project-E-Sport-Arena/Wp-Arena/creer-une-equipe/',
-      method: 'POST',
-      dataType: 'json',
-      data: dataToSend
-    }).done(function (response) {
-      console.log(response);
-      if (response.code == 1) {
-        var $alertsDiv = $('#alert-name');
-        $alertsDiv.show();
-        // window.setTimeout(function () {
-        //   location.href = response.redirect;
-        // }, 5000);
-      }
-      if (response.code == 2) {
-        var $alertDivEmpty = $('#alert-name-exist');
-        $alertDivEmpty.show();
-      }
-      if (response.code == 3) {
-        var $alertDescriptionEmpty = $('#alert-description-empty');
-        $alertDescriptionEmpty.show();
-      }
-      if (response.code == 4) {
-        var $alertTeamMoreThanOne = $('#alert-team-more-than-one');
-        $alertTeamMoreThanOne.show();
-      }
-    }).fail(function () {
-      console.log('IF OK ');
-      $('#alert-name').hide();
-      window.alert('Team créée félicitations');
-      window.setTimeout(function () {
-        location.href = response.redirect;
-      }, 10000);
-    })
-  },
-
-  // addItemToCart: function (evt) {
-  //   evt.preventDefault();
-  //   console.log('addItemOK');
-  //   var array_name = [];
-  //   var array_quantity = [];
-  //   var array_price = [];
-
-  //   // $itemName.val();
-  //   $name = $itemName.val();
-  //   $quantity = parseInt($itemQuantity.val());
-  //   $price = parseInt($itemPrice.val());
-  //   console.log($name);
-  //   console.log($quantity);
-  //   console.log($price);
-  //   nameArray.push($name);
-  //   quantityArray.push($quantity);
-  //   priceArray.push($price);
-  //   console.log(nameArray)
-
-
-  //   app.displayCart()
-  // },
-
-  // displayCart: function (elem) {
-  //   console.log(elem);
-  //   console.log('je suis dans display cart');
-  //   cartData = '<table><tr><th class="pr-2">Produit</th class="pl-5"><th>Quantité</th><th class="pr-5 pl-3">Prix</th><th class="pr-5">Total</th></tr>'
-  //   // console.log(cartData);
-  //   total = 0;
-  //   for (i = 0; i < nameArray.length; i++) {
-  //     total += quantityArray[i] * priceArray[i];
-  //     cartData += "<tr><td class='mr-2'>" + nameArray[i] + "</td><td>" + quantityArray[i] + "</td><td class='pl-3'>" + priceArray[i] + "</td><td>" + quantityArray[i] * priceArray[i] + "</td><td><button id='buttonDelete" + i + "'>Supprimer</button></td></tr>"
-  //   }
-  //   cartData += '<tr><td></td><td></td><td></td><td>' + total + '</td></tr></table>';
-  //   document.getElementById('cart-mycart').innerHTML = cartData
-  //   // Je rajoute un evenement au click sur supprimer
-  //   $('.buttonDelete').on('click', app.delElement);
-  // },
-
-  // delElement: function (a) {
-  //   nameArray.splice(a, 1);
-  //   quantityArray.splice(a, 1);
-  //   priceArray.splice(a, 1);
-  //   app.displayCart();
-  // },
-
-  // addToCart: function () {
-  //   console.log('coucou t es dans addtocart');
-  //   for (i = 0; i < nameArray.lenght; i++) {
-  //     addToCartData = "<button class='cart-add-item" + i + "'>Ajouter au panier</button>"
-  //     console.log(addToCartData);
-  //     document.getElementByClass("cart-add-item" + $i).innerHTML = addToCartData;
-
-  //   }
 }
 
 

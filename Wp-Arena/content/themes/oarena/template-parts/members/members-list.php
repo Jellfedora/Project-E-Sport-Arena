@@ -1,3 +1,5 @@
+
+<div class="pt-3">
 <h2 class="news__title text-light mt-3 mb-3 text-center">&#9660; Membres &#9660; </h2>
     <div class="cards text-center flex-wrap">
 
@@ -23,4 +25,5 @@ if ($members->have_posts()): while ($members->have_posts()): $members->the_post(
 
 endif;?>
 
+</div>
 </div>

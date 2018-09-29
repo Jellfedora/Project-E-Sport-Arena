@@ -55,7 +55,7 @@
     <div class="product-price h2"><?= get_post_meta($post->ID, 'article_price', true); ?></div>
     <div>Quantité : </div>
     <div class="product-quantity h2">
-      <input type="number" value="0" min="0">
+      <input type="number" value="0" min="0" >
     </div>
     <div class="product-line-price h2">0</div>
   </div>

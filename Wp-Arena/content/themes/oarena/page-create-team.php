@@ -22,7 +22,7 @@
                 <!-- Boutton de soumission-->
                 <!-- <div class="one"><input  class="insider" ></div> -->
                 <div class="container">
-                        <button class='myButt one' type="submit" value="Creer team"'>
+                        <button class='myButt one' type="submit" value="Creer team">
                                 <div class='insider'></div>
                                 Créer une équipe
                         </button>
