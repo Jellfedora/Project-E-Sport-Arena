@@ -1,4 +1,6 @@
 <?php
+// $id=get_the_ID();
+// var_dump($id);
 ?>
 <div class="news__item">
          <div class="news__item-image" style="background-image: url(<?=get_the_post_thumbnail_url();?>);">
@@ -8,7 +10,7 @@
              <h3 class="news__item-title text-light"><?php the_title();?></h3>
              </a>
              <p class="news__item-text"><?php the_content();?></p>
-             <h4>Fait partie de l'équipe:  </h4>
+             <h4>Fait partie de l'équipe: </h4>
          </div>
  </div>
 

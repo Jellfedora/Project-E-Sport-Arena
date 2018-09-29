@@ -8,16 +8,27 @@ $id = $post->ID;
     <div class="card mb-2 p-3 m-auto w-75 rounded " style="background-color:#6994db ">
         <div class="card__intro d-flex  justify-content-start ">
         <ul class="mt-2 ml-2 d-flex flex-column">
-            <i class="fa fa-gamepad" aria-hidden="true"><span class="intro__font ml-1"> <?= get_game(get_the_ID()); ?></span></i>
-            <i class="fa fa-user mb-2 mt-2" aria-hidden="true"><span class="intro__font ml-1"> <?= get_seats(get_the_ID()); ?></span></i>
-            <i class="fa fa-calendar " aria-hidden="true"><span class="intro__font ml-1"> <?= get_date(get_the_ID()); ?></span></i>
-            <i class="fa fa-eur " aria-hidden="true"><span class="intro__font ml-1"> <?= get_price(get_the_ID()); ?></span></i>
+          <div>  <?= get_price(get_the_ID()); ?><i class="fa fa-eur ml-2" aria-hidden="true"></i> </div>
+            <i> Places totales : <?= get_post_meta($id, 'tournament_available_total', true);?></i>
+            <i> Places restantes : <?= get_post_meta($id, 'tournament_available_seats', true);?></i>
         </ul>
         </div>
         <div class="card-body d-flex flex-column">
             <h3 class="news__tournament"><?php the_title() ; ?></h3>
+        
+                                    <?php  if(get_post_meta($id, 'tournament_available_seats', true) > 0 ){ ?>
+                                       
+         <h3 class="m-auto" style="color: green;">Il reste encore des places</h3>                              
+        
+                                    <?php } else { ?>
+
+
+        <h3 class="text-danger">Le tournoi est complet !</h3>
+
+                                  <?php  } ?>
+
             <p class="card-text"> <?php the_content() ; ?></p>   
-            <h4>team inscrites: </h4>
+            <h4>Team inscrites: </h4>
             <?php  $register_teams = get_post_meta($post->ID, '_team_register');
                 foreach ($register_teams as $team) {
                 echo $team .'</br>'; 
@@ -40,15 +51,21 @@ $id = $post->ID;
                                     // die;
                                 }
 
-                                if ($role === 'administrator' || $role === 'TeamAdmin') { ; ?>
-
+                                if ($role === 'administrator' || $role === 'TeamAdmin') 
+                                { ; 
+                                    if(get_post_meta($id, 'tournament_available_seats', true) > 0 )
+                                     { ?> 
         <button type="submit" class="btn btn-success ml-2 mt-2 mr-2 mb-3"> Inscrire ma team</button>
         <button name="remove-team" type="submit" class="btn btn-danger mt-2 mb-3" value="remove-team-submit"> Desinscrire ma team</button>
         </form>
-                                <?php } 
-                                }   ; 
+                                    <?php } else { ?> 
+        <button name="remove-team" type="submit" class="btn btn-danger mt-2 mb-3" value="remove-team-submit"> Desinscrire ma team</button>
+        <p class="text-danger">Le tournoi est complet !</p>
+                                  <?php       } 
+
+                                    } 
+                                }  ?>
                                 
-                                ?>
         </div>
     </div>
 </div>

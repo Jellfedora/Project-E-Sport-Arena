@@ -13,6 +13,7 @@ var app = {
         $('#alert-name-exist').hide();
         $('#alert-team-more-than-one').hide();
         $('#alert-description-empty').hide();
+        $('#success-create-team').hide();
 
     },
 
@@ -38,30 +39,25 @@ var app = {
             console.log(response);
             if (response.code == 1) {
                 var $alertsDiv = $('#alert-name');
-                $alertsDiv.show();
+                $alertsDiv.show().delay(8000).hide(200);
                 // window.setTimeout(function () {
                 //   location.href = response.redirect;
                 // }, 5000);
             }
             if (response.code == 2) {
                 var $alertDivEmpty = $('#alert-name-exist');
-                $alertDivEmpty.show();
+                $alertDivEmpty.show().delay(8000).hide(200);
             }
             if (response.code == 3) {
                 var $alertDescriptionEmpty = $('#alert-description-empty');
-                $alertDescriptionEmpty.show();
+                $alertDescriptionEmpty.show().delay(8000).hide(200);
             }
             if (response.code == 4) {
                 var $alertTeamMoreThanOne = $('#alert-team-more-than-one');
-                $alertTeamMoreThanOne.show();
+                $alertTeamMoreThanOne.show().delay(8000).hide(200);
             }
         }).fail(function () {
-            console.log('IF OK ');
-            $('#alert-name').hide();
-            window.alert('Team créée félicitations');
-            window.setTimeout(function () {
-                location.href = response.redirect;
-            }, 500);
+            $('#success-create-team').show();
         })
     },
 }
