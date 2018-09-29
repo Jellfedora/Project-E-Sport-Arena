@@ -32,7 +32,6 @@ class oArenaAddTeam
             $array_title = $post->post_title;
         }
 
-
             if (isset($_POST['register-team-tournament']))
             {
                 if(isset($_POST['remove-team']) AND ($_POST['register-team-tournament'] === $array_title )) {
@@ -55,6 +54,16 @@ class oArenaAddTeam
 
                     // add value of the metaboxe
                     add_post_meta($_POST['register-tournament-id'], '_team_register', $array_title);
+                    // var_dump($post->);
+                    // die;
+                   $numberSeatsAvailable = get_post_meta($_POST['register-tournament-id'], 'tournament_available_seats');
+                //    $seats = $numberSeatsAvailable--;
+                foreach ($numberSeatsAvailable as $seats) {
+                        $seat = intval($seats)-1;
+                }
+                   update_post_meta($_POST['register-tournament-id'], 'tournament_available_seats', $seat);
+
+                //    update_post_meta('') ;
 
                     /* var_dump($array_title);
                         die;

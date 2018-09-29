@@ -207,3 +207,11 @@ le bug en changeant le panier de place dans la boucle et en gardant les data
 * JS quazi OK maanque juste un probleme sur le NaN
 * Fix selon role admin les messages, bouton ajouter team a tournoi, et ajouter au panier selon roles 
 * fix bug create team avec description vide
+* fix tard dans la nuit le bug du total du panier, il suffisait de mettre 0 en dur ... 
+* Style page d'inscription
+
+# Sprint 3.5
+
+++++ 29 septembre 2018 +++
+
+* Création du la custom box Places dispos

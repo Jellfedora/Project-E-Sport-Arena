@@ -212,3 +212,10 @@ https://codex.wordpress.org/Function_Reference/wp_create_user
 * Fix l'ajout des team a un tournoi + conditions
 * début paypal pour panier
 * Fix bug create team vide
+* fix bug JS total panier
+* style page register
+
+# Sprint 3.6 29 septembre 2018
+
+* Création CPT
+* Enregistrement des produits ajoutés au panier dans les CPT de membres

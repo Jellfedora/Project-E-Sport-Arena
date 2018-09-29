@@ -9,6 +9,7 @@ function init_metabox()
 
     // For CPT Tournament
     add_meta_box('team_register', 'Participants', 'team_register', 'tournament', 'normal' );
+    add_meta_box('tournament_available_seats', 'Places disponibles pour ce tournoi', 'tournament_available_seats', 'tournament', 'normal' );
 
     // For CPT Member
     add_meta_box('member_info', 'Informations livraison', 'member_info', 'members', 'normal');
@@ -58,7 +59,17 @@ function team_register($post)
         //var_dump($teams);exit;
        ?> <input id="" type="text" name="register-team" value="<?= $team; ?>" /><?php
     }
-  
+}
+    
+function tournament_available_seats($post) 
+{
+        $available_seats = get_post_meta($post->ID, 'tournament_available_seats', true);
+
+    ?>
+    <input type="number" name="tournament-available-seats" placeholder="Nombre de places au tournoi disponibles" value="<?= $available_seats ; ?>"/>
+
+    <?php 
+     
 }
 
 function member_info($post)
@@ -100,7 +111,7 @@ function article_quantity($post)
     $article_quantity = get_post_meta($post->ID, 'article_quantity', true);
 
     ?>
-    <input type="number" name="article-quantity" placeholder="Nombre de places disponibles" value="<?= $article_quantity ; ?>"/>
+    <input type="number" name="article-quantity" placeholder="Nombre d'articles' disponibles" value="<?= $article_quantity ; ?>"/>
 
     <?php 
 }
@@ -108,6 +119,7 @@ function article_quantity($post)
 
 
 add_action('save_post', 'save_metabox');
+
 function save_metabox($post_id)
 {
     // Team chief
@@ -139,6 +151,10 @@ function save_metabox($post_id)
     //
     if (isset($_POST['register-team'])) {
         update_post_meta($post_id, '_team_register', sanitize_text_field($_POST['register-team']));
+    }
+
+    if (isset($_POST['tournament-available-seats'])) {
+        update_post_meta($post_id, 'tournament_available_seats', sanitize_text_field($_POST['tournament-available-seats']));
     }
 
     // Member information

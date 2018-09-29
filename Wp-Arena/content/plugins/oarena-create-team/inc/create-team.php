@@ -75,11 +75,7 @@ Class oArenaCreateTeam
                 // S'il n'y a aucune erreur
             } else {
         }
-        
-        // ********************* ICI BUG APPAREMENT ****************
-        // Message d'erreur si la description de l'équipe est vide
-        // **********************************************************
-        
+                
             // Je récupere l'user et son ID
             $current_user = wp_get_current_user();
             

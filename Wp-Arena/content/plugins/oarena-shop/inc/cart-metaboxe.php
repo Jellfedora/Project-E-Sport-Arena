@@ -11,20 +11,19 @@ function init_cart_metabox()
 
 function member_cart($post)
 {   
-    //Renseigne l'id des produits
-    $billet_magique_id = 5355;
-    $billet_tournoi_id = 5365;
-    $billet_reduit_id = 5431;
-    //Recupére le nom de l'article billet magique
-    $magique_name = get_post($billet_magique_id);
-    $magique_title = $magique_name->post_title;
-    //Récupére le nom de l'article billet tournoi
-    $tournoi_name = get_post($billet_tournoi_id);
-    $tournoi_title = $tournoi_name->post_title;
-     //Récupére le nom de l'article billet réduit
-    $reduit_name = get_post($billet_reduit_id);
-    $reduit_title = $reduit_name->post_title;
-
+            $billet_magique_id = 5355;
+            $billet_tournoi_id = 5365;
+            $billet_reduit_id = 5431;
+            //Recupére le nom de l'article billet magique
+            $magique_name = get_post($billet_magique_id);
+            $magique_title = $magique_name->post_title;
+            //Récupére le nom de l'article billet tournoi
+            $tournoi_name = get_post($billet_tournoi_id);
+            $tournoi_title = $tournoi_name->post_title;
+            //Récupére le nom de l'article billet réduit
+            $reduit_name = get_post($billet_reduit_id);
+            $reduit_title = $reduit_name->post_title;
+            
     //Billet magique
     $magique_quantity = get_post_meta($post->ID, 'magique_quantity', true);
     $magique_price = get_post_meta($billet_magique_id, 'article_price', true);
@@ -95,10 +94,13 @@ function member_cart($post)
     <?php
 }
 
-function cart($post) {
+function cart($post)
+{
     $cart = get_post_meta($post->ID, 'cart');
     //var_dump($post->ID);
-    foreach ($cart as $product) {
+    $total = [];
+    foreach ($cart as $product)
+    {
         //var_dump($product);
         // Je stocke mes données dans des variables
         $product_title = $product['title'];
@@ -114,10 +116,14 @@ function cart($post) {
             <p>Prix total pour cet article: <?= $product_total_price; ?> &euro; </p>
         </div>
         
-           
-
-       <?php
-    }
+        <?php
+                $product_total_price;
+                // var_dump($product_total_price);
+                $total[] = $product_total_price;
+            }
+           $total_price = array_sum($total);
+            var_dump($total_price);
+               
 }
 
 add_action('save_post', 'save_cart_metabox');
@@ -127,7 +133,7 @@ function save_cart_metabox($post_id)
 {
     // PANIER TEST
     if (isset($_POST['cart'])) {
-        update_post_meta($post_id, 'cart', sanitize_text_field($_POST['cart']));
+        update_post_meta($post_id, '_cart', sanitize_text_field($_POST['cart']));
     }
 
 
@@ -135,15 +141,15 @@ function save_cart_metabox($post_id)
 
         //Sauvegarde la quantitée
     if (isset($_POST['magique-quantity'])) {
-        update_post_meta($post_id, 'magique_quantity', absint($_POST['magique-quantity']));
+        update_post_meta($post_id, '_magique_quantity', absint($_POST['magique-quantity']));
     }
         //Billet Tournoi
     if (isset($_POST['tournoi-quantity'])) {
-        update_post_meta($post_id, 'tournoi_quantity', absint($_POST['tournoi-quantity']));
+        update_post_meta($post_id, '_tournoi_quantity', absint($_POST['tournoi-quantity']));
     }
 
          //Billet Reduit
     if (isset($_POST['reduit-quantity'])) {
-        update_post_meta($post_id, 'reduit_quantity', absint($_POST['reduit-quantity']));
+        update_post_meta($post_id, '_reduit_quantity', absint($_POST['reduit-quantity']));
     }
 }
