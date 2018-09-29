@@ -63,8 +63,10 @@ endwhile;
 
                             if ($role === 'administrator' || $role === 'TeamAdmin') { ; ?>
 
-
+<a href="Panier">
 <button class="checkout btn btn-success" name="add-to-cart-button" style="height: 5em; " >Ajouter les articles au panier</button>
+</a>
+
 
 
 

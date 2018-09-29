@@ -2,7 +2,6 @@
 if (!get_theme_mod('oarena_theme_posts_active')) : 
 ?>
 
-<div class="news p-3 mt-5">
     <h2 class="news__title text-light">&#9660; ACTUALIT&Eacute;S &#9660; </h2>
     <div class="news__content">
 
@@ -29,6 +28,6 @@ if (!get_theme_mod('oarena_theme_posts_active')) :
     endif; ?>
 
     </div>
-</div>
+
 
 <?php endif; ?>

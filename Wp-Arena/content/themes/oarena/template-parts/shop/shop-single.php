@@ -52,7 +52,7 @@
         <?php  $product = get_post();?>
         <input type="hidden" name="product" value="<?= ($product->ID);  ?>">
       <h3 name="product-name" class="product-title"><?= the_title() ; ?></h3>
-      <p name="product-description" class="product-description"><?= the_content() ; ?></p>
+      <p name="product-description" class="product-description" readonly><?= the_content() ; ?></p>
     </div>
     <div class="h2">Prix : </div>
     <div name="product-price" class="product-price h2"><?= get_post_meta($post->ID, 'article_price', true); ?></div>
