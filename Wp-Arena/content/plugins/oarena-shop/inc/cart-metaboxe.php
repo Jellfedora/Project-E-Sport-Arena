@@ -99,19 +99,24 @@ function cart($post) {
     $cart = get_post_meta($post->ID, 'cart');
     //var_dump($post->ID);
     foreach ($cart as $product) {
-       
-       foreach ($product as $product_details) {
-           var_dump($product);
-           ?>
-            <div>
-                <h3><?= $product_details->title ; ?></h3> 
-                <p>Prix Unitaire:</p>
-                <p>Quantité:</p>
-                <p>Total:</p>
-            </div>
-           <?php
+        //var_dump($product);
+        // Je stocke mes données dans des variables
+        $product_title = $product['title'];
+        $product_price = $product['product-price'];
+        $product_quantity = $product['product-quantity'];
+        $product_total_price = $product['product-total-price'];
+        
+        ?>
+        <div style="border:1px solid black; padding:0.5em;">
+            <p>Référence: <?= $product_title; ?></p>
+            <p>Prix: <?= $product_price; ?> &euro;</p>
+            <p>Quantité: <?= $product_quantity; ?></p>
+            <p>Prix total pour cet article: <?= $product_total_price; ?> &euro; </p>
+        </div>
+        
+           
 
-       }
+       <?php
     }
 }
 
