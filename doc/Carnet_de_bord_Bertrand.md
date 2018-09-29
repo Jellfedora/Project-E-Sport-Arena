@@ -215,3 +215,5 @@ le bug en changeant le panier de place dans la boucle et en gardant les data
 ++++ 29 septembre 2018 +++
 
 * Création du la custom box Places dispos
+* Décrémentation des places dispos a l'inscription d'une team
+* Si on arrive a 0 plus de possibilité d'inscriptions a un tournoi

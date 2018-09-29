@@ -121,8 +121,10 @@ function cart($post)
                 // var_dump($product_total_price);
                 $total[] = $product_total_price;
             }
-           $total_price = array_sum($total);
-            var_dump($total_price);
+           $total_price = array_sum($total);?>
+           <p>Prix total du panier: <?= $total_price; ?> &euro; </p>
+           <?php
+            //var_dump($total_price);
                
 }
 

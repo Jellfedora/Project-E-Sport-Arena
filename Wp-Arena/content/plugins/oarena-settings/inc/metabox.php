@@ -9,7 +9,10 @@ function init_metabox()
 
     // For CPT Tournament
     add_meta_box('team_register', 'Participants', 'team_register', 'tournament', 'normal' );
-    add_meta_box('tournament_available_seats', 'Places disponibles pour ce tournoi', 'tournament_available_seats', 'tournament', 'normal' );
+
+    // Check available seats on tournament
+    add_meta_box('tournament_available_total', 'Capacité maximum pour ce tournoi', 'tournament_available_total', 'tournament', 'normal' );
+    add_meta_box('tournament_available_seats', 'Places encore disponibles pour ce tournoi', 'tournament_available_seats', 'tournament', 'normal' );
 
     // For CPT Member
     add_meta_box('member_info', 'Informations livraison', 'member_info', 'members', 'normal');
@@ -67,6 +70,17 @@ function tournament_available_seats($post)
 
     ?>
     <input type="number" name="tournament-available-seats" placeholder="Nombre de places au tournoi disponibles" value="<?= $available_seats ; ?>"/>
+
+    <?php 
+     
+}
+
+function tournament_available_total($post) 
+{
+        $available_seats_total = get_post_meta($post->ID, 'tournament_available_total', true);
+
+    ?>
+    <input type="number" name="tournament-available-total" placeholder="Nombre de places au tournoi disponibles" value="<?= $available_seats_total ; ?>"/>
 
     <?php 
      
@@ -153,8 +167,14 @@ function save_metabox($post_id)
         update_post_meta($post_id, '_team_register', sanitize_text_field($_POST['register-team']));
     }
 
+    // tournament seats
+
     if (isset($_POST['tournament-available-seats'])) {
         update_post_meta($post_id, 'tournament_available_seats', sanitize_text_field($_POST['tournament-available-seats']));
+    }
+
+    if (isset($_POST['tournament-available-total'])) {
+        update_post_meta($post_id, 'tournament_available_total', sanitize_text_field($_POST['tournament-available-total']));
     }
 
     // Member information

@@ -217,5 +217,7 @@ https://codex.wordpress.org/Function_Reference/wp_create_user
 
 # Sprint 3.6 29 septembre 2018
 
-* Création CPT
+* Création metabox
 * Enregistrement des produits ajoutés au panier dans les CPT de membres
+* Décrémentation métabox a inscription team
+* Rajout conditions pour inscrire team ( places dispo > 0)
