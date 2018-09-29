@@ -4,108 +4,18 @@ span {
 }
 
 .overline-left-underline-right:after,
-.overline-left-underline-right:before,
-.overline-left:after,
-.underline-closing:after,
-.underline-closing:before,
-.underline-left:after,
-.underline-opening:after,
-.underline-opening:before,
-.underline-right:after {
+.overline-left-underline-right:before {
     position: absolute;
     z-index: -1
 }
 
 .overline-left-underline-right:after,
-.overline-left:after,
-.overline-opening:after,
-.overline-opening:before,
-.overline-right-underline-left:after,
-.overline-right:after,
+
 .right-down:after {
     content: "";
     top: 0
 }
 
-.underline-left:focus:after,
-.underline-left:hover:after {
-    width: 100%;
-    height: 3px
-}
-
-.underline-closing:after {
-    content: "";
-    width: 3px;
-    height: 3px;
-    bottom: 0;
-    left: 0
-}
-
-.underline-closing:focus:after,
-.underline-closing:hover:after {
-    width: 50%;
-    height: 3px
-}
-
-.underline-closing:before {
-    content: "";
-    width: 3px;
-    height: 3px;
-    bottom: 0;
-    right: 0
-}
-
-.underline-closing:focus:before,
-.underline-closing:hover:before {
-    width: 50%;
-    height: 3px
-}
-
-.underline-opening:after {
-    content: "";
-    width: 3px;
-    height: 3px;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: 0 auto
-}
-
-.underline-opening:focus:after,
-.underline-opening:hover:after {
-    width: 100%;
-    height: 3px
-}
-
-.underline-opening:before {
-    content: "";
-    width: 3px;
-    height: 3px;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    margin: 0 auto
-}
-
-.underline-opening:focus:before,
-.underline-opening:hover:before {
-    width: 100%;
-    height: 3px
-}
-
-.underline-right:after {
-    content: "";
-    width: 3px;
-    height: 3px;
-    left: 0;
-    bottom: 0
-}
-
-.underline-right:focus:after,
-.underline-right:hover:after {
-    width: 100%;
-    height: 3px
-}
 
 .overline-left-underline-right:after {
     width: 3px;
@@ -129,32 +39,6 @@ span {
 
 .overline-left-underline-right:focus:before,
 .overline-left-underline-right:hover:before {
-    width: 100%;
-    height: 3px
-}
-
-.overline-right-underline-left:after {
-    width: 3px;
-    height: 3px;
-    left: 0
-}
-
-.overline-right-underline-left:focus:after,
-.overline-right-underline-left:hover:after {
-    width: 100%;
-    height: 3px
-}
-
-.overline-right-underline-left:before {
-    content: "";
-    width: 3px;
-    height: 3px;
-    bottom: 0;
-    right: 0
-}
-
-.overline-right-underline-left:focus:before,
-.overline-right-underline-left:hover:before {
     width: 100%;
     height: 3px
 }
