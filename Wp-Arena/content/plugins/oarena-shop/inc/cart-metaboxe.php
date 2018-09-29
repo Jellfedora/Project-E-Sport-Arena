@@ -100,6 +100,7 @@ function cart($post) {
     //var_dump($post->ID);
     foreach ($cart as $product) {
         //var_dump($product);
+
         // Je stocke mes données dans des variables
         $product_title = $product['title'];
         $product_price = $product['product-price'];
@@ -113,11 +114,15 @@ function cart($post) {
             <p>Quantité: <?= $product_quantity; ?></p>
             <p>Prix total pour cet article: <?= $product_total_price; ?> &euro; </p>
         </div>
-        
-           
 
        <?php
     }
+    // Je récupére le total du panier
+    $total = $product_total_price; 
+    ?>
+    <p style ="color:red;">Total du panier: <?= $total; ?> &euro;</p>
+    <?php
+    
 }
 
 add_action('save_post', 'save_cart_metabox');
