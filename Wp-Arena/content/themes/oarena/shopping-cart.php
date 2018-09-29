@@ -66,8 +66,17 @@ Template Name: Page panier
 
     //Billet total
     $cart_total = ($magique_total + $tournoi_total + $reduit_total);
+
+
+
+#########################################################################################
+//NOUVEAU PANIER
+$cart = get_post_meta($post->ID, 'cart');
+var_dump($cart);
+
+$total = [];
 ?>
-<form action="validate-cart.php"  method="post" class="container p-0" style="border:3px solid black;">
+        <form action="validate-cart.php"  method="post" class="container p-0" style="border:3px solid black;">
     <h3 class="text-center mb-2">Votre Panier</h3>
     <div class="d-flex text-center text-light" style="border-bottom:3px solid black;border-top:3px solid black;margin-top:2em;">
         <h4 class="col">DESIGNATION</h4>
@@ -76,36 +85,40 @@ Template Name: Page panier
         <h4 class="col">QUANTITE</h4>
         <h4 class="col">TOTAL &nbsp;TTC</h4>
     </div>
-    <!-- Billet Magique -->
+<?php
+    foreach ($cart as $product)
+    {
+        //var_dump($product);
+        // Je stocke mes données dans des variables
+        $product_title = $product['title'];
+        $product_price = $product['product-price'];
+        $product_quantity = $product['product-quantity'];
+        $product_total_price = $product['product-total-price'];
+        
+        ?>
+
     <div class="d-flex text-center"style="border-bottom:1px solid black;padding:0.5em;">
-        <h5 class="col" style><?= $magique_title ; ?></h5>
+        <h5 class="col" style><?= $product_title; ?></h5>
         <p class="col">5</p>
-        <p class="col"><?= $magique_price ; ?> &euro;</p>
-        <input class="col text-center text-success" style="background:transparent;border:none;" type="number" name="magique-quantity" placeholder="Quantité" value="<?= $magique_quantity ; ?>"/>
-        <p class="col"> <?= $magique_total ; ?> &euro;</p>
+        <p class="col"><?= $product_price; ?> &euro;</p>
+        <input class="col text-center text-success" style="background:transparent;border:none;" type="number" name="quantity" placeholder="Quantité" value="<?= $product_quantity; ?>"/>
+        <p class="col"> <?= $product_total_price; ?> &euro;</p>
     </div>
-    <!-- Billet Tournoi -->
-    <div class="d-flex text-center" style="border-bottom:1px solid black;padding:0.5em;">
-        <h5 class="col" style><?= $tournoi_title ; ?></h5>
-        <p class="col">7</p>
-        <p class="col"><?= $tournoi_price ; ?> &euro;</p>
-        <input class="col text-center text-success" style="background:transparent;border:none;" type="number" name="tournoi-quantity" placeholder="Quantité" value="<?= $tournoi_quantity ; ?>"/>
-        <p class="col"><?= $tournoi_total ; ?> &euro;</p>
-    </div>
-    <!--Billet Reduit-->
-    <div class="d-flex text-center" style="padding:0.5em;">
-        <h5 class="col" style><?= $reduit_title ; ?></h5>
-        <p class="col">10</p>
-        <p class="col"><?= $reduit_price ; ?> &euro;</p>
-        <input class="col text-center text-success" style="background:transparent;border:none;" type="number" name="reduit-quantity" placeholder="Quantité" value="<?= $reduit_quantity ; ?>"/>
-        <p class="col"><?= $reduit_total ; ?> &euro;</p>
-    </div>
-    <div class="container d-flex"style="border:1px solid black;padding:0.5em;margin-top:0.5em;">
+ 
+        <?php
+                $product_total_price;
+                // var_dump($product_total_price);
+                $total[] = $product_total_price;
+            }
+           $total_price = array_sum($total);?>
+           
+
+    <div class="container d-flex"style="padding:0.5em;margin-top:0.5em;">
         <div class="col text-center">
             <!--Total-->
             <h4 class="">Total Panier</h4>
-            <p><?= $cart_total ; ?> &euro;</p>
-            <input class="btn" type="submit" value="Reinitialiser" name="reset-cart" />
+            <p style="color:red;"><?= $total_price; ?> &euro;</p>
+            <input class="btn" type="submit" value="Vider le panier" name="reset-cart" />
             <input class="btn" type="submit" value="Confirmer Panier" name="validate-cart">
         </div>
         <div class="col">

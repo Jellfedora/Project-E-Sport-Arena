@@ -48,8 +48,11 @@ class oArenaAddArticlesToCart
             $product_total_price = $product_price * $product_quantity;
 
             // Je stocke dans un tableau
+            //$id = get_the_id();
+            //var_dump($id);exit;
             $product_array= Array();
             $product_array = [
+                //'id' => $id,
                 'title' => $product_title,
                 'product-price' => $product_price,
                 'product-quantity' => $product_quantity,
@@ -62,7 +65,6 @@ class oArenaAddArticlesToCart
             //var_dump($product_array);exit;
 
             // J'ajoute ces informations au panier du membre
-            //add_post_meta($id_member, 'cart', $product_title);
             add_post_meta($id_member, 'cart', $product_array);
 
 
