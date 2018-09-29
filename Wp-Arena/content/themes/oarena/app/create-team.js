@@ -30,7 +30,7 @@ var app = {
 
         // Je fais un appel Ajax
         $.ajax({
-            url: 'http://localhost/Project/Project-E-Sport-Arena/Wp-Arena/creer-une-equipe/',
+            url: 'http://localhost/Cours/Wordpress/Projet/Projet-master/Project-E-Sport-Arena/Wp-Arena/creer-une-equipe/',
             method: 'POST',
             dataType: 'json',
             data: dataToSend

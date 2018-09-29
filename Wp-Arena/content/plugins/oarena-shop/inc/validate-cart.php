@@ -32,11 +32,10 @@ class oArenaValidateCart
         }
 
 
-        // Si le formulaire est soumit avec l'input reset, reset les valeurs
+        // Si le formulaire est soumit avec l'input reset, efface le post meta
         if (isset($_POST['reset-cart'])) {
-            update_post_meta($post->ID, 'magique_quantity', 0);
-            update_post_meta($post->ID, 'tournoi_quantity', 0);
-            update_post_meta($post->ID, 'reduit_quantity', 0);
+            delete_post_meta($post->ID, 'cart');
+            //var_dump($post->ID);exit;
             // Redirige vers la page panier
                     wp_redirect('panier');
                     exit;
@@ -45,21 +44,20 @@ class oArenaValidateCart
         // Si le formulaire est soumit
         if (isset($_POST['validate-cart'])) {
             
-            // Billet Magique
-            if (!empty($_POST['magique-quantity'])) {
-                //echo('hey');exit;
-                update_post_meta($post->ID, 'magique_quantity', absint($_POST['magique-quantity']));
+            // Changer la quantité
+            if (!empty($_POST['quantity'])) {
+                // Si plusieurs articles $cart est un tableau multidimensionnel
+                $cart = get_post_meta($post->ID, 'cart');
+                var_dump($post->ID);
+                print_r($cart[1]);
+                print_r($cart);exit;
+
+
+
+                update_post_meta($post->ID, 'cart','product-quantity', absint($_POST['quantity']));
             }
 
-                //Billet Tournoi
-            if (!empty($_POST['tournoi-quantity'])) {
-                update_post_meta($post->ID, 'tournoi_quantity', absint($_POST['tournoi-quantity']));
-            }
-
-                //Billet Reduit
-            if (!empty($_POST['reduit-quantity'])) {
-                update_post_meta($post->ID, 'reduit_quantity', absint($_POST['reduit-quantity']));
-            }
+            
 
         
             // Redirige vers la page panier
