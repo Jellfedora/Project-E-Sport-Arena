@@ -12,7 +12,7 @@
       <img class="carousel-item-image" src="<?= get_theme_mod('oarena_theme_carousel_image') ; ?>" alt="First slide">
       <div class="carousel-caption d-none d-md-block">  
       <div class=" carousel__text container">
-          <h3 class="">Tournoi des tournois</h1>
+          <h3 class=""><?php the_title() ; ?></h1>
           <button class="carousel__button">En savoir plus</button>
     </div>
 </div>
@@ -21,7 +21,7 @@
       <img class="carousel-item-image" src="<?= get_theme_mod('oarena_theme_carousel_image2') ; ?>" alt="Second slide">
       <div class="carousel-caption d-none d-md-block">
         <div class=" carousel__text container">
-          <h3 class="">Tournoi Super Smash Bros Melee</h1>
+          <h3 class=""><?php the_title() ; ?></h1>
           <button class="carousel__button">En savoir plus</button>
         </div>
       </div>

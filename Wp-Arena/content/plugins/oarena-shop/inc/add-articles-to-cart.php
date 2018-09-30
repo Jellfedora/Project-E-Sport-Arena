@@ -68,9 +68,10 @@ class oArenaAddArticlesToCart
             // J'ajoute ces informations au panier du membre
             add_post_meta($id_member, 'cart', $product_array);
 
-
+            // A changer sur le serveur ou ajax
+            $url = 'http://localhost/Cours/Wordpress/Projet/Projet-master/Project-E-Sport-Arena/Wp-Arena/panier/';
             // Redirige vers la page profil
-            wp_redirect('panier');
+            wp_redirect($url);
             exit;
         }
 

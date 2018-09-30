@@ -17,6 +17,10 @@
 
 .menu-lg {
     display: none;
+
+    &__video {
+        display: none;
+    }
 }
 
 .menu__login {
@@ -53,7 +57,7 @@
             text-align: center;
         }
 
-        &__nav {}
+        &__logo {}
 
 
     }
@@ -78,11 +82,7 @@
         transition-duration: 0.5s;
     }
 
-    .footer {
-        margin-left: 18em;
-        transition-property: margin-left;
-        transition-duration: 0.5s;
-    }
+
 
     .main-hide {
         margin-left: 4.5em;
@@ -90,5 +90,14 @@
 
     .footer-hide {
         margin-left: 4.5em;
+    }
+}
+
+// Large devices (desktops, 1224px and up)
+@media (min-width: 1804px) {
+    .menu-lg {
+        &__video {
+            display: inherit;
+        }
     }
 }
