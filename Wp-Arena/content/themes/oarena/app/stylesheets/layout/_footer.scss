@@ -1,6 +1,14 @@
 .footer {
+    position: absolute;
+    bottom: 0;
+
+
     &__contact button {
         width: 5em;
     }
 
+}
+
+@media (min-width: 1024px) {
+    .footer {}
 }

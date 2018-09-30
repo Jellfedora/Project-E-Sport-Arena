@@ -1,6 +1,6 @@
 <?php ; ?>
 </main>
-<footer class="footer  d-flex flex-column mt-5 mb-5">
+<footer class="footer container d-flex flex-column mt-5 mb-5" style="position:absolute;bottom:0;left:15em;">
     <div class="footer__contact d-flex justify-content-around mb-5">
       </div>
       <!-- <div class="footer__links d-flex justify-content-center ">
@@ -16,7 +16,7 @@
       <div class="footer__rs d-flex justify-content-around mt-5">
         <a href="#" class="text-light"><i class="fa fa-facebook" aria-hidden="true"></i></a>
         <a href="#" class="text-light"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-        <div> &copy; Julien LECOINTE & son fidéle assistant Bertrand PARROCHE</div>
+        <div> &copy; Julien LECOINTE & Bertrand PARROCHE</div>
         <a href="#" class="text-light"><i class="fa fa-github" aria-hidden="true"></i></a>
         <a href="#" class="text-light"><i class="fa fa-instagram" aria-hidden="true"></i></a>
     </div>
