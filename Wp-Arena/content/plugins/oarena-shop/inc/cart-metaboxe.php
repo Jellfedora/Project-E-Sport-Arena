@@ -17,6 +17,7 @@ function cart($post)
     {
         //var_dump($product);
         // Je stocke mes données dans des variables
+        $product_id = $product['id'];
         $product_title = $product['title'];
         $product_price = $product['product-price'];
         $product_quantity = $product['product-quantity'];
@@ -24,7 +25,7 @@ function cart($post)
         
         ?>
         <div style="border:1px solid black; padding:0.5em;">
-            <input type="hidden" value="<?= $post->ID ?>">
+            <p>Id produit: <?= $product_id; ?></p>
             <p>Référence: <?= $product_title; ?></p>
             <p>Prix: <?= $product_price; ?> &euro;</p>
             <p>Quantité: <?= $product_quantity; ?></p>
@@ -37,16 +38,9 @@ function cart($post)
                 $total[] = $product_total_price;
             }
            $total_price = array_sum($total);?>
-<<<<<<< HEAD
-           <p>Prix total du panier: <?= $total_price; ?> &euro; </p>
-           <?php
-            //var_dump($total_price);
-               
-=======
            <p style="color:red;">Prix total du panier: <?= $total_price; ?> &euro; </p>
 
            <?php
->>>>>>> master
 }
 
 add_action('save_post', 'save_cart_metabox');

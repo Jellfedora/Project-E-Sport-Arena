@@ -32,53 +32,16 @@ Template Name: Page panier
             $post->ID;
         }
 
-    // TODO récupérer les id dynamiquement!!!!
-    //Renseigne l'id des produits
-    $billet_magique_id = 5355;
-    $billet_tournoi_id = 5365;
-    $billet_reduit_id = 5431;
-    //Recupére le nom de l'article billet magique
-    $magique_name = get_post($billet_magique_id);
-    $magique_title = $magique_name->post_title;
-    //Récupére le nom de l'article billet tournoi
-    $tournoi_name = get_post($billet_tournoi_id);
-    $tournoi_title = $tournoi_name->post_title;
-     //Récupére le nom de l'article billet réduit
-    $reduit_name = get_post($billet_reduit_id);
-    $reduit_title = $reduit_name->post_title;
-
-    //Billet magique
-    $magique_quantity = get_post_meta($post->ID, 'magique_quantity', true);
-    $magique_price = get_post_meta($billet_magique_id, 'article_price', true);
-    $magique_total = ($magique_price * $magique_quantity);
-    //(is_numeric($magique_total));
-    //var_dump($magique_total);
-
-    //Billet tournoi
-    $tournoi_quantity = get_post_meta($post->ID, 'tournoi_quantity', true);
-    $tournoi_price = get_post_meta($billet_tournoi_id, 'article_price', true);
-    $tournoi_total = ($tournoi_price * $tournoi_quantity);
-
-    //Billet reduit
-    $reduit_quantity = get_post_meta($post->ID, 'reduit_quantity', true);
-    $reduit_price = get_post_meta($billet_reduit_id, 'article_price', true);
-    $reduit_total = ($reduit_price * $reduit_quantity);
-
-    //Billet total
-    $cart_total = ($magique_total + $tournoi_total + $reduit_total);
-
-
-
-#########################################################################################
 //NOUVEAU PANIER
 $cart = get_post_meta($post->ID, 'cart');
-var_dump($cart);
+//var_dump($post->ID);
 
 $total = [];
 ?>
         <form action="validate-cart.php"  method="post" class="container p-0" style="border:3px solid black;">
     <h3 class="text-center mb-2">Votre Panier</h3>
     <div class="d-flex text-center text-light" style="border-bottom:3px solid black;border-top:3px solid black;margin-top:2em;">
+        <h4 class="col">REFERENCE PRODUIT</h4>
         <h4 class="col">DESIGNATION</h4>
         <h4 class="col">RESTANTS</h4>
         <h4 class="col">PRIX UNITAIRE &nbsp;TTC</h4>
@@ -90,6 +53,7 @@ $total = [];
     {
         //var_dump($product);
         // Je stocke mes données dans des variables
+        $product_id = $product['id'];
         $product_title = $product['title'];
         $product_price = $product['product-price'];
         $product_quantity = $product['product-quantity'];
@@ -97,12 +61,15 @@ $total = [];
         
         ?>
 
-    <div class="d-flex text-center"style="border-bottom:1px solid black;padding:0.5em;">
+    <div class="product-cart d-flex text-center"style="border-bottom:1px solid black;padding:0.5em;">
+        <p class="col" style><?= $product_id; ?></p>
         <h5 class="col" style><?= $product_title; ?></h5>
-        <p class="col">5</p>
-        <p class="col"><?= $product_price; ?> &euro;</p>
-        <input class="col text-center text-success" style="background:transparent;border:none;" type="number" name="quantity" placeholder="Quantité" value="<?= $product_quantity; ?>"/>
-        <p class="col"> <?= $product_total_price; ?> &euro;</p>
+        <p class="product-seats col text-center"style="background:transparent;border:none;">6</p>
+        <p id="" class="product-cart-price col"><?= $product_price; ?>&euro;</p>
+        <p class="product-cart-quantity col text-center"name="quantity" placeholder="Quantité"><?= $product_quantity; ?></p>
+        <div class="product-total-cart-price col">
+            <p id="" > <?= $product_total_price; ?>&euro;</p>
+        </div>
     </div>
  
         <?php
@@ -117,17 +84,46 @@ $total = [];
         <div class="col text-center">
             <!--Total-->
             <h4 class="">Total Panier</h4>
-            <p style="color:red;"><?= $total_price; ?> &euro;</p>
-            <input class="btn" type="submit" value="Vider le panier" name="reset-cart" />
-            <input class="btn" type="submit" value="Confirmer Panier" name="validate-cart">
+            <p id="total-cart" style="color:red;"><?= $total_price; ?> &euro;</p>
+            <div class="d-flex ">
+                <input class="btn col text-light" style="background:none;" type="submit" value="Vider le panier" name="reset-cart" />
+                <div class=" col">
+                    <!-- Paypal -->
+                    <?php get_template_part('template-parts/shop/shop','paypal'); ?>
+                </div>
+            </div>
         </div>
-        <div class="col">
-            <!-- Paypal -->
-            <?php get_template_part('template-parts/shop/shop','paypal'); ?>
-        </div>
+        
     </div>  
 </form>
 
+    <?php $member_genre = get_post_meta($post->ID, 'member_genre', true);?>
+    <?php $member_name = get_post_meta($post->ID, 'member_name', true);?>
+    <?php $member_firstname = get_post_meta($post->ID, 'member_firstname', true);?>
+    <?php $member_street = get_post_meta($post->ID, 'member_street', true);?>
+    <?php $member_postal_code = get_post_meta($post->ID, 'member_postal_code', true);?>
+    <?php $member_city = get_post_meta($post->ID, 'member_city', true); ?>
+
+<div class="container mt-2">
+        <h4>Votre adresse de facturation:</h4>
+      
+	    <div class="">
+			<p class="">Votre nom: <?php echo $member_name; ?></p>
+        </div>
+        <div class="">
+			<p class="">Votre prénom: <?php echo $member_firstname; ?></p>
+        </div>
+        <div class="">
+			<p class="">Numéro et nom de la rue: <?php echo $member_street; ?></p>
+        </div>
+        <div class="">
+			<p class="">Code postal: <?php echo $member_postal_code; ?></p>
+        </div>
+        <div class="">
+			<p class="">Ville: <?php echo $member_city; ?></p>
+        </div>
+        <a href="profil" class="text-light">Modifier</a>
+    </div>
 
 
 <?php get_footer() ; ?>

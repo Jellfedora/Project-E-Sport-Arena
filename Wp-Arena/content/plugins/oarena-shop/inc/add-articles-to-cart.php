@@ -52,7 +52,8 @@ class oArenaAddArticlesToCart
             //var_dump($id);exit;
             $product_array= Array();
             $product_array = [
-                //'id' => $id,
+                // Ajoute id pour identifiant unique 
+                'id' => $product_id,
                 'title' => $product_title,
                 'product-price' => $product_price,
                 'product-quantity' => $product_quantity,
