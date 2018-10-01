@@ -18,7 +18,7 @@ if (!get_theme_mod('oarena_theme_posts_active')) :
 
     if ($our_articles->have_posts()): while ($our_articles->have_posts()): $our_articles->the_post(); 
 
-        get_template_part('template-parts/front-page/actuality');
+        get_template_part('template-parts/actualities/actualities' , "display");
 
     endwhile;
 

@@ -41,6 +41,30 @@ class oArenaValidateCart
                     exit;
         }
 
+        // Si le bouton supprimer est soumi
+        if (isset($_POST['remove'])) {
+            // $cart récupére tout le panier
+            $cart = oArenaCartFunctions::get_cart_meta($post->ID);
+            //var_dump($cart);
+
+
+            foreach ($_POST['remove'] as $product_id=> $quantity) {
+
+                    //$cart[$product_id]['product-quantity'] = $quantity;
+                    unset($cart[$product_id]);
+
+                    // var_dump($product_id ,$quantity);
+                }
+            //var_dump($cart);
+            //var_dump($product_id);exit;
+            oArenaCartFunctions::add_cart_meta($post->ID, $cart);
+            // Redirige vers la page panier
+                    wp_redirect('panier');
+                    exit;
+        }
+
+
+
         // Si le formulaire est soumit
         if (isset($_POST['validate-cart'])) {
 
@@ -51,7 +75,7 @@ class oArenaValidateCart
 
             // var_dump($cart);
             // var_dump($_POST);exit;
-
+            
             ##############################################################
             // Changer la quantité
             if (isset($_POST['quantity'])) {
@@ -74,12 +98,6 @@ class oArenaValidateCart
                 // exit;
 
                 // get_cart_meta($post_id);
-                
-
-
-                
-
-                
                 oArenaCartFunctions::add_cart_meta($post->ID, $cart);
                 // update_post_meta($post->ID, 'cart','product-quantity', absint($_POST['quantity']));
             }

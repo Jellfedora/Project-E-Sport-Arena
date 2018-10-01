@@ -35,7 +35,7 @@ Template Name: Page panier
 $cart = oArenaCartFunctions::get_cart_meta($post->ID);
 $total =[];
 ?>
-        <form action="validate-cart.php"  method="post" class="container p-0" style="border:3px solid black;">
+        <form action="validate-cart.php"  method="post" class="container-fluide p-0" style="border:3px solid black;">
     <h3 class="text-center mb-2">Votre Panier</h3>
     <div class="d-flex text-center text-light" style="border-bottom:3px solid black;border-top:3px solid black;margin-top:2em;">
         <h4 class="col">REFERENCE PRODUIT</h4>
@@ -44,6 +44,7 @@ $total =[];
         <h4 class="col">PRIX UNITAIRE &nbsp;TTC</h4>
         <h4 class="col">QUANTITE</h4>
         <h4 class="col">TOTAL &nbsp;TTC</h4>
+        <h4 class="col">SUPPRIMER</h4>
     </div>
 <?php
     foreach ($cart as $product)
@@ -63,11 +64,13 @@ $total =[];
         <h5 class="col" style><?= $product_title; ?></h5>
         <p class="product-seats col text-center"style="background:transparent;border:none;">6</p>
         <p id="" class="product-cart-price col"><?= $product_price; ?>&euro;</p>
-        <p class="product-cart-quantity d-none col text-center"name="quantity" placeholder="Quantité"><?= $product_quantity; ?></p>
         <input class="col text-center text-success" style="background:transparent;border:none;" type="number" name="quantity[<?= $product_id; ?>]" placeholder="Quantité" value="<?= $product_quantity; ?>"/>
         <div class="product-total-cart-price col">
             <p id="" > <?= $product_total_price; ?>&euro;</p>
         </div>
+        <div class="col">
+            <input class="btn" type="submit" value="Supprimer article" name="remove[<?= $product_id; ?>]">
+            </div>
     </div>
  
         <?php

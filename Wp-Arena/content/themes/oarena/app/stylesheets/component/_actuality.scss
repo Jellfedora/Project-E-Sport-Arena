@@ -1,0 +1,32 @@
+.actuality {
+
+
+    &__item {
+        height: 30em;
+        background-color: $menu-color;
+        display: flex;
+
+        &__image {
+            width: 30em;
+            background-repeat: no-repeat;
+            padding: 5em;
+        }
+
+        &__content {
+            padding: 2em;
+            width: 65em;
+        }
+
+        &__category-button {
+            border: 1px solid white;
+            width: 10em;
+            margin-bottom: 2em;
+            padding: 0.3em;
+        }
+
+        &__text {
+            margin-top: 1em;
+        }
+    }
+
+}
