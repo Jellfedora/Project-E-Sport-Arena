@@ -10,7 +10,7 @@ Class oArenaCreateTeam
     
     function displayJson($to_display)
     {
-      header(home_url());
+      header('Content-type: application/json');
       echo json_encode($to_display);
       exit;
     }
@@ -46,8 +46,8 @@ Class oArenaCreateTeam
                     'code' => 1,
                     'error' => 'Le nom de la team ne peux pas être vide'
                       ];
-                json_encode($this->displayJson($errorList));
-                // die;                    
+                    $this->displayJson($errorList);
+                    // die;                    
                 }  
                 // Message d'erreur si la team existe déjà
                 if ($teamName == $title->post_title)
@@ -56,8 +56,8 @@ Class oArenaCreateTeam
                                       'code' => 2,
                                       'error' => 'Cette team existe déjà blibli'
                                     ];
-               json_encode($this->displayJson($errorList));
-                // die;
+                    $this->displayJson($errorList);
+                    // die;
                     // var_dump($errorList);
                     // die();
                     wp_redirect('equipe');
@@ -70,13 +70,12 @@ Class oArenaCreateTeam
                                     'error' => 'La description d equipe ne peux pas être vide'
                                     ];
 
-                    json_encode($this->displayJson($errorList));      
+                    $this->displayJson($errorList);
                         // $this->displayJson($errorList);
                         // die;                  
                     // S'il n'y a aucune erreur
-                } else {
+                }
             }
-        }
                 
             // Je récupere l'user et son ID
             $current_user = wp_get_current_user();
@@ -114,14 +113,16 @@ Class oArenaCreateTeam
                 ];
                 
                 // Je créé un nouveau post
-                wp_insert_post($team_post);
+                // wp insert post return l'ID du post 
+                $team_id = wp_insert_post($team_post);
                 
                 // Je lui change son role en team admin
                 wp_update_user([
                     'ID' => $user_id,
                     'role' => 'TeamAdmin',
                     ]);
-                    wp_redirect('equipe');exit;
+                
+                $this->displayJson(['code' => 200, 'error' => '', 'url' => get_the_permalink($team_id)]);
 
             // Si le compte est supérieur a 0 Je redirige vers la home 
             } else
@@ -130,7 +131,7 @@ Class oArenaCreateTeam
                             'code' => 4,
                             'error' => 'Vous avez déjà créé une team'
                             ];      
-                json_encode($this->displayJson($errorList));
+                $this->displayJson($errorList);
                 
                 // var_dump('Vous ne pouvez pas creer plusieurs équipes');
                 // die();

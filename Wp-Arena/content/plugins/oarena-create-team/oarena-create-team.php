@@ -1,4 +1,4 @@
- <?php  
+<?php  
 /*
 Plugin Name: oArena Create Team
 Description: Création d'équipe 
@@ -15,5 +15,3 @@ Version: 1.0.0
     
     register_activation_hook(__FILE__, [$oArenaCreateTeam, 'activation']);
     register_deactivation_hook(__FILE__, [$oArenaCreateTeam, 'deactivation']);
-
- ?>

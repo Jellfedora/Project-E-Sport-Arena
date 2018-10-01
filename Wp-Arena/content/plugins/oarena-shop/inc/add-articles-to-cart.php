@@ -11,7 +11,7 @@ class oArenaAddArticlesToCart
     // fonction qui permet d'encoder le json pour l'envoyer
     function displayJson($to_display)
     {
-      header(home_url());
+      header('Content-type: application/json');
       echo json_encode($to_display);
       exit;
     }
@@ -19,6 +19,7 @@ class oArenaAddArticlesToCart
     public function add_articles_to_cart()
     {
 
+        $errorList = [];
         // Initialisation du JSON
 
         //RECUPERER LE MEMBRE ACTUELLEMENT CONNECTE
@@ -46,11 +47,6 @@ class oArenaAddArticlesToCart
 
        // If the form is submitted
         if (isset($_POST['add-product'])) {
-
-            $errorList = [
-                'code' => 0
-            ];
-            json_encode($this->displayJson($errorList));
 
             // je stocke mes données dans des variables
             $product_id = esc_html($_POST['product']);
@@ -82,19 +78,13 @@ class oArenaAddArticlesToCart
 
             //var_dump($product_array);exit;
 
+
             // J'ajoute ces informations au panier du membre
             // add_post_meta($id_member, 'cart', $product_array);
             oArenaCartFunctions::add_cart_meta($id_member, $product_array);
 
-
-        } else {
-            $errorList = [
-                'code' => 1
-            ];
-
-        // json_encode($this->displayJson($errorList)); 
-        }
-
+            $this->displayJson(['code' => 'ok']);
+        } 
     }
 }
 

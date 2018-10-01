@@ -217,3 +217,16 @@ le bug en changeant le panier de place dans la boucle et en gardant les data
 * Création du la custom box Places dispos
 * Décrémentation des places dispos a l'inscription d'une team
 * Si on arrive a 0 plus de possibilité d'inscriptions a un tournoi
+
+# Sprint 3.7 
+
+++++ 30 septembre 2018 ++++
+
+* 
+
+# Sprint 3.8 
+
+++++ 1er octobre 2018 ++++
+
+* Création du panier ( julien ) avec l'aide de Christophe qui intervient sur la fin car impossible de récuperer les articles individuellement => petit cour
+* Réponse json pour stopper le chargement a l'ajout d'un article au panier => aide de christophe qui me change juste l'URL 

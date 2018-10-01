@@ -229,3 +229,6 @@ https://codex.wordpress.org/Function_Reference/wp_create_user
 * Travailler sur le panier mais non concluant => en attente de christophe
 
 # Sprint 3.8 01 octobre 2018 ( julien uniquement )
+
+* Gestion des changements de quantité dans le panier
+* Ajout sans chargement ( json ) des articles depuis la page panier
