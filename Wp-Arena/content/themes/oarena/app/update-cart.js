@@ -6,6 +6,7 @@ var app = {
 
         // recuperer le bouton je lance la fonction
         $('.form_add_cart').on('submit', app.addArticle);
+        $('.hideDiv').on('click', app.hideItemAdd);
         console.log('update-cart');
 
         $add_article = $('.alert-add-article');
@@ -48,6 +49,11 @@ var app = {
 
 
         })
+    },
+
+    hideItemAdd: function () {
+        console.log('add');
+        $('.' + $id_for_div).hide();
     },
 
 }
