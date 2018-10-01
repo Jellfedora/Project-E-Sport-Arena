@@ -12,8 +12,8 @@ class oArenaAddArticlesToCart
     function displayJson($to_display)
     {
       header(home_url());
-      echo json_encode($to_display);
-      exit;
+      //echo json_encode($to_display);
+      //exit;
     }
 
     public function add_articles_to_cart()
@@ -50,7 +50,7 @@ class oArenaAddArticlesToCart
             $errorList = [
                 'code' => 0
             ];
-            json_encode($this->displayJson($errorList));
+            //json_encode($this->displayJson($errorList));
 
             // je stocke mes données dans des variables
             $product_id = esc_html($_POST['product']);
