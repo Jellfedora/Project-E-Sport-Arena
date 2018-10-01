@@ -37,16 +37,9 @@ function cart($post)
                 $total[] = $product_total_price;
             }
            $total_price = array_sum($total);?>
-<<<<<<< HEAD
-           <p>Prix total du panier: <?= $total_price; ?> &euro; </p>
-           <?php
-            //var_dump($total_price);
-               
-=======
            <p style="color:red;">Prix total du panier: <?= $total_price; ?> &euro; </p>
 
            <?php
->>>>>>> master
 }
 
 add_action('save_post', 'save_cart_metabox');
