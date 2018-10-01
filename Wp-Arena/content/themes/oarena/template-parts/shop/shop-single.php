@@ -62,7 +62,7 @@
       <input name="product-quantity" type="number" value="0" min="0" >
     </div>
     <div class="product-line-price h2">0</div>
-    <div class="alert-add-article alert-add-article-ok<?= get_the_ID() ; ?> text-danger h3 mb-1">Article ajouté ! <i class="hideDiv fa fa-times-circle ml-2" aria-hidden="true"></i></div>
+    <div class="alert-add-article alert-add-article-ok<?= get_the_ID() ; ?> text-success h2 mb-1">Article ajouté ! <i class="hideDiv<?= get_the_ID() ; ?> fa fa-times-circle mb-2 ml-2" aria-hidden="true" style="color: red; font-size:1em;"></i></div>
     <button id="buttonAddToCart" class="btn btn-success mb-2" type="submit" value="Ajouter au panier" for="formAddToCart">Ajouter au panier</button>
   </div>
 

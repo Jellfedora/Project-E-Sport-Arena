@@ -6,7 +6,7 @@ var app = {
 
         // recuperer le bouton je lance la fonction
         $('.form_add_cart').on('submit', app.addArticle);
-        $('.hideDiv').on('click', app.hideItemAdd);
+
         console.log('update-cart');
 
         $add_article = $('.alert-add-article');
@@ -31,31 +31,31 @@ var app = {
         }).done(function (response) {
 
             if (response.code === 'ok') {
+                $id = response.id;
+                $('.hideDiv' + $id).on('click', function hideItemAdd() {
+                    $id = response.id;
+                    $id_for_div = 'alert-add-article-ok' + $id;
+                    $('.' + $id_for_div).hide();
+
+                });
                 // preventDefault();
                 console.log('bien ajouté au panier')
                 // console.log(response.id);
-                $id_for_div = 'alert-add-article-ok' + response.id;
-                // console.log($id_for_div);
-                $('.' + $id_for_div).show();
+                $id_for_div = 'alert-add-article-ok' + $id;
+                console.log($id_for_div);
 
             } else {
                 console.log('Il y a une erreur');
             }
+            $('.' + $id_for_div).show();
 
 
         }).fail(function () {
 
             console.log('Il y a une erreur');
 
-
         })
     },
-
-    hideItemAdd: function () {
-        console.log('add');
-        $('.' + $id_for_div).hide();
-    },
-
 }
 
 $(app.init);

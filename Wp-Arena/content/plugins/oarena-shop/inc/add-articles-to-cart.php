@@ -83,7 +83,8 @@ class oArenaAddArticlesToCart
             // add_post_meta($id_member, 'cart', $product_array);
             oArenaCartFunctions::add_cart_meta($id_member, $product_array);
 
-            $this->displayJson(['code' => 'ok']);
+            $this->displayJson(['code' => 'ok',
+                                'id' => $product_id]);
         } 
     }
 }
