@@ -10,7 +10,7 @@ function init_cart_metabox()
 
 function cart($post)
 {
-    $cart = get_post_meta($post->ID, 'cart');
+    $cart = oArenaCartFunctions::get_cart_meta($post->ID);
     var_dump($post->ID);
     $total = [];
     foreach ($cart as $product)

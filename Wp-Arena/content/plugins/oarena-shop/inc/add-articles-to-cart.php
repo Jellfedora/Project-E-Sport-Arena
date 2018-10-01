@@ -8,8 +8,12 @@ class oArenaAddArticlesToCart
         add_action('init', [$this, 'add_articles_to_cart']);
     }
 
+    // Appel json! fonction
+
     public function add_articles_to_cart()
     {
+        
+
         //RECUPERER LE MEMBRE ACTUELLEMENT CONNECTE
 
         //Récupére le user courant 
@@ -50,8 +54,9 @@ class oArenaAddArticlesToCart
             // Je stocke dans un tableau
             //$id = get_the_id();
             //var_dump($id);exit;
-            $product_array= Array();
-            $product_array = [
+            $product_array = oArenaCartFunctions::get_cart_meta($id_member);
+
+            $product_array[$product_id] = [
                 // Ajoute id pour identifiant unique 
                 'id' => $product_id,
                 'title' => $product_title,
@@ -60,20 +65,28 @@ class oArenaAddArticlesToCart
                 'product-total-price' => $product_total_price,
             ];
             
-            //var_dump($product_array);exit;
+            // var_dump($product_array);exit;
 
 
             //var_dump($product_array);exit;
 
             // J'ajoute ces informations au panier du membre
-            add_post_meta($id_member, 'cart', $product_array);
+            // add_post_meta($id_member, 'cart', $product_array);
+            oArenaCartFunctions::add_cart_meta($id_member, $product_array);
 
             // A changer sur le serveur ou ajax
             $url = 'http://localhost/Cours/Wordpress/Projet/Projet-master/Project-E-Sport-Arena/Wp-Arena/panier/';
             // Redirige vers la page profil
             wp_redirect($url);
             exit;
-        }
+        } 
+        
+        // pour json, else message derreur  "une erreur est survenue"
+        //$errorList = [
+                //             'code' => 4,
+                //             'error' => 'Vous avez déjà créé une team'
+                //             ];      
+                // json_encode($this->displayJson($errorList));
 
     }
 }

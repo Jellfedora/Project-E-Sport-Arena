@@ -46,25 +46,42 @@ class oArenaValidateCart
 
             ##############################################################
 
-            var_dump(get_post_meta($post->ID, 'cart'));
-            var_dump($_POST);exit;
+            $cart = oArenaCartFunctions::get_cart_meta($post->ID);
+
+
+            // var_dump($cart);
+            // var_dump($_POST);exit;
 
             ##############################################################
             // Changer la quantité
             if (isset($_POST['quantity'])) {
 
+                $cart = oArenaCartFunctions::get_cart_meta($post->ID);
+
+                // var_dump($cart);
+
                 //print_r($_POST);exit;
+                foreach ($_POST['quantity'] as $product_id=> $quantity) {
+
+                    $cart[$product_id]['product-quantity'] = $quantity;
 
 
-                // Si plusieurs articles $cart est un tableau multidimensionnel
-                $cart = get_post_meta($post->ID, 'cart');
-                var_dump($_POST['quantity']);exit;
-                //print_r($cart[1]);
+                    // var_dump($product_id ,$quantity);
+                }
+
+                // var_dump($cart);
+
+                // exit;
+
+                // get_cart_meta($post_id);
                 
 
 
+                
 
-                update_post_meta($post->ID, 'cart','product-quantity', absint($_POST['quantity']));
+                
+                oArenaCartFunctions::add_cart_meta($post->ID, $cart);
+                // update_post_meta($post->ID, 'cart','product-quantity', absint($_POST['quantity']));
             }
 
             
