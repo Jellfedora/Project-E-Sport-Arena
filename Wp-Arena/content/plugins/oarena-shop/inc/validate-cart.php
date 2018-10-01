@@ -43,11 +43,17 @@ class oArenaValidateCart
 
         // Si le formulaire est soumit
         if (isset($_POST['validate-cart'])) {
+
+            ##############################################################
+
+            var_dump(get_post_meta($post->ID, 'cart'));
             var_dump($_POST);exit;
+
+            ##############################################################
             // Changer la quantité
             if (isset($_POST['quantity'])) {
 
-                print_r($_POST);exit;
+                //print_r($_POST);exit;
 
 
                 // Si plusieurs articles $cart est un tableau multidimensionnel

@@ -1,5 +1,5 @@
 
-<div class="next-tournaments container">
+<div class="next-tournaments container-fluide">
 <h2 class="news__title text-light  mb-3 text-center">&#9660; PROCHAINS TOURNOIS &#9660; </h2>
     <div class="cards d-flex justify-content-around flex-wrap">
 
@@ -8,7 +8,7 @@
             $args= [
                 'post_type' => 'tournament',
                 'cat' => '',
-                'posts_per_page' => 4,
+                'posts_per_page' => 3,
                 'order' => 'DESC',
                 'order_by' => 'date'
             ];

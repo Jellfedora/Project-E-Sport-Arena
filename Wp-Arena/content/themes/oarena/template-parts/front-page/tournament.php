@@ -1,6 +1,5 @@
     <div class="card mb-2 p-3 text-light " style="width: 30rem; border: 3px solid black; background-color:#242752;">
-        <div class="card__intro d-flex justify-content-around ">
-        <img class="card-img-top p-1" src="https://source.unsplash.com/100x100/?fortnite">
+        <div class="news__intro" style="background-image: url(<?= get_the_post_thumbnail_url(); ?>);">
         <ul class="mt-2 ml-2">
             <i class="fa fa-gamepad" aria-hidden="true"><span class="intro__font ml-1"> <?= get_game(get_the_ID()); ?></span></i>
             <i class="fa fa-user " aria-hidden="true"><span class="intro__font ml-1"> <?= get_seats(get_the_ID()); ?></span></i>

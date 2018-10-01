@@ -33,7 +33,7 @@ Template Name: Page panier
 
 //NOUVEAU PANIER
 $cart = get_post_meta($post->ID, 'cart');
-
+$total =[];
 ?>
         <form action="validate-cart.php"  method="post" class="container p-0" style="border:3px solid black;">
     <h3 class="text-center mb-2">Votre Panier</h3>
@@ -71,6 +71,7 @@ $cart = get_post_meta($post->ID, 'cart');
     </div>
  
         <?php
+        
                 $product_total_price;
                 // var_dump($product_total_price);
                 $total[] = $product_total_price;

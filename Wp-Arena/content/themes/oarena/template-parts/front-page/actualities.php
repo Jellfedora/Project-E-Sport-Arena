@@ -2,7 +2,7 @@
 if (!get_theme_mod('oarena_theme_posts_active')) : 
 ?>
 
-    <h2 class="news__title text-light">&#9660; ACTUALIT&Eacute;S &#9660; </h2>
+    <h2 class="news__title actualities text-light">&#9660; ACTUALIT&Eacute;S &#9660; </h2>
     <div class="news__content">
 
     <?php 
