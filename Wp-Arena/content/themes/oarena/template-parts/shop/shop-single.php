@@ -62,6 +62,7 @@
       <input name="product-quantity" type="number" value="0" min="0" >
     </div>
     <div class="product-line-price h2">0</div>
+    <div class="alert-add-article alert-add-article-ok<?= get_the_ID() ; ?> text-danger h3 mb-1">Article ajouté !</div>
     <button id="buttonAddToCart" class="btn btn-success mb-2" type="submit" value="Ajouter au panier" for="formAddToCart">Ajouter au panier</button>
   </div>
 

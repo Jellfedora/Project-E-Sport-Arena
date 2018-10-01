@@ -6,7 +6,10 @@ var app = {
 
         // recuperer le bouton je lance la fonction
         $('.form_add_cart').on('submit', app.addArticle);
-        console.log('update-cart')
+        console.log('update-cart');
+
+        $add_article = $('.alert-add-article');
+        $add_article.hide();
     },
 
     // fonction JSON qui récupere un tableau d erreur 
@@ -29,6 +32,11 @@ var app = {
             if (response.code === 'ok') {
                 // preventDefault();
                 console.log('bien ajouté au panier')
+                // console.log(response.id);
+                $id_for_div = 'alert-add-article-ok' + response.id;
+                // console.log($id_for_div);
+                $('.' + $id_for_div).show();
+
             } else {
                 console.log('Il y a une erreur');
             }
