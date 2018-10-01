@@ -17,6 +17,7 @@ function cart($post)
     {
         //var_dump($product);
         // Je stocke mes données dans des variables
+        $product_id = $product['id'];
         $product_title = $product['title'];
         $product_price = $product['product-price'];
         $product_quantity = $product['product-quantity'];
@@ -24,7 +25,7 @@ function cart($post)
         
         ?>
         <div style="border:1px solid black; padding:0.5em;">
-            <input type="hidden" value="<?= $post->ID ?>">
+            <p>Id produit: <?= $product_id; ?></p>
             <p>Référence: <?= $product_title; ?></p>
             <p>Prix: <?= $product_price; ?> &euro;</p>
             <p>Quantité: <?= $product_quantity; ?></p>

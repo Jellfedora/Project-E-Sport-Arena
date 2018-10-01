@@ -1,12 +1,16 @@
 .description {
+    padding-top: 2em;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
 
-    height: 50vh;
 
     &__presentation {
         padding-top: 1em;
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
+
 
         &__title {
             text-align: center;
@@ -15,6 +19,7 @@
         }
 
         &__introduction {
+            margin-top: 1em;
             display: inline-block;
             background-color: $menu-color;
             color: white;
@@ -34,15 +39,14 @@
     }
 
     &__services__content {
-        display: flex;
-        justify-content: space-around;
 
 
         &__items {
             background-color: $menu-color;
             color: white;
-            width: 30em;
+            width: 100%;
             padding: 1em;
+            margin-bottom: 1em;
 
             &__title {
                 margin: 0.5em;
@@ -53,5 +57,42 @@
     &__arrow {
         display: flex;
         justify-content: center;
+        width: 100%;
+    }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 778px) {}
+
+// Large devices (desktops, 1024px and up)
+@media (min-width: 1024px) {
+    .description {
+
+        &__presentation {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+
+
+        }
+
+        &__services__content {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+
+
+            &__items {
+                width: 30em;
+            }
+        }
+    }
+}
+
+// Large devices (desktops, 1224px and up)
+@media (min-width: 1804px) {
+    .description {
+        height: 100vh;
     }
 }
