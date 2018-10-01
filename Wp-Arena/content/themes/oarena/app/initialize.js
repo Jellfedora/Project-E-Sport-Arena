@@ -44,7 +44,7 @@ var app = {
     });
     $('.scroll-to-actualities').click(function () {
       $('html,body').animate({
-          scrollTop: $('.news').offset().top
+          scrollTop: $('.actualities').offset().top
         },
         'slow');
     });

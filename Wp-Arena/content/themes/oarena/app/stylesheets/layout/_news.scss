@@ -1,4 +1,19 @@
 .news {
+    &__intro {
+        height: 15em;
+        background-size: cover;
+        background-position: center;
+    }
+
+    &__info {
+        margin-top: 1em;
+
+        &__items {
+            width: 100%;
+        }
+    }
+
+
     &__item {
         margin-top: 1em;
         border: 1px solid grey;

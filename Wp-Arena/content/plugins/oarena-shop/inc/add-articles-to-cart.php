@@ -66,8 +66,9 @@ class oArenaAddArticlesToCart
             // Je stocke dans un tableau
             //$id = get_the_id();
             //var_dump($id);exit;
-            $product_array= Array();
-            $product_array = [
+            $product_array = oArenaCartFunctions::get_cart_meta($id_member);
+
+            $product_array[$product_id] = [
                 // Ajoute id pour identifiant unique 
                 'id' => $product_id,
                 'title' => $product_title,
@@ -76,13 +77,14 @@ class oArenaAddArticlesToCart
                 'product-total-price' => $product_total_price,
             ];
             
-            //var_dump($product_array);exit;
+            // var_dump($product_array);exit;
 
 
             //var_dump($product_array);exit;
 
             // J'ajoute ces informations au panier du membre
-            add_post_meta($id_member, 'cart', $product_array);
+            // add_post_meta($id_member, 'cart', $product_array);
+            oArenaCartFunctions::add_cart_meta($id_member, $product_array);
 
 
         } else {

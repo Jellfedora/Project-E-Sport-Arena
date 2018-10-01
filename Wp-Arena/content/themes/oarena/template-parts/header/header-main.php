@@ -30,7 +30,7 @@
     </div>
     
     <div class="menu-lg__logo text-center">
-      <a class="" href="<?=home_url();?>"><img src="http://image.noelshack.com/fichiers/2018/39/7/1538341417-9483dbf4-2c84-4b08-a121-a34d2582026e.png"></a>
+      <a class="" href="<?=home_url();?>"><img src="http://image.noelshack.com/fichiers/2018/40/1/1538388583-logo-header-lg.png"></a>
       <h1 class="text-light">E-Sport oArena</h1>
     </div>
     <div>

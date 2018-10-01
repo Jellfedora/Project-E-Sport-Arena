@@ -5,7 +5,7 @@
       <p class="description__presentation__introduction">"Avant j'étais un aventurier comme toi. Et puis je me suis pris une fléche dans le genou"</p>
     </div>
     <div class="description__services">
-      <h2 class="description__services__title">&#9660; PROCHAINS TOURNOIS &#9660;</h2>
+      <h2 class="description__services__title">&#9660; NOS SERVICES &#9660;</h2>
       <div class="description__services__content">
         <div class="description__services__content__items">
           <img class="description__services__content__items__img" src="http://image.noelshack.com/fichiers/2018/38/7/1537695663-webp-net-resizeimage-2.png" alt="">
