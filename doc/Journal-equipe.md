@@ -221,3 +221,11 @@ https://codex.wordpress.org/Function_Reference/wp_create_user
 * Enregistrement des produits ajoutés au panier dans les CPT de membres
 * Décrémentation métabox a inscription team
 * Rajout conditions pour inscrire team ( places dispo > 0)
+
+# Sprint 3.7 30 septembre 2018 ( julien uniquement )
+
+* Début JS ajouter dans le panier
+* Reglages bugs inté
+* Travailler sur le panier mais non concluant => en attente de christophe
+
+# Sprint 3.8 01 octobre 2018 ( julien uniquement )

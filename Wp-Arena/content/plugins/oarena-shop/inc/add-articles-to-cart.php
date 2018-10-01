@@ -8,8 +8,19 @@ class oArenaAddArticlesToCart
         add_action('init', [$this, 'add_articles_to_cart']);
     }
 
+    // fonction qui permet d'encoder le json pour l'envoyer
+    function displayJson($to_display)
+    {
+      header(home_url());
+      echo json_encode($to_display);
+      exit;
+    }
+
     public function add_articles_to_cart()
     {
+
+        // Initialisation du JSON
+
         //RECUPERER LE MEMBRE ACTUELLEMENT CONNECTE
 
         //Récupére le user courant 
@@ -35,6 +46,11 @@ class oArenaAddArticlesToCart
 
        // If the form is submitted
         if (isset($_POST['add-product'])) {
+
+            $errorList = [
+                'code' => 0
+            ];
+            json_encode($this->displayJson($errorList));
 
             // je stocke mes données dans des variables
             $product_id = esc_html($_POST['product']);
@@ -68,11 +84,13 @@ class oArenaAddArticlesToCart
             // J'ajoute ces informations au panier du membre
             add_post_meta($id_member, 'cart', $product_array);
 
-            // A changer sur le serveur ou ajax
-            $url = 'http://localhost/Cours/Wordpress/Projet/Projet-master/Project-E-Sport-Arena/Wp-Arena/panier/';
-            // Redirige vers la page profil
-            wp_redirect($url);
-            exit;
+
+        } else {
+            $errorList = [
+                'code' => 1
+            ];
+
+        // json_encode($this->displayJson($errorList)); 
         }
 
     }

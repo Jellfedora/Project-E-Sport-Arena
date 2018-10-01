@@ -27,7 +27,7 @@
                                         Créer une équipe
                                 </button>
                                 <div id="success-create-team" class="justify-content-center flex-column w-100">
-                                       <div class="text-success h1 font-weight-bold mt-3">Team créée <i class="fa fa-wheelchair ml-3 mb-2" style="font-size: 2em;" aria-hidden="true"></i>
+                                       <div class="text-success h1 font-weight-bold mt-3">Team créée <i class="fa fa-gamepad ml-3 mb-2" style="font-size: 2em;" aria-hidden="true"></i>
                                        </div>
                                       <div><a href="<?= home_url() ; ?>" class="h2">Aller vers l'acceuil</a></div>
                                 </div>

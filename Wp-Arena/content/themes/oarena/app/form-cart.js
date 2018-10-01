@@ -30,7 +30,7 @@ var app = {
         $('.product-cart-price').each(function () {
             productTTC = units * quantity;
             //productTTC = parseInt($(this).text());
-            console.log(('prix total ttc du produit: ') + (productTTC));
+            console.log(('prix total ttc du produit: ') + productTTC);
             // Je change le contenu du total ttc du produit
             $('.product-total-cart-price').html(productTTC.toFixed(2));;
         });

@@ -39,22 +39,22 @@ var app = {
             console.log(response);
             if (response.code == 1) {
                 var $alertsDiv = $('#alert-name');
-                $alertsDiv.show().delay(8000).hide(200);
+                $alertsDiv.show().delay(3000).hide(200);
                 // window.setTimeout(function () {
                 //   location.href = response.redirect;
                 // }, 5000);
             }
             if (response.code == 2) {
                 var $alertDivEmpty = $('#alert-name-exist');
-                $alertDivEmpty.show().delay(8000).hide(200);
+                $alertDivEmpty.show().delay(3000).hide(200);
             }
             if (response.code == 3) {
                 var $alertDescriptionEmpty = $('#alert-description-empty');
-                $alertDescriptionEmpty.show().delay(8000).hide(200);
+                $alertDescriptionEmpty.show().delay(3000).hide(200);
             }
             if (response.code == 4) {
                 var $alertTeamMoreThanOne = $('#alert-team-more-than-one');
-                $alertTeamMoreThanOne.show().delay(8000).hide(200);
+                $alertTeamMoreThanOne.show().delay(3000).hide(200);
             }
         }).fail(function () {
             $('#success-create-team').show();

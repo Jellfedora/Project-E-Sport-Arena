@@ -4,6 +4,11 @@ var shippingRate = 0.00;
 var fadeTime = 300;
 
 
+var titleOneItem = $('.product-title');
+var quantityTotal = $('.product-quantity input')
+var item = this;
+console.log(item);
+
 // Tout se déclenche au click sur la quantité 
 recalculateCart();
 
@@ -27,7 +32,7 @@ function recalculateCart() {
         subtotal += parseFloat($(this).children('.product-line-price').text());
         // PROBLEME ICI comme il boucle au tant que rien n'est affiché il boucle sur du vide NaN => donc bug sur le total nan * nan = nan
         // Probleme de valeur par défaut ? 
-        console.log(subtotal);
+        // console.log(subtotal);
     });
 
     // Calcul du total de tous les articles 
@@ -67,8 +72,11 @@ function updateQuantity(quantityInput) {
     var price = parseFloat(productRow.children('.product-price').text());
     // récupere la valeur de l'input ou il y a la quantité avec val vide
     var quantity = $(quantityInput).val();
+    // var title = $(titleOneItem).text();
+    // console.log(title);
     // linePrice récupere le total de chaque article ( prix * quantité )
     var linePrice = price * quantity;
+
 
     // Mise a jour + effets sur l'apparition / disparition du chiffre
     productRow.children('.product-line-price').each(function () {
@@ -78,7 +86,38 @@ function updateQuantity(quantityInput) {
             $(this).fadeIn(fadeTime);
         });
     });
+    // console.log(this);
+    // console.log(linePrice);
+    // console.log(($title).text(this));
+
+    // Si la quantité est supérieure a 0 et le lineprice supérieur a 0
+    // Alors retourne moi les titres + quantité
+    // Au submit enregistre tout dans une métabox.
+    // Sur la page panier avec un get_current_user on réinjecte les données dans les méta box 
+    // $('.product-quantity input')
+    // if (quantity > 0 || lineprice > 0) {
+    //     itemQuantity = [];
+    //     console.log('coucou vous avez des valeurs supérieures a 0 en quantité et lineprice');
+    //     quantityTotal.each(function () {
+    //         quantity = itemQuantity.push(quantity);
+
+    //     });
+    //     if (this.quantity > 0) {
+    //         itemTitle = [];
+    //         titleOneItem.each(function () {
+    //             title = itemTitle.push(title);
+    //         });
+    //     } else {
+    //         console.log('nope');
+    //     }
+    // } else {
+    //     console.log(vide);
+    // }
+    // console.log(itemTitle);
+    // console.log(quantity);
+    // console.log(itemQuantity);
 }
+
 
 
 // Supprimer l'article du panier

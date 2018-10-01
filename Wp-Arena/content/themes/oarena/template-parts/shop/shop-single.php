@@ -37,15 +37,15 @@
         <div class="column-labels">
             <label class="product-image">Image</label>
             <label class="product-details">Product</label>
-            <label class="product-price">Price</label>
+            <label class="product-price">Price </label><?= get_post_meta($post->ID, 'article_price', true); ?>
             <label class="product-quantity">Quantity</label>
             <label class="product-removal">Remove</label>
             <label class="product-line-price">Total</label>
         </div>
     </div>
-  <div class="product">
+  <div class="product text-center">
     <div class="product-image">
-      <img src="https://images-na.ssl-images-amazon.com/images/I/911MDRVptZL._SX425_.jpg">
+      <img class="mt-2" src="https://images-na.ssl-images-amazon.com/images/I/911MDRVptZL._SX425_.jpg">
     </div>
     <div class="product-details">
         <!--Récupére ID du produit-->
@@ -61,10 +61,10 @@
       <input name="product-quantity" type="number" value="0" min="0" >
     </div>
     <div class="product-line-price h2">0</div>
+<button class="btn btn-success mb-2" type="submit" value="Ajouter au panier" name="add-product">Ajouter au panier</button>
   </div>
 
 </div>
-<input class="btn" type="submit" value="Ajouter Article" name="add-product">
 </form>
    
 
