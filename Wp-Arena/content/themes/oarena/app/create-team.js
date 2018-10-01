@@ -43,21 +43,23 @@ var app = {
                 // window.setTimeout(function () {
                 //   location.href = response.redirect;
                 // }, 5000);
-            }
-            if (response.code == 2) {
+            } else if (response.code == 2) {
                 var $alertDivEmpty = $('#alert-name-exist');
                 $alertDivEmpty.show().delay(3000).hide(200);
-            }
-            if (response.code == 3) {
+            } else if (response.code == 3) {
                 var $alertDescriptionEmpty = $('#alert-description-empty');
                 $alertDescriptionEmpty.show().delay(3000).hide(200);
-            }
-            if (response.code == 4) {
+            } else if (response.code == 4) {
                 var $alertTeamMoreThanOne = $('#alert-team-more-than-one');
                 $alertTeamMoreThanOne.show().delay(3000).hide(200);
+            } else if (response.code == 200) {
+                $('#success-create-team').show();
+
+                window.location(response.url);
             }
+
         }).fail(function () {
-            $('#success-create-team').show();
+            console.log('FAIL');
         })
     },
 }

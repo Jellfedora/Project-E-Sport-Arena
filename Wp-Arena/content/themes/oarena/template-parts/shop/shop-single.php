@@ -31,7 +31,8 @@
     </div>
 </div> -->
 
-<form action="add-articles-to-cart.php"  method="post" class="container p-0" style="border:3px solid black;">
+<form action="add-articles-to-cart.php"  method="post" class="container p-0 form_add_cart" style="border:3px solid black;" name="formAddToCart" action="add-articles-to-cart">
+    <input type="hidden" name="add-product" value="1" />
 <div class="shopping-cart">
     <div style="display: none;">
         <div class="column-labels">
@@ -61,7 +62,7 @@
       <input name="product-quantity" type="number" value="0" min="0" >
     </div>
     <div class="product-line-price h2">0</div>
-<button class="btn btn-success mb-2" type="submit" value="Ajouter au panier" name="add-product">Ajouter au panier</button>
+    <button id="buttonAddToCart" class="btn btn-success mb-2" type="submit" value="Ajouter au panier" for="formAddToCart">Ajouter au panier</button>
   </div>
 
 </div>
