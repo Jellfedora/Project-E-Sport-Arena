@@ -4,9 +4,33 @@
     height: 100vh;
     display: flex;
 
+
+
+    &__content {
+        margin: 3em;
+        //background: $menu-color;
+    }
+
+    &__header {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background-color: $menu-color;
+    }
+
+    &__title {
+        font-size: 3em;
+        color: white;
+    }
+
     &__image {
         width: 100%;
         height: 20em;
+    }
+
+    &__info {
+        display: flex;
+        justify-content: space-between;
     }
 }
 
