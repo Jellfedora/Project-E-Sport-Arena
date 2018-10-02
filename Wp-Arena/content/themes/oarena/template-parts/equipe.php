@@ -22,16 +22,14 @@ $arguments = [
 
 
 <div class="equipe text-center ">
-	
-	
 
 <?php $user_team = new WP_Query($arguments);
-//print_r($user_team); 
+
 if ($user_team->have_posts()): while ($user_team->have_posts()): $user_team->the_post();?>
 	<div class="equipe__title">
 		<h2 class="text-center"> &#9660; Team <?php the_title();?> &#9660;  </h2>
 	</div>
-	<div class="team__logo text-center">
+	<div class="equipe__logo text-center">
 		<img  src="<?= the_post_thumbnail_url('thumbnail'); ?>" alt="">
 	</div>
 	<div class="equipe__bio">
@@ -79,13 +77,14 @@ $id_team->ID;
       <svg height="40" width="150" xmlns="http://www.w3.org/2000/svg">
         <rect id="shape" height="40" width="150" />
         <div id="text">
-          <span class="spot button-update-team"></span>Modifier équipe
+          <span class="spot"></span>Modifier équipe
         </div>
       </svg>
-    </div>
+	</div>
+</div>
 
 
-<div class="team__form-update team-form-update hide">
+<div class="equipe__form-update team-form-update hide">
 	<form action="update-member-team" class="col-12 col-md-6 offset-md-3 mb-5" method="post">
 		<h3 class="text-center">Changer le chef d'équipe</h3>
 		<div class="error team__error">
@@ -115,7 +114,7 @@ $id_team->ID;
 	    <input type="submit" name="member-submit">
 	</form>
 </div>
-</div>
+
 <?php
 endif;
 
