@@ -67,7 +67,7 @@ $total =[];
         <p id="" class="product-cart-price col"><?= $product_price; ?>&euro;</p>
         <input class="product-cart-quantity col text-center text-success" style="background:transparent;border:none;" type="number" name="quantity[<?= $product_id; ?>]" placeholder="Quantité" value="<?= $product_quantity; ?>"/>
         <div class="product-total-cart-price col">
-            <input class="product-cart-total-price col text-center" style="background:transparent;border:none;" type="number" name="total-price[<?= $product_id; ?>]" value="<?= $product_total_price; ?>"/>
+            <p id="" class="product-cart-price col"><?= $product_total_price; ?>&euro;</p>
         </div>
         <div class="col">
             <input class="btn" type="submit" value="Supprimer article" name="remove[<?= $product_id; ?>]">
