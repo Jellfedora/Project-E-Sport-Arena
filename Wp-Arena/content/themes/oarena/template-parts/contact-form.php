@@ -33,12 +33,15 @@ get_header(); ?>
                 /*
                  * Si envoyé, analyser les données du formulaire et les stocker dans des variables
                  */
+                // var_dump($_POST['submit']);
+                // die;
  
+
                 if (isset($_POST['submit']) && !empty($_POST['myemail'])) {
                         $name = htmlspecialchars($_POST['myname']);
                         $email = sanitize_email($_POST['myemail']);
                         $message = wp_kses_post($_POST['mymessage']);
- 
+
                 /*
                  * Créer un post de type 'contact'
                  */
@@ -58,7 +61,7 @@ get_header(); ?>
                  */
  
                 } else { ?>
-                        <form action="<?php echo the_permalink(); ?>" method="post">
+                        <form action="<?= the_permalink(); ?>" method="post">
                                 <label for="name"></label>
                                 <input type="text" name="myname" id="name" placeholder="Votre nom" />
                                 <hr>
@@ -69,7 +72,7 @@ get_header(); ?>
                                 <textarea cols="50" rows="10" name="mymessage" id="message" placeholder="Votre message..."></textarea>
                                 <br>
                         <div class="container">
-                                <button class='myButt one' type="submit" value="Creer team">
+                                <button class='myButt one' type="submit" value="Creer team" name="submit">
                                         <div class='insider'></div>
                                         Envoyer votre message <i class="fa fa-envelope-o ml-3" aria-hidden="true"></i>
                                 </button>
@@ -82,4 +85,4 @@ get_header(); ?>
 </div><!-- #primary -->
 </div>
  
-<?php get_footer(); 
+<?php get_footer(); ?>

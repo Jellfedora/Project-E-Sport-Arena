@@ -24,7 +24,7 @@ var app = {
 
         // Je fais un appel Ajax
         $.ajax({
-            url: 'http://localhost/Cours/Wordpress/Projet/Projet-master/Project-E-Sport-Arena/Wp-Arena/panier/',
+            url: 'http://localhost/Project/Project-E-Sport-Arena/Wp-Arena/Wp-Arena/panier/',
             method: 'POST',
             dataType: 'json',
             data: dataToSend

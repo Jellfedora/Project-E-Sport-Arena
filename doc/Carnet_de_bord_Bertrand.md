@@ -230,3 +230,13 @@ le bug en changeant le panier de place dans la boucle et en gardant les data
 
 * Création du panier ( julien ) avec l'aide de Christophe qui intervient sur la fin car impossible de récuperer les articles individuellement => petit cour
 * Réponse json pour stopper le chargement a l'ajout d'un article au panier => aide de christophe qui me change juste l'URL 
+* Ajout div qui s'affiche a article a ajouté + possibilité de la fermée
+* Pareil sur create team ( opquast )
+
+# Sprint 3.8 
+
+++++ 1er octobre 2018 ++++
+
+* Netttoyage des fichiers ( espaces avant <?php par exemple )
+* Résolutions de bug / Envoie de messages qui marchaient plus  
+* Ajout d'incrémentation et ouverture fermeture tournois

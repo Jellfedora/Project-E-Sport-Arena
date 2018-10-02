@@ -228,7 +228,18 @@ https://codex.wordpress.org/Function_Reference/wp_create_user
 * Reglages bugs inté
 * Travailler sur le panier mais non concluant => en attente de christophe
 
-# Sprint 3.8 01 octobre 2018 ( julien uniquement )
+# Sprint 3.8 01 octobre 2018 
 
 * Gestion des changements de quantité dans le panier
 * Ajout sans chargement ( json ) des articles depuis la page panier
+* ajouts effets front en js selon opquast ( croix pour fermer les div )
+* inté
+
+# Sprint 3.9 02 octobre 2018 
+
+* Petit récap et test des users story => 2 bugs : envoie message et accés au BO des user et team admin
+* interdiction BO 
+* Petit nettoyage des espaces devant les <?php 
+* Fix bug envoie de message
+* désinscription tournoi + ouverture / fermeture automatique
+* inté

@@ -8,7 +8,7 @@
         <div class="form-group">
             <label for="username"><span class="overline-left-underline-right">Nom d'utilisateur *</span><br></label>
             <input type="text" class="form-control" id="username" name="username"  aria-describedby="usernameHelp" placeholder="Nom d'utilisateur" required>
-            <small id="usernameHelp" class="form-text text-danger h6">En minuscules,sans chiffres et sans caractéres spéciaux</small>
+            <small id="usernameHelp" class="form-text text-danger h6">Sans restrictions</small>
         </div>
 
         <div class="form-group">

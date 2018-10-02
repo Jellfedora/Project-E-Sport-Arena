@@ -1,4 +1,4 @@
- <?php  
+<?php  
 /*
 Plugin Name: oArena add team to tournament
 Description: Plugin pour s'inscrire à un tournoi
@@ -15,4 +15,4 @@ Version: 1.0.0
 
     register_activation_hook(__FILE__, [$oarena_addteam_tournament, 'activation']);
     register_deactivation_hook(__FILE__, [$oarena_addteam_tournament, 'deactivation']);
- ?>
+ 

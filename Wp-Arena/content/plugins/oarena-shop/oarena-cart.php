@@ -1,4 +1,4 @@
- <?php  
+<?php  
 /*
 Plugin Name: oArena Shopping
 Description: Plugin pour la boutique du site
@@ -26,4 +26,3 @@ Version: 1.0.0
     
     register_activation_hook(__FILE__, [$oArenaValidateCart, 'activation']);
     register_deactivation_hook(__FILE__, [$oArenaValidateCart, 'deactivation']);
- ?>

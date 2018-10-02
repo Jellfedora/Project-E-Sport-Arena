@@ -20,12 +20,8 @@ class oArenaAddTeam
         );
 
         $user = get_posts($args);
-        // $user_post = $user->post_title;
-        // var_dump();
-        // die;
-        
+       
         $array_title = '';
-        // $myTeamName = $_POST['register-team-tournament'];
         
         foreach ($user as $post)
         {
@@ -34,63 +30,52 @@ class oArenaAddTeam
 
             if (isset($_POST['register-team-tournament']))
             {
-                if(isset($_POST['remove-team']) AND ($_POST['register-team-tournament'] === $array_title )) {
-                    
-                    // Delete the value of the metaboxe
-                    delete_post_meta($_POST['register-tournament-id'], '_team_register', $array_title);
-                    
-                    // Redirect to home
-                    wp_redirect(home_url());
-                    exit;
-
-                }
-
                 if ($_POST['register-team-tournament'] === $array_title )
                 {
                     // Verifie que la team nest pas déjà inscrite au tournoi
-                    if (in_array($array_title,(get_post_meta($_POST['register-tournament-id'], '_team_register')))) {
+                    if (in_array($array_title,(get_post_meta($_POST['register-tournament-id'], '_team_register')))) 
+                    {
                         echo('Vous etes déjà inscrit à ce tournoi');exit;
                     }
 
                     // add value of the metaboxe
                     add_post_meta($_POST['register-tournament-id'], '_team_register', $array_title);
-                    // var_dump($post->);
-                    // die;
+                    
                    $numberSeatsAvailable = get_post_meta($_POST['register-tournament-id'], 'tournament_available_seats');
-                //    $seats = $numberSeatsAvailable--;
-                foreach ($numberSeatsAvailable as $seats) {
-                        $seat = intval($seats)-1;
-                }
-                   update_post_meta($_POST['register-tournament-id'], 'tournament_available_seats', $seat);
+                
+                    foreach ($numberSeatsAvailable as $seats)
+                    {
+                            $seat = intval($seats)-1;
+                    }
+                    update_post_meta($_POST['register-tournament-id'], 'tournament_available_seats', $seat);
 
-                //    update_post_meta('') ;
-
-                    /* var_dump($array_title);
-                        die;
-                        var_dump('Vous pouvez inscrire cette equipe');
-                        function team_register_tournament($post) 
-                        {
-                            $register_teams = get_post_meta($post->ID, '_team_register', true);
-
-                            ?>
-                            <input id="" type="text" name="register-team" value="<?php echo $register_teams; ?>" />
-                            <?php
-                        }
-                        add_action('save_post', 'save_metabox_tournament');
-
-                        function save_metabox_tournament($post_id)
-                        {
-                            add_post_meta($post_id, '_team_register', $array_title);
-                     }
-                     */
-                    // Redirige vers la page profil
                     wp_redirect(home_url());
-                    exit;
+                        exit;
 
-                } else {
-                    var_dump('Cette team n\'est pas la vôtre ou elle n\'existe pas');
-                    die;
+                    } else {
+                        var_dump('Cette team n\'est pas la vôtre ou elle n\'existe pas');
+                        die;
                 }
+
+            }
+            
+            if(isset($_POST['remove-team']) && $_POST['delete-team-tournament'] === $array_title )
+            {
+                // Delete the value of the metaboxe
+                delete_post_meta($_POST['delete-tournament-id'], '_team_register', $array_title);
+
+                $numberSeatsAvailable = get_post_meta($_POST['delete-tournament-id'], 'tournament_available_seats');
+                
+                foreach ($numberSeatsAvailable as $seats) 
+                {
+                        $seat = intval($seats)+1;
+                }
+                   update_post_meta($_POST['delete-tournament-id'], 'tournament_available_seats', $seat);
+                
+                // Redirect to home
+                wp_redirect(home_url());
+                exit;
+
             }
     }    
 }

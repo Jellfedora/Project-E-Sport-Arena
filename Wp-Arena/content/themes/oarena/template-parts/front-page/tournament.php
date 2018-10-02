@@ -1,10 +1,10 @@
 <div class="card mb-2 p-3 text-light  " style="width: 30rem; border: 3px solid black; background-color:#242752;">
     <div class="text-center">
     <?php  if(get_post_meta($id, 'tournament_available_seats', true) > 0 ){ ?>
-                <p class="text-success">INSCRIPTION OUVERTE</p>
+                <p class="text-success">INSCRIPTIONS OUVERTES</p>
                 
         <?php } else { ?>
-                <p class="text-danger">INSCRIPTION FERME&#201;</p>
+                <p class="text-danger">INSCRIPTIONS FERME&#201;S</p>
                 
         <?php  } ?>
     </div>

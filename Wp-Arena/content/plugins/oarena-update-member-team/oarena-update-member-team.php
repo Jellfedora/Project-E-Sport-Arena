@@ -1,4 +1,4 @@
- <?php  
+<?php  
 /*
 Plugin Name: oArena Update Member Team
 Description: Mise à jour des membres des teams pour le théme oArena
@@ -16,4 +16,3 @@ Version: 1.0.0
     
     register_activation_hook(__FILE__, [$oArenaUpdateTeamMember, 'activation']);
     register_deactivation_hook(__FILE__, [$oArenaUpdateTeamMember, 'deactivation']);
- ?>
