@@ -62,6 +62,10 @@
         margin-top: 2em;
         background-color: $menu-color;
 
+        &__title {
+            margin-top: 1em;
+        }
+
         &__participants {
             margin-top: 1em;
             display: flex;

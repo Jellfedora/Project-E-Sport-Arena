@@ -1,0 +1,23 @@
+.team {
+    background-color: $menu-color;
+    border: 1px solid white;
+    width: 30em;
+    height: 15em;
+    display: flex;
+    justify-content: space-around;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin: 1em;
+
+    &__title {
+        background-color: $menu-color;
+        height: 1.5em;
+        padding: 0.2em;
+    }
+}
+
+.team-list {
+    display: flex;
+    flex-wrap: wrap;
+}

@@ -21,17 +21,18 @@ $id = $post->ID;
             </div>
             <div class="tournament__info">
                 <div class="tournament__info__content">
-                    <div class="tournament__info__meta text-center">
-                        <p>Places totales : <?= get_post_meta($id, 'tournament_available_total', true);?></p>
-                        <p>Places restantes : <?= get_post_meta($id, 'tournament_available_seats', true);?></p>
-                        <p>Prix:<?= get_price(get_the_ID()); ?><i class="fa fa-eur ml-2" aria-hidden="true"></i></p>
-                    </div>
+                    
                     <div class="tournament__info__text">
                         <p class="card-text"> <?php the_content() ; ?></p> 
                     </div> 
                 </div>
                 <form class="tournament__form text-center" action="add-team" method="post">
-                    <h4>Ils vous attendent dans l'aréne ! </h4>
+                    <div class="tournament__info__meta text-center">
+                        <p>Date : <?= get_post_meta($id, 'date', true);?></p>
+                        <p>Places totales : <?= get_post_meta($id, 'tournament_available_total', true);?></p>
+                        <p>Places restantes : <?= get_post_meta($id, 'tournament_available_seats', true);?></p>
+                    </div>
+                    <h4 class="tournament__form__title">Ils vous attendent dans l'aréne ! </h4>
                     <div class="tournament__form__participants">  
 <?php   $register_teams = get_post_meta($post->ID, '_team_register');
         foreach ($register_teams as $team) {

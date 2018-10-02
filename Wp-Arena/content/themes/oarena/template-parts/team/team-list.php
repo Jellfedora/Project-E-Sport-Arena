@@ -1,5 +1,5 @@
-<h2 class="news__title text-light mt-3 mb-3 text-center">&#9660; Equipes &#9660; </h2>
-    <div class="cards text-center flex-wrap">
+<h2 class="news__title text-light  mb-3 text-center">&#9660; Teams &#9660; </h2>
+    <div class="team-list">
 
             <?php 
 
@@ -14,7 +14,7 @@
 
             if ($our_articles->have_posts()): while ($our_articles->have_posts()): $our_articles->the_post(); 
 
-            get_template_part('template-parts/team/team' , 'single');
+            get_template_part('template-parts/team/team' , 'single-list');
 
             endwhile;
 

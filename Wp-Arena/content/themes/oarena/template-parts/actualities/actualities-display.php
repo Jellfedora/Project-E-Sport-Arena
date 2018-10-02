@@ -8,7 +8,7 @@
             </div>
             <a href="<?php the_permalink() ; ?>"></a>
             <h3 class="actuality__item__title text-light"><?php the_title(); ?></h3>
-            <div class="actuality__item__text">
+            <div class="actuality__item__text text-light">
                 <?php the_content() ; ?>
             </div>
         </div>
