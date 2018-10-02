@@ -1,16 +1,12 @@
 <?php
-// $id=get_the_ID();
-// var_dump($id);
+// pour afficher la pag du membre (pas de contenu sur cette page pour le moment)
+//get_the_permalink(get_the_ID()) ;
 ?>
-<div class="news__item">
-         <div class="news__item-image" style="background-image: url(<?=get_the_post_thumbnail_url();?>);">
-         </div>
-         <div class="news__item-content  ">
-             <a href="<?=get_the_permalink(get_the_ID());?>">
-             <h3 class="news__item-title text-light"><?php the_title();?></h3>
-             </a>
-             <p class="news__item-text"><?php the_content();?></p>
-             <h4>Fait partie de l'équipe: </h4>
-         </div>
- </div>
+
+
+<!-- <a class="member__name" href=""> -->
+<div class="member " style="background-image:url('<?= the_post_thumbnail_url(); ?>');">
+    <h3 class="member__title text-light text-center"><?php the_title(); ?></h3>
+</div>
+</a>
 
