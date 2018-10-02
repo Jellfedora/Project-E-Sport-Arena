@@ -243,3 +243,4 @@ https://codex.wordpress.org/Function_Reference/wp_create_user
 * Fix bug envoie de message
 * désinscription tournoi + ouverture / fermeture automatique
 * inté
+* problemes ajax et inscription team

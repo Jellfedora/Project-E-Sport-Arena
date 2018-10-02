@@ -30,7 +30,7 @@
         </div>
 
         <div class="form-group">
-            <small class="form-text text-dark h4">* champs obligatoires</small>
+            <small class="form-text text-dark">* champs obligatoires</small>
         </div>
         <input type="submit" name="envoi" class="btn btn-success" value="S'inscrire">
     </form>

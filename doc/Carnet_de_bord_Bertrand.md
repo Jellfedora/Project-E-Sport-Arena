@@ -240,3 +240,5 @@ le bug en changeant le panier de place dans la boucle et en gardant les data
 * Netttoyage des fichiers ( espaces avant <?php par exemple )
 * Résolutions de bug / Envoie de messages qui marchaient plus  
 * Ajout d'incrémentation et ouverture fermeture tournois
+* Beaucoup de temps perdu sur l'ajax et l'inscription a une team
+    => on etait pas du tout en retard du coup j'ai pu me le permettre

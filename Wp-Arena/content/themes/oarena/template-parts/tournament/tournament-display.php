@@ -70,7 +70,7 @@ $id = $post->ID;
 
                     <?php   } else { 
                     ; ?> 
-
+                        </form>
                         <p class="text-danger">Le tournoi est complet !</p>
                     <form action="add-team" method="post" class="delete-team-to-tournament-form tournament__form text-center mt-0">
                         <input type="text" value="" name="delete-team-tournament" placeholder="Votre équipe" class="p-2" >

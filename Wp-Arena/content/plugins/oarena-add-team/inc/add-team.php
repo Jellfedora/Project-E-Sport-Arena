@@ -45,12 +45,12 @@ class oArenaAddTeam
                     if (in_array($array_title,(get_post_meta($_POST['register-tournament-id'], '_team_register')))) 
                     {
 
-                        $errorList = [
-                            'code' => 1,
-                            'error' => 'Déja inscrit'
-                            ];
+                    //     $errorList = [
+                    //         'code' => 1,
+                    //         'error' => 'Déja inscrit'
+                    //         ];
 
-                    $this->displayJson($errorList);
+                    // $this->displayJson($errorList);
                         // echo('Vous etes déjà inscrit à ce tournoi');exit;
                     }
 
@@ -65,11 +65,11 @@ class oArenaAddTeam
                     }
                     update_post_meta($_POST['register-tournament-id'], 'tournament_available_seats', $seat);
 
-                    $errorList = [
-                    'code' => 200,
-                    'error' => 'Team inscrite'
-                      ];
-                    $this->displayJson($errorList);
+                    // $errorList = [
+                    // 'code' => 200,
+                    // 'error' => 'Team inscrite'
+                    //   ];
+                    // $this->displayJson($errorList);
 
                     // wp_redirect(home_url());
                         // exit;
@@ -81,7 +81,7 @@ class oArenaAddTeam
 
             }
             
-            if(isset($_POST['delete-team-to-tournament-form']) && $_POST['delete-team-tournament'] === $array_title )
+            if(isset($_POST['remove-team']) && $_POST['delete-team-tournament'] === $array_title )
             {
                 // Delete the value of the metaboxe
                 delete_post_meta($_POST['delete-tournament-id'], '_team_register', $array_title);
@@ -96,11 +96,11 @@ class oArenaAddTeam
                 
                 update_post_meta($_POST['delete-tournament-id'], 'tournament_available_seats', $seat);
                 
-                    $errorList = [
-                        'code' => 100,
-                        'error' => 'team desinscrite'
-                          ];
-                $this->displayJson($errorList);
+                //     $errorList = [
+                //         'code' => 100,
+                //         'error' => 'team desinscrite'
+                //           ];
+                // $this->displayJson($errorList);
                 
                 // Redirect to home
                 wp_redirect(home_url());
