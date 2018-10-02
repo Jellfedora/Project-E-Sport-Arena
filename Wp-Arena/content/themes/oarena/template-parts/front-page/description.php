@@ -10,7 +10,7 @@
         <div class="description__services__content__items">
           <img class="description__services__content__items__img" src="http://image.noelshack.com/fichiers/2018/38/7/1537695663-webp-net-resizeimage-2.png" alt="">
           <h5 class="description__services__content__items__title">Matériel High-Tech</h5>
-          <p class="description__services__content__items__text">Profitez d’installations à la pointe de la technologie pour vivre une expérience e-sport optimale.</p>
+          <p class="description__services__content__items__text">Profitez d’installations à la pointe de la technologie pour vivre une expérience e-sport optimale!</p>
         </div>
         <div class="description__services__content__items">
           <img class="description__services__content__items__img" src="http://image.noelshack.com/fichiers/2018/38/7/1537695663-webp-net-resizeimage-2.png" alt="">
@@ -24,13 +24,13 @@
         </div>
         <div class="description__services__content__items">
           <img class="description__services__content__items__img" src="http://image.noelshack.com/fichiers/2018/38/7/1537695663-webp-net-resizeimage-2.png" alt="">
-          <h5 class="description__services__content__items__title">Matériel High-Tech</h5>
-          <p class="description__services__content__items__text">Profitez d’installations à la pointe de la technologie pour vivre une expérience e-sport optimale.</p>
+          <h5 class="description__services__content__items__title">Inscription en ligne</h5>
+          <p class="description__services__content__items__text">Organiser votre équipe et lancez vous dans la bataille!</p>
         </div>
         <div class="description__services__content__items">
           <img class="description__services__content__items__img" src="http://image.noelshack.com/fichiers/2018/38/7/1537695663-webp-net-resizeimage-2.png" alt="">
-          <h5 class="description__services__content__items__title">Une petite faim?</h5>
-          <p class="description__services__content__items__text">Qu’on soit joueur ou simple spectateur, le e-sport ça creuse ! Vous pourrez déguster nos petits en-cas!</p>
+          <h5 class="description__services__content__items__title">Un site en constante évolution</h5>
+          <p class="description__services__content__items__text">oArena se plie en quatre pour vous satisfaire! Bientôt un espace membre encore plus poussé avec l'ajout d'un forum, un tchat live (Mon fidéle assistant Bertrand prépare l'ajax!) et bien d'autres contenus à venir!</p>
         </div>
       </div>
     </div>

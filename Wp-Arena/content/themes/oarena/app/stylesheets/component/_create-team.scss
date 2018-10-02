@@ -1,0 +1,48 @@
+.create-team {
+    background-color: $menu-color;
+    margin: 2em;
+    padding: 1em;
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+
+    &__content {
+        &__intro {
+            border-bottom: 1px solid white;
+            margin-bottom: 2em;
+        }
+
+        &__form {
+            &__input {
+                display: flex;
+                justify-content: space-around;
+                flex-wrap: wrap;
+                border-bottom: 1px solid white;
+
+                &__name input {
+                    width: 15em;
+                    margin-bottom: 1em;
+                }
+
+                &__textarea textarea {
+                    width: 40em;
+                    margin-bottom: 1em;
+                }
+            }
+
+            &__submit {
+                margin-top: 2em;
+
+                &__error {
+                    margin-top: 1em;
+                    padding: 1em;
+                }
+            }
+        }
+    }
+}
+
+.text-danger {
+    border: 1px solid red;
+    padding: 0.5em;
+}

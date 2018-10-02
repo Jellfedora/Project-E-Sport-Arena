@@ -3,23 +3,22 @@ $post = get_post();
 foreach ($post as $post_id) {
     $post_id = $post->ID;
 }
-// var_dump($post_id);
-// // die;
+
 ?>
-<div class="pt-5">
-    <div style="padding-bottom: 3em;">
-    <div class="card mb-2 p-3 m-auto w-75 rounded" style="background-color:#6994db ">
-        <div class="card-body d-flex flex-column">
-            <h5 class="news__tournament">Team :&nbsp; <?php the_title() ; ?></h5>
-            <p class="card-text"> <?php the_content() ; ?></p>   
-            <div class="news__tournament__status__chief">Leader de l'équipe : </div>
-        <div class="news__tournament__status__chief__name"><?= get_post_meta($post_id,'_team_chief',true); ?></div>
-            <div class="news__tournament__status__members">Membres de l'équipe :</div>
-            <div class="news__tournament__status__members__name"><li><?= $member1 = get_post_meta($post_id,'_member1',true);?></li></div>
-            <div class="news__tournament__status__members__name"><li><?= $member1 = get_post_meta($post_id,'_member2',true);?></li></div>
-            <div class="news__tournament__status__members__name"><li><?= $member1 = get_post_meta($post_id,'_member3',true);?></li></div>
-            <div class="news__tournament__status__members__name"><li><?= $member1 = get_post_meta($post_id,'_member4',true);?></li></div>
-            <div class="news__tournament__status__members__name"><li><?= $member1 = get_post_meta($post_id,'_member5',true);?></li></div>
-        </div>
+<h2 class="news__title text-light  mb-3 text-center">&#9660; Team &#9660; </h2>
+
+<div class="team-display">
+    <div class ="team-display__content text-center">
+        <h5 class="team-display__content">Team :&nbsp; <?php the_title() ; ?></h5>
+        <img class="team-display__content" src="<?= the_post_thumbnail_url(); ?>" alt="">
+        <p class="team-display__content"> <?php the_content() ; ?></p>   
+        <h6 class="">Leader de l'équipe : </h6>
+        <p class="team-display__content"><?= get_post_meta($post_id,'_team_chief',true); ?></p>
+        <h6 class="team-display__content">Membres de l'équipe :</h6>
+        <p class="team-display__content"><li><?= $member1 = get_post_meta($post_id,'_member1',true);?></li></p>
+        <p class="team-display__content"><li><?= $member1 = get_post_meta($post_id,'_member2',true);?></li></p>
+        <p class="team-display__content"><li><?= $member1 = get_post_meta($post_id,'_member3',true);?></li></p>
+        <p class="team-display__content"><li><?= $member1 = get_post_meta($post_id,'_member4',true);?></li></p>
+        <p class="team-display__content"><li><?= $member1 = get_post_meta($post_id,'_member5',true);?></li></p>
     </div>
 </div>
