@@ -47,7 +47,7 @@ class oArenaMembersCpt
             'supports' => [
                 'title',
                 //'editor',
-                //'thumbnail',
+                'thumbnail',
                 //'custom-fields',
                 'revisions',
             ],

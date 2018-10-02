@@ -1,4 +1,4 @@
-.team {
+.member {
     background-color: $menu-color;
     border: 1px solid white;
     width: 30em;
@@ -17,7 +17,7 @@
     }
 }
 
-.team-list {
+.member-list {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
