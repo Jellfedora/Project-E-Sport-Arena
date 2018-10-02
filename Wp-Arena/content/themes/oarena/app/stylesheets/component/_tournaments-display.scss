@@ -3,24 +3,31 @@
     background-size: cover;
     height: 100vh;
     display: flex;
+    color: white;
+
 
 
 
     &__content {
         margin: 3em;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: space-between;
+        width: 100%;
         //background: $menu-color;
     }
 
     &__header {
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
         align-items: center;
-        background-color: $menu-color;
+        width: 100%;
     }
 
     &__title {
         font-size: 3em;
-        color: white;
+        background-color: $menu-color;
+        padding: 0.3em;
     }
 
     &__image {
@@ -29,8 +36,44 @@
     }
 
     &__info {
-        display: flex;
-        justify-content: space-between;
+        width: 100%;
+
+        &__content {
+            background-color: $menu-color;
+        }
+
+        &__meta {
+            margin-left: 2em;
+            margin-right: 2em;
+            display: flex;
+            justify-content: space-around;
+            padding: 0.5em;
+            border-bottom: 1px solid white;
+        }
+
+        &__text {
+            margin-left: 2em;
+            margin-right: 2em;
+            padding: 0.5em 2em;
+        }
+    }
+
+    &__form {
+        margin-top: 2em;
+        background-color: $menu-color;
+
+        &__participants {
+            margin-top: 1em;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            text-transform: uppercase;
+
+            &__team {
+                border: 1px solid white;
+                padding: 0.2em;
+            }
+        }
     }
 }
 
