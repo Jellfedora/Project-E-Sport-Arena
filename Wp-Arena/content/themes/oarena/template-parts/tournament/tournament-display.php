@@ -21,12 +21,11 @@ $id = $post->ID;
             </div>
             <div class="tournament__info">
                 <div class="tournament__info__content">
-                    
                     <div class="tournament__info__text">
                         <p class="card-text"> <?php the_content() ; ?></p> 
                     </div> 
-                    </div>
-                    <form class="tournament__form text-center" action="add-team" method="post">
+                </div>
+                    <form class="add-team-to-tournament-form tournament__form text-center" action="add-team" method="post">
                         <div class="tournament__info__meta text-center">
                             <p>Date : <?= get_post_meta($id, 'date', true);?></p>
                             <p>Places totales : <?= get_post_meta($id, 'tournament_available_total', true);?></p>
@@ -34,48 +33,56 @@ $id = $post->ID;
                         </div>
                         <h4 class="tournament__form__title">Ils vous attendent dans l'aréne ! </h4>
                         <div class="tournament__form__participants">  
+
                         <?php   $register_teams = get_post_meta($post->ID, '_team_register');
                                 foreach ($register_teams as $team) {
                                     echo '<div class="tournament__form__participants__team" >' .$team .'</div>'; 
-                                }?>         
+                                }?>   
+
                         </div>
 
                     
-                        <?php 
-                    if (is_user_logged_in())
-                    {
-                        $user = wp_get_current_user()->roles;
-                        foreach ($user as $role) 
-                        {
-                        }
-                        if ($role === 'administrator' || $role === 'TeamAdmin')
-                        { ; 
-                            if(get_post_meta($id, 'tournament_available_seats', true) > 0 )
-                            { ?> 
+                                 <?php 
+                                if (is_user_logged_in())
+                                {
+                                    $user = wp_get_current_user()->roles;
+                                    foreach ($user as $role) 
+                                    {
+                                    }
+                                    if ($role === 'administrator' || $role === 'TeamAdmin')
+                                    { ; 
+                                        if(get_post_meta($id, 'tournament_available_seats', true) > 0 )
+                                        { ?> 
+
                         <p class="text-align mt-5">Rejoindre le combat! </p>
                         <input type="text" value="" name="register-team-tournament" placeholder="Votre équipe" class="p-2" >
                         <input type="hidden" value="<?= get_the_ID(); ?>" name="register-tournament-id" >
+                        <button type="submit" id="submit-team-to-tournament" class="btn btn-success ml-2 mt-2 mr-2 mb-3"> Inscrire ma team</button>
+                         <div id="alert-team-subscribe" class="text-success h5 font-weight-bold">Votre team est inscrite au tournoi ! <i id="alert-team-subscribe-cross" class="fa fa-times-circle mb-2 ml-2" aria-hidden="true" style="color: green; font-size:1em;"></i></div>
+                         <div id="alert-team-error-subscribe" class="text-danger h5 font-weight-bold">Team déjà inscrite, inconnue ou vous n'êtes pas l'admin ! <i id="alert-team-error-subscribe-cross" class="fa fa-times-circle mb-2 ml-2" aria-hidden="true" style="color: green; font-size:1em;"></i></div>
+                    </form>
+                    <form action="remove-team" method="post" class="delete-team-to-tournament-form tournament__form text-center mt-0">
+                        <input type="text" value="" name="delete-team-tournament" placeholder="Votre équipe" class="p-2" >
+                        <input type="hidden" value="<?= get_the_ID(); ?>" name="delete-tournament-id" >
+                        <button name="remove-team" type="submit" class="btn btn-danger ml-2 mt-2 mb-3"> Desinscrire ma team</button>
+                        <div class="alert-team-delete" class="text-success h5 font-weight-bold">Votre team est désinscrite du tournoi ! <i class="alert-team-delete-cross" class="fa fa-times-circle mb-2 ml-2" aria-hidden="true" style="color: green; font-size:1em;"></i></div>
+                    </form>
 
+                    <?php   } else { 
+                    ; ?> 
 
-                                <button type="submit" class="btn btn-success ml-2 mt-2 mr-2 mb-3"> Inscrire ma team</button>
-                            </form>
-                            <form action="remove-team" method="post" class="tournament__form text-center mt-0">
-                                <input type="text" value="" name="delete-team-tournament" placeholder="Votre équipe" class="p-2" >
-                                <input type="hidden" value="<?= get_the_ID(); ?>" name="delete-tournament-id" >
-                                <button name="remove-team" type="submit" class="btn btn-danger mt-2 mb-3"> Desinscrire ma team</button>
-                            </form>
-                    <?php   } else { ?> 
-                            <p class="text-danger">Le tournoi est complet !</p>
-                             <form action="remove-team" method="post" class="tournament__form text-center mt-0">
-                                <input type="text" value="" name="delete-team-tournament" placeholder="Votre équipe" class="p-2" >
-                                <input type="hidden" value="<?= get_the_ID(); ?>" name="delete-tournament-id" >
-                                <button name="remove-team" type="submit" class="btn btn-danger mt-2 mb-3"> Desinscrire ma team</button>
-                            </form>
+                        <p class="text-danger">Le tournoi est complet !</p>
+                    <form action="add-team" method="post" class="delete-team-to-tournament-form tournament__form text-center mt-0">
+                        <input type="text" value="" name="delete-team-tournament" placeholder="Votre équipe" class="p-2" >
+                        <input type="hidden" value="<?= get_the_ID(); ?>" name="delete-tournament-id" >
+                        <button name="remove-team" type="submit" class="btn btn-danger ml-2 mt-2 mb-3"> Desinscrire ma team</button>
+                        <div class="alert-team-delete" class="text-danger h5 font-weight-bold">Votre team est désinscrite du tournoi ! <i class="alert-team-delete-cross" class="fa fa-times-circle mb-2 ml-2" aria-hidden="true" style="color: green; font-size:1em;"></i></div>
+                     </form>
                     <?php   } 
 
                         } 
                     }?>
-
+            </div>
     </div>
 </div>
 

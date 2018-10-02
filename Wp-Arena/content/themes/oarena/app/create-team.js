@@ -52,7 +52,6 @@ var app = {
                 $('#alert-name-exist-cross').on('click', function hideExistTeam() {
                     $('#alert-name-exist').hide();
                 });
-                alert - name - exist
             } else if (response.code == 3) {
                 var $alertDescriptionEmpty = $('#alert-description-empty');
                 $alertDescriptionEmpty.show();
