@@ -2,9 +2,7 @@
 /*
 Template Name: page-team
  */
-?>
-
-<?php get_header();?>
+get_header();?>
 
 
 <?php
@@ -120,10 +118,9 @@ $id_team->ID;
 </div>
 <?php
 endif;
-?>
 
 
 
 
 
-<?php get_footer();?>
+get_footer();?>

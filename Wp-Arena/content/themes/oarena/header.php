@@ -8,4 +8,4 @@
 
 <body>
 
-    <?php get_template_part('template-parts/header/header', 'main') ; ?>
+    <?php get_template_part('template-parts/header/header', 'main') ; 

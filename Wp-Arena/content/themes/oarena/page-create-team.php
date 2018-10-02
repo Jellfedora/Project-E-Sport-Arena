@@ -1,5 +1,5 @@
-<?php get_header(); ?>
-<?php 
+<?php get_header(); 
+ 
 // Template Name: create-team
 ?>
 
@@ -37,5 +37,4 @@
 </div>
 
 
- <?php
-  get_footer(); ?> 
+ <?php get_footer(); 

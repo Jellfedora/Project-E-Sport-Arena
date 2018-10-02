@@ -1,6 +1,5 @@
-<?php get_header();
+<?php get_header(); ?>
 
-?>
 <div class="pt-5">
     <form action="register.php" class="col-12 col-md-6 offset-md-3 mb-5" method="post">
         <!-- <h1 class="overline-left-underline-right">Inscription</h1> -->
@@ -39,4 +38,4 @@
 
 
 
-<?php get_footer();?>
+<?php get_footer();

@@ -33,40 +33,39 @@
 
 <form action="add-articles-to-cart.php"  method="post" class="container p-0 form_add_cart" style="border:3px solid black;" name="formAddToCart" action="add-articles-to-cart">
     <input type="hidden" name="add-product" value="1" />
-<div class="shopping-cart">
-    <div style="display: none;">
-        <div class="column-labels">
-            <label class="product-image">Image</label>
-            <label class="product-details">Product</label>
-            <label class="product-price">Price </label><?= get_post_meta($post->ID, 'article_price', true); ?>
-            <label class="product-quantity">Quantity</label>
-            <label class="product-removal">Remove</label>
-            <label class="product-line-price">Total</label>
-        </div>
+        <div class="shopping-cart">
+            <div style="display: none;">
+                <div class="column-labels">
+                    <label class="product-image">Image</label>
+                    <label class="product-details">Product</label>
+                    <label class="product-price">Price </label><?= get_post_meta($post->ID, 'article_price', true); ?>
+                    <label class="product-quantity">Quantity</label>
+                    <label class="product-removal">Remove</label>
+                    <label class="product-line-price">Total</label>
+                </div>
+            </div>
+            <div class="product text-center">
+                <div class="product-image">
+                <img class="mt-2" src="https://images-na.ssl-images-amazon.com/images/I/911MDRVptZL._SX425_.jpg">
+                </div>
+                <div class="product-details">
+                    <!--Récupére ID du produit-->
+                    <?php  $product = get_post();?>
+                    <input type="hidden" name="product" value="<?= ($product->ID);  ?>">
+                <h3 name="product-name" class="product-title"><?= the_title() ; ?></h3>
+                <p name="product-description" class="product-description" readonly><?= the_content() ; ?></p>
+                </div>
+                <div class="h2">Prix : </div>
+                <div name="product-price" class="product-price h2"><?= get_post_meta($post->ID, 'article_price', true); ?></div>
+                <div>Quantité : </div>
+                <div  class="product-quantity h2">
+                    <input name="product-quantity" type="number" value="0" min="0" >
+                </div>
+                <div class="product-line-price h2">0</div>
+                <div class="alert-add-article alert-add-article-ok<?= get_the_ID() ; ?> text-success h2 mb-1">Article ajouté ! <i class="hideDiv<?= get_the_ID() ; ?> fa fa-times-circle mb-2 ml-2" aria-hidden="true" style="color: red; font-size:1em;"></i></div>
+                <button id="buttonAddToCart" class="btn btn-success mb-2" type="submit" value="Ajouter au panier" for="formAddToCart">Ajouter au panier</button>
+            </div>
     </div>
-  <div class="product text-center">
-    <div class="product-image">
-      <img class="mt-2" src="https://images-na.ssl-images-amazon.com/images/I/911MDRVptZL._SX425_.jpg">
-    </div>
-    <div class="product-details">
-        <!--Récupére ID du produit-->
-        <?php  $product = get_post();?>
-        <input type="hidden" name="product" value="<?= ($product->ID);  ?>">
-      <h3 name="product-name" class="product-title"><?= the_title() ; ?></h3>
-      <p name="product-description" class="product-description" readonly><?= the_content() ; ?></p>
-    </div>
-    <div class="h2">Prix : </div>
-    <div name="product-price" class="product-price h2"><?= get_post_meta($post->ID, 'article_price', true); ?></div>
-    <div>Quantité : </div>
-    <div  class="product-quantity h2">
-      <input name="product-quantity" type="number" value="0" min="0" >
-    </div>
-    <div class="product-line-price h2">0</div>
-    <div class="alert-add-article alert-add-article-ok<?= get_the_ID() ; ?> text-success h2 mb-1">Article ajouté ! <i class="hideDiv<?= get_the_ID() ; ?> fa fa-times-circle mb-2 ml-2" aria-hidden="true" style="color: red; font-size:1em;"></i></div>
-    <button id="buttonAddToCart" class="btn btn-success mb-2" type="submit" value="Ajouter au panier" for="formAddToCart">Ajouter au panier</button>
-  </div>
-
-</div>
 </form>
    
 

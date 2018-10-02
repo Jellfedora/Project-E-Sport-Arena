@@ -61,4 +61,4 @@
             // Je remet les variables globals telle qu'elles étaient avant ma boucle custom
             wp_reset_postdata();    
             
-        endif; ?>
+        endif; 

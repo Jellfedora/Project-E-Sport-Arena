@@ -45,23 +45,26 @@ $id = $post->ID;
 
 <?php 
 
-        if (is_user_logged_in()) {
+        if (is_user_logged_in())
+        {
             $user = wp_get_current_user()->roles;
-            foreach ($user as $role) {
+            foreach ($user as $role) 
+            {
             }
-            if ($role === 'administrator' || $role === 'TeamAdmin') { ; 
+            if ($role === 'administrator' || $role === 'TeamAdmin')
+            { ; 
                 if(get_post_meta($id, 'tournament_available_seats', true) > 0 )
                 { ?> 
                     <button type="submit" class="btn btn-success ml-2 mt-2 mr-2 mb-3"> Inscrire ma team</button>
                     <button name="remove-team" type="submit" class="btn btn-danger mt-2 mb-3" value="remove-team-submit"> Desinscrire ma team</button>
                 </form>
-<?php   } else { ?> 
+        <?php   } else { ?> 
                 <button name="remove-team" type="submit" class="btn btn-danger mt-2 mb-3" value="remove-team-submit"> Desinscrire ma team</button>
                 <p class="text-danger">Le tournoi est complet !</p>
-<?php           } 
+          <?php } 
 
-         } 
-     }?>
+            } 
+    }?>
              
     </div>
 </div>

@@ -1,4 +1,3 @@
-
 <?php
 // Displays the name of the connected user
 if (is_user_logged_in()) {

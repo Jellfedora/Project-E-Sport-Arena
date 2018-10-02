@@ -1,4 +1,3 @@
-
 <header class="header">
   <!--menu for small screen/mobile-->
   <div class="menu-xs">

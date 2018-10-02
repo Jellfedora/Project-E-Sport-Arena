@@ -10,4 +10,4 @@
 
     <?php get_template_part('template-parts/front-page/actualities') ; ?>
 
-<?php get_footer(); ?>
+<?php get_footer();

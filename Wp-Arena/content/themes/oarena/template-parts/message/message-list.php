@@ -1,4 +1,4 @@
- <?php 
+<?php 
 
     $args= [
         'post_type' => 'contact',

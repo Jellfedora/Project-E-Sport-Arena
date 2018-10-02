@@ -2,12 +2,10 @@
 /*
 Template Name: Page panier
  */
-?>
-
-<?php get_header() ; ?>
+get_header() ; 
 
 
-<?php
+
 // TODO: Mettre le css dans app, récupérer les articles dynamiquement
     
             // Récupéres l'utilisateur connecté
@@ -46,7 +44,9 @@ $total =[];
         <h4 class="col">TOTAL &nbsp;TTC</h4>
         <h4 class="col">SUPPRIMER</h4>
     </div>
+
 <?php
+
     foreach ($cart as $product)
     {
         //var_dump($product);
@@ -75,13 +75,13 @@ $total =[];
     </div>
  
         <?php
-        
-                $product_total_price;
-                 //var_dump($product_total_price);
-                $total[] = $product_total_price;
-                //var_dump($total);
-            }
-           $total_price = array_sum($total);?>
+
+        $product_total_price;
+            //var_dump($product_total_price);
+        $total[] = $product_total_price;
+        //var_dump($total);
+    }
+        $total_price = array_sum($total);?>
            
 
     <div class="container d-flex"style="padding:0.5em;margin-top:0.5em;">
@@ -97,8 +97,7 @@ $total =[];
                     <?php get_template_part('template-parts/shop/shop','paypal'); ?>
                 </div>
             </div>
-        </div>
-        
+        </div>        
     </div>  
 </form>
 
@@ -110,12 +109,16 @@ $total =[];
 
 
 
-    <?php $member_genre = get_post_meta($post->ID, 'member_genre', true);?>
-    <?php $member_name = get_post_meta($post->ID, 'member_name', true);?>
-    <?php $member_firstname = get_post_meta($post->ID, 'member_firstname', true);?>
-    <?php $member_street = get_post_meta($post->ID, 'member_street', true);?>
-    <?php $member_postal_code = get_post_meta($post->ID, 'member_postal_code', true);?>
-    <?php $member_city = get_post_meta($post->ID, 'member_city', true); ?>
+    <?php 
+    
+    $member_genre = get_post_meta($post->ID, 'member_genre', true);
+    $member_name = get_post_meta($post->ID, 'member_name', true);
+    $member_firstname = get_post_meta($post->ID, 'member_firstname', true);
+    $member_street = get_post_meta($post->ID, 'member_street', true);
+    $member_postal_code = get_post_meta($post->ID, 'member_postal_code', true);
+    $member_city = get_post_meta($post->ID, 'member_city', true);
+     
+     ?>
 
 <div class="container mt-2">
         <h4>Votre adresse de facturation:</h4>
