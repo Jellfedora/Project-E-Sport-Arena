@@ -6,7 +6,9 @@ $shopping_cart = site_url('panier');
 
 <div class="news p-3 d-flex justify-content-around">
     <h2 class="news__title text-light h1">Reservez dés maintenant votre place pour les prochains tournois</h2>
-   <a href="<?= $shopping_cart; ?>" style="color: black;"><i class="fa fa-shopping-basket" style="font-size: 2em;" aria-hidden="true"></i></a>
+   <a href="<?= $shopping_cart; ?>" style="color: black;"><i class="fa fa-shopping-basket" style="font-size: 2em;" aria-hidden="true"></i> <label></label>
+&euro; <div class="totals-value" id="cart-total">0</div>
+</div></a>
 </div>
     <div class="news__content">
 
@@ -45,9 +47,6 @@ endwhile;
 <div class="totals-value" id="cart-shipping">0</div>
 </div>
 <div class="totals-item totals-item-total">
-<label>Total</label>
-<div class="totals-value" id="cart-total">0</div>
-</div>
 </div>
 
 <?php 

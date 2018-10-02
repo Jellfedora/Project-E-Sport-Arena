@@ -39,19 +39,32 @@ var app = {
             console.log(response);
             if (response.code == 1) {
                 var $alertsDiv = $('#alert-name');
-                $alertsDiv.show().delay(3000).hide(200);
+                $alertsDiv.show();
+                $('#alert-name-empty-cross').on('click', function hideEmptyTeam() {
+                    $('#alert-name').hide();
+                });
                 // window.setTimeout(function () {
                 //   location.href = response.redirect;
                 // }, 5000);
             } else if (response.code == 2) {
                 var $alertDivEmpty = $('#alert-name-exist');
-                $alertDivEmpty.show().delay(3000).hide(200);
+                $alertDivEmpty.show();
+                $('#alert-name-exist-cross').on('click', function hideExistTeam() {
+                    $('#alert-name-exist').hide();
+                });
+                alert - name - exist
             } else if (response.code == 3) {
                 var $alertDescriptionEmpty = $('#alert-description-empty');
-                $alertDescriptionEmpty.show().delay(3000).hide(200);
+                $alertDescriptionEmpty.show();
+                $('#alert-description-empty-cross').on('click', function hideEmptyDescription() {
+                    $('#alert-description-empty').hide();
+                });
             } else if (response.code == 4) {
                 var $alertTeamMoreThanOne = $('#alert-team-more-than-one');
-                $alertTeamMoreThanOne.show().delay(3000).hide(200);
+                $alertTeamMoreThanOne.show();
+                $('#alert-name-already-create-cross').on('click', function hideTeamMoreThan() {
+                    $('#alert-team-more-than-one').hide();
+                });
             } else if (response.code == 200) {
                 $('#success-create-team').show();
 

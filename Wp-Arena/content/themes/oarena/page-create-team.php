@@ -12,12 +12,12 @@
                         <!-- Test input simple-->
                         <input type="hidden" name="submit-team" value="true">
                         <input type="text" name="team-name" placeholder="Nom de votre team" class="text-center m-auto">
-                        <div id="alert-name" class="text-danger h5 font-weight-bold">L'équipe ne peux pas être vide</div> 
-                        <div id="alert-name-exist" class="text-danger h5 font-weight-bold">Cette équipe existe déjà</div>
-                        <div id="alert-team-more-than-one" class="text-danger h5 font-weight-bold">Vous avez déjà créé une team</div>
+                        <div id="alert-name" class="text-danger h5 font-weight-bold">L'équipe ne peux pas être vide <i id="alert-name-empty-cross" class="fa fa-times-circle mb-2 ml-2" aria-hidden="true" style="color: red; font-size:1em;"></i></div> 
+                        <div id="alert-name-exist" class="text-danger h5 font-weight-bold">Cette équipe existe déjà <i id="alert-name-exist-cross" class="fa fa-times-circle mb-2 ml-2" aria-hidden="true" style="color: red; font-size:1em;"></i></div>
+                        <div id="alert-team-more-than-one" class="text-danger h5 font-weight-bold">Vous avez déjà créé une team <i id="alert-name-already-create-cross" class="fa fa-times-circle mb-2 ml-2" aria-hidden="true" style="color: red; font-size:1em;"></i></div>
                         <hr>
                         <textarea name="myteamdescription" cols="30" rows="10"></textarea>
-                        <div id="alert-description-empty" class="text-danger h5 font-weight-bold">La description ne peux pas être vide</div>
+                        <div id="alert-description-empty" class="text-danger h5 font-weight-bold">La description ne peux pas être vide <i id="alert-description-empty-cross" class="fa fa-times-circle mb-2 ml-2" aria-hidden="true" style="color: red; font-size:1em;"></i></div>
                         <hr>
                         <!-- Boutton de soumission-->
                         <!-- <div class="one"><input  class="insider" ></div> -->

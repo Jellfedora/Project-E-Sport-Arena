@@ -64,7 +64,7 @@ $total =[];
         <h5 class="col" style><?= $product_title; ?></h5>
         <p class="product-seats col text-center"style="background:transparent;border:none;">6</p>
         <p id="" class="product-cart-price col"><?= $product_price; ?>&euro;</p>
-        <input class="col text-center text-success" style="background:transparent;border:none;" type="number" name="quantity[<?= $product_id; ?>]" placeholder="Quantité" value="<?= $product_quantity; ?>"/>
+        <input class="product-cart-quantity col text-center text-success" style="background:transparent;border:none;" type="number" name="quantity[<?= $product_id; ?>]" placeholder="Quantité" value="<?= $product_quantity; ?>"/>
         <div class="product-total-cart-price col">
             <p id="" > <?= $product_total_price; ?>&euro;</p>
         </div>
@@ -89,7 +89,7 @@ $total =[];
             <p id="total-cart" style="color:red;"><?= $total_price; ?> &euro;</p>
             <div class="d-flex ">
                 <input class="btn col text-light" style="background:none;" type="submit" value="Vider le panier" name="reset-cart" />
-                <input class="btn" type="submit" value="Confirmer Panier" name="validate-cart">
+                <input class="btn" type="submit" value="Recalculer Panier" name="validate-cart">
                 <div class=" col">
                     <!-- Paypal -->
                     <?php get_template_part('template-parts/shop/shop','paypal'); ?>

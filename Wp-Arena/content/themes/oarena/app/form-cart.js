@@ -4,7 +4,7 @@ var app = {
 
         console.log('js panier ok');
         //ecouteur d'evenement sur les changements de quantité
-        //$('.product-cart-quantity').on('click', app.recalculateTotal);
+        // $('.product-cart-quantity').on('click', app.recalculateTotal);
 
 
 
