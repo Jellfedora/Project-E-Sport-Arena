@@ -82,21 +82,20 @@ class oArenaValidateCart
 
                 $cart = oArenaCartFunctions::get_cart_meta($post->ID);
 
-                // var_dump($cart);
+                //var_dump($cart);
 
                 //print_r($_POST);exit;
+                
+
+                
+                //Je met à jour la quantité
                 foreach ($_POST['quantity'] as $product_id=> $quantity) {
 
                     $cart[$product_id]['product-quantity'] = $quantity;
 
-
-                    // var_dump($product_id ,$quantity);
+                     //var_dump($product_id ,$quantity);
                 }
-
-                // var_dump($cart);
-
-                // exit;
-
+                
                 // get_cart_meta($post_id);
                 oArenaCartFunctions::add_cart_meta($post->ID, $cart);
                 // update_post_meta($post->ID, 'cart','product-quantity', absint($_POST['quantity']));

@@ -21,7 +21,7 @@ function cart($post)
         $product_title = $product['title'];
         $product_price = $product['product-price'];
         $product_quantity = $product['product-quantity'];
-        $product_total_price = $product['product-total-price'];
+        $product_total_price = $product_quantity * $product_price;
         
         ?>
         <div style="border:1px solid black; padding:0.5em;">

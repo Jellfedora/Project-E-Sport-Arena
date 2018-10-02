@@ -40,7 +40,7 @@ $total =[];
     <div class="d-flex text-center text-light" style="border-bottom:3px solid black;border-top:3px solid black;margin-top:2em;">
         <h4 class="col">REFERENCE PRODUIT</h4>
         <h4 class="col">DESIGNATION</h4>
-        <h4 class="col">RESTANTS</h4>
+        <h4 class="col d-none">RESTANTS</h4>
         <h4 class="col">PRIX UNITAIRE &nbsp;TTC</h4>
         <h4 class="col">QUANTITE</h4>
         <h4 class="col">TOTAL &nbsp;TTC</h4>
@@ -55,18 +55,19 @@ $total =[];
         $product_title = $product['title'];
         $product_price = $product['product-price'];
         $product_quantity = $product['product-quantity'];
-        $product_total_price = $product['product-total-price'];
+        $product_total_price = $product_quantity*$product_price;
+        //var_dump($product_total_price);
         
         ?>
 
     <div class="product-cart d-flex text-center"style="border-bottom:1px solid black;padding:0.5em;">
         <p class="col" style><?= $product_id; ?></p>
         <h5 class="col" style><?= $product_title; ?></h5>
-        <p class="product-seats col text-center"style="background:transparent;border:none;">6</p>
+        <p class=" d-none product-seats col text-center"style="background:transparent;border:none;">6</p>
         <p id="" class="product-cart-price col"><?= $product_price; ?>&euro;</p>
         <input class="product-cart-quantity col text-center text-success" style="background:transparent;border:none;" type="number" name="quantity[<?= $product_id; ?>]" placeholder="Quantité" value="<?= $product_quantity; ?>"/>
         <div class="product-total-cart-price col">
-            <p id="" > <?= $product_total_price; ?>&euro;</p>
+            <input class="product-cart-total-price col text-center" style="background:transparent;border:none;" type="number" name="total-price[<?= $product_id; ?>]" value="<?= $product_total_price; ?>"/>
         </div>
         <div class="col">
             <input class="btn" type="submit" value="Supprimer article" name="remove[<?= $product_id; ?>]">
@@ -76,8 +77,9 @@ $total =[];
         <?php
         
                 $product_total_price;
-                // var_dump($product_total_price);
+                 //var_dump($product_total_price);
                 $total[] = $product_total_price;
+                //var_dump($total);
             }
            $total_price = array_sum($total);?>
            
