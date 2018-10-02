@@ -4,14 +4,33 @@
     padding: 1em;
     color: white;
 
+    &__content {
+        padding: 2em;
+        border-bottom: 1px solid white;
+        margin-bottom: 2em;
+    }
 
-}
+    &__button-update {
+        margin-top: 2em;
+    }
 
-#text {
-    color: red;
-}
+    &__members {
+        display: flex;
+        justify-content: space-around;
+        border: 1px solid white;
+        padding: 1em;
+    }
 
-.equipe__form-update {
-    margin-top: 1em;
-    background-color: $menu-color;
+    &__chief li {
+        border: 1px solid white;
+        width: 10em;
+        color: green;
+    }
+
+    &__member li {
+        border: 1px solid white;
+        width: 10em;
+        margin: 0.2em;
+        color: green;
+    }
 }

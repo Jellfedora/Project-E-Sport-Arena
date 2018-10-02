@@ -14,8 +14,13 @@
 @media (min-width: 1024px) {
 
     .footer {
+        margin-top: 25em;
         margin-left: 18em;
         transition-property: margin-left;
         transition-duration: 0.5s;
+    }
+
+    .footer-hide {
+        margin-left: 4.5em;
     }
 }

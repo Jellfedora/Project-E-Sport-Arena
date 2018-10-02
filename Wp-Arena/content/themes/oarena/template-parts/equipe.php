@@ -22,19 +22,20 @@ $arguments = [
 
 
 <div class="equipe text-center ">
+	<div class="equipe__content">
 
 <?php $user_team = new WP_Query($arguments);
 
 if ($user_team->have_posts()): while ($user_team->have_posts()): $user_team->the_post();?>
-	<div class="equipe__title">
-		<h2 class="text-center"> &#9660; Team <?php the_title();?> &#9660;  </h2>
-	</div>
-	<div class="equipe__logo text-center">
-		<img  src="<?= the_post_thumbnail_url('thumbnail'); ?>" alt="">
-	</div>
-	<div class="equipe__bio">
-		<p>Description: <?php the_content();?></p>
-	</div>
+		<div class="equipe__title">
+			<h2 class="text-center"> &#9660; Team <?php the_title();?> &#9660;  </h2>
+		</div>
+		<div class="equipe__logo text-center">
+			<img  src="<?= the_post_thumbnail_url('thumbnail'); ?>" alt="">
+		</div>
+		<div class="equipe__bio">
+			<p>Description: <?php the_content();?></p>
+		</div>
 		<?php endwhile;
 
     // Je remet les variables globals telle qu'elles étaient avant ma boucle custom
@@ -58,34 +59,29 @@ foreach($team_id as $id_team){
 $id_team->ID;
 
 }
-?>
-	<div class="equipe__chief">
-		<h3>Chef d'équipe:</h3>
-		<li><?= $team_chief = get_post_meta($id_team->ID,'_team_chief',true);?></li>
+?>		<div class="equipe__members">
+			<div class="equipe__chief">
+				<h3>Chef d'équipe:</h3>
+				<li><?= $team_chief = get_post_meta($id_team->ID,'_team_chief',true);?></li>
+			</div>
+			<div class="equipe__member">
+				<h3>Membres:</h3>
+				<ul>
+					<li><?= $member1 = get_post_meta($id_team->ID,'_member1',true);?></li>
+					<li><?= $member2 = get_post_meta($id_team->ID,'_member2',true);?></li>	
+					<li><?= $member3 = get_post_meta($id_team->ID,'_member3',true);?></li>
+					<li><?= $member4 = get_post_meta($id_team->ID,'_member4',true);?></li>
+					<li><?= $member5 = get_post_meta($id_team->ID,'_member5',true);?></li>	
+				</ul>
+			</div>
+		</div>
+		<div class="equipe__button-update button-update-team">
+		<button class="btn text-danger">Modifier equipe</button>
+		</div>
 	</div>
-	<div class="equipe__member">
-		<h3>Membres:</h3>
-		<ul>
-			<li><?= $member1 = get_post_meta($id_team->ID,'_member1',true);?></li>
-			<li><?= $member2 = get_post_meta($id_team->ID,'_member2',true);?></li>	
-			<li><?= $member3 = get_post_meta($id_team->ID,'_member3',true);?></li>
-			<li><?= $member4 = get_post_meta($id_team->ID,'_member4',true);?></li>
-			<li><?= $member5 = get_post_meta($id_team->ID,'_member5',true);?></li>	
-		</ul>
-	</div>
-    <div class="equipe__button-update button-update-team svg-wrapper">
-      <svg height="40" width="150" xmlns="http://www.w3.org/2000/svg">
-        <rect id="shape" height="40" width="150" />
-        <div id="text">
-          <span class="spot"></span>Modifier équipe
-        </div>
-      </svg>
-	</div>
-</div>
 
-
-<div class="equipe__form-update team-form-update hide">
-	<form action="update-member-team" class="col-12 col-md-6 offset-md-3 mb-5" method="post">
+<div class="team-form-update hide equipe__form ">
+	<form action="update-member-team equipe__form__content" class="col-12 col-md-6 offset-md-3 mb-5" method="post">
 		<h3 class="text-center">Changer le chef d'équipe</h3>
 		<div class="error team__error">
 			<p>Voici les erreurs:</p>
@@ -94,7 +90,7 @@ $id_team->ID;
 			<p id="member" class="">Chef d'équipe</p>
 	        <input type="text" class="form-control"  name="_team_chief"  aria-describedby="member" placeholder="<?= $team_chief ?>" >
 	    </div>
-	    <input class="button-update-member" type="submit" name="team_chief-submit">
+	    <input class="button-update-member text-danger" type="submit" name="team_chief-submit">
 	</form>
 
 	<form action="update-member-team" class="col-12 col-md-6 offset-md-3 mb-5" method="post">
@@ -111,8 +107,9 @@ $id_team->ID;
 	        <p id="member5" class="">Membre 5</p>
 			<input type="text" class="form-control" name="_member5"  aria-describedby="member" placeholder="<?= $member5 ?>" >
 	    </div>
-	    <input type="submit" name="member-submit">
+	    <input class="text-danger" type="submit" name="member-submit">
 	</form>
+</div>
 </div>
 
 <?php

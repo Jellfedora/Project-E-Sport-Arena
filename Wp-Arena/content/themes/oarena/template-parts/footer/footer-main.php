@@ -1,6 +1,6 @@
 <?php ; ?>
 </main>
-<footer class="footer container d-flex flex-column mt-5 ">
+<footer class="footer d-flex flex-column">
       <div class="footer__contact d-flex justify-content-around mb-5">
       </div>
       <!-- <div class="footer__links d-flex justify-content-center ">
