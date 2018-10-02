@@ -13,6 +13,9 @@ var app = {
     $form_update_member_error = $('.error');
     $itemName = $('.item-name');
 
+    //Effet sur lelement precedent quand on tape dans l'input
+    $('.effect-register').on('keypress', app.showHoverEffect);
+
     // Show the team edition form
     $team_form_update = $('.team-form-update');
     $button_update_team = $('.button-update-team');
@@ -51,8 +54,13 @@ var app = {
     // app.addToCart();
 
   },
+  showHoverEffect: function () {
+    console.log('yoooo');
+    $(this).prev().css('color', "green");
+  },
+
   hideMenu: function (evt) {
-    $menu.addClass('menu-hide');
+    $menu.fadeOut(1000);
     $menu_v_small.removeClass('hide');
     $footer.addClass('footer-hide');
     $main.addClass('main-hide');
@@ -67,7 +75,7 @@ var app = {
   },
 
   showMenuheader: function (evt) {
-    $menu.removeClass('menu-hide');
+    $menu.fadeIn(1000);
   },
 
   showTeamform: function (evt) {
@@ -153,3 +161,26 @@ $(document).ready(function () {
     }, 'slow');
   });
 });
+
+
+
+
+
+// hideMenu: function (evt) {
+//     $menu.fadeOut(3000);
+//     $menu_v_small.fadeIn(3000);
+//     $footer.addClass('footer-hide');
+//     $main.addClass('main-hide');
+
+//   },
+
+//   showMenu: function (evt) {
+//     $menu_v_small.fadeOut(3000);
+//     $footer.removeClass('footer-hide');
+//     $main.removeClass('main-hide');
+//     setTimeout(app.showMenuheader, 300);
+//   },
+
+//   showMenuheader: function (evt) {
+//     $menu.fadeIn(3000);
+//   },

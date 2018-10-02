@@ -4,7 +4,8 @@
 'layout/description',
 'layout/news',
 'layout/footer',
-'layout/create-team';
+'layout/create-team',
+'layout/404';
 @import 'component/action-button',
 'component/menu-lg-button',
 'component/nav-menu',
@@ -22,7 +23,8 @@
 'component/equipe',
 'component/create-team',
 'component/team-display',
-'component/member-single';
+'component/member-single',
+'component/register-form';
 @import 'pages/page-team';
 @import 'action/action';
 @import 'shame.scss';
