@@ -9,7 +9,7 @@ foreach ($post as $post_id) {
 
 <div class="team-display">
     <div class ="team-display__content text-center">
-        <h5 class="team-display__content">Team :&nbsp; <?php the_title() ; ?></h5>
+        <h5 class="team-display__content"><?php the_title() ; ?></h5>
         <img class="team-display__content" src="<?= the_post_thumbnail_url(); ?>" alt="">
         <p class="team-display__content"> <?php the_content() ; ?></p>   
         <h6 class="">Leader de l'équipe : </h6>
