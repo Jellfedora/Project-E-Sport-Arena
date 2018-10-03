@@ -60,7 +60,7 @@ var app = {
   },
 
   hideMenu: function (evt) {
-    $menu.fadeOut(1000);
+    $menu.fadeOut(200);
     $menu_v_small.removeClass('hide');
     $footer.addClass('footer-hide');
     $main.addClass('main-hide');
@@ -71,11 +71,11 @@ var app = {
     $menu_v_small.addClass('hide');
     $footer.removeClass('footer-hide');
     $main.removeClass('main-hide');
-    setTimeout(app.showMenuheader, 300);
+    setTimeout(app.showMenuheader, 100);
   },
 
   showMenuheader: function (evt) {
-    $menu.fadeIn(1000);
+    $menu.fadeIn(300);
   },
 
   showTeamform: function (evt) {
