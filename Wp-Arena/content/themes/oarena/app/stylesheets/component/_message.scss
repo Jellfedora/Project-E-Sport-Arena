@@ -1,0 +1,12 @@
+.message {
+    margin: 1em;
+    margin-top: 3em;
+    background-color: $menu-color;
+    color: white;
+    padding: 2em;
+
+    &__title {
+        padding-bottom: 1em;
+        border-bottom: 1px solid white;
+    }
+}
