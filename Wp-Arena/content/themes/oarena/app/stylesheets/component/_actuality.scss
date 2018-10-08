@@ -2,19 +2,15 @@
 
 
     &__item {
-        height: 30em;
         background-color: $menu-color;
-        display: flex;
 
         &__image {
-            width: 30em;
             background-repeat: no-repeat;
             padding: 5em;
         }
 
         &__content {
             padding: 2em;
-            width: 65em;
         }
 
         &__category-button {
@@ -29,4 +25,21 @@
         }
     }
 
+}
+
+@media (min-width: 768px) {
+    .actuality {
+
+
+        &__item {
+            height: 30em;
+            display: flex;
+        }
+        &__content {
+            width: 65em;
+        }
+        &__image {
+            width: 30em;
+        }
+    }
 }
